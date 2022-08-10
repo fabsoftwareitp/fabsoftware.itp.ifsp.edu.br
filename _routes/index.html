@@ -1,0 +1,103 @@
+
+    <div class="content">
+      <app-header>
+      <style class="style-scope app-header">
+
+        nav {
+          display:flex;
+          justify-content: space-between;
+          margin: 0.7rem 0;
+        }
+        nav ul {
+          margin:0;
+          padding:0;
+          list-style-type:none;
+          display:flex;
+          justify-content: space-between;
+        }
+
+        nav ul li {
+          box-sizing: border-box;
+          padding: 0.2rem 0.5rem;
+        }
+
+ 
+      </style>
+
+      <nav class="style-scope app-header">
+        <a href="/" class="style-scope app-header">FabSoftware</a>
+        <ul class="style-scope app-header">
+          <li class="style-scope app-header"><a href="/documentos/" class="style-scope app-header">Documentos </a></li><li class="style-scope app-header"><a href="/membros/" class="style-scope app-header">Membros </a></li><li class="style-scope app-header"><a href="/projetos/" class="style-scope app-header">Projetos </a></li><li class="style-scope app-header"><a href="/sobre/" class="style-scope app-header">Sobre </a></li><li class="style-scope app-header"><a href="/treinamento/" class="style-scope app-header">Treinamento </a></li>
+        </ul>
+      </nav>
+    </app-header>
+      <main>
+        
+  <h1>Bem vindo</h1>
+
+  <h2>Membros</h2>
+  <ul class="membros"><li>
+            <a href="/membros/ana-julia/">Ana Julia</a>
+          </li><li>
+            <a href="/membros/andre-augusto/">Andre Augusto</a>
+          </li><li>
+            <a href="/membros/danilao/">Danilao</a>
+          </li><li>
+            <a href="/membros/gabriel-machado/">Gabriel Machado</a>
+          </li><li>
+            <a href="/membros/joao-correa/">Joao Correa</a>
+          </li><li>
+            <a href="/membros/rafael-alexandre/">Rafael Alexandre</a>
+          </li><li>
+            <a href="/membros/vinicius-manoel/">Vinicius Manoel</a>
+          </li><li>
+            <a href="/membros/vitor-aquino/">Vitor Aquino</a>
+          </li></ul>
+
+  <h2>Projetos</h2>
+  <ul class="projetos"><li>
+            <a href="/projetos/consultorio-na-rua/">Consultorio Na Rua</a>
+          </li><li>
+            <a href="/projetos/show-de-fisica/">Show De Fisica</a>
+          </li><li>
+            <a href="/projetos/sis-gerenciamento-de-eventos/">Sis Gerenciamento De Eventos</a>
+          </li><li>
+            <a href="/projetos/site-espweb/">Site Espweb</a>
+          </li><li>
+            <a href="/projetos/svsa-manual/">Svsa Manual</a>
+          </li><li>
+            <a href="/projetos/">Projetos</a>
+          </li></ul>
+
+  <script type="module">
+    const getGraph = await fetch("graph.json");
+    const response = await getGraph.json();
+    const membros = response.filter((e) => e.route.startsWith("/membros/") && e.data.status == "ativo");
+    const projetos = response.filter((e) => e.route.startsWith("/projetos/"));
+
+    document.querySelector(".membros").innerHTML = membros
+      .map(
+        (item) =>
+          `<li>
+            <a href="${item.route}">${item.label != null ? item.label : item.title}</a>
+          </li>`
+      )
+      .join("");
+
+      document.querySelector(".projetos").innerHTML = projetos
+      .map(
+        (item) =>
+          `<li>
+            <a href="${item.route}">${item.label != null ? item.label : item.title}</a>
+          </li>`
+      )
+      .join("");
+
+      
+  </script>
+
+      </main>
+    </div>
+    <footer>Fábrica de Software IFSP Campus Itapetininga</footer>
+  
+
