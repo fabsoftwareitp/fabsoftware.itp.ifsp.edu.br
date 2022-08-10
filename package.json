@@ -1,0 +1,21 @@
+{
+  "name": "greenblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "greenwood build",
+    "start": "greenwood develop"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@greenwood/cli": "^0.25.2",
+    "puppeteer": "^13.5.2"
+  },
+  "prettier": {
+    "printWidth": 600
+  }
+}

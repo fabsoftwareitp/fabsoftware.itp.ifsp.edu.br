@@ -1,0 +1,19 @@
+<body>
+  <h1>Todos os membros</h1>
+  <nav>
+    <ul class="shelf"></ul>
+  </nav>
+
+  <script type="module">
+    const data = await getMenuData("membros");
+    console.log(data);
+    document.querySelector(".shelf").innerHTML = data
+      .map(
+        (item) =>
+          `<li><a href="${item.route}">${
+            item.label != null ? item.label : item.title
+          } </a></li>`
+      )
+      .join("");
+  </script>
+</body>
