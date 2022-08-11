@@ -49,22 +49,19 @@ class HeaderComponent extends HTMLElement {
           font-weight: bold;
         }
       </style>
-
-        <div class="container">
-          <nav class="menu">
-            <ul>
-              ${this.navigation
-                .map((item) => {
-                  const isCurentPageLink = activeRoute.indexOf(item.route) >= 0;
-                  const activeClassName = isCurentPageLink ? 'active' : '';
-                  return `<li>
-                      <a href="${item.route}" class="${activeClassName}" >${item.label != null ? item.label : item.title}</a>
-                    </li>`;
-                })
-                .join("")}
-            </ul>
-          </nav>
-        </div>
+      <nav class="menu">
+        <ul>
+          ${this.navigation
+            .map((item) => {
+              const isCurentPageLink = activeRoute.indexOf(item.route) >= 0;
+              const activeClassName = isCurentPageLink ? "active" : "";
+              return `<li>
+                  <a href="${item.route}" class="${activeClassName}" >${item.label != null ? item.label : item.title}</a>
+                </li>`;
+            })
+            .join("")}
+        </ul>
+      </nav>
     `;
   }
 }
