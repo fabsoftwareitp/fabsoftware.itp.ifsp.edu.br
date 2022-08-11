@@ -1,4 +1,13 @@
-<!DOCTYPE html><html lang="pt-BR"><head><!-- Shady DOM styles for app-header --><style>body {transition: opacity ease-in 0.2s; } 
+<!DOCTYPE html><html lang="pt-BR">
+                        
+                        
+                          <head>
+                          <link rel="preload" href="/styles/theme.0.css" as="style" crossorigin="anonymous"></link>
+                        
+                        <link rel="modulepreload" href="/router.ee4282c5.js" as="script">
+                      
+                        <link rel="modulepreload" href="/app.6b1dbc2e.js" as="script">
+                      <!-- Shady DOM styles for app-header --><style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style>
             
@@ -18,13 +27,19 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&amp;display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
-    <link rel="stylesheet" href="/styles/theme.css">
+    <link rel="stylesheet" href="/styles/theme.0.css">
 
-    <script src="/src/index.js"></script>
+    <script type="module" src="/app.6b1dbc2e.js"></script>
 
     
+
+          
+            <script type="module">import{getMenuData as e}from"/app.6b1dbc2e.js";const o=await e("documentos");console.log(o),document.querySelector(".shelf").innerHTML=o.map((e=>`<li><a href="${e.route}">${null!=e.title?e.title:e.label} </a></li>`)).join("")//# sourceMappingURL=1352395302-scratch.310a2d0f.js.map
+</script>
+          
+        
   
-          <script type="module" src="/node_modules/@greenwood/cli/src/lib/router.js"></script>
+          <script type="module" src="/router.ee4282c5.js"></script>
 
           <script>
             window.__greenwood = window.__greenwood || {};
@@ -42,12 +57,12 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
       <app-header>
       <style class="style-scope app-header">
 
-        nav {
+        nav.menu {
           display:flex;
           justify-content: space-between;
           margin: 0.7rem 0;
         }
-        nav ul {
+        nav.menu ul {
           margin:0;
           padding:0;
           list-style-type:none;
@@ -55,7 +70,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
           justify-content: space-between;
         }
 
-        nav ul li {
+        nav.menu ul li {
           box-sizing: border-box;
           padding: 0.2rem 0.5rem;
         }
@@ -63,7 +78,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
  
       </style>
 
-      <nav class="style-scope app-header">
+      <nav class="menu style-scope app-header">
         <a href="/" class="style-scope app-header">FabSoftware</a>
         <ul class="style-scope app-header">
           <li class="style-scope app-header"><a href="/documentos/" class="style-scope app-header">Documentos </a></li><li class="style-scope app-header"><a href="/membros/" class="style-scope app-header">Membros </a></li><li class="style-scope app-header"><a href="/projetos/" class="style-scope app-header">Projetos </a></li><li class="style-scope app-header"><a href="/sobre/" class="style-scope app-header">Sobre </a></li><li class="style-scope app-header"><a href="/treinamento/" class="style-scope app-header">Treinamento </a></li>
@@ -76,19 +91,6 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
   <nav>
     <ul class="shelf"><li><a href="/documentos/avaliacoes/">Avaliações </a></li><li><a href="/documentos/calendario/">Calendário </a></li><li><a href="/documentos/reunioes/">Reuniões </a></li></ul>
   </nav>
-
-  <script type="module">
-    const data = await getMenuData("documentos");
-    console.log(data);
-    document.querySelector(".shelf").innerHTML = data
-      .map(
-        (item) =>
-          `<li><a href="${item.route}">${
-            item.title != null ? item.title : item.label
-          } </a></li>`
-      )
-      .join("");
-  </script>
 
       </main>
     </div>

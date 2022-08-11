@@ -3,12 +3,12 @@
       <app-header>
       <style class="style-scope app-header">
 
-        nav {
+        nav.menu {
           display:flex;
           justify-content: space-between;
           margin: 0.7rem 0;
         }
-        nav ul {
+        nav.menu ul {
           margin:0;
           padding:0;
           list-style-type:none;
@@ -16,7 +16,7 @@
           justify-content: space-between;
         }
 
-        nav ul li {
+        nav.menu ul li {
           box-sizing: border-box;
           padding: 0.2rem 0.5rem;
         }
@@ -24,7 +24,7 @@
  
       </style>
 
-      <nav class="style-scope app-header">
+      <nav class="menu style-scope app-header">
         <a href="/" class="style-scope app-header">FabSoftware</a>
         <ul class="style-scope app-header">
           <li class="style-scope app-header"><a href="/documentos/" class="style-scope app-header">Documentos </a></li><li class="style-scope app-header"><a href="/membros/" class="style-scope app-header">Membros </a></li><li class="style-scope app-header"><a href="/projetos/" class="style-scope app-header">Projetos </a></li><li class="style-scope app-header"><a href="/sobre/" class="style-scope app-header">Sobre </a></li><li class="style-scope app-header"><a href="/treinamento/" class="style-scope app-header">Treinamento </a></li>
@@ -51,19 +51,6 @@
             <a href="/treinamento/vue/">Vue</a>
           </li></ul>
   </nav>
-
-  <script type="module">
-    const data = await getMenuData("treinamento");
-    console.log(data);
-    document.querySelector(".shelf").innerHTML = data
-      .map(
-        (item) =>
-          `<li>
-            <a href="${item.route}">${item.label != null ? item.label : item.title}</a>
-          </li>`
-      )
-      .join("");
-  </script>
 
       </main>
     </div>
