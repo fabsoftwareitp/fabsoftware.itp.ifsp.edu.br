@@ -1,19 +1,15 @@
+<head>
+  <script type="module">
+    import { getMenuData } from "./scripts/app.js";
+
+    const data = await getMenuData("documentos");
+    console.log(data);
+    document.querySelector(".shelf").innerHTML = data.map((item) => `<li><a href="${item.route}">${item.title != null ? item.title : item.label} </a></li>`).join("");
+  </script>
+</head>
 <body>
   <h1>Documentos</h1>
   <nav>
     <ul class="shelf"></ul>
   </nav>
-
-  <script type="module">
-    const data = await getMenuData("documentos");
-    console.log(data);
-    document.querySelector(".shelf").innerHTML = data
-      .map(
-        (item) =>
-          `<li><a href="${item.route}">${
-            item.title != null ? item.title : item.label
-          } </a></li>`
-      )
-      .join("");
-  </script>
 </body>

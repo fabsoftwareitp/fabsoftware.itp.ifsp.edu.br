@@ -18,12 +18,12 @@ class HeaderComponent extends HTMLElement {
     return /*html*/`
       <style>
 
-        nav {
+        nav.menu {
           display:flex;
           justify-content: space-between;
           margin: 0.7rem 0;
         }
-        nav ul {
+        nav.menu ul {
           margin:0;
           padding:0;
           list-style-type:none;
@@ -31,7 +31,7 @@ class HeaderComponent extends HTMLElement {
           justify-content: space-between;
         }
 
-        nav ul li {
+        nav.menu ul li {
           box-sizing: border-box;
           padding: 0.2rem 0.5rem;
         }
@@ -39,7 +39,7 @@ class HeaderComponent extends HTMLElement {
  
       </style>
 
-      <nav>
+      <nav class="menu">
         <a href="/">FabSoftware</a>
         <ul>
           ${this.navigation.map(item =>
