@@ -1,12 +1,12 @@
 
-    <div class="content">
-      <app-header>
+    <app-header>
       <style class="style-scope app-header">
 
         nav.menu {
           display:flex;
-          justify-content: space-between;
-          margin: 0.7rem 0;
+          justify-content: space-around;
+          padding: 1rem 0;
+          background-color:black;
         }
         nav.menu ul {
           margin:0;
@@ -21,25 +21,44 @@
           padding: 0.2rem 0.5rem;
         }
 
- 
+        nav.menu a {
+          text-decoration: none;
+          color:white;
+        }
+
+        nav.menu a.active {
+          color: #FD624C;
+          text-decoration: underline;
+          font-weight: bold;
+        }
       </style>
 
-      <nav class="menu style-scope app-header">
-        <a href="/" class="style-scope app-header">FabSoftware</a>
-        <ul class="style-scope app-header">
-          <li class="style-scope app-header"><a href="/documentos/" class="style-scope app-header">Documentos </a></li><li class="style-scope app-header"><a href="/membros/" class="style-scope app-header">Membros </a></li><li class="style-scope app-header"><a href="/projetos/" class="style-scope app-header">Projetos </a></li><li class="style-scope app-header"><a href="/sobre/" class="style-scope app-header">Sobre </a></li><li class="style-scope app-header"><a href="/treinamento/" class="style-scope app-header">Treinamento </a></li>
-        </ul>
-      </nav>
+        <div class="container style-scope app-header">
+          <nav class="menu style-scope app-header">
+            <ul class="style-scope app-header">
+              <li class="style-scope app-header">
+                      <a href="/documentos/" class="style-scope app-header">Documentos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/membros/" class="active style-scope app-header">Membros</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/projetos/" class="style-scope app-header">Projetos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/sobre/" class="style-scope app-header">Sobre</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/treinamento/" class="style-scope app-header">Treinamento</a>
+                    </li>
+            </ul>
+          </nav>
+        </div>
     </app-header>
-      <main>
-        
+    <main class="container">
+      
   <section>
     <h1>João Victor Ferreira de Morais</h1>
 <p><img src="https://avatars.githubusercontent.com/u/41636783?v=4" alt="joaomorais1f"></p>
   </section>
 
-      </main>
-    </div>
+    </main>
     <footer>Fábrica de Software IFSP Campus Itapetininga</footer>
   
 

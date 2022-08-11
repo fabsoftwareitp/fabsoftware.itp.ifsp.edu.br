@@ -1,8 +1,11 @@
 <!DOCTYPE html><html lang="pt-BR">
                         
                         
+                          
                           <head>
-                          <link rel="preload" href="/styles/theme.0.css" as="style" crossorigin="anonymous"></link>
+                          <link rel="preload" href="/styles/theme.16434084.css" as="style" crossorigin="anonymous"></link>
+                        
+                          <link rel="preload" href="/styles/lib/bootstrap-reboot.14092910.css" as="style" crossorigin="anonymous"></link>
                         
                         <link rel="modulepreload" href="/router.ee4282c5.js" as="script">
                       
@@ -16,8 +19,10 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         
         
     
-    <title>Fábrica de Software </title>
+    <title>Fábrica de Software</title>
     <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -26,8 +31,9 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&amp;display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
-    <link rel="stylesheet" href="/styles/theme.0.css">
+
+    <link rel="stylesheet" href="/styles/lib/bootstrap-reboot.14092910.css">
+    <link rel="stylesheet" href="/styles/theme.16434084.css">
 
     <script type="module" src="/app.6b1dbc2e.js"></script>
 
@@ -47,14 +53,14 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 
             <router-outlet>
               
-    <div class="content">
-      <app-header>
+    <app-header>
       <style class="style-scope app-header">
 
         nav.menu {
           display:flex;
-          justify-content: space-between;
-          margin: 0.7rem 0;
+          justify-content: space-around;
+          padding: 1rem 0;
+          background-color:black;
         }
         nav.menu ul {
           margin:0;
@@ -69,25 +75,44 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
           padding: 0.2rem 0.5rem;
         }
 
- 
+        nav.menu a {
+          text-decoration: none;
+          color:white;
+        }
+
+        nav.menu a.active {
+          color: #FD624C;
+          text-decoration: underline;
+          font-weight: bold;
+        }
       </style>
 
-      <nav class="menu style-scope app-header">
-        <a href="/" class="style-scope app-header">FabSoftware</a>
-        <ul class="style-scope app-header">
-          <li class="style-scope app-header"><a href="/documentos/" class="style-scope app-header">Documentos </a></li><li class="style-scope app-header"><a href="/membros/" class="style-scope app-header">Membros </a></li><li class="style-scope app-header"><a href="/projetos/" class="style-scope app-header">Projetos </a></li><li class="style-scope app-header"><a href="/sobre/" class="style-scope app-header">Sobre </a></li><li class="style-scope app-header"><a href="/treinamento/" class="style-scope app-header">Treinamento </a></li>
-        </ul>
-      </nav>
+        <div class="container style-scope app-header">
+          <nav class="menu style-scope app-header">
+            <ul class="style-scope app-header">
+              <li class="style-scope app-header">
+                      <a href="/documentos/" class="style-scope app-header">Documentos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/membros/" class="active style-scope app-header">Membros</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/projetos/" class="style-scope app-header">Projetos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/sobre/" class="style-scope app-header">Sobre</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/treinamento/" class="style-scope app-header">Treinamento</a>
+                    </li>
+            </ul>
+          </nav>
+        </div>
     </app-header>
-      <main>
-        
+    <main class="container">
+      
   <section>
     <h1>Laura Naomi Seto</h1>
 <p><img src="https://avatars.githubusercontent.com/u/47746453?v=4" alt="lauranaomiseto"></p>
   </section>
 
-      </main>
-    </div>
+    </main>
     <footer>Fábrica de Software IFSP Campus Itapetininga</footer>
   
 

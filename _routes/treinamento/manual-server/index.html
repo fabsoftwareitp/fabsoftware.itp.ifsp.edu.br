@@ -1,12 +1,12 @@
 
-    <div class="content">
-      <app-header>
+    <app-header>
       <style class="style-scope app-header">
 
         nav.menu {
           display:flex;
-          justify-content: space-between;
-          margin: 0.7rem 0;
+          justify-content: space-around;
+          padding: 1rem 0;
+          background-color:black;
         }
         nav.menu ul {
           margin:0;
@@ -21,18 +21,38 @@
           padding: 0.2rem 0.5rem;
         }
 
- 
+        nav.menu a {
+          text-decoration: none;
+          color:white;
+        }
+
+        nav.menu a.active {
+          color: #FD624C;
+          text-decoration: underline;
+          font-weight: bold;
+        }
       </style>
 
-      <nav class="menu style-scope app-header">
-        <a href="/" class="style-scope app-header">FabSoftware</a>
-        <ul class="style-scope app-header">
-          <li class="style-scope app-header"><a href="/documentos/" class="style-scope app-header">Documentos </a></li><li class="style-scope app-header"><a href="/membros/" class="style-scope app-header">Membros </a></li><li class="style-scope app-header"><a href="/projetos/" class="style-scope app-header">Projetos </a></li><li class="style-scope app-header"><a href="/sobre/" class="style-scope app-header">Sobre </a></li><li class="style-scope app-header"><a href="/treinamento/" class="style-scope app-header">Treinamento </a></li>
-        </ul>
-      </nav>
+        <div class="container style-scope app-header">
+          <nav class="menu style-scope app-header">
+            <ul class="style-scope app-header">
+              <li class="style-scope app-header">
+                      <a href="/documentos/" class="style-scope app-header">Documentos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/membros/" class="style-scope app-header">Membros</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/projetos/" class="style-scope app-header">Projetos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/sobre/" class="style-scope app-header">Sobre</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/treinamento/" class="active style-scope app-header">Treinamento</a>
+                    </li>
+            </ul>
+          </nav>
+        </div>
     </app-header>
-      <main>
-        
+    <main class="container">
+      
   <section>
     <h1>Como acessar o servidor da Fábrica de Software</h1>
 <p>Primeiramente, é necessário que se tenha instalado o SSH em sua máquina, que ele servirá de ponte entre seu computador e o servidor, após isso, o processo de conexão é bem simples, começe pelo seguinte comando no seu terminal:
@@ -52,8 +72,7 @@ Com isso o terminal irá te pedir uma senha, use a que o seu instrutor no projet
 <p>Em seu explorador de arquivos do Linux pode existir uma opção chamada "conectar à uma rede", clique nela e depois insira "<a href="mailto:devops@10.112.70.230">devops@10.112.70.230</a>", que é o endereço e o usuário que será acessado, novamente, insira sua senha, e após isso o próprio explorador de arquivos terá acesso ao servidor, assim te dando uma interface visual, um pouco mais fácil de ser trabalhada, para que possa ser realizado o gerenciamento de arquivos.</p>
   </section>
 
-      </main>
-    </div>
+    </main>
     <footer>Fábrica de Software IFSP Campus Itapetininga</footer>
   
 
