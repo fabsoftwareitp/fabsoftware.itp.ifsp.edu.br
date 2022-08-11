@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <title>Fábrica de Software </title>
+    <title>Fábrica de Software</title>
     <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -11,7 +13,8 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css" />
+
+    <link rel="stylesheet" href="../styles/lib/bootstrap-reboot.css" />
     <link rel="stylesheet" href="../styles/theme.css" />
 
     <script type="module" src="../scripts/app.js"></script>
@@ -19,12 +22,10 @@
     <script type="module" data-gwd-opt="static" src="/components/navigation.js"></script>
   </head>
   <body>
-    <div class="content">
-      <app-header></app-header>
-      <main>
-        <page-outlet></page-outlet>
-      </main>
-    </div>
+    <app-header></app-header>
+    <main class="container">
+      <page-outlet></page-outlet>
+    </main>
     <footer>Fábrica de Software IFSP Campus Itapetininga</footer>
   </body>
 </html>
