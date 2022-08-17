@@ -18,12 +18,17 @@ class HeaderComponent extends HTMLElement {
 
     return /*html*/ `
       <style>
+        header {
+          background-color:black;
+        }
 
         nav.menu {
           display:flex;
-          justify-content: space-around;
+          justify-content: space-between;
           padding: 1rem 0;
-          background-color:black;
+          max-width: 80vw;
+          flex-wrap: wrap;
+          margin: 0 auto;
         }
         nav.menu ul {
           margin:0;
@@ -41,6 +46,13 @@ class HeaderComponent extends HTMLElement {
         nav.menu a {
           text-decoration: none;
           color:white;
+          display: flex;
+          align-items: center;
+        }
+
+        nav.menu .logo {
+          font-size: 1.25rem;
+          gap:0.4rem;
         }
 
         nav.menu a.active {
@@ -48,20 +60,33 @@ class HeaderComponent extends HTMLElement {
           text-decoration: underline;
           font-weight: bold;
         }
+
+        nav.menu img {
+          max-width: 1.5rem;
+        }
+
+        nav.menu .container {
+          max-width: 80vw;
+        }
       </style>
-      <nav class="menu">
-        <ul>
-          ${this.navigation
-            .map((item) => {
-              const isCurentPageLink = activeRoute.indexOf(item.route) >= 0;
-              const activeClassName = isCurentPageLink ? "active" : "";
-              return `<li>
-                  <a href="${item.route}" class="${activeClassName}" >${item.label != null ? item.label : item.title}</a>
-                </li>`;
-            })
-            .join("")}
-        </ul>
-      </nav>
+      <header>
+        <nav class="menu">
+            <a href="/" class="logo">
+              <img src="/assets/logo-oficial.png" alt="logo oficial">
+              <span>FabSoftware</span></a>
+            <ul>
+              ${this.navigation
+                .map((item) => {
+                  const isCurentPageLink = activeRoute.indexOf(item.route) >= 0;
+                  const activeClassName = isCurentPageLink ? "active" : "";
+                  return `<li>
+                      <a href="${item.route}" class="${activeClassName}" >${item.title != null ? item.title : item.label}</a>
+                    </li>`;
+                })
+                .join("")}
+            </ul>
+        </nav>
+      </header>
     `;
   }
 }

@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "greenwood build",
-    "start": "greenwood develop"
+    "start": "greenwood develop",
+    "serve": "greenwood serve"
   },
   "author": "",
   "license": "ISC",

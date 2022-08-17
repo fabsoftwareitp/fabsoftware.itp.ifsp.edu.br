@@ -1,6 +1,6 @@
 ---
-extends: _layouts.treina
-section: content
+template: "page"
+title: "Fluxo de Git e Github da Fábrica"
 
 name: "Git e Github"
 ---
