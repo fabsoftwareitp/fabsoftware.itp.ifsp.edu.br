@@ -1,12 +1,17 @@
 
     <app-header>
       <style class="style-scope app-header">
+        header {
+          background-color:black;
+        }
 
         nav.menu {
           display:flex;
-          justify-content: space-around;
+          justify-content: space-between;
           padding: 1rem 0;
-          background-color:black;
+          max-width: 80vw;
+          flex-wrap: wrap;
+          margin: 0 auto;
         }
         nav.menu ul {
           margin:0;
@@ -24,6 +29,13 @@
         nav.menu a {
           text-decoration: none;
           color:white;
+          display: flex;
+          align-items: center;
+        }
+
+        nav.menu .logo {
+          font-size: 1.25rem;
+          gap:0.4rem;
         }
 
         nav.menu a.active {
@@ -31,29 +43,82 @@
           text-decoration: underline;
           font-weight: bold;
         }
+
+        nav.menu img {
+          max-width: 1.5rem;
+        }
+
+        nav.menu .container {
+          max-width: 80vw;
+        }
       </style>
-      <nav class="menu style-scope app-header">
-        <ul class="style-scope app-header">
-          <li class="style-scope app-header">
-                  <a href="/documentos/" class="active style-scope app-header">Documentos</a>
-                </li><li class="style-scope app-header">
-                  <a href="/membros/" class="style-scope app-header">Membros</a>
-                </li><li class="style-scope app-header">
-                  <a href="/projetos/" class="style-scope app-header">Projetos</a>
-                </li><li class="style-scope app-header">
-                  <a href="/sobre/" class="style-scope app-header">Sobre</a>
-                </li><li class="style-scope app-header">
-                  <a href="/treinamento/" class="style-scope app-header">Treinamento</a>
-                </li>
-        </ul>
-      </nav>
+      <header class="style-scope app-header">
+        <nav class="menu style-scope app-header">
+            <a href="/" class="logo style-scope app-header">
+              <img src="/assets/logo-oficial.png" alt="logo oficial" class="style-scope app-header">
+              <span class="style-scope app-header">FabSoftware</span></a>
+            <ul class="style-scope app-header">
+              <li class="style-scope app-header">
+                      <a href="/documentos/" class="active style-scope app-header">Documentos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/membros/" class="style-scope app-header">Equipe</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/projetos/" class="style-scope app-header">Projetos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/sobre/" class="style-scope app-header">Sobre</a>
+                    </li>
+            </ul>
+        </nav>
+      </header>
     </app-header>
     <main class="container">
       
-  <h1>Documentos</h1>
-  <nav>
-    <ul class="shelf"><li><a href="/documentos/avaliacoes/">Avaliações </a></li><li><a href="/documentos/calendario/">Calendário </a></li><li><a href="/documentos/reunioes/">Reuniões </a></li></ul>
-  </nav>
+  <section>
+    <h1>Documentos</h1>
+<ul>
+<li><a href="avaliacoes/">Avaliações</a></li>
+<li><a href="calendario/">Calendário</a></li>
+<li><a href="reunioes/">Reuniões</a></li>
+</ul>
+<h2>Tutoriais</h2>
+<ul>
+<li><a href="tutoriais/manual-server/">Manual Server</a></li>
+<li><a href="tutoriais/github/">Git e GitHub da Fábrica</a></li>
+</ul>
+<h2>Treinamento</h2>
+<p>Esta página contém materiais de apoio para o aprendizado das principais tecnologias dos projetos da Fábrica de Software.</p>
+<h3>Bootstrap</h3>
+<p>Esta página contém materiais de apoio para o aprendizado do framework Bootstrap, usado no SGE, e poderá sofrer alterações no futuro. Participantes da Fábrica de Software podem adicionar material.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=SmQMZ36hJJY&amp;list=PLnDvRpP8Bnexu5wvxogy6N49_S5Xk8Cze">Curso de Bootstrap: Matheus Battisti - Hora de Codar</a></li>
+<li><a href="https://getbootstrap.com.br/docs/4.1/getting-started/introduction/">Documentação oficial do Bootstrap</a></li>
+</ul>
+<h3>Figma</h3>
+<p>Esta página contém materiais de apoio para o aprendizado da ferramenta de design Figma, usada em todos os projetos, e poderá sofrer alterações no futuro. Participantes da Fábrica de Software podem adicionar material.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=vg-INqhKD5c">Tutorial Completo de FIGMA - Ferramenta GRÁTIS para Design de Interfaces: Gabriel Silvestri</a></li>
+<li><a href="https://www.figma.com/community/file/944644388375583520">Figma UX Documentation</a></li>
+</ul>
+<h3>Vue.js</h3>
+<p>Esta página contém materiais de apoio para o aprendizado do framework Vue.js, usado no Site da Fábrica, e poderá sofrer alterações no futuro. Participantes da Fábrica de Software podem adicionar material.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=wsAQQioPIJs&amp;list=PLnDvRpP8BnezDglaAvtWgQXzsOmXUuRHL">Curso de Vue.js: Matheus Battisti - Hora de Codar</a></li>
+<li><a href="https://www.youtube.com/watch?v=Rz7D51uU_gY&amp;list=PLWNaqtzH6CWR-dykXeDD5XmMzJur9JBIh&amp;index=1">Vue.js - Curso Completo: ProgrAmada Mente</a></li>
+<li><a href="https://vuejs.org/guide/introduction.html">Documentação oficial do Vue.js</a>x</li>
+</ul>
+<h3>Nuxt.js</h3>
+<p>Esta página contém materiais de apoio para o aprendizado do framework Nuxt.js, usado no Site da Fábrica, e poderá sofrer alterações no futuro. Participantes da Fábrica de Software podem adicionar material.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=jw6tRUGkpmo&amp;list=PLcoYAcR89n-oU266D5Dy6DT-H8npny_qJ">Curso Gratuito de Nuxt.js: Tiago Matos</a></li>
+<li><a href="https://nuxtjs.org/docs/get-started/installation">Documentação oficial do Nuxt.js</a></li>
+</ul>
+<h3>Laravel</h3>
+<p>Esta página contém materiais de apoio para o aprendizado do framework Laravel, usado no SGE e no Consultório na Rua (e por enquanto no Site da Fábrica), e poderá sofrer alterações no futuro. Participantes da Fábrica de Software podem adicionar material.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=qH7rsZBENJo&amp;list=PLnDvRpP8BnewYKI1n2chQrrR4EYiJKbUG&amp;index=1">Curso de Laravel: Matheus Battisti - Hora de Codar</a></li>
+<li><a href="https://laravel.com/">Documentação oficial do Laravel</a></li>
+</ul>
+  </section>
 
     </main>
     <footer>Fábrica de Software IFSP Campus Itapetininga</footer>

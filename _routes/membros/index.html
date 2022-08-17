@@ -1,12 +1,17 @@
 
     <app-header>
       <style class="style-scope app-header">
+        header {
+          background-color:black;
+        }
 
         nav.menu {
           display:flex;
-          justify-content: space-around;
+          justify-content: space-between;
           padding: 1rem 0;
-          background-color:black;
+          max-width: 80vw;
+          flex-wrap: wrap;
+          margin: 0 auto;
         }
         nav.menu ul {
           margin:0;
@@ -24,6 +29,13 @@
         nav.menu a {
           text-decoration: none;
           color:white;
+          display: flex;
+          align-items: center;
+        }
+
+        nav.menu .logo {
+          font-size: 1.25rem;
+          gap:0.4rem;
         }
 
         nav.menu a.active {
@@ -31,29 +43,48 @@
           text-decoration: underline;
           font-weight: bold;
         }
+
+        nav.menu img {
+          max-width: 1.5rem;
+        }
+
+        nav.menu .container {
+          max-width: 80vw;
+        }
       </style>
-      <nav class="menu style-scope app-header">
-        <ul class="style-scope app-header">
-          <li class="style-scope app-header">
-                  <a href="/documentos/" class="style-scope app-header">Documentos</a>
-                </li><li class="style-scope app-header">
-                  <a href="/membros/" class="active style-scope app-header">Membros</a>
-                </li><li class="style-scope app-header">
-                  <a href="/projetos/" class="style-scope app-header">Projetos</a>
-                </li><li class="style-scope app-header">
-                  <a href="/sobre/" class="style-scope app-header">Sobre</a>
-                </li><li class="style-scope app-header">
-                  <a href="/treinamento/" class="style-scope app-header">Treinamento</a>
-                </li>
-        </ul>
-      </nav>
+      <header class="style-scope app-header">
+        <nav class="menu style-scope app-header">
+            <a href="/" class="logo style-scope app-header">
+              <img src="/assets/logo-oficial.png" alt="logo oficial" class="style-scope app-header">
+              <span class="style-scope app-header">FabSoftware</span></a>
+            <ul class="style-scope app-header">
+              <li class="style-scope app-header">
+                      <a href="/documentos/" class="style-scope app-header">Documentos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/membros/" class="active style-scope app-header">Equipe</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/projetos/" class="style-scope app-header">Projetos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/sobre/" class="style-scope app-header">Sobre</a>
+                    </li>
+            </ul>
+        </nav>
+      </header>
     </app-header>
     <main class="container">
       
-  <h1>Todos os membros</h1>
-  <nav>
-    <ul class="shelf"><li><a href="/membros/ana-julia/">Ana Julia </a></li><li><a href="/membros/andre-augusto/">Andre Augusto </a></li><li><a href="/membros/bruno-joshua/">Bruno Joshua </a></li><li><a href="/membros/carlos-silva/">Carlos Silva </a></li><li><a href="/membros/danilao/">Danilao </a></li><li><a href="/membros/gabriel-machado/">Gabriel Machado </a></li><li><a href="/membros/joao-correa/">Joao Correa </a></li><li><a href="/membros/joao-morais/">Joao Morais </a></li><li><a href="/membros/laura-naomi/">Laura Naomi </a></li><li><a href="/membros/lucas-cavalherie/">Lucas Cavalherie </a></li><li><a href="/membros/maria-senger/">Maria Senger </a></li><li><a href="/membros/neemias-matos/">Neemias Matos </a></li><li><a href="/membros/pedro-gois/">Pedro Gois </a></li><li><a href="/membros/rafael-alexandre/">Rafael Alexandre </a></li><li><a href="/membros/rafael-brochado/">Rafael Brochado </a></li><li><a href="/membros/rafael-santos/">Rafael Santos </a></li><li><a href="/membros/samuel-matos/">Samuel Matos </a></li><li><a href="/membros/vinicius-manoel/">Vinicius Manoel </a></li><li><a href="/membros/vinicius-zeravex/">Vinicius Zeravex </a></li><li><a href="/membros/vitor-aquino/">Vitor Aquino </a></li></ul>
-  </nav>
+  <section>
+    <h1>Todos os membros</h1>
+<app-team>
+        <style class="style-scope app-team">
+          /* CSS will go here */
+        </style>
+  
+        <nav class="style-scope app-team">
+          <ul class="shelf style-scope app-team"><li class="style-scope app-team"><a href="/membros/ana-julia/" class="style-scope app-team">Ana Julia </a></li><li class="style-scope app-team"><a href="/membros/andre-augusto/" class="style-scope app-team">Andre Augusto </a></li><li class="style-scope app-team"><a href="/membros/bruno-joshua/" class="style-scope app-team">Bruno Joshua </a></li><li class="style-scope app-team"><a href="/membros/carlos-silva/" class="style-scope app-team">Carlos Silva </a></li><li class="style-scope app-team"><a href="/membros/danilao/" class="style-scope app-team">Danilao </a></li><li class="style-scope app-team"><a href="/membros/gabriel-machado/" class="style-scope app-team">Gabriel Machado </a></li><li class="style-scope app-team"><a href="/membros/joao-correa/" class="style-scope app-team">Joao Correa </a></li><li class="style-scope app-team"><a href="/membros/joao-morais/" class="style-scope app-team">Joao Morais </a></li><li class="style-scope app-team"><a href="/membros/laura-naomi/" class="style-scope app-team">Laura Naomi </a></li><li class="style-scope app-team"><a href="/membros/lucas-cavalherie/" class="style-scope app-team">Lucas Cavalherie </a></li><li class="style-scope app-team"><a href="/membros/maria-senger/" class="style-scope app-team">Maria Senger </a></li><li class="style-scope app-team"><a href="/membros/neemias-matos/" class="style-scope app-team">Neemias Matos </a></li><li class="style-scope app-team"><a href="/membros/pedro-gois/" class="style-scope app-team">Pedro Gois </a></li><li class="style-scope app-team"><a href="/membros/rafael-alexandre/" class="style-scope app-team">Rafael Alexandre </a></li><li class="style-scope app-team"><a href="/membros/rafael-brochado/" class="style-scope app-team">Rafael Brochado </a></li><li class="style-scope app-team"><a href="/membros/rafael-santos/" class="style-scope app-team">Rafael Santos </a></li><li class="style-scope app-team"><a href="/membros/samuel-matos/" class="style-scope app-team">Samuel Matos </a></li><li class="style-scope app-team"><a href="/membros/vinicius-manoel/" class="style-scope app-team">Vinicius Manoel </a></li><li class="style-scope app-team"><a href="/membros/vinicius-zeravex/" class="style-scope app-team">Vinicius Zeravex </a></li><li class="style-scope app-team"><a href="/membros/vitor-aquino/" class="style-scope app-team">Vitor Aquino </a></li></ul>
+        </nav>
+      </app-team>
+  </section>
 
     </main>
     <footer>Fábrica de Software IFSP Campus Itapetininga</footer>

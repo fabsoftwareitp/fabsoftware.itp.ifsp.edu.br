@@ -1,12 +1,17 @@
 
     <app-header>
       <style class="style-scope app-header">
+        header {
+          background-color:black;
+        }
 
         nav.menu {
           display:flex;
-          justify-content: space-around;
+          justify-content: space-between;
           padding: 1rem 0;
-          background-color:black;
+          max-width: 80vw;
+          flex-wrap: wrap;
+          margin: 0 auto;
         }
         nav.menu ul {
           margin:0;
@@ -24,6 +29,13 @@
         nav.menu a {
           text-decoration: none;
           color:white;
+          display: flex;
+          align-items: center;
+        }
+
+        nav.menu .logo {
+          font-size: 1.25rem;
+          gap:0.4rem;
         }
 
         nav.menu a.active {
@@ -31,59 +43,80 @@
           text-decoration: underline;
           font-weight: bold;
         }
+
+        nav.menu img {
+          max-width: 1.5rem;
+        }
+
+        nav.menu .container {
+          max-width: 80vw;
+        }
       </style>
-      <nav class="menu style-scope app-header">
-        <ul class="style-scope app-header">
-          <li class="style-scope app-header">
-                  <a href="/documentos/" class="style-scope app-header">Documentos</a>
-                </li><li class="style-scope app-header">
-                  <a href="/membros/" class="style-scope app-header">Membros</a>
-                </li><li class="style-scope app-header">
-                  <a href="/projetos/" class="active style-scope app-header">Projetos</a>
-                </li><li class="style-scope app-header">
-                  <a href="/sobre/" class="style-scope app-header">Sobre</a>
-                </li><li class="style-scope app-header">
-                  <a href="/treinamento/" class="style-scope app-header">Treinamento</a>
-                </li>
-        </ul>
-      </nav>
+      <header class="style-scope app-header">
+        <nav class="menu style-scope app-header">
+            <a href="/" class="logo style-scope app-header">
+              <img src="/assets/logo-oficial.png" alt="logo oficial" class="style-scope app-header">
+              <span class="style-scope app-header">FabSoftware</span></a>
+            <ul class="style-scope app-header">
+              <li class="style-scope app-header">
+                      <a href="/documentos/" class="style-scope app-header">Documentos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/membros/" class="style-scope app-header">Equipe</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/projetos/" class="active style-scope app-header">Projetos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/sobre/" class="style-scope app-header">Sobre</a>
+                    </li>
+            </ul>
+        </nav>
+      </header>
     </app-header>
     <main class="container">
       
-  <h1>Todos os projetos</h1>
-  <nav>
-    <ul class="shelf"><div>
-            <h2>Consultorio Na Rua</h2>
-            <img src="/assets/projetos/logo-consultorio-na-rua.jpg" alt="">
-            <p><a href="/projetos/consultorio-na-rua/">Saiba mais..</a>
+  <section>
+    <h1>Todos os membros</h1>
+<app-projects>
+        <style class="style-scope app-projects">
+          img {
+            max-width:100%;
+          }
+        </style>
+  
+        <nav class="style-scope app-projects">
+          <ul class="shelf style-scope app-projects"><div class="style-scope app-projects">
+            <h2 class="style-scope app-projects">Consultorio Na Rua</h2>
+            <img src="/assets/projetos/logo-consultorio-na-rua.jpg" alt="" class="style-scope app-projects">
+            <p class="style-scope app-projects"><a href="/projetos/consultorio-na-rua/" class="style-scope app-projects">Saiba mais..</a>
               
             </p>
-          </div><div>
-            <h2>Show De Fisica</h2>
-            <img src="/assets/projetos/logo-show-de-fisica.jpg" alt="">
-            <p><a href="/projetos/show-de-fisica/">Saiba mais..</a>
+          </div><div class="style-scope app-projects">
+            <h2 class="style-scope app-projects">Show De Fisica</h2>
+            <img src="/assets/projetos/logo-show-de-fisica.jpg" alt="" class="style-scope app-projects">
+            <p class="style-scope app-projects"><a href="/projetos/show-de-fisica/" class="style-scope app-projects">Saiba mais..</a>
               
             </p>
-          </div><div>
-            <h2>Sis Gerenciamento De Eventos</h2>
-            <img src="/assets/projetos/logo-sge.png" alt="">
-            <p><a href="/projetos/sis-gerenciamento-de-eventos/">Saiba mais..</a>
+          </div><div class="style-scope app-projects">
+            <h2 class="style-scope app-projects">Sis Gerenciamento De Eventos</h2>
+            <img src="/assets/projetos/logo-sge.png" alt="" class="style-scope app-projects">
+            <p class="style-scope app-projects"><a href="/projetos/sis-gerenciamento-de-eventos/" class="style-scope app-projects">Saiba mais..</a>
               
             </p>
-          </div><div>
-            <h2>Site Espweb</h2>
-            <img src="/assets/projetos/logo-espweb.png" alt="">
-            <p><a href="/projetos/site-espweb/">Saiba mais..</a>
+          </div><div class="style-scope app-projects">
+            <h2 class="style-scope app-projects">Site Espweb</h2>
+            <img src="/assets/projetos/logo-espweb.png" alt="" class="style-scope app-projects">
+            <p class="style-scope app-projects"><a href="/projetos/site-espweb/" class="style-scope app-projects">Saiba mais..</a>
               
             </p>
-          </div><div>
-            <h2>Svsa Manual</h2>
-            <img src="/assets/projetos/logo-svsa.png" alt="">
-            <p><a href="/projetos/svsa-manual/">Saiba mais..</a>
+          </div><div class="style-scope app-projects">
+            <h2 class="style-scope app-projects">Svsa Manual</h2>
+            <img src="/assets/projetos/logo-svsa.png" alt="" class="style-scope app-projects">
+            <p class="style-scope app-projects"><a href="/projetos/svsa-manual/" class="style-scope app-projects">Saiba mais..</a>
               
             </p>
           </div></ul>
-  </nav>
+        </nav>
+      </app-projects>
+  </section>
 
     </main>
     <footer>Fábrica de Software IFSP Campus Itapetininga</footer>

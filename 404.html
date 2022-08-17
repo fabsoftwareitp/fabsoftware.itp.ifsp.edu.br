@@ -2,12 +2,12 @@
                         
                           
                           <head>
-                          <link rel="preload" href="/styles/theme.16434084.css" as="style" crossorigin="anonymous"></link>
+                          <link rel="preload" href="/styles/theme.79976053.css" as="style" crossorigin="anonymous"></link>
                         
                           <link rel="preload" href="/styles/lib/bootstrap-reboot.14092910.css" as="style" crossorigin="anonymous"></link>
                         
                         <link rel="modulepreload" href="/app.6b1dbc2e.js" as="script">
-                      <!-- Shady DOM styles for app-header --><style>body {transition: opacity ease-in 0.2s; } 
+                      <!-- Shady DOM styles for app-header --><!-- Shady DOM styles for app-team --><!-- Shady DOM styles for app-projects --><style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style>
             
@@ -30,10 +30,12 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&amp;display=swap">
 
     <link rel="stylesheet" href="/styles/lib/bootstrap-reboot.14092910.css">
-    <link rel="stylesheet" href="/styles/theme.16434084.css">
+    <link rel="stylesheet" href="/styles/theme.79976053.css">
 
     <script type="module" src="/app.6b1dbc2e.js"></script>
 
+    
+    
     
   
           
@@ -51,12 +53,17 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
   <body>
     <app-header>
       <style class="style-scope app-header">
+        header {
+          background-color:black;
+        }
 
         nav.menu {
           display:flex;
-          justify-content: space-around;
+          justify-content: space-between;
           padding: 1rem 0;
-          background-color:black;
+          max-width: 80vw;
+          flex-wrap: wrap;
+          margin: 0 auto;
         }
         nav.menu ul {
           margin:0;
@@ -74,6 +81,13 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         nav.menu a {
           text-decoration: none;
           color:white;
+          display: flex;
+          align-items: center;
+        }
+
+        nav.menu .logo {
+          font-size: 1.25rem;
+          gap:0.4rem;
         }
 
         nav.menu a.active {
@@ -81,22 +95,33 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
           text-decoration: underline;
           font-weight: bold;
         }
+
+        nav.menu img {
+          max-width: 1.5rem;
+        }
+
+        nav.menu .container {
+          max-width: 80vw;
+        }
       </style>
-      <nav class="menu style-scope app-header">
-        <ul class="style-scope app-header">
-          <li class="style-scope app-header">
-                  <a href="/documentos/" class="style-scope app-header">Documentos</a>
-                </li><li class="style-scope app-header">
-                  <a href="/membros/" class="style-scope app-header">Membros</a>
-                </li><li class="style-scope app-header">
-                  <a href="/projetos/" class="style-scope app-header">Projetos</a>
-                </li><li class="style-scope app-header">
-                  <a href="/sobre/" class="style-scope app-header">Sobre</a>
-                </li><li class="style-scope app-header">
-                  <a href="/treinamento/" class="style-scope app-header">Treinamento</a>
-                </li>
-        </ul>
-      </nav>
+      <header class="style-scope app-header">
+        <nav class="menu style-scope app-header">
+            <a href="/" class="logo style-scope app-header">
+              <img src="/assets/logo-oficial.png" alt="logo oficial" class="style-scope app-header">
+              <span class="style-scope app-header">FabSoftware</span></a>
+            <ul class="style-scope app-header">
+              <li class="style-scope app-header">
+                      <a href="/documentos/" class="style-scope app-header">Documentos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/membros/" class="style-scope app-header">Equipe</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/projetos/" class="style-scope app-header">Projetos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/sobre/" class="style-scope app-header">Sobre</a>
+                    </li>
+            </ul>
+        </nav>
+      </header>
     </app-header>
     <main class="container">
       

@@ -3,14 +3,14 @@
                         
                           
                           <head>
-                          <link rel="preload" href="/styles/theme.16434084.css" as="style" crossorigin="anonymous"></link>
+                          <link rel="preload" href="/styles/theme.79976053.css" as="style" crossorigin="anonymous"></link>
                         
                           <link rel="preload" href="/styles/lib/bootstrap-reboot.14092910.css" as="style" crossorigin="anonymous"></link>
                         
                         <link rel="modulepreload" href="/router.ee4282c5.js" as="script">
                       
                         <link rel="modulepreload" href="/app.6b1dbc2e.js" as="script">
-                      <!-- Shady DOM styles for app-header --><style>body {transition: opacity ease-in 0.2s; } 
+                      <!-- Shady DOM styles for app-header --><!-- Shady DOM styles for app-team --><!-- Shady DOM styles for app-projects --><style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style>
             
@@ -19,7 +19,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         
         
     
-    <title>Fábrica de Software</title>
+    <title>Projetos</title>
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,23 +33,19 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&amp;display=swap">
 
     <link rel="stylesheet" href="/styles/lib/bootstrap-reboot.14092910.css">
-    <link rel="stylesheet" href="/styles/theme.16434084.css">
+    <link rel="stylesheet" href="/styles/theme.79976053.css">
 
     <script type="module" src="/app.6b1dbc2e.js"></script>
 
     
-
-          
-            <script type="module">import{getMenuData as a}from"/app.6b1dbc2e.js";const e=await a("projetos");document.querySelector(".shelf").innerHTML=e.map((a=>`<div>\n            <h2>${null!=a.label?a.label:a.title}</h2>\n            <img src="${a.data.img}" alt="">\n            <p><a href="${a.route}">Saiba mais..</a>\n              \n            </p>\n          </div>`)).join("")//# sourceMappingURL=1160185624-scratch.2f9d5748.js.map
-</script>
-          
-        
+    
+    
   
           <script type="module" src="/router.ee4282c5.js"></script>
 
           <script>
             window.__greenwood = window.__greenwood || {};
-            window.__greenwood.currentTemplate = "/projetos/";
+            window.__greenwood.currentTemplate = "page";
           </script>
           </head>
         
@@ -61,12 +57,17 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
               
     <app-header>
       <style class="style-scope app-header">
+        header {
+          background-color:black;
+        }
 
         nav.menu {
           display:flex;
-          justify-content: space-around;
+          justify-content: space-between;
           padding: 1rem 0;
-          background-color:black;
+          max-width: 80vw;
+          flex-wrap: wrap;
+          margin: 0 auto;
         }
         nav.menu ul {
           margin:0;
@@ -84,6 +85,13 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         nav.menu a {
           text-decoration: none;
           color:white;
+          display: flex;
+          align-items: center;
+        }
+
+        nav.menu .logo {
+          font-size: 1.25rem;
+          gap:0.4rem;
         }
 
         nav.menu a.active {
@@ -91,59 +99,80 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
           text-decoration: underline;
           font-weight: bold;
         }
+
+        nav.menu img {
+          max-width: 1.5rem;
+        }
+
+        nav.menu .container {
+          max-width: 80vw;
+        }
       </style>
-      <nav class="menu style-scope app-header">
-        <ul class="style-scope app-header">
-          <li class="style-scope app-header">
-                  <a href="/documentos/" class="style-scope app-header">Documentos</a>
-                </li><li class="style-scope app-header">
-                  <a href="/membros/" class="style-scope app-header">Membros</a>
-                </li><li class="style-scope app-header">
-                  <a href="/projetos/" class="active style-scope app-header">Projetos</a>
-                </li><li class="style-scope app-header">
-                  <a href="/sobre/" class="style-scope app-header">Sobre</a>
-                </li><li class="style-scope app-header">
-                  <a href="/treinamento/" class="style-scope app-header">Treinamento</a>
-                </li>
-        </ul>
-      </nav>
+      <header class="style-scope app-header">
+        <nav class="menu style-scope app-header">
+            <a href="/" class="logo style-scope app-header">
+              <img src="/assets/logo-oficial.png" alt="logo oficial" class="style-scope app-header">
+              <span class="style-scope app-header">FabSoftware</span></a>
+            <ul class="style-scope app-header">
+              <li class="style-scope app-header">
+                      <a href="/documentos/" class="style-scope app-header">Documentos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/membros/" class="style-scope app-header">Equipe</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/projetos/" class="active style-scope app-header">Projetos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/sobre/" class="style-scope app-header">Sobre</a>
+                    </li>
+            </ul>
+        </nav>
+      </header>
     </app-header>
     <main class="container">
       
-  <h1>Todos os projetos</h1>
-  <nav>
-    <ul class="shelf"><div>
-            <h2>Consultorio Na Rua</h2>
-            <img src="/assets/projetos/logo-consultorio-na-rua.jpg" alt="">
-            <p><a href="/projetos/consultorio-na-rua/">Saiba mais..</a>
+  <section>
+    <h1>Todos os membros</h1>
+<app-projects>
+        <style class="style-scope app-projects">
+          img {
+            max-width:100%;
+          }
+        </style>
+  
+        <nav class="style-scope app-projects">
+          <ul class="shelf style-scope app-projects"><div class="style-scope app-projects">
+            <h2 class="style-scope app-projects">Consultorio Na Rua</h2>
+            <img src="/assets/projetos/logo-consultorio-na-rua.jpg" alt="" class="style-scope app-projects">
+            <p class="style-scope app-projects"><a href="/projetos/consultorio-na-rua/" class="style-scope app-projects">Saiba mais..</a>
               
             </p>
-          </div><div>
-            <h2>Show De Fisica</h2>
-            <img src="/assets/projetos/logo-show-de-fisica.jpg" alt="">
-            <p><a href="/projetos/show-de-fisica/">Saiba mais..</a>
+          </div><div class="style-scope app-projects">
+            <h2 class="style-scope app-projects">Show De Fisica</h2>
+            <img src="/assets/projetos/logo-show-de-fisica.jpg" alt="" class="style-scope app-projects">
+            <p class="style-scope app-projects"><a href="/projetos/show-de-fisica/" class="style-scope app-projects">Saiba mais..</a>
               
             </p>
-          </div><div>
-            <h2>Sis Gerenciamento De Eventos</h2>
-            <img src="/assets/projetos/logo-sge.png" alt="">
-            <p><a href="/projetos/sis-gerenciamento-de-eventos/">Saiba mais..</a>
+          </div><div class="style-scope app-projects">
+            <h2 class="style-scope app-projects">Sis Gerenciamento De Eventos</h2>
+            <img src="/assets/projetos/logo-sge.png" alt="" class="style-scope app-projects">
+            <p class="style-scope app-projects"><a href="/projetos/sis-gerenciamento-de-eventos/" class="style-scope app-projects">Saiba mais..</a>
               
             </p>
-          </div><div>
-            <h2>Site Espweb</h2>
-            <img src="/assets/projetos/logo-espweb.png" alt="">
-            <p><a href="/projetos/site-espweb/">Saiba mais..</a>
+          </div><div class="style-scope app-projects">
+            <h2 class="style-scope app-projects">Site Espweb</h2>
+            <img src="/assets/projetos/logo-espweb.png" alt="" class="style-scope app-projects">
+            <p class="style-scope app-projects"><a href="/projetos/site-espweb/" class="style-scope app-projects">Saiba mais..</a>
               
             </p>
-          </div><div>
-            <h2>Svsa Manual</h2>
-            <img src="/assets/projetos/logo-svsa.png" alt="">
-            <p><a href="/projetos/svsa-manual/">Saiba mais..</a>
+          </div><div class="style-scope app-projects">
+            <h2 class="style-scope app-projects">Svsa Manual</h2>
+            <img src="/assets/projetos/logo-svsa.png" alt="" class="style-scope app-projects">
+            <p class="style-scope app-projects"><a href="/projetos/svsa-manual/" class="style-scope app-projects">Saiba mais..</a>
               
             </p>
           </div></ul>
-  </nav>
+        </nav>
+      </app-projects>
+  </section>
 
     </main>
     <footer>Fábrica de Software IFSP Campus Itapetininga</footer>
@@ -160,10 +189,16 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
               <greenwood-route data-route="/documentos/calendario/" data-template="page" data-key="/_routes/documentos/calendario/index.html"></greenwood-route>
             
 
+              <greenwood-route data-route="/documentos/" data-template="page" data-key="/_routes/documentos/index.html"></greenwood-route>
+            
+
               <greenwood-route data-route="/documentos/reunioes/" data-template="page" data-key="/_routes/documentos/reunioes/index.html"></greenwood-route>
             
 
-              <greenwood-route data-route="/documentos/" data-template="/documentos/" data-key="/_routes/documentos/index.html"></greenwood-route>
+              <greenwood-route data-route="/documentos/tutoriais/github/" data-template="page" data-key="/_routes/documentos/tutoriais/github/index.html"></greenwood-route>
+            
+
+              <greenwood-route data-route="/documentos/tutoriais/manual-server/" data-template="page" data-key="/_routes/documentos/tutoriais/manual-server/index.html"></greenwood-route>
             
 
               <greenwood-route data-route="/" data-template="/" data-key="/_routes/index.html"></greenwood-route>
@@ -185,6 +220,9 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             
 
               <greenwood-route data-route="/membros/gabriel-machado/" data-template="page" data-key="/_routes/membros/gabriel-machado/index.html"></greenwood-route>
+            
+
+              <greenwood-route data-route="/membros/" data-template="page" data-key="/_routes/membros/index.html"></greenwood-route>
             
 
               <greenwood-route data-route="/membros/joao-correa/" data-template="page" data-key="/_routes/membros/joao-correa/index.html"></greenwood-route>
@@ -229,10 +267,10 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
               <greenwood-route data-route="/membros/vitor-aquino/" data-template="page" data-key="/_routes/membros/vitor-aquino/index.html"></greenwood-route>
             
 
-              <greenwood-route data-route="/membros/" data-template="/membros/" data-key="/_routes/membros/index.html"></greenwood-route>
+              <greenwood-route data-route="/projetos/consultorio-na-rua/" data-template="page" data-key="/_routes/projetos/consultorio-na-rua/index.html"></greenwood-route>
             
 
-              <greenwood-route data-route="/projetos/consultorio-na-rua/" data-template="page" data-key="/_routes/projetos/consultorio-na-rua/index.html"></greenwood-route>
+              <greenwood-route data-route="/projetos/" data-template="page" data-key="/_routes/projetos/index.html"></greenwood-route>
             
 
               <greenwood-route data-route="/projetos/show-de-fisica/" data-template="page" data-key="/_routes/projetos/show-de-fisica/index.html"></greenwood-route>
@@ -247,34 +285,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
               <greenwood-route data-route="/projetos/svsa-manual/" data-template="page" data-key="/_routes/projetos/svsa-manual/index.html"></greenwood-route>
             
 
-              <greenwood-route data-route="/projetos/" data-template="/projetos/" data-key="/_routes/projetos/index.html"></greenwood-route>
-            
-
-              <greenwood-route data-route="/sobre/" data-template="/sobre/" data-key="/_routes/sobre/index.html"></greenwood-route>
-            
-
-              <greenwood-route data-route="/treinamento/bootstrap/" data-template="page" data-key="/_routes/treinamento/bootstrap/index.html"></greenwood-route>
-            
-
-              <greenwood-route data-route="/treinamento/figma/" data-template="page" data-key="/_routes/treinamento/figma/index.html"></greenwood-route>
-            
-
-              <greenwood-route data-route="/treinamento/github/" data-template="page" data-key="/_routes/treinamento/github/index.html"></greenwood-route>
-            
-
-              <greenwood-route data-route="/treinamento/laravel/" data-template="page" data-key="/_routes/treinamento/laravel/index.html"></greenwood-route>
-            
-
-              <greenwood-route data-route="/treinamento/manual-server/" data-template="page" data-key="/_routes/treinamento/manual-server/index.html"></greenwood-route>
-            
-
-              <greenwood-route data-route="/treinamento/nuxt/" data-template="page" data-key="/_routes/treinamento/nuxt/index.html"></greenwood-route>
-            
-
-              <greenwood-route data-route="/treinamento/vue/" data-template="page" data-key="/_routes/treinamento/vue/index.html"></greenwood-route>
-            
-
-              <greenwood-route data-route="/treinamento/" data-template="/treinamento/" data-key="/_routes/treinamento/index.html"></greenwood-route>
+              <greenwood-route data-route="/sobre/" data-template="page" data-key="/_routes/sobre/index.html"></greenwood-route>
             
           </body>
         </html>
