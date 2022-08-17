@@ -38,8 +38,8 @@ class ProjectsComponent extends HTMLElement {
           }
         </style>
   
-        <nav>
-          <ul class="shelf">Loading...</ul>
+        <nav class="shelf">
+          Loading...
         </nav>
       `;
   }

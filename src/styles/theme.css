@@ -19,3 +19,35 @@ footer {
 img {
   max-width: 100%;
 }
+
+.bg-index {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)), url(https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress%20cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 60px);
+  text-align: center;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family:  ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+  padding-bottom: 60px;
+}
+
+.bg-index img {
+  max-width: 13rem;
+  margin-bottom: 2rem;
+}
+
+.bg-index h1 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.bg-index h2 {
+  color: #fd624c;
+  font-weight: 700;
+}

@@ -7,8 +7,9 @@ template: "page"
 
 ## Agosto
 
-- 24 - 
-- 17 - Apresentação Vitor
+- 31 - Avaliação Bimestral
+- 24 - Apresentação Vitor
+- 17 - Reunião SVSA
 - 10 - Apresentação Vininicus
 - 03 - Retomada presencial
 

@@ -58,7 +58,6 @@ class HeaderComponent extends HTMLElement {
         nav.menu a.active {
           color: #FD624C;
           text-decoration: underline;
-          font-weight: bold;
         }
 
         nav.menu img {
@@ -84,6 +83,7 @@ class HeaderComponent extends HTMLElement {
                     </li>`;
                 })
                 .join("")}
+                <li><a href="https://github.com/fabsoftwareitp" target="_blank">GitHub</a></li>
             </ul>
         </nav>
       </header>

@@ -7,10 +7,18 @@ template: "page"
 
 ## Agosto 
 
+### Semana 33 (17/08)
+A reunião de acompanhamento não aconteceu devido a outra reunião da equipe SVSA. Os membros da equipe SVSA (Maria e João) juntamente com o professor Danilo se encontraram na Secretaria de Promoção Social para uma reunião com os gestores e apresentação das novas funcionalidades do sistema SVSA.
+
+### Semana 32 (10/08)
+Ausências: nenhuma.
+
+Apresentação do Vininicus sobre TailwindCSS seguida de discussão. Logo após acompanhamento das atividades e redistribuição de tarefas.
+
 ### Semana 31 (03/08)
 Ausências: Ana
 
-Retomada presencial e alinhamento das atividades de cada um dos membros. Todos (menos a Ana que não veio) estão com issues atribuidas. 
+Retomada presencial e alinhamento das atividades de cada um dos membros. Todos (menos a Ana que não veio) estão com issues atribuidas. Foi pedido que todos encontrassem alguma atividade para si, porém ninguem fez.
 
 ## Julho
 
@@ -19,12 +27,12 @@ Retomada presencial e alinhamento das atividades de cada um dos membros. Todos (
 ### Semana 28 (12/07)
 Ausências: Vitor, Ana, Rafael e Vitor;
 
-- 
+Acompanhamento no geral.
 
 ### Semana 27 (05/07)
 Ausências: Vitor, Ana (chegou atrasada) e Rafael.
 
-- Apresentação do João sobre Nuxt.js e a nova estrutura do site da fábrica; O Gabriel também mostrou a parte que não conseguiu em sua última apresentação. Logo em seguida foi realizado o acompanhamento e distribuição das tarefas.
+Apresentação do João sobre Nuxt.js e a nova estrutura do site da fábrica; O Gabriel também mostrou a parte que não conseguiu em sua última apresentação. Logo em seguida foi realizado o acompanhamento e distribuição das tarefas.
 
 ## Junho
 
