@@ -3,7 +3,7 @@
                         
                           
                           <head>
-                          <link rel="preload" href="/styles/theme.79976053.css" as="style" crossorigin="anonymous"></link>
+                          <link rel="preload" href="/styles/theme.14215904.css" as="style" crossorigin="anonymous"></link>
                         
                           <link rel="preload" href="/styles/lib/bootstrap-reboot.14092910.css" as="style" crossorigin="anonymous"></link>
                         
@@ -33,7 +33,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&amp;display=swap">
 
     <link rel="stylesheet" href="/styles/lib/bootstrap-reboot.14092910.css">
-    <link rel="stylesheet" href="/styles/theme.79976053.css">
+    <link rel="stylesheet" href="/styles/theme.14215904.css">
 
     <script type="module" src="/app.6b1dbc2e.js"></script>
 
@@ -97,7 +97,6 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         nav.menu a.active {
           color: #FD624C;
           text-decoration: underline;
-          font-weight: bold;
         }
 
         nav.menu img {
@@ -123,21 +122,32 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                     </li><li class="style-scope app-header">
                       <a href="/sobre/" class="style-scope app-header">Sobre</a>
                     </li>
+                <li class="style-scope app-header"><a href="https://github.com/fabsoftwareitp" target="_blank" class="style-scope app-header">GitHub</a></li>
             </ul>
         </nav>
       </header>
     </app-header>
-    <main class="container">
+    <main>
       
-  <h1>Bem vindo</h1>
+  <div class="bg-index">
+    <img src="/assets/logo-oficial.png" alt="logo principal">
+    <h1>Fábrica de Software</h1>
+    <h2>IFSP Itapetininga</h2>
+  </div>
+  <div class="container">
+    <section>
+      <h2>Sobre o projeto</h2>
+      <p>A Fábrica de Software é uma iniciativa liderada pelo Prof. Danilo Bueno, e têm como objetivo o desenvolvimento, a prática e a evolução nos âmbitos da criação de software. Neste sentido, os participantes do projeto podem ter as oportunidades de conhecer diferentes tecnologias, enfrentar desafios reais, trabalhar em equipe, entre outros.</p>
+    </section>
 
-  <h2>Membros</h2>
-  <ul class="membros"><li>
+    <section>
+      <h2>Equipe</h2>
+      <ul class="membros"><li>
             <a href="/membros/ana-julia/">Ana Julia</a>
           </li><li>
             <a href="/membros/andre-augusto/">Andre Augusto</a>
           </li><li>
-            <a href="/membros/danilao/">Danilao</a>
+            <a href="/membros/danilo-bueno/">Danilo Bueno</a>
           </li><li>
             <a href="/membros/gabriel-machado/">Gabriel Machado</a>
           </li><li>
@@ -149,9 +159,11 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
           </li><li>
             <a href="/membros/vitor-aquino/">Vitor Aquino</a>
           </li></ul>
+    </section>
 
-  <h2>Projetos</h2>
-  <ul class="projetos"><li>
+    <section>
+      <h2>Projetos</h2>
+      <ul class="projetos"><li>
             <a href="/projetos/consultorio-na-rua/">Consultorio Na Rua</a>
           </li><li>
             <a href="/projetos/">Index</a>
@@ -164,8 +176,31 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
           </li><li>
             <a href="/projetos/svsa-manual/">Svsa Manual</a>
           </li></ul>
+    </section>
 
-  <script type="module">const t=await fetch("graph.json"),e=await t.json(),l=e.filter((t=>t.route.startsWith("/membros/")&&"ativo"==t.data.status)),o=e.filter((t=>t.route.startsWith("/projetos/")));document.querySelector(".membros").innerHTML=l.map((t=>`<li>\n            <a href="${t.route}">${null!=t.label?t.label:t.title}</a>\n          </li>`)).join(""),document.querySelector(".projetos").innerHTML=o.map((t=>`<li>\n            <a href="${t.route}">${null!=t.label?t.label:t.title}</a>\n          </li>`)).join("")//# sourceMappingURL=234530937-scratch.f83aa3ae.js.map
+    <section>
+      <h2>Depoimentos</h2>
+      <div>
+        <iframe src="https://www.youtube.com/embed/B1bys3rAuL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        <p>Rafael Damiam</p>
+      </div>
+
+      <div>
+        <iframe src="https://www.youtube.com/embed/sDcW1keRIDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        <p>Vinicius Zevarex</p>
+      </div>
+      <div>
+        <iframe src="https://www.youtube.com/embed/D054k8JNOm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        <p>João Moraiz</p>
+      </div>
+      <div>
+        <iframe src="https://www.youtube.com/embed/aw3LTiobEYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        <p>Lucas Cavalherie</p>
+      </div>
+    </section>
+  </div>
+
+  <script type="module">const t=await fetch("graph.json"),e=await t.json(),l=e.filter((t=>t.route.startsWith("/membros/")&&"ativo"==t.data.status)),o=e.filter((t=>t.route.startsWith("/projetos/")));document.querySelector(".membros").innerHTML=l.map((t=>`<li>\n            <a href="${t.route}">${null!=t.label?t.label:t.title}</a>\n          </li>`)).join(""),document.querySelector(".projetos").innerHTML=o.map((t=>`<li>\n            <a href="${t.route}">${null!=t.label?t.label:t.title}</a>\n          </li>`)).join("")//# sourceMappingURL=69683719-scratch.f0d91dd5.js.map
 </script>
 
     </main>
@@ -210,7 +245,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
               <greenwood-route data-route="/membros/carlos-silva/" data-template="page" data-key="/_routes/membros/carlos-silva/index.html"></greenwood-route>
             
 
-              <greenwood-route data-route="/membros/danilao/" data-template="page" data-key="/_routes/membros/danilao/index.html"></greenwood-route>
+              <greenwood-route data-route="/membros/danilo-bueno/" data-template="page" data-key="/_routes/membros/danilo-bueno/index.html"></greenwood-route>
             
 
               <greenwood-route data-route="/membros/gabriel-machado/" data-template="page" data-key="/_routes/membros/gabriel-machado/index.html"></greenwood-route>
