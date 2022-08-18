@@ -7,6 +7,7 @@ title: 'Documentos'
 - [Avaliações](avaliacoes/)
 - [Calendário](calendario/)
 - [Reuniões](reunioes/)
+- [Quadro](https://github.com/orgs/fabsoftwareitp/projects/2)
 
 ## Tutoriais
 - [Manual Server](tutoriais/manual-server/)
