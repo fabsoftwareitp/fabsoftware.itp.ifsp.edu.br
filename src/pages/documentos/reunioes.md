@@ -7,6 +7,11 @@ template: "page"
 
 ## Agosto 
 
+### Semana 34 (24/08)
+Ausências: Ana
+
+Os colaboradores Gabriel e João trouxeram a necessidade da professora Eline para a administração do evento GeekIF. Os alunos já estão trabalhando na criação da landing page do evento e então sugeriram o SGE para aministração. Nesse sentido todos se comprometeram a dar um foco maior no SGE para entregar a tempo do evento. O evento acontecerá dia 24 de Setembro.
+
 ### Semana 33 (17/08)
 A reunião de acompanhamento não aconteceu devido a outra reunião da equipe SVSA. Os membros da equipe SVSA (Maria e João) juntamente com o professor Danilo se encontraram na Secretaria de Promoção Social para uma reunião com os gestores e apresentação das novas funcionalidades do sistema SVSA.
 
