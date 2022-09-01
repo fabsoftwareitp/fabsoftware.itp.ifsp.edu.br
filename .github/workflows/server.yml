@@ -1,0 +1,34 @@
+name: 🚀 Deploy website on push to main server
+
+on:
+  push:
+    branches:
+      - dev
+      - main
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.3.2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+    - name: Install NPM Dependencies
+      run: npm install
+
+    - name: Build website
+      run: npm run generate
+
+    - name: Copy repository contents via scp
+      uses: appleboy/scp-action@master
+      env:
+        HOST: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ secrets.PORT }}
+        KEY: ${{ secrets.SSHKEY }}
+      with:
+        source: "./public/*"
+        target: "/var/www/sitefabrica"
+        strip_components: 1
