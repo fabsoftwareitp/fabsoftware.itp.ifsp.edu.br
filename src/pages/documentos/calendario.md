@@ -5,10 +5,18 @@ template: "page"
 
 # Calendário 📅
 
-## Agosto
+## Setembro
+- 28
+- 21
+- 14
+- 08 - Reunião
+- 07 - Feriado
 
-- 31 - Avaliação Bimestral
-- 24 - Apresentação Vitor
+## Agosto
+- 31 - Apresentação Vitor
+- 24 - Reunião de alinhamento SGE
+- ~~31 - Avaliação Bimestral~~
+- ~~24 - Apresentação Vitor~~
 - 17 - Reunião SVSA
 - 10 - Apresentação Vininicus
 - 03 - Retomada presencial
