@@ -19,7 +19,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         
         
     
-    <title>Fluxo de Git e Github da Fábrica</title>
+    <title>Fluxo de trabalho da Fábrica</title>
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -130,35 +130,33 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <main>
       
   <section class="container">
-    <h1>Material de Treinamento - Git e Github</h1>
-<p>Esta página contém materiais de apoio para o aprendizado da tecnologia Git e do sistema Github, usados em todos os projetos da Fábrica, e poderá sofrer alterações no futuro. Participantes da Fábrica de Software podem adicionar material.</p>
-<h2>Tutorial - Como clonar seu repositório Github</h2>
-<p><strong>AVISO:</strong> Você precisará ter o Git instalado em sua máquina. Para download do Git, <a href="https://git-scm.com/downloads">clique aqui</a>. Será preciso também uma conta no Github, que você pode fazer clicando <a href="https://github.com">aqui</a>. Irei usar o VS Code para o tutorial.</p>
-<ol>
-<li>Abra o terminal e vá para a pasta em que se deseja trabalhar usando o comando <code>cd [caminho da pasta]</code>;</li>
-<li>Digite <code>git init</code> para inicializar a pasta <code>.git</code>, que funcionará como meio de armazenar os arquivos para o <em>commit</em>;</li>
-<li>Após isso, digite <code>git clone [url do repositório a ser clonado]</code> para baixar uma cópia do projeto para sua máquina, e tendo baixado-a, digite <code>cd [nome do repositório clonado]</code> para acessar a nova pasta. OBS.: Para pegar o link do repositório, basta entrar nele pelo Github, clicar no botão verde que diz <strong>Code</strong>  e copiar a URL que aparecer;</li>
-<li>Digite os comandos <code>git config --global user.name "[nome do usuário]"</code> e <code>git config --global user.email "[email do usuário]"</code> para se conectar à sua conta do Github, para assim realizar seu <em>commits</em>;</li>
-<li>Para realizar <em>commits</em> por uma <em>branch</em> específica, é preciso entrar nela pelo terminal, usando o comando <code>git checkout [nome da *branch*]</code>;</li>
-<li>Após realizar as alterações desejadas nos arquivos, é preciso fazer o <em>commit</em> das mudanças. Para isso, clique no terceiro ícone da barra lateral do VS Code, dê uma descrição para o <em>commit</em> no campo de escrever e clique no botão com um símbolo de visto. Após alguns momentos, clique em <strong>Sincronizar alterações</strong>;</li>
-<li>Para requisitar o <em>merge</em>, isto é, o envio dos arquivos de sua <em>branch</em> para outra <em>branch</em> principal, é preciso fazer um <em>pull request</em>. Para isso, clique na aba <strong>Pull requests</strong> no Github e crie um novo pull request com base na <em>branch</em> para qual você deseja enviar os arquivos, comparando com sua própria <em>branch</em>.</li>
-</ol>
-<h3>-- Alguns comandos importantes para versionamento de código com o Git --</h3>
-<ul>
-<li><code>git init</code> ---- Inicializa o Git;</li>
-<li><code>git clone [url]</code> ---- Clona o repositório Github;</li>
-<li><code>git config --global user.name ""</code>//<code>git config --global user.email ""</code> ---- Especifica nome e email do usuário para <em>commits</em>;</li>
-<li><code>git checkout [nome da *branch*]</code> ---- Muda para a <em>branch</em> especificada;</li>
-<li><code>git pull</code> ---- Atualiza os arquivos à sua disposição baseado nas mudanças feitas na <em>branch</em>;</li>
-</ul>
-<h2>Cursos e vídeos</h2>
-<ul>
-<li><a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA">Curso de Git e Github - Curso em Vídeo</a></li>
-</ul>
-<h2>Material escrito e documentação</h2>
-<ul>
-<li><a href="https://git-scm.com/docs">Documentação oficial do Git</a></li>
-</ul>
+    <h1>Fluxo de trabalho da Fábrica</h1>
+<h2>Deploy</h2>
+<p>Publicação da aplicação em <strong>servidores</strong> de staging e produção.</p>
+<h3>Setup para o servidor</h3>
+<p><strong>Essas configurações já estão realizadas no servidor!!</strong></p>
+<p>A estrutura de pastas deve ser criada para que o deploy seja realizado. É importante que as permissões da pasta do usuário estejam corretas para que o acesso seja garantido. Use o comando <code>chown devops:devops /suapasta</code> para trocar o dono das pastas caso necessário.</p>
+<p>Configure o seu <code>.env</code> com as configurações necessárias para o deploy:</p>
+<pre><code>DEPLOY_REPOSITORY=
+DEPLOY_SERVER=
+DEPLOY_PATH= 
+</code></pre>
+<p>A partir desse ponto, use o comando <code>envoy run init</code>. Esse comando irá criar a estrutura necessária de pastas para o controle das releases.</p>
+<p><img src="/assets/tutoriais/deploy-ls-after-init.png" alt="Estrutura depois do init"></p>
+<p>Garanta as permissões necessárias para a pasta storage:
+<code>sudo chown -R $USER:www-data storage/</code></p>
+<p>Configure o arquivo <code>.env</code> do servidor que está na pasta raiz do <code>DEPLOY_PATH</code> configurado. Adicione as informações de conexão com o banco de dados bem como a base de dados a ser utilizada (essa base de dados já deve existir).</p>
+<p>No servidor deve existir a configuração disponibilizando um endereço para a aplicação online. No caso do apache atual, temos um alias apontando pro caminho:</p>
+<p><code>Alias /stag.sge         /var/www/sge/stag/current/public</code></p>
+<p>Caso repositório for publico, pode se usar o ednereço via https. Se o repositório for privado, deve se criar uma chave de deploy no github. Usando o comando <code>cat id_rsa.pub</code> pegue a chave publica e adicione no github como chave de deploy.</p>
+<h3>Deployando</h3>
+<p>Você precisa ter o envoy instalado em sua máquina, caso não tenha instale com o comando: <code>composer global require "laravel/envoy"</code></p>
+<p>Para realizar o deploy, utilize o comando: <code>envoy run deploy</code>. A aplicação irá pedir o seu prontuário e a sua senha para acesso liberar o acesso a internet (necessário para que o servidor possa fazer um pull do repositório). Além disso irá pedir a senha de acesso ao SSH.</p>
+<p>As configurações padrões estão para usar a banch <code>develop</code> como padrão, caso queira fazer deploy de outra branch, use o parametro <code>branch=nome-da-sua-branch-aqui</code>. Exemplo: <code>envoy run deploy --branch=feature123</code>.</p>
+<p>Se tudo ocorrer bem você receberá uma mensagem de <code>Deployment (20220901171117) finished</code> que contém o número do deploy realizado. Qualquer problema no deploy você deve conferir e resolver.</p>
+<h3>Promoção para prod</h3>
+<p>Após a versão ser testada nos ambientes de staging, a aplicação deve ser promovida para o servidor de produção. </p>
+<p>Essa operação é importante e deve se tomar cuidados ao realizá-la.</p>
   </section>
 
     </main>

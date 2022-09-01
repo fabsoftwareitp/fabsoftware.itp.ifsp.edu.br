@@ -1,0 +1,109 @@
+
+    <app-header>
+      <style class="style-scope app-header">
+        header {
+          background-color:black;
+        }
+
+        nav.menu {
+          display:flex;
+          justify-content: space-between;
+          padding: 1rem 0;
+          max-width: 80vw;
+          flex-wrap: wrap;
+          margin: 0 auto;
+        }
+        nav.menu ul {
+          margin:0;
+          padding:0;
+          list-style-type:none;
+          display:flex;
+          justify-content: space-between;
+        }
+
+        nav.menu ul li {
+          box-sizing: border-box;
+          padding: 0.2rem 0.5rem;
+        }
+
+        nav.menu a {
+          text-decoration: none;
+          color:white;
+          display: flex;
+          align-items: center;
+        }
+
+        nav.menu .logo {
+          font-size: 1.25rem;
+          gap:0.4rem;
+        }
+
+        nav.menu a.active {
+          color: #FD624C;
+          text-decoration: underline;
+        }
+
+        nav.menu img {
+          max-width: 1.5rem;
+        }
+
+        nav.menu .container {
+          max-width: 80vw;
+        }
+      </style>
+      <header class="style-scope app-header">
+        <nav class="menu style-scope app-header">
+            <a href="/" class="logo style-scope app-header">
+              <img src="/assets/logo-oficial.png" alt="logo oficial" class="style-scope app-header">
+              <span class="style-scope app-header">FabSoftware</span></a>
+            <ul class="style-scope app-header">
+              <li class="style-scope app-header">
+                      <a href="/documentos/" class="active style-scope app-header">Documentos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/membros/" class="style-scope app-header">Equipe</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/projetos/" class="style-scope app-header">Projetos</a>
+                    </li><li class="style-scope app-header">
+                      <a href="/sobre/" class="style-scope app-header">Sobre</a>
+                    </li>
+                <li class="style-scope app-header"><a href="https://github.com/fabsoftwareitp" target="_blank" class="style-scope app-header">GitHub</a></li>
+            </ul>
+        </nav>
+      </header>
+    </app-header>
+    <main>
+      
+  <section class="container">
+    <h1>Fluxo de trabalho da Fábrica</h1>
+<h2>Deploy</h2>
+<p>Publicação da aplicação em <strong>servidores</strong> de staging e produção.</p>
+<h3>Setup para o servidor</h3>
+<p><strong>Essas configurações já estão realizadas no servidor!!</strong></p>
+<p>A estrutura de pastas deve ser criada para que o deploy seja realizado. É importante que as permissões da pasta do usuário estejam corretas para que o acesso seja garantido. Use o comando <code>chown devops:devops /suapasta</code> para trocar o dono das pastas caso necessário.</p>
+<p>Configure o seu <code>.env</code> com as configurações necessárias para o deploy:</p>
+<pre><code>DEPLOY_REPOSITORY=
+DEPLOY_SERVER=
+DEPLOY_PATH= 
+</code></pre>
+<p>A partir desse ponto, use o comando <code>envoy run init</code>. Esse comando irá criar a estrutura necessária de pastas para o controle das releases.</p>
+<p><img src="/assets/tutoriais/deploy-ls-after-init.png" alt="Estrutura depois do init"></p>
+<p>Garanta as permissões necessárias para a pasta storage:
+<code>sudo chown -R $USER:www-data storage/</code></p>
+<p>Configure o arquivo <code>.env</code> do servidor que está na pasta raiz do <code>DEPLOY_PATH</code> configurado. Adicione as informações de conexão com o banco de dados bem como a base de dados a ser utilizada (essa base de dados já deve existir).</p>
+<p>No servidor deve existir a configuração disponibilizando um endereço para a aplicação online. No caso do apache atual, temos um alias apontando pro caminho:</p>
+<p><code>Alias /stag.sge         /var/www/sge/stag/current/public</code></p>
+<p>Caso repositório for publico, pode se usar o ednereço via https. Se o repositório for privado, deve se criar uma chave de deploy no github. Usando o comando <code>cat id_rsa.pub</code> pegue a chave publica e adicione no github como chave de deploy.</p>
+<h3>Deployando</h3>
+<p>Você precisa ter o envoy instalado em sua máquina, caso não tenha instale com o comando: <code>composer global require "laravel/envoy"</code></p>
+<p>Para realizar o deploy, utilize o comando: <code>envoy run deploy</code>. A aplicação irá pedir o seu prontuário e a sua senha para acesso liberar o acesso a internet (necessário para que o servidor possa fazer um pull do repositório). Além disso irá pedir a senha de acesso ao SSH.</p>
+<p>As configurações padrões estão para usar a banch <code>develop</code> como padrão, caso queira fazer deploy de outra branch, use o parametro <code>branch=nome-da-sua-branch-aqui</code>. Exemplo: <code>envoy run deploy --branch=feature123</code>.</p>
+<p>Se tudo ocorrer bem você receberá uma mensagem de <code>Deployment (20220901171117) finished</code> que contém o número do deploy realizado. Qualquer problema no deploy você deve conferir e resolver.</p>
+<h3>Promoção para prod</h3>
+<p>Após a versão ser testada nos ambientes de staging, a aplicação deve ser promovida para o servidor de produção. </p>
+<p>Essa operação é importante e deve se tomar cuidados ao realizá-la.</p>
+  </section>
+
+    </main>
+    <footer>Fábrica de Software IFSP Campus Itapetininga</footer>
+  
+
