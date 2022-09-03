@@ -51,3 +51,42 @@ img {
   color: #fd624c;
   font-weight: 700;
 }
+
+.main section {
+  margin-bottom: 4rem;
+}
+
+.membros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 4rem;
+  text-align: center;
+}
+
+.membro {
+  max-width: 15rem;
+}
+
+.membro img {
+  display: inline-block;
+  border-radius: 100%;
+  margin-bottom: 1rem;
+}
+
+.membro a {
+  display: inline-block;
+  font-size: 1.5rem;
+  color:#fd624c;
+  font-weight: 600;
+}
+
+.membro a:hover {
+  font-weight: bold;
+}
+
+.depoimentos-videos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

@@ -4,6 +4,7 @@ template: "page"
 status: ativo
 name: "Vitor Gabriel de Aquino"
 img: https://avatars.githubusercontent.com/u/95290697?v=4
+position: "Tec. Informática (2º ano)"
 ---
 
 # Vitor Gabriel de Aquino

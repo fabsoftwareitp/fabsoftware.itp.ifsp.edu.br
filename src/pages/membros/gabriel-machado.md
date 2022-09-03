@@ -4,6 +4,7 @@ template: "page"
 status: ativo
 name: "Gabriel Machado"
 img: https://avatars.githubusercontent.com/u/103156444?v=4
+position: "Tec. Informática (2º ano)"
 ---
 
 # Gabriel Machado
