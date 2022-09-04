@@ -3,7 +3,7 @@
                         
                           
                           <head>
-                          <link rel="preload" href="/styles/theme.57515411.css" as="style" crossorigin="anonymous"></link>
+                          <link rel="preload" href="/styles/theme.20924013.css" as="style" crossorigin="anonymous"></link>
                         
                           <link rel="preload" href="/styles/lib/bootstrap-reboot.14092910.css" as="style" crossorigin="anonymous"></link>
                         
@@ -33,7 +33,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&amp;display=swap">
 
     <link rel="stylesheet" href="/styles/lib/bootstrap-reboot.14092910.css">
-    <link rel="stylesheet" href="/styles/theme.57515411.css">
+    <link rel="stylesheet" href="/styles/theme.20924013.css">
 
     <script type="module" src="/app.6b1dbc2e.js"></script>
 
@@ -222,9 +222,8 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 
     <section>
       <h2>Projetos</h2>
-      <ul class="projetos"><li>
-            <a href="/projetos/">Projetos</a>
-          </li></ul>
+      <p>A Fábrica de Software possui mais de <a href="/projetos/">10 projetos</a> entre finalizados e em desenvolvimento desde a sua fundação. Dentre os projetos, temos internos para o próprio campus, como o <a href="/projetos/#sge">Sistema de Gerênciamento de Eventos (SGE)</a> e também externos em parceria com a Prefeitura Municipal de Itapetininga em projetos como o <a href="/projetos/#svsa">SVSA</a> e <a href="/projetos/#conrua">Consultório na Rua</a>.</p>
+      <ul class="projetos"></ul>
     </section>
 
     <section>
@@ -251,7 +250,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     </section>
   </div>
 
-  <script type="module">const t=await fetch("graph.json"),a=await t.json(),e=a.filter((t=>t.route.startsWith("/membros/")&&"ativo"==t.data.status)),l=a.filter((t=>t.route.startsWith("/projetos/")));document.querySelector(".membros").innerHTML=e.map((t=>`<div class="membro">\n            <a href="${t.route}">\n              <img src="${t.data.img}" alt="${t.title}">\n              <span>${null!=t.label?t.label:t.title}</span>\n            </a>\n            <small>${t.data.position}</small>\n          </div class="membro">`)).join(""),document.querySelector(".projetos").innerHTML=l.map((t=>`<li>\n            <a href="${t.route}">${null!=t.label?t.label:t.title}</a>\n          </li>`)).join("")//# sourceMappingURL=818940642-scratch.d9bb89c8.js.map
+  <script type="module">const a=await fetch("graph.json"),t=(await a.json()).filter((a=>a.route.startsWith("/membros/")&&"ativo"==a.data.status));document.querySelector(".membros").innerHTML=t.map((a=>`<div class="membro">\n            <a href="${a.route}">\n              <img src="${a.data.img}" alt="${a.title}">\n              <span>${null!=a.label?a.label:a.title}</span>\n            </a>\n            <small>${a.data.position}</small>\n          </div class="membro">`)).join("")//# sourceMappingURL=2090538288-scratch.b60e2f8c.js.map
 </script>
 
     </main>
