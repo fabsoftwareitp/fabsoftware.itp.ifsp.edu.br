@@ -32,6 +32,7 @@
 
     <section>
       <h2>Projetos</h2>
+      <p>A Fábrica de Software possui mais de <a href="/projetos/">10 projetos</a> entre finalizados e em desenvolvimento desde a sua fundação. Dentre os projetos, temos internos para o próprio campus, como o <a href="/projetos/#sge">Sistema de Gerênciamento de Eventos (SGE)</a> e também externos em parceria com a Prefeitura Municipal de Itapetininga em projetos como o <a href="/projetos/#svsa">SVSA</a> e <a href="/projetos/#conrua">Consultório na Rua</a>.</p>
       <ul class="projetos"></ul>
     </section>
 
@@ -63,7 +64,6 @@
     const getGraph = await fetch("graph.json");
     const response = await getGraph.json();
     const membros = response.filter((e) => e.route.startsWith("/membros/") && e.data.status == "ativo");
-    const projetos = response.filter((e) => e.route.startsWith("/projetos/"));
 
     document.querySelector(".membros").innerHTML = membros
       .map(
@@ -75,15 +75,6 @@
             </a>
             <small>${item.data.position}</small>
           </div class="membro">`
-      )
-      .join("");
-
-    document.querySelector(".projetos").innerHTML = projetos
-      .map(
-        (item) =>
-          `<li>
-            <a href="${item.route}">${item.label != null ? item.label : item.title}</a>
-          </li>`
       )
       .join("");
   </script>
