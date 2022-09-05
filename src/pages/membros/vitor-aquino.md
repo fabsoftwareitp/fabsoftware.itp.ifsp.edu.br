@@ -36,3 +36,30 @@ total: **13,5 horas**
 - 28/06 - 1 Hora - Ajustes finais no manual do WebServer
 
 total: **4 horas**
+
+### Julho
+***semana 03/07 - 09/07***
+
+Produção do Relatório do Mês de Junho.
+
+- Link do PR: https://github.com/fabsoftwareitp/sitefabrica-jig/pull/73
+
+***semanas 10/07 - 30/07***
+
+Realização de uma busca/pesquisa sobre sistemas operacionais de virtualização gratuitos/open source e sobre a virtualização em si.
+
+- Link da issue: https://github.com/fabsoftwareitp/fabsoftwareitp.github.io/issues/4
+
+***totais***
+- total de PRs incorporados ao sistema: 2
+- total de horas no mês: 10 horas
+
+### Agosto
+***mês inteiro***
+
+Desenvolvimento do protótipo de um jogo similar a "space Invaders" com a linguagem Javascript, onde o jogador move a nave por meio do acelerômetro, sensor presente na grande maioria dos smarthphones, e atira com o toque na tela.
+
+- Link da issue: https://github.com/fabsoftwareitp/fabsoftwareitp.github.io/issues/1
+
+***totais***
+- total de horas no mês: 22 horas
