@@ -9,11 +9,11 @@ template: "page"
 - 28
 - 21
 - 14
-- 08 - Reunião
+- 08 - Reunião de alinhamento
 - 07 - Feriado
 
 ## Agosto
-- 31 - Apresentação Vitor
+- ~~31 - Apresentação Vitor~~ Foi adiada
 - 24 - Reunião de alinhamento SGE
 - ~~31 - Avaliação Bimestral~~
 - ~~24 - Apresentação Vitor~~

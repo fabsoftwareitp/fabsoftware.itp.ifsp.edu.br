@@ -7,9 +7,15 @@ template: "page"
 
 ## Setembro 
 
+### Semana 35 (08/09)
+Ausências: Ana, Vitor, Vininicus, João;
+
+Reuniram-se na Fábrica o professor Danilo juntamente com os alunos Gabriel, Andre e Rafael. Resolvemos algumas pendências no consultório na rua arrumando os arquivos de rota, resolvemos conflitos dos PRs abertos e também testamos e configuramos o deploy automático.
+
 ## Agosto 
 
 ### Semana 35 (31/08)
+Nesta semana era pra acontecer a apresentação do Vitor sobre o seu trabalho com o JavaScript porém ele acabou chegando atrasado e não foi possível apresentar. O Professor Danilo teve que se ausentar as 15:00 pois tinha reunião do curso Integrado em Inforática. Foram repassados apenas as issues de cada um.
 
 ### Semana 34 (24/08)
 Ausências: Ana

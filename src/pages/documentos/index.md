@@ -11,6 +11,7 @@ title: 'Documentos'
 - [Modelos](modelos/relatorio/)
 
 ## Tutoriais
+- [Como fazer deploy da aplicação](tutoriais/deploy/)
 - [Manual Server](tutoriais/manual-server/)
 - [Git e GitHub da Fábrica](tutoriais/github/)
 

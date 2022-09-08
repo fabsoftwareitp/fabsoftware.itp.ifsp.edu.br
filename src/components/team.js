@@ -29,6 +29,7 @@ class TeamComponent extends HTMLElement {
         <nav>
           <ul class="shelf">Loading...</ul>
         </nav>
+        
       `;
   }
 }
