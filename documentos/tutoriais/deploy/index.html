@@ -19,7 +19,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         
         
     
-    <title>Avaliações</title>
+    <title>Como fazer deploy das aplicações</title>
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -130,46 +130,28 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <main>
       
   <section class="container">
-    <h1>Avaliações 📅</h1>
-<p>A avaliação tem como objetivo  proporcionar um feedback para o colaborador sobre como está seu desempenho e evolução no projeto para que o mesmo possa avaliar seu desempenho e buscar melhorias. O resultado da avaliação é baseado em um índice com cinco níveis, sendo eles: acima do esperado; pouco acima do esperado; dentro do esperado; pouco abaixo do esperado e abaixo do esperado. O índice serve para que o colaborador se situe e possa melhorar sua posição para a próxima avaliação.</p>
-<h2>Desligamento do projeto</h2>
-<p>O desligamento do colaborador no projeto pode acontecer caso o índice de desempenho esteja abaixo do nível dentro do esperado em mais de uma avaliação e/ou tenha menos de 75% de presença nas atividades presenciais durante um mês.</p>
-<h2>Avaliação Bimestral (de 25/04 a 21/06)</h2>
-<h3>Ana Julia</h3>
-<pre><code>- posição: junior I
-- perfil:  front-end / ux
-- desempenho: abaixo do esperado
-</code></pre>
-<h3>Andre Augusto</h3>
-<pre><code>- posição: junior II
-- perfil: back-end
-- desempenho: dentro do esperado
-</code></pre>
-<h3>Gabriel Machado</h3>
-<pre><code>- posição: junior I
-- perfil: back-end
-- desempenho: pouco abaixo do esperado
-</code></pre>
-<h3>João Correa</h3>
-<pre><code>- posição: junior I
-- perfil: front-end
-- desempenho: acima do esperado
-</code></pre>
-<h3>Rafael Alexandre</h3>
-<pre><code>- posição: junior II
-- perfil: back-end
-- desempenho: dentro do esperado
-</code></pre>
-<h3>Vinicius Manoel</h3>
-<pre><code>- posição: junior I
-- perfil: n/a
-- desempenho: abaixo do esperado;
-</code></pre>
-<h3>Vitor Aquino</h3>
-<pre><code>- posição: junior I
-- perfil: n/a
-- desempenho: dentro do esperado;  
-</code></pre>
+    <h1>Como fazer deploy das aplicações</h1>
+<p>Antes de fazer seu PR, teste as suas alterações no ambiente de produção. Para isso siga os passos abaixo:</p>
+<ol>
+<li>
+<p>Verifique se a sua branch e todas a alterções que você gostaria de verificar já estão sincronizadas com o github. Ou seja, você deve ter enviado todo o código da sua branch para o repositório remoto no github.</p>
+</li>
+<li>
+<p>Verifique se o projeto que você está já está instalado o envoy. Rode o comando <code>php vendor/bin/envoy</code>. Caso não tenha o envoy instalado instale ele no projeto usando o <code>composer require laravel/envoy --dev</code>.</p>
+</li>
+<li>
+<p>Para realizar o deploy, utilize o comando: <code>php vendor/bin/envoy run deploy --branch=feature123</code>. A aplicação irá pedir o seu prontuário e a sua senha para liberar o acesso a internet (necessário para que o servidor possa fazer um pull do repositório). Além disso irá pedir a senha de acesso ao SSH.</p>
+</li>
+<li>
+<p>Se tudo ocorrer bem você receberá uma mensagem de <code>Deployment (20220901171117) finished</code> que contém o número do deploy realizado. Qualquer problema no deploy você deve conferir e resolver.</p>
+</li>
+<li>
+<p>Acesse o endereço do projeto e verifique se a aplicação e suas mudanças estão funcionando corretamente. O ambiente configurado é o de staging, então o endereço deve ser semelhante a <a href="https://fabsoftware.itp.ifsp.edu.br/sge.stag">https://fabsoftware.itp.ifsp.edu.br/sge.stag</a>. Se você estiver no instituto deverá usar o IP da rede local para poder acessar.</p>
+</li>
+<li>
+<p>Caso esteja tudo OK, crie o PR.</p>
+</li>
+</ol>
   </section>
 
     </main>
