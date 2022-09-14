@@ -88,7 +88,7 @@ DEPLOY_PATH=
 <p>A partir desse ponto, use o comando <code>envoy run init</code>. Esse comando irá criar a estrutura necessária de pastas para o controle das releases.</p>
 <p><img src="/assets/tutoriais/deploy-ls-after-init.png" alt="Estrutura depois do init"></p>
 <p>Garanta as permissões necessárias para a pasta storage:
-<code>sudo chown -R $USER:www-data storage/</code></p>
+<code>sudo chown -R $USER:www-data storage/</code> e <code>chmod -R 775 storage</code></p>
 <p>Configure o arquivo <code>.env</code> do servidor que está na pasta raiz do <code>DEPLOY_PATH</code> configurado. Adicione as informações de conexão com o banco de dados bem como a base de dados a ser utilizada (essa base de dados já deve existir).</p>
 <p>No servidor deve existir a configuração disponibilizando um endereço para a aplicação online. No caso do apache atual, temos um alias apontando pro caminho:</p>
 <p><code>Alias /stag.sge         /var/www/sge/stag/current/public</code></p>
