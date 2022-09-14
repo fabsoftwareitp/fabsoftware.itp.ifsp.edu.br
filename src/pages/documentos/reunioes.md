@@ -7,6 +7,13 @@ template: "page"
 
 ## Setembro 
 
+### Semana 37 (21/09)
+Ausências:
+Avaliação
+
+### Semana 36 (14/09)
+Ausências: 
+
 ### Semana 35 (08/09)
 Ausências: Ana, Vitor, Vininicus, João;
 

@@ -29,7 +29,8 @@ A partir desse ponto, use o comando `envoy run init`. Esse comando irá criar a 
 ![Estrutura depois do init](/assets/tutoriais/deploy-ls-after-init.png)
 
 Garanta as permissões necessárias para a pasta storage:
-`sudo chown -R $USER:www-data storage/`
+`sudo chown -R $USER:www-data storage/` e `chmod -R 775 storage`
+
 
 Configure o arquivo `.env` do servidor que está na pasta raiz do `DEPLOY_PATH` configurado. Adicione as informações de conexão com o banco de dados bem como a base de dados a ser utilizada (essa base de dados já deve existir).
 

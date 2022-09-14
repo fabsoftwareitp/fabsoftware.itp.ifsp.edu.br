@@ -6,9 +6,9 @@ template: "page"
 # Calendário 📅
 
 ## Setembro
-- 28
-- 21
-- 14
+- 28 - 
+- 21 - Avaliação
+- 14 - Apresentação Vitor
 - 08 - Reunião de alinhamento
 - 07 - Feriado
 

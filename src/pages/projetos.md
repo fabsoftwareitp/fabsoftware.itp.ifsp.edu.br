@@ -22,7 +22,7 @@ Chamamos de Consultório na Rua equipes multiprofissionais que desenvolvem açõ
 ---
 
 ## Sistema de Gerenciamento de Eventos
-[https://ic.itp.ifsp.edu.br/sgeIFSP/](https://ic.itp.ifsp.edu.br/sgeIFSP/)
+https://fabsoftware.itp.ifsp.edu.br/sgeIFSP/
 
 ![SGE](/assets/projetos/logo-sge.png)
 
