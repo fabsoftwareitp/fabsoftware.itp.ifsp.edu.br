@@ -7,12 +7,18 @@ template: "page"
 
 ## Setembro 
 
-### Semana 37 (21/09)
+### Semana 39 (28/09)
 Ausências:
-Avaliação
+
+### Semana 37 (21/09)
+Ausências: Ana e Vininicus;
+
+Resolvendo problemas no CNR com o Andre. Incorporando o deploy automático do game para o casa aberta no site da fábrica (http://fabsoftware.itp.ifsp.edu.br/casaaberta/). Atualizando o SGE para versão mais nova do Laravel.
 
 ### Semana 36 (14/09)
-Ausências: 
+Ausências: Ana e Vininicus;
+
+Apresentação do Vitor sobre o desenvolvimento do game http://siateste.000webhostapp.com/
 
 ### Semana 35 (08/09)
 Ausências: Ana, Vitor, Vininicus, João;
