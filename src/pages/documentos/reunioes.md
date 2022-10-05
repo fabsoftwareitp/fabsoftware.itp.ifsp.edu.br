@@ -5,10 +5,18 @@ template: "page"
 
 # Reuniões 📓
 
+## Outubro
+
+### Semana 39 (05/10)
+Ausências: Ana, Vinicius, Vitor
+Acompanhamento e distribuição de tarefas. Ajudando o João a resolver o problema do slide no meetape. Trabalhando com o Andre no deploy da aplicação no servidor e com o Gabriel no SGE.
+
+
 ## Setembro 
 
-### Semana 39 (28/09)
-Ausências:
+### Semana 38 (28/09)
+Ausências: Vininicus;
+
 
 ### Semana 37 (21/09)
 Ausências: Ana e Vininicus;
