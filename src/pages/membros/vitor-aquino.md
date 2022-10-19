@@ -83,7 +83,6 @@ Implementação de novas funções, como o bloqueio do zoom na página e o uso d
 
 - Link da issue: https://github.com/fabsoftwareitp/space-invaders/issues/2
 
-
 ***totais***
 - total de PRs incorporados ao sistema: 2 (contando com a inserção do código na própria branch "main" do novo repositório)
 - total de horas no mês: 19 horas
