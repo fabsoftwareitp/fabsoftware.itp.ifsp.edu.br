@@ -5,8 +5,14 @@ template: "page"
 
 # Calendário 📅
 
+## Outubro
+- 26 - 
+- 19 - Reunião 
+- 12 - Feriado
+- 05 - Reunião
+
 ## Setembro
-- 28 - 
+- 28 - Reunião
 - 21 - Avaliação
 - 14 - Apresentação Vitor
 - 08 - Reunião de alinhamento

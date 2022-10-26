@@ -10,7 +10,7 @@ template: "page"
 
 Descrição das atividades realizadas. Para cada atividade colocar a link da issue bem como o link do PR.
 
-- Link da issue: https://github.com/fabsoftwareitp/sitefabrica-jig/issues/81
+- Link da issue: https://github.com/fabsoftwareitp/consultorionarua.itp.ifsp.edu.br/issues/28
 - Link do PR: https://github.com/fabsoftwareitp/sge-laravel/pull/81
 
 *** semana 36 ***

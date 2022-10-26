@@ -8,7 +8,7 @@ A Fábrica de Software possui um total de 10 projetos entre finalizados e em des
 
 
 ## App do Consultório na Rua 
-[https://fabsoftware.itp.ifsp.edu.br/cnr](https://fabsoftware.itp.ifsp.edu.br/cnr)
+[https://fabsoftware.itp.ifsp.edu.br/conrua.stag/](https://fabsoftware.itp.ifsp.edu.br/conrua.stag/)
 
 ![App Consultório na Rua](/assets/projetos/logo-consultorio-na-rua.jpg)
 

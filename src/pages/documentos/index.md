@@ -8,7 +8,7 @@ title: 'Documentos'
 - [Calendário](calendario/)
 - [Reuniões](reunioes/)
 - [Quadro](https://github.com/orgs/fabsoftwareitp/projects/2)
-- [Modelos](modelos/relatorio/)
+- [Modelo de Relatório](modelos/relatorio/)
 
 ## Tutoriais
 - [Como fazer deploy da aplicação](tutoriais/deploy/)

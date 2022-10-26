@@ -5,7 +5,27 @@ template: "page"
 
 # Reuniões 📓
 
+## Resumo
+PRs integrados
+
+|              	| André 	| Gabriel 	| Rafael 	| Vitor 	|
+|:---       	|:---:  	|:---:  	|:---:	    |:---:  	|
+| Sem41        	|   0   	|    0    	|    0   	|   0   	|
+| Sem42        	|   0   	|    0    	|    1   	|   0   	|
+| **Outrubro** 	| **0** 	|  **0**  	|  **1** 	| **0** 	|
+| Sem43        	|       	|         	|        	|       	|
+
 ## Outubro
+
+### Semana 42 (26/10)
+Ausências: Vitor e João
+Acompanhamento: Reunião do consultório na rua para acertar os detalhes da última reunião. Ficou definido que o o teste piloto será executado na terça-feira. É necessário criar os usuários e passar para a coordenadora para que ela consiga realizar os testes.
+
+### Semana 41 (19/10)
+Ausências: Vitor e João
+Acompanhamento: Distribuição de tarefas e conversa sobre o desempenho e acompanhamento de cada membro. Ficou combinado o novo modelo de relatório e a nova forma de acompanhamento em que cada um se compromete entregar pelo menos um PR a cada semana.   
+
+### Semana 40 (12/10)
 
 ### Semana 39 (05/10)
 Ausências: Ana, Vinicius, Vitor
