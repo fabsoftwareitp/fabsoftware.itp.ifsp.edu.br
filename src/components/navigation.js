@@ -59,6 +59,10 @@ class HeaderComponent extends HTMLElement {
           color: #FD624C;
           text-decoration: underline;
         }
+        nav.menu a:hover {
+          color: #FD624C;
+          text-decoration: underline;
+        }
 
         nav.menu img {
           max-width: 1.5rem;
