@@ -128,7 +128,6 @@ class FooterComponent extends HTMLElement {
             <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
          <a href="#">Fabrica de Software</a>.
             </p>
-            <p><img width="25" class="invert-elements img-fluid" height="25" src="https://fabsoftware.itp.ifsp.edu.br/sge.stag/images/facebook-logo.svg"></p>
           </div>
         </div>
       </div>
