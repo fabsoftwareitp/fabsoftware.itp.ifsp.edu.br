@@ -37,7 +37,7 @@ Atuei como scrum master, distribuindo tasks, checando as funcionalidades dos sit
 - 29/06 - Festinha da fabrica
 - total: **16 horas**
 
-### Julho
+### Julho (Férias)
 - Revisada no site para  encontrar novos erros - 2 hora
 - Reforma da sala de apresentações do site SGE - 4 horas
 - Atuação como Scrum master catalogando as falhas do sistema SGE - 2 horas
@@ -52,8 +52,30 @@ Atuei como scrum master, distribuindo tasks, checando as funcionalidades dos sit
 - total: **16 horas**
 
 ### Setembro
-- 07/05 - Implementação da lista de espera no SGE - 4 horas
-- 14/09 - Ajudei a arrumar e fazer alguns ajustes a mais no SGE - 4 horas
-- 21/09 - Arrumei o sistema de donos da fabrica implementando o usuario Organizador - 4 horas
-- 28/09 -
+- 07/05 - Feriado da Independência do Brasil - Implementação da lista de espera no SGE - 4 horas -
+    link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/Teste
+- 14/09 - Ajudei a arrumar e fazer alguns ajustes a mais no SGE - 4 horas -
+    link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/Teste
+- 21/09 - Arrumei o sistema de donos da fabrica implementando o usuario Organizador - 4 horas -
+    link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/Teste
+- 28/09 - Melhoria do formulário - 4 horas -
+    link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/teste3
 - total: **16 horas**
+
+### Outubro
+- 05/10 - tentando arrumar problema da melhoria do formulário - 4 horas -
+    link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/teste3
+- 12/10 - Feriado da nossa senhora Aparecida - 0 horas
+- 19/10 - Atuação como Scrum master na fábrica e organização do relatório - 4 horas
+- 26/10 - Implementado o rodapé e um menu responsivo hamburger - 4 horas -
+    link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/rodape
+- total: **12 horas**
+
+### Novembro
+- 02/10 - Feriado de Finados - Optimização de imagens das logos do site - 4 horas -
+    link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/rodape
+- 09/10 - 
+- 16/10 -
+- 23/10 -
+- 30/10 -
+- total: **- horas**

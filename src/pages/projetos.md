@@ -10,7 +10,7 @@ A Fábrica de Software possui um total de 10 projetos entre finalizados e em des
 ## App do Consultório na Rua 
 [https://fabsoftware.itp.ifsp.edu.br/cnr](https://fabsoftware.itp.ifsp.edu.br/cnr)
 
-![App Consultório na Rua](/assets/projetos/logo-consultorio-na-rua.jpg)
+![App Consultório na Rua](/assets/projetos/logo-consultorio-na-rua.png)
 
 Chamamos de Consultório na Rua equipes multiprofissionais que desenvolvem ações integrais de saúde frente às necessidades dessa população. Elas devem realizar suas atividades de forma itinerante e, quando necessário, desenvolver ações em parceria com as equipes das Unidades Básicas de Saúde do território. É um aplicativo para ajudar no acompanhamento das equipes na rua.
 
@@ -64,7 +64,7 @@ Tem a finalidade de servir de guia para os usuários do SVSA, facilitando o aces
 ## Show De Fisica
 [https://showdefisica.itp.ifsp.edu.br/](https://showdefisica.itp.ifsp.edu.br/)
 
-![Show de Física](/assets/projetos/logo-show-de-fisica.jpg)
+![Show de Física](/assets/projetos/logo-show-de-fisica.png)
 
 Show de física é um projeto no campo da Educação e Ciência. Sua missão é contribuir para o ensino de conceitos físicos por meio de diferentes e divertidos métodos de apredizagem.
 
