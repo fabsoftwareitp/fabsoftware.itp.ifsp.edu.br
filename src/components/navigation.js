@@ -32,7 +32,9 @@ class HeaderComponent extends HTMLElement {
           align-items: center;
           height: 50px;
           padding: 1em;
+          position:relative;
         }
+
         nav.menu ul {
           margin:0;
           padding:0;
@@ -74,12 +76,14 @@ class HeaderComponent extends HTMLElement {
         nav.menu .container {
           max-width: 80vw;
         }
+
+        
+        /*hamburger*/
         .hamburger {
           display: flex;
           flex-direction: row;
           list-style-type: none;
-          margin: 0;
-          padding: 0;
+    
         }
 
         .hamburger > li {
@@ -143,13 +147,11 @@ class HeaderComponent extends HTMLElement {
           .hamburger {
             position: absolute;
             z-index:2;
-            top: 9.6vh;
-            margin-top: 50px;
+            top: 86px;
             left: 0;
             flex-direction: column;
-            width: 100%;
-            justify-content: center;
             align-items: center;
+            width: 100%;
           }
 
           #hamburger-toggle ~ .hamburger li {
