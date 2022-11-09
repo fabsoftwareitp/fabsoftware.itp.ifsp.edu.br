@@ -29,7 +29,12 @@ class HeaderComponent extends HTMLElement {
           max-width: 80vw;
           flex-wrap: wrap;
           margin: 0 auto;
+          align-items: center;
+          height: 50px;
+          padding: 1em;
+          position:relative;
         }
+
         nav.menu ul {
           margin:0;
           padding:0;
@@ -59,6 +64,10 @@ class HeaderComponent extends HTMLElement {
           color: #FD624C;
           text-decoration: underline;
         }
+        nav.menu a:hover {
+          color: #FD624C;
+          text-decoration: underline;
+        }
 
         nav.menu img {
           max-width: 1.5rem;
@@ -67,13 +76,124 @@ class HeaderComponent extends HTMLElement {
         nav.menu .container {
           max-width: 80vw;
         }
+
+        
+        /*hamburger*/
+        .hamburger {
+          display: flex;
+          flex-direction: row;
+          list-style-type: none;
+    
+        }
+
+        .hamburger > li {
+          margin: 0 1rem;
+          overflow: hidden;
+        }
+
+        .hamburger-button-container {
+          display: none;
+          height: 100%;
+          width: 30px;
+          cursor: pointer;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #hamburger-toggle {
+          display: none;
+        }
+
+        .hamburger-button,.hamburger-button::before,.hamburger-button::after {
+          display: block;
+          background-color: #fff;
+          position: absolute;
+          height: 4px;
+          width: 30px;
+          transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+          border-radius: 2px;
+        }
+
+        .hamburger-button::before {
+          content: "";
+          margin-top: -8px;
+        }
+
+        .hamburger-button::after {
+          content: "";
+          margin-top: 8px;
+        }
+
+        #hamburger-toggle:checked + .hamburger-button-container .hamburger-button::before {
+          margin-top: 0px;
+          transform: rotate(405deg);
+        }
+
+        #hamburger-toggle:checked + .hamburger-button-container .hamburger-button {
+          background: rgba(255, 255, 255, 0);
+        }
+
+        #hamburger-toggle:checked + .hamburger-button-container .hamburger-button::after {
+          margin-top: 0px;
+          transform: rotate(-405deg);
+        }
+
+        @media (max-width: 900px) {
+          .hamburger-button-container {
+            display: flex;
+          }
+
+          .hamburger {
+            position: absolute;
+            z-index:2;
+            top: 86px;
+            left: 0;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+          }
+
+          #hamburger-toggle ~ .hamburger li {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+          }
+
+          #hamburger-toggle:checked ~ .hamburger li {
+            border: 1px solid #333;
+            height: 2.5em;
+            padding: 0.5em;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+          }
+
+          .hamburger > li {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0.5em 0;
+            width: 100%;
+            color: white;
+            background-color: #222;
+          }
+
+          .hamburger > li:not(:last-child) {
+            border-bottom: 1px solid #444;
+          }
+        }
       </style>
       <header>
         <nav class="menu">
             <a href="/" class="logo">
               <img src="/assets/logo-oficial.png" alt="logo oficial">
               <span>FabSoftware</span></a>
-            <ul>
+              <input id="hamburger-toggle" type="checkbox" />
+                <label class='hamburger-button-container' for="hamburger-toggle">
+                  <div class='hamburger-button'></div>
+                </label>
+            <ul class="hamburger">
               ${this.navigation
                 .map((item) => {
                   const isCurentPageLink = activeRoute.indexOf(item.route) >= 0;

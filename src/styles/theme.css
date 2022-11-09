@@ -106,6 +106,12 @@ img {
   flex-wrap: wrap;
 }
 
+@media (max-width: 770px) {
+  .depoimentos-videos {
+    justify-content: center;
+  }
+}
+
 .banners {
   display: flex;
   justify-content: space-between;
