@@ -3,14 +3,14 @@
                         
                           
                           <head>
-                          <link rel="preload" href="/styles/theme.20924013.css" as="style" crossorigin="anonymous"></link>
+                          <link rel="preload" href="/styles/theme.85243808.css" as="style" crossorigin="anonymous"></link>
                         
                           <link rel="preload" href="/styles/lib/bootstrap-reboot.14092910.css" as="style" crossorigin="anonymous"></link>
                         
                         <link rel="modulepreload" href="/router.ee4282c5.js" as="script">
                       
                         <link rel="modulepreload" href="/app.6b1dbc2e.js" as="script">
-                      <!-- Shady DOM styles for app-header --><!-- Shady DOM styles for app-team --><!-- Shady DOM styles for app-projects --><style>body {transition: opacity ease-in 0.2s; } 
+                      <!-- Shady DOM styles for app-header --><!-- Shady DOM styles for app-footer --><!-- Shady DOM styles for app-team --><!-- Shady DOM styles for app-projects --><style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style>
             
@@ -33,10 +33,11 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&amp;display=swap">
 
     <link rel="stylesheet" href="/styles/lib/bootstrap-reboot.14092910.css">
-    <link rel="stylesheet" href="/styles/theme.20924013.css">
+    <link rel="stylesheet" href="/styles/theme.85243808.css">
 
     <script type="module" src="/app.6b1dbc2e.js"></script>
 
+    
     
     
     
@@ -68,7 +69,12 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
           max-width: 80vw;
           flex-wrap: wrap;
           margin: 0 auto;
+          align-items: center;
+          height: 50px;
+          padding: 1em;
+          position:relative;
         }
+
         nav.menu ul {
           margin:0;
           padding:0;
@@ -98,6 +104,10 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
           color: #FD624C;
           text-decoration: underline;
         }
+        nav.menu a:hover {
+          color: #FD624C;
+          text-decoration: underline;
+        }
 
         nav.menu img {
           max-width: 1.5rem;
@@ -106,13 +116,124 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         nav.menu .container {
           max-width: 80vw;
         }
+
+        
+        /*hamburger*/
+        .hamburger {
+          display: flex;
+          flex-direction: row;
+          list-style-type: none;
+    
+        }
+
+        .hamburger > li {
+          margin: 0 1rem;
+          overflow: hidden;
+        }
+
+        .hamburger-button-container {
+          display: none;
+          height: 100%;
+          width: 30px;
+          cursor: pointer;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #hamburger-toggle {
+          display: none;
+        }
+
+        .hamburger-button,.hamburger-button::before,.hamburger-button::after {
+          display: block;
+          background-color: #fff;
+          position: absolute;
+          height: 4px;
+          width: 30px;
+          transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+          border-radius: 2px;
+        }
+
+        .hamburger-button::before {
+          content: "";
+          margin-top: -8px;
+        }
+
+        .hamburger-button::after {
+          content: "";
+          margin-top: 8px;
+        }
+
+        #hamburger-toggle:checked + .hamburger-button-container .hamburger-button::before {
+          margin-top: 0px;
+          transform: rotate(405deg);
+        }
+
+        #hamburger-toggle:checked + .hamburger-button-container .hamburger-button {
+          background: rgba(255, 255, 255, 0);
+        }
+
+        #hamburger-toggle:checked + .hamburger-button-container .hamburger-button::after {
+          margin-top: 0px;
+          transform: rotate(-405deg);
+        }
+
+        @media (max-width: 900px) {
+          .hamburger-button-container {
+            display: flex;
+          }
+
+          .hamburger {
+            position: absolute;
+            z-index:2;
+            top: 86px;
+            left: 0;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+          }
+
+          #hamburger-toggle ~ .hamburger li {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+          }
+
+          #hamburger-toggle:checked ~ .hamburger li {
+            border: 1px solid #333;
+            height: 2.5em;
+            padding: 0.5em;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+          }
+
+          .hamburger > li {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0.5em 0;
+            width: 100%;
+            color: white;
+            background-color: #222;
+          }
+
+          .hamburger > li:not(:last-child) {
+            border-bottom: 1px solid #444;
+          }
+        }
       </style>
       <header class="style-scope app-header">
         <nav class="menu style-scope app-header">
             <a href="/" class="logo style-scope app-header">
               <img src="/assets/logo-oficial.png" alt="logo oficial" class="style-scope app-header">
               <span class="style-scope app-header">FabSoftware</span></a>
-            <ul class="style-scope app-header">
+              <input id="hamburger-toggle" type="checkbox" class="style-scope app-header">
+                <label class="hamburger-button-container style-scope app-header" for="hamburger-toggle">
+                  <div class="hamburger-button style-scope app-header"></div>
+                </label>
+            <ul class="hamburger style-scope app-header">
               <li class="style-scope app-header">
                       <a href="/documentos/" class="active style-scope app-header">Documentos</a>
                     </li><li class="style-scope app-header">
@@ -164,7 +285,50 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
   </section>
 
     </main>
-    <footer>Fábrica de Software IFSP Campus Itapetininga</footer>
+    <app-footer>
+      <style class="style-scope app-footer">
+        .footer{
+          background-color:#26272b;
+          padding:20px 0 10px;
+          font-size:15px;
+          color:#737373;
+          text-align:center;
+        }
+
+        .footer img{
+          max-width: 1.5rem;
+        }
+
+        .footer a:hover{
+          text-decoration:none;
+        }
+
+        .footer-fab{
+          color:#fff;
+          font-size:30px;
+          text-decoration: none
+        }
+        .footer-fab:hover{
+          font-size:31px;
+        }
+        .footer-p{
+          color:white;
+          margin: 5px 0 35px;
+        }
+      </style>
+      <footer class="footer style-scope app-footer">
+        
+        <a href="/" class="footer-fab style-scope app-footer">
+            <img src="/assets/logo-oficial.png" alt="logo oficial" class="style-scope app-footer">
+            <span class="footer-fab style-scope app-footer">Fábrica de Software<span class="style-scope app-footer">
+        </span></span></a>
+
+        <p class="footer-p style-scope app-footer">Somos um grupo de desenvolvimento procurando por novas e criativas soluções para ajudar pessoas com nossos produtos em seus objetivos</p>
+      
+        <p class="style-scope app-footer">Copyright © 2022 - All Rights Reserved by Fabrica de Software.</p>
+
+      </footer>
+    </app-footer>
   
 
 

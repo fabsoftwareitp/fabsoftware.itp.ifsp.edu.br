@@ -12,7 +12,12 @@
           max-width: 80vw;
           flex-wrap: wrap;
           margin: 0 auto;
+          align-items: center;
+          height: 50px;
+          padding: 1em;
+          position:relative;
         }
+
         nav.menu ul {
           margin:0;
           padding:0;
@@ -42,6 +47,10 @@
           color: #FD624C;
           text-decoration: underline;
         }
+        nav.menu a:hover {
+          color: #FD624C;
+          text-decoration: underline;
+        }
 
         nav.menu img {
           max-width: 1.5rem;
@@ -50,13 +59,124 @@
         nav.menu .container {
           max-width: 80vw;
         }
+
+        
+        /*hamburger*/
+        .hamburger {
+          display: flex;
+          flex-direction: row;
+          list-style-type: none;
+    
+        }
+
+        .hamburger > li {
+          margin: 0 1rem;
+          overflow: hidden;
+        }
+
+        .hamburger-button-container {
+          display: none;
+          height: 100%;
+          width: 30px;
+          cursor: pointer;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #hamburger-toggle {
+          display: none;
+        }
+
+        .hamburger-button,.hamburger-button::before,.hamburger-button::after {
+          display: block;
+          background-color: #fff;
+          position: absolute;
+          height: 4px;
+          width: 30px;
+          transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+          border-radius: 2px;
+        }
+
+        .hamburger-button::before {
+          content: "";
+          margin-top: -8px;
+        }
+
+        .hamburger-button::after {
+          content: "";
+          margin-top: 8px;
+        }
+
+        #hamburger-toggle:checked + .hamburger-button-container .hamburger-button::before {
+          margin-top: 0px;
+          transform: rotate(405deg);
+        }
+
+        #hamburger-toggle:checked + .hamburger-button-container .hamburger-button {
+          background: rgba(255, 255, 255, 0);
+        }
+
+        #hamburger-toggle:checked + .hamburger-button-container .hamburger-button::after {
+          margin-top: 0px;
+          transform: rotate(-405deg);
+        }
+
+        @media (max-width: 900px) {
+          .hamburger-button-container {
+            display: flex;
+          }
+
+          .hamburger {
+            position: absolute;
+            z-index:2;
+            top: 86px;
+            left: 0;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+          }
+
+          #hamburger-toggle ~ .hamburger li {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+          }
+
+          #hamburger-toggle:checked ~ .hamburger li {
+            border: 1px solid #333;
+            height: 2.5em;
+            padding: 0.5em;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+          }
+
+          .hamburger > li {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0.5em 0;
+            width: 100%;
+            color: white;
+            background-color: #222;
+          }
+
+          .hamburger > li:not(:last-child) {
+            border-bottom: 1px solid #444;
+          }
+        }
       </style>
       <header class="style-scope app-header">
         <nav class="menu style-scope app-header">
             <a href="/" class="logo style-scope app-header">
               <img src="/assets/logo-oficial.png" alt="logo oficial" class="style-scope app-header">
               <span class="style-scope app-header">FabSoftware</span></a>
-            <ul class="style-scope app-header">
+              <input id="hamburger-toggle" type="checkbox" class="style-scope app-header">
+                <label class="hamburger-button-container style-scope app-header" for="hamburger-toggle">
+                  <div class="hamburger-button style-scope app-header"></div>
+                </label>
+            <ul class="hamburger style-scope app-header">
               <li class="style-scope app-header">
                       <a href="/documentos/" class="style-scope app-header">Documentos</a>
                     </li><li class="style-scope app-header">
@@ -81,21 +201,119 @@
 <h2>Evolução</h2>
 <h2>Atividades</h2>
 <p>Atuei como scrum master, distribuindo tasks, checando as funcionalidades dos sites e ajudando os outros integrantes a fazerem as tasks dadas por mim, além de assistir as apresentações dos outros participantes</p>
+<h3>Maio</h3>
+<ul>
+<li>19/04 - Apresentação da fabrica para os novos integrantes/apresentação do fluxo de trabalhos do github - 4 Horas</li>
+<li>26/04 - Levantamento de Tasks do site SGE - 4 Horas</li>
+<li>04/05 - Ajudei os integrantes a resolver uns problemas na hora de iniciar o SGE - 4 Horas </li>
+<li>11/05 - Reunião da fabrica para juntar ideias para o IF casa aberta - 4 Horas</li>
+<li>18/05 - Resolvi um problema na versão do php do windowns no pc e testei o Websocks para chat do SGE - 4 Horas </li>
+<li>25/05 - Assisti a apresentação dos integrantes -  4 Horas</li>
+<li>total: <strong>16 horas</strong></li>
+</ul>
 <h4>Junho</h4>
 <ul>
-<li>19/04 - 3 Horas - Apresentação da fabrica para os novos integrantes/apresentação do fluxo de trabalhos do github</li>
-<li>26/04 - 3 Horas - Levantamento de Tasks do site SGE</li>
-<li>3/05 - 3 Horas - Ajudei os integrantes a resolver uns problemas na hora de iniciar o SGE</li>
-<li>10/05 - 3 Horas - Reunião da fabrica para juntar ideias para o IF casa aberta</li>
-<li>24/05 - 3 Horas - Resolvi um problema na versão do php do windowns no pc e testei o Websocks para chat do SGE</li>
-<li>31/05 -  3 Horas - Assisti a apresentação dos integrantes</li>
-<li>7/06 -  3 Horas - Assisti a apresentação dos integrantes</li>
-<li>14/06 -  3 Horas - Assisti a apresentação dos integrantes</li>
+<li>01/06 - Assisti a apresentação dos integrantes(Ana) - 4 Horas</li>
+<li>08/06 - Assisti a apresentação dos integrantes(Gabriel) - 4 Horas</li>
+<li>15/06 - Atuação como Scrum Master - 4 horas</li>
+<li>22/06 - Assisti a apresentação dos integrantes(João) - 4 Horas</li>
+<li>29/06 - Festinha da fabrica</li>
+<li>total: <strong>16 horas</strong></li>
 </ul>
-<p>total: <strong>15 horas</strong></p>
+<h3>Julho (Férias)</h3>
+<ul>
+<li>Revisada no site para  encontrar novos erros - 2 hora</li>
+<li>Reforma da sala de apresentações do site SGE - 4 horas</li>
+<li>Atuação como Scrum master catalogando as falhas do sistema SGE - 2 horas</li>
+<li>total: <strong>8 horas</strong></li>
+</ul>
+<h3>Agosto</h3>
+<ul>
+<li>03/08 – Distribuir a implementação do layout em issues – 4 horas </li>
+<li>10/08 – Arrumar o chat - 4 horas</li>
+<li>17/08 – Atuação como Scrum master para ajudar a resolver a exibição de palestrantes no SGE – 4 horas</li>
+<li>24/08 – Fazer teste do chat do SGE e verificar o problema de compatibilidade entre as versões do projeto – 4 horas</li>
+<li>31/08 - Atuação como Scrum master ajudando os outros no SGE, e mesclagem do chat – 4 horas</li>
+<li>total: <strong>16 horas</strong></li>
+</ul>
+<h3>Setembro</h3>
+<ul>
+<li>07/05 - Feriado da Independência do Brasil - Implementação da lista de espera no SGE - 4 horas -
+link branch: <a href="https://github.com/fabsoftwareitp/sge-laravel/tree/Teste">https://github.com/fabsoftwareitp/sge-laravel/tree/Teste</a></li>
+<li>14/09 - Ajudei a arrumar e fazer alguns ajustes a mais no SGE - 4 horas -
+link branch: <a href="https://github.com/fabsoftwareitp/sge-laravel/tree/Teste">https://github.com/fabsoftwareitp/sge-laravel/tree/Teste</a></li>
+<li>21/09 - Arrumei o sistema de donos da fabrica implementando o usuario Organizador - 4 horas -
+link branch: <a href="https://github.com/fabsoftwareitp/sge-laravel/tree/Teste">https://github.com/fabsoftwareitp/sge-laravel/tree/Teste</a></li>
+<li>28/09 - Melhoria do formulário - 4 horas -
+link branch: <a href="https://github.com/fabsoftwareitp/sge-laravel/tree/teste3">https://github.com/fabsoftwareitp/sge-laravel/tree/teste3</a></li>
+<li>total: <strong>16 horas</strong></li>
+</ul>
+<h3>Outubro</h3>
+<ul>
+<li>05/10 - tentando arrumar problema da melhoria do formulário - 4 horas -
+link branch: <a href="https://github.com/fabsoftwareitp/sge-laravel/tree/teste3">https://github.com/fabsoftwareitp/sge-laravel/tree/teste3</a></li>
+<li>12/10 - Feriado da nossa senhora Aparecida - 0 horas</li>
+<li>19/10 - Atuação como Scrum master na fábrica e organização do relatório - 4 horas</li>
+<li>26/10 - Implementado o rodapé e um menu responsivo hamburger - 4 horas -
+link branch: <a href="https://github.com/fabsoftwareitp/sge-laravel/tree/rodape">https://github.com/fabsoftwareitp/sge-laravel/tree/rodape</a></li>
+<li>total: <strong>12 horas</strong></li>
+</ul>
+<h3>Novembro</h3>
+<ul>
+<li>02/10 - Feriado de Finados - Optimização de imagens das logos do site - 4 horas -
+link branch: <a href="https://github.com/fabsoftwareitp/sge-laravel/tree/rodape">https://github.com/fabsoftwareitp/sge-laravel/tree/rodape</a></li>
+<li>09/10 - </li>
+<li>16/10 -</li>
+<li>23/10 -</li>
+<li>30/10 -</li>
+<li>total: <strong>- horas</strong></li>
+</ul>
   </section>
 
     </main>
-    <footer>Fábrica de Software IFSP Campus Itapetininga</footer>
+    <app-footer>
+      <style class="style-scope app-footer">
+        .footer{
+          background-color:#26272b;
+          padding:20px 0 10px;
+          font-size:15px;
+          color:#737373;
+          text-align:center;
+        }
+
+        .footer img{
+          max-width: 1.5rem;
+        }
+
+        .footer a:hover{
+          text-decoration:none;
+        }
+
+        .footer-fab{
+          color:#fff;
+          font-size:30px;
+          text-decoration: none
+        }
+        .footer-fab:hover{
+          font-size:31px;
+        }
+        .footer-p{
+          color:white;
+          margin: 5px 0 35px;
+        }
+      </style>
+      <footer class="footer style-scope app-footer">
+        
+        <a href="/" class="footer-fab style-scope app-footer">
+            <img src="/assets/logo-oficial.png" alt="logo oficial" class="style-scope app-footer">
+            <span class="footer-fab style-scope app-footer">Fábrica de Software<span class="style-scope app-footer">
+        </span></span></a>
+
+        <p class="footer-p style-scope app-footer">Somos um grupo de desenvolvimento procurando por novas e criativas soluções para ajudar pessoas com nossos produtos em seus objetivos</p>
+      
+        <p class="style-scope app-footer">Copyright © 2022 - All Rights Reserved by Fabrica de Software.</p>
+
+      </footer>
+    </app-footer>
   
 
