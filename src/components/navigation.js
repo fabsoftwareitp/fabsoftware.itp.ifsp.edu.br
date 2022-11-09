@@ -30,7 +30,7 @@ class HeaderComponent extends HTMLElement {
           flex-wrap: wrap;
           margin: 0 auto;
           align-items: center;
-          height: 50px;
+          height: 80px;
           padding: 1em;
           position:relative;
         }
@@ -147,7 +147,7 @@ class HeaderComponent extends HTMLElement {
           .hamburger {
             position: absolute;
             z-index:2;
-            top: 86px;
+            top: 80px;
             left: 0;
             flex-direction: column;
             align-items: center;
