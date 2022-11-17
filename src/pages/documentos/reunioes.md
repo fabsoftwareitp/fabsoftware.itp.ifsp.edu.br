@@ -15,6 +15,18 @@ PRs integrados
 | **Outrubro** 	| **0** 	|  **0**  	|  **1** 	| **0** 	|
 | Sem43        	|       	|         	|        	|       	|
 
+## Novembro
+
+### Semana 45 (16/11)
+Ausências: só o Gabriel veio.
+
+Fizemos a reunião e expliquei sobre o funcionamento básico do canvas, sua API e como trabalhar ouvindo os eventos do teclado para que ele possa dar continuidade na tarefa de adequar o movimento.
+
+### Semana 44 (09/11)
+
+### Semana 43 (02/11)
+Não tivemos encontro, foi feriado.
+
 ## Outubro
 
 ### Semana 42 (26/10)

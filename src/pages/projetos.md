@@ -10,7 +10,7 @@ A Fábrica de Software possui um total de 10 projetos entre finalizados e em des
 ## App do Consultório na Rua 
 [https://fabsoftware.itp.ifsp.edu.br/conrua.stag/](https://fabsoftware.itp.ifsp.edu.br/conrua.stag/)
 
-![App Consultório na Rua](/assets/projetos/logo-consultorio-na-rua.png)
+![App Consultório na Rua](/assets/projetos/logo-consultorio-na-rua.png) 
 
 Chamamos de Consultório na Rua equipes multiprofissionais que desenvolvem ações integrais de saúde frente às necessidades dessa população. Elas devem realizar suas atividades de forma itinerante e, quando necessário, desenvolver ações em parceria com as equipes das Unidades Básicas de Saúde do território. É um aplicativo para ajudar no acompanhamento das equipes na rua.
 
