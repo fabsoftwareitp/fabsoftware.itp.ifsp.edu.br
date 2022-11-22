@@ -25,6 +25,6 @@ USER pptruser
 RUN yarn install
 RUN yarn run build
 
-FROM webdevops/php-nginx-alpine
+FROM nginx:alpine
 
-COPY --from=workspace /public /usr/share/nginx/html
+COPY --from=app /public /usr/share/nginx/html
