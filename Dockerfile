@@ -27,4 +27,4 @@ RUN yarn run build
 
 FROM nginx:alpine
 
-COPY --from=app /public /usr/share/nginx/html
+COPY --from=build /app/public /usr/share/nginx/html
