@@ -8,7 +8,7 @@ A Fábrica de Software possui um total de 10 projetos entre finalizados e em des
 
 
 ## App do Consultório na Rua 
-[https://fabsoftware.itp.ifsp.edu.br/conrua.stag/](https://fabsoftware.itp.ifsp.edu.br/conrua.stag/)
+[https://consultorionarua.fabsoftware.itp.ifsp.edu.br](https://consultorionarua.fabsoftware.itp.ifsp.edu.br)
 
 ![App Consultório na Rua](/assets/projetos/logo-consultorio-na-rua.png) 
 
@@ -22,9 +22,12 @@ Chamamos de Consultório na Rua equipes multiprofissionais que desenvolvem açõ
 ---
 
 ## Sistema de Gerenciamento de Eventos
-https://fabsoftware.itp.ifsp.edu.br/sgeIFSP/
+[https://sge.fabsoftware.itp.ifsp.edu.br](https://sge.fabsoftware.itp.ifsp.edu.br)
 
-![SGE](/assets/projetos/logo-sge.png)
+![Logo SGE](/assets/projetos/logo-sge.png)
+![SGE1](/assets/projetos/sge-img1.png)
+![SGE2](/assets/projetos/sge-img2.png)
+
 
 O SGE é um projeto de sistema em que você pode buscar por eventos que estão por vir ou mesmo registrar seu próprio evento para que o público acesse as informações de uma forma simples.
 
@@ -38,19 +41,21 @@ O SGE é um projeto de sistema em que você pode buscar por eventos que estão p
 ### Landing pages
 
 ## Site da Fábrica
-https://fabsoftware.itp.ifsp.edu.br/
+[https://fabsoftware.itp.ifsp.edu.br/](https://fabsoftware.itp.ifsp.edu.br/)
 
 - Tecnologias: HTML, CSS, JS e Greenwood.js ([GitHub](https://github.com/fabsoftwareitp/fabsoftwareitp.github.io))
-- Time: [João Correa](/membros/joao-correa/)
+- Time: [João Correa](/membros/joao-correa/) e [Rafael Alexandre](/membros/rafael-alexandre/)
 - Status: em Desenvolvimento
 - Data: 07/2022
 
 ---
 
 ## Manual do usuário SVSA
-https://svsa.itp.ifsp.edu.br/
+[https://svsa.itp.ifsp.edu.br/](https://svsa.itp.ifsp.edu.br/)
 
 ![Logo SVSA](/assets/projetos/logo-svsa.png)
+![SVSA1](/assets/projetos/svsa-img1.png)
+![SVSA2](/assets/projetos/svsa-img2.png))
 
 Tem a finalidade de servir de guia para os usuários do SVSA, facilitando o acesso ao sistema e suas funcionalidades.
 
@@ -64,7 +69,9 @@ Tem a finalidade de servir de guia para os usuários do SVSA, facilitando o aces
 ## Show De Fisica
 [https://showdefisica.itp.ifsp.edu.br/](https://showdefisica.itp.ifsp.edu.br/)
 
-![Show de Física](/assets/projetos/logo-show-de-fisica.png)
+![Logo Show de Física](/assets/projetos/logo-show-de-fisica.png)
+![Show de Física1](/assets/projetos/show-de-fisica-img1.png)
+![Show de Física2](/assets/projetos/show-de-fisica-img2.png)
 
 Show de física é um projeto no campo da Educação e Ciência. Sua missão é contribuir para o ensino de conceitos físicos por meio de diferentes e divertidos métodos de apredizagem.
 
@@ -76,7 +83,7 @@ Show de física é um projeto no campo da Educação e Ciência. Sua missão é 
 ---
 
 ## Pós Especialização em Desenvolvimento Web
-[http://ic.itp.ifsp.edu.br/espweb/](http://ic.itp.ifsp.edu.br/espweb/)
+[https://espweb.fabsoftware.itp.ifsp.edu.br](https://espweb.fabsoftware.itp.ifsp.edu.br)
 
 ![FS-cinza](/assets/projetos/logo-espweb.png)
 
@@ -90,7 +97,11 @@ O site EspWeb foi elaborado para a divulgação do curso de Especialização em 
 ---
 
 ## Feira de Ciências
-https://feiradeciencias.itp.ifsp.edu.br/
+[https://feiradeciencias.itp.ifsp.edu.br/](https://feiradeciencias.itp.ifsp.edu.br/)
+
+![Logo Feira de Ciências](/assets/projetos/logo-feira-de-ciencias.png)
+![Feira de Ciências1](/assets/projetos/feira-de-ciencias-img1.png)
+![Feira de Ciências2](/assets/projetos/feira-de-ciencias-img2.png)
 
 - Tecnologias: HTML, CSS e JS ([GitHub](https://github.com/fabsoftwareitp/feiradeciencias.itp.ifsp.edu.br))
 - Time: [Laura Naomi](/membros/laura-naomi/), [Andre Augusto](/membros/andre-augusto/), [Maria Senger](/membros/maria-senger/) e [Rafael Alexandre](/membros/rafael-alexandre/)
@@ -99,20 +110,21 @@ https://feiradeciencias.itp.ifsp.edu.br/
 
 ---
 
-## Meetape
-Tech: HTML, CSS e JS.
-https://meetape.itp.ifsp.edu.br/
-
-
----
-
 ## Worktech
-https://worktech.itp.ifsp.edu.br/
+![Logo Worktech](/assets/projetos/logo-worktech.png)
+![Worktech1](/assets/projetos/worktech-img1.png)
+![Worktech2](/assets/projetos/worktech-img2.png)
+
+[https://worktech.itp.ifsp.edu.br/](https://worktech.itp.ifsp.edu.br/)
 Tech: HTML, CSS e JS;
 
 ---
 
 ## Pós Info EDU
+![Logo Pós Info EDU](/assets/projetos/logo-posInfo.png)
+![Pós Info1](/assets/projetos/posInfo-img1.png)
+![Pós Info2](/assets/projetos/posInfo-img2.png)
+
 Tech: HTML, CSS e JS;
 Frameworks: nenhum;
-https://pos.itp.ifsp.edu.br/
+[https://pos.itp.ifsp.edu.br/](https://pos.itp.ifsp.edu.br/)

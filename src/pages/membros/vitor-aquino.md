@@ -63,3 +63,26 @@ Desenvolvimento do protótipo de um jogo similar a "space Invaders" com a lingua
 
 ***totais***
 - total de horas no mês: 22 horas
+
+### Setembro
+***semana 04/09 - 10/09***
+
+Produção do relatório dos meses de Julho e Agosto.
+
+- Link do PR: https://github.com/fabsoftwareitp/fabsoftwareitp.github.io/pull/5
+
+***semana 11/09 - 17/09***
+
+Envio do código do protótipo de jogo no novo repositório.
+
+- Link da issue: https://github.com/fabsoftwareitp/space-invaders/issues/1
+
+***semanas 18/09 - 01/10***
+
+Implementação de novas funções, como o bloqueio do zoom na página e o uso da tela cheia, além de uma tentativa não muito bem sucedida de descobrir a razão pela qual o uso do acelerômetro parece não funcionar em alguns celulares.
+
+- Link da issue: https://github.com/fabsoftwareitp/space-invaders/issues/2
+
+***totais***
+- total de PRs incorporados ao sistema: 2 (contando com a inserção do código na própria branch "main" do novo repositório)
+- total de horas no mês: 19 horas
