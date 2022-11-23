@@ -63,7 +63,7 @@ Atuei como scrum master, distribuindo tasks, checando as funcionalidades dos sit
 - total: **16 horas**
 
 ### Outubro
-- 05/10 - tentando arrumar problema da melhoria do formulário - 4 horas -
+- 05/10 - Tentando arrumar problema da melhoria do formulário - 4 horas -
     link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/teste3
 - 12/10 - Feriado da nossa senhora Aparecida - 0 horas
 - 19/10 - Atuação como Scrum master na fábrica e organização do relatório - 4 horas
@@ -75,7 +75,7 @@ Atuei como scrum master, distribuindo tasks, checando as funcionalidades dos sit
 - 02/10 - Feriado de Finados - Optimização de imagens das logos do site - 4 horas -
     link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/rodape
 - 09/10 - 
-- 16/10 -
+- 16/10 - Semana cientifico Cultural - 0 horas
 - 23/10 -
 - 30/10 -
 - total: **- horas**
