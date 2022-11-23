@@ -110,13 +110,6 @@ O site EspWeb foi elaborado para a divulgação do curso de Especialização em 
 
 ---
 
-## Meetape
-Tech: HTML, CSS e JS.
-[https://meetape.itp.ifsp.edu.br/](https://meetape.itp.ifsp.edu.br/)
-
-
----
-
 ## Worktech
 ![Logo Worktech](/assets/projetos/logo-worktech.png)
 ![Worktech1](/assets/projetos/worktech-img1.png)
