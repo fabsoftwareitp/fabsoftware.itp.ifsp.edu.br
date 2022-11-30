@@ -10,4 +10,4 @@ position: "Tec. Informática (3º ano)"
 
 # Maria Eduarda Senger
 
- ![Mah-Senger](https://avatars.githubusercontent.com/u/77407513?v=4)
+![Mah-Senger](https://avatars.githubusercontent.com/u/77407513?v=4)

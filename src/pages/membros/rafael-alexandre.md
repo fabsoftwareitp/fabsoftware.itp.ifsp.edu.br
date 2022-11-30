@@ -9,7 +9,7 @@ position: "Tec. Informática (3º ano)"
 
 # Rafael Alexandre
 
- ![Rafalexandre-code](https://avatars.githubusercontent.com/u/77407339?v=4)
+![Rafalexandre-code](https://avatars.githubusercontent.com/u/77407339?v=4)
 
 Técnico em Informática [em formação] pelo IFSP, membro da Fábrica de Softwares (2020 - 2021), período ao qual participa/participou no desenvolvimento dos projetos: [Feira de Ciencias, site da Fábrica, SGE], com enfoque no uso das linguagens: [PHP e SQL].
 
