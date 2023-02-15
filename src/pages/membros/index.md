@@ -7,34 +7,36 @@ template: "page"
 
 <app-team></app-team>
 
+## Equipe
+
 ## Equipe 22
-Ana Júlia
-Gabriel Machado
-João Correa
-Vinicius Manoel
-Vitor Aquino
-Rafael Alexandre
-Maria Senger
-André Augusto
+- Ana Júlia
+- Gabriel Machado
+- João Correa
+- Vinicius Manoel
+- Vitor Aquino
+- Rafael Alexandre
+- Maria Senger
+- André Augusto
 
 ## Equipe 21
-Rafael Alexandre
-Maria Senger
-André Augusto
-Laura Naomi
+- Rafael Alexandre
+- Maria Senger
+- André Augusto
+- Laura Naomi
 
 ## Equipe 20
-Samuel Facchetti
-Lucas Cavalherie
-Pedro Gois
-Rafael Damiam
-João Vitor
+- Samuel Facchetti
+- Lucas Cavalherie
+- Pedro Gois
+- Rafael Damiam
+- João Vitor
 
 ## Equipe 19
-Rafael Almeida
-Lucas Cavalherie
-Pedro Gois
-Rafael Damiam
-Vinicius Zevarex
-João Vitor
-Neemias
+- Rafael Almeida
+- Lucas Cavalherie
+- Pedro Gois
+- Rafael Damiam
+- Vinicius Zevarex
+- João Vitor
+- Neemias

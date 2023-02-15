@@ -52,11 +52,21 @@ Balanço do ano de 2022 e definição de prioridades para o ano de 2023.
     - Maria: alocada no SVSA;
 
 - **Treinamento**: organização do treinamento sobre laravel e git/github.
+    - André -> Laravel/Consultório
+    - Rafael -> SGE
+    - Gabriel -> Git/Github
+    - João -> Md Site Fábrica
 
 - **Objetivos23**:
     - Mudança do layout/sala/servidor; Criação de nova imagem para as máquinas com os softwares necessários;
-    - IFCasa Aberta?
-    - 
+    - IFCasa Aberta
+        - Finalizar o space invaders
+        - Apresentação Consultório na Rua
+        - Apresentação SVSA/SEC
+        - API Guia do Campus (pergutas sobre o campus respondidas pela API do Google Voz)
+
+    - Atualização do SGE para modelo de componentes
+    - Acordo de cooperação sobre o Consultório de Rua
 
 
 ### Antigas

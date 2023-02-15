@@ -10,7 +10,16 @@ class TeamComponent extends HTMLElement {
 
   async getData() {
     const data = await getMenuData("membros");
-    this.shadowRoot.querySelector(".shelf").innerHTML = data.map((item) => `<li><a href="${item.route}">${item.label != null ? item.label : item.title} </a></li>`).join("");
+    console.log(data);
+    this.shadowRoot.querySelector(".shelf").innerHTML = data
+      .map(
+        (item) => `
+      <li>
+        <img src="${item.data.img}" width="30" style="border-radius: 100%">
+        <a href="${item.route}">${item.label != null ? item.label : item.title}</a>
+      </li>`
+      )
+      .join("");
   }
 
   connectedCallback() {
