@@ -18,6 +18,8 @@ name: "Git e Github"
 
 5. O docker não está na inicialização do sistema, precisa verificar como ativar isso
 
+6. Tem que instalar `apt-get -y install build-essential nghttp2 libnghttp2-dev libssl-dev`. Principalmente o `libssl-dev`
+
 
 ## Configurar o Coolify para container Remoto com Docker
 
