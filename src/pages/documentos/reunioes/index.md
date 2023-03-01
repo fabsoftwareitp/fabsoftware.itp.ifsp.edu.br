@@ -22,9 +22,15 @@ PRs integrados
 
 ## Fevereiro
 
-<!-- ### Semana 09 (01/03) -->
+### Semana 10 (08/03)
 
-<!-- ### Semana 08 (22/02) -->
+### Semana 09 (01/03) 
+Ausências: nenhuma
+
+- Organização do novo ambiente da Fábrica de Software: organização novamente dos computadores visto que a sala foi alterada novamente, crimpagem dos cabos e teste das máquinas. Distribuição das tarefas para elaboração do treinamento. 
+
+### Semana 08 (22/02)
+- Feriado de carnaval
 
 ### Semana 07 (15/02)
 

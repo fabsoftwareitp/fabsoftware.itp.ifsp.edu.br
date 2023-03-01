@@ -12,7 +12,7 @@ template: "page"
 - 08 - Reunião
 
 ## Fevereiro
-- 01/03 - **Apresentação parcial do treinamento proposto**. 
+- 01/03 - Organização do novo ambiente da Fábrica
 - 22 - Feriado
 - 15 - Reunião inicial
 
