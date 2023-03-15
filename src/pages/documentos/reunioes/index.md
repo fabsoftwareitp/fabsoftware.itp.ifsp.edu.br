@@ -5,24 +5,59 @@ template: "page"
 
 # Reuniões 📓
 
+## Objetivos 23
+- Divulgação de resultados nos eventos: IF Casa Aberta e WorkTech
+- Mudança do layout/sala/servidor; Criação de nova imagem para as máquinas com os softwares necessários;
+- IFCasa Aberta
+    - Finalizar o space invaders
+    - Apresentação Consultório na Rua
+    - Apresentação SVSA/SEC
+    - API Guia do Campus (pergutas sobre o campus respondidas pelaAPI - do Google Voz)
+- Atualização do SGE para modelo de componentes
+- Acordo de cooperação sobre o Consultório de Rua
+
+
 ## Resumo
 PRs integrados
 
-|              	| André 	| Gabriel 	| Rafael 	| Vitor 	|
-|:---       	|:---:  	|:---:  	|:---:	    |:---:  	|
-| **FEV**    	| **0** 	|  **0**  	|  **0** 	| **0** 	|
-| Sem09        	|   0   	|    0    	|    0   	|   0   	|
-| Sem08        	|   0   	|    0    	|    0   	|   0   	|
-| Sem07        	|   0   	|    0    	|    0   	|   0   	|
-| -----       	| ----     	| ---      	| ---     	| ---       |
-| **JAN**    	| **0** 	|  **0**  	|  **0** 	| **0** 	|
-| Sem06        	|       	|         	|        	|       	|
+|              	| André 	| Gabriel 	| Rafael 	
+|:---       	|:---:  	|:---:  	|:---:	    
+| **MAR**    	| **0** 	|  **0**  	|  **0** 	
+| Sem1        	|   0   	|    0    	|    0   
+| Sem12        	|   0   	|    0    	|    0   	
+| Sem11        	|   0   	|    0    	|    0   	
+| Sem10        	|   0   	|    0    	|    0   	
+| -----       	| ----     	| ---      	| ---     	
+| **FEV**    	| **0** 	|  **0**  	|  **0** 	
+| Sem09        	|   0   	|    0    	|    0   	
+| Sem08        	|   0   	|    0    	|    0   	
+| Sem07        	|   0   	|    0    	|    0   	
+| -----       	| ----     	| ---      	| ---     	
+| **JAN**    	| **0** 	|  **0**  	|  **0** 	
+| Sem06        	|   0   	|    0    	|    0   	
 
 ---
 
-## Fevereiro
+## Março
+
+### Semana 13 (29/03)
+### Semana 12 (22/03)
+### Semana 11 (15/03)
+- Definição de carga horária - mínimo 8 horas com no mínimo 1 tarde presencial
+- Definição de entregas de atividades e relatórios
+- Criar depoimentos;
+- Organizar Github;
+- Processo seletivo
+    - problema inicial para ser resolvido + entrevista;
+    - criar aba sobre o processo seletivo
+
+Ausências: 
 
 ### Semana 10 (08/03)
+Ausências: Rafael
+- Reunião para discutir as ideias para o planejamento. Ficou decidido que será uma apreesntação curta com slides seguida de atividades acompnhadas pelo tutor que está ministrando o treinamento. Gabriel ficou responsável por elaborar a parte de Git/GitHub; André sobre Laravel e Rafael sobre o SGE;
+
+## Fevereiro
 
 ### Semana 09 (01/03) 
 Ausências: nenhuma
@@ -62,18 +97,6 @@ Balanço do ano de 2022 e definição de prioridades para o ano de 2023.
     - Rafael -> SGE
     - Gabriel -> Git/Github
     - João -> Md Site Fábrica
-
-- **Objetivos23**:
-    - Mudança do layout/sala/servidor; Criação de nova imagem para as máquinas com os softwares necessários;
-    - IFCasa Aberta
-        - Finalizar o space invaders
-        - Apresentação Consultório na Rua
-        - Apresentação SVSA/SEC
-        - API Guia do Campus (pergutas sobre o campus respondidas pela API do Google Voz)
-
-    - Atualização do SGE para modelo de componentes
-    - Acordo de cooperação sobre o Consultório de Rua
-
 
 ### Antigas
 - [Reuniões de 2022](reunioes-22)

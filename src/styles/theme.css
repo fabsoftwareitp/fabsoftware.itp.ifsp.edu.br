@@ -6,6 +6,9 @@ body {
 body {
   margin-top: 0;
   font-size: 17px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 a {
@@ -60,6 +63,10 @@ img {
 .bg-index h2 {
   color: #fd624c;
   font-weight: 700;
+}
+
+main {
+  flex:1;
 }
 
 .main {

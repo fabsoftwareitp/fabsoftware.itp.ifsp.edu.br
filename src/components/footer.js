@@ -29,15 +29,13 @@ class FooterComponent extends HTMLElement {
 
         .footer-fab{
           color:#fff;
-          font-size:30px;
+          font-size:25px;
           text-decoration: none
         }
-        .footer-fab:hover{
-          font-size:31px;
-        }
+  
         .footer-p{
           color:white;
-          margin: 5px 0 35px;
+          margin: 5px 0;
         }
       </style>
       <footer class="footer">
@@ -47,9 +45,8 @@ class FooterComponent extends HTMLElement {
             <span class="footer-fab">Fábrica de Software<span>
         </a>
 
-        <p class="footer-p">Somos um grupo de desenvolvimento procurando por novas e criativas soluções para ajudar pessoas com nossos produtos em seus objetivos</p>
-      
-        <p>Copyright &copy; 2022 - All Rights Reserved by Fabrica de Software.</p>
+        <p class="footer-p">Somos um grupo de desenvolvimento procurando por novas e criativas soluções para ajudar pessoas com nossos produtos em seus objetivos.</p>
+        <p>Desde 2019</p>
 
       </footer>
     `;
