@@ -5,20 +5,26 @@ template: "page"
 
 # Calendário 📅
 
-## Abril
-- 26 - **Finalização do treinamento**
+
+## Maio
+- 03 **Finalização do treinamento**
     - Prof. Rafael: DevOps (server, coolify, deploy automático)
-- 19 - Rafael: SGE e SiteFábrica 
-- 12 - André: Laravel
-- 05 - **Início da turma 23** 
+
+## Abril
+- 26 - Rafael: SGE e SiteFábrica 
+- 19 - André: Laravel
+- 12 - **Início da turma 23** 
+    - Finalização do processo seletivo
     - Início do treinamento dev23
     - Prof. Danilo: Metodologias Ágeis / Fábrica;
     - Gabriel: GIT/GITHub;
+- 05 - Publicação do edital de seleção de novos membros;
+     - Apresentação final do treinamento
 
 ## Março
-- 29 - Finalização do processo seletivo;
-- 23 - Publicação do edital de seleção de novos membros; 
-- 15 - **Apresentação final do treinamento**; 
+- 29 - Apresentação Treinamento Gabriel e Rafael
+- 22 - Apresentação Treinamento André
+- 15 - 
 - 08 - Reunião
 
 ## Fevereiro
