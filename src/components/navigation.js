@@ -9,7 +9,9 @@ class HeaderComponent extends HTMLElement {
   async connectedCallback() {
     const getGraph = await fetch("graph.json");
     const response = await getGraph.json();
-    this.navigation = response.filter((e) => e.route.split("/").length == 3 && !e.route.includes("404"));
+    this.navigation = response.filter((e) => e.route.split("/").length == 3 
+      && !e.route.includes("404") 
+      && !e.route.includes("documentos"));
     this.root.innerHTML = this.getTemplate();
   }
 
