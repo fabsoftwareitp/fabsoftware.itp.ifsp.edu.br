@@ -10,6 +10,7 @@ title: 'Documentos'
 - [Modelo de Relatório](modelos/relatorio/)
 
 # Infraestrutura
+- [Arquitetura](arquitetura/)
 - [Imagem das máquinas](imagem/)
 
 ## Tutoriais
