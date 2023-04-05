@@ -4,65 +4,78 @@
     <h1>Fábrica de Software</h1>
     <h2>IFSP Itapetininga</h2>
   </div>
-  <div class="container">
+  <div class="main container">
     <section>
       <h2>Sobre o projeto</h2>
-      <p>A Fábrica de Software é uma iniciativa liderada pelo Prof. Danilo Bueno, e têm como objetivo o desenvolvimento, a prática e a evolução nos âmbitos da criação de software. Neste sentido, os participantes do projeto podem ter as oportunidades de conhecer diferentes tecnologias, enfrentar desafios reais, trabalhar em equipe, entre outros.</p>
+      <p>A Fábrica de Software é uma iniciativa liderada pelo Prof. Danilo Bueno <strong>desde maio de 2019</strong> no Instituto Federal de Ciência e Tecnologia campus Itapetininga. A Fábrica têm como objetivo principal, o desenvolvimento, a prática e a evolução nos âmbitos do <strong>desenvolvimento de software</strong>. Nela, os alunos tem diversas vivências e oportunidades além da aulas tradicionais dos cursos, dentre as quais se destacam:</p>
+      <div class="banners">
+        <figure>
+          <img src="/assets/banner-tech.svg" alt="banner tecnologias" />
+          <figcaption>Conhecer diferentes tecnologias</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/banner-engineer.svg" alt="banner tecnologias" />
+          <figcaption>Enfrentar desafios reais</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/banner-pair.svg" alt="banner tecnologias" />
+          <figcaption>Trabalhar em equipe</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section>
-      <h2>Equipe</h2>
-      <ul class="membros"></ul>
+      <h2 id="equipe">Equipe</h2>
+      <p>A equipe é formada por alunos dos cursos de Informática do campus Itapetininga. Atualmente conta com <a href="#equipe"><strong>3 alunos</strong></a> do curso Técnico Integrado em Informática e já teve mais de <a href="/membros/"><strong>17 participantes</strong></a> desde o ínicio do projeto.</p>
+      <div id="equipe" class="membros"></div>
     </section>
 
     <section>
       <h2>Projetos</h2>
+      <p>A Fábrica de Software possui mais de <a href="/projetos/"><strong>10 projetos</strong></a> entre finalizados e em desenvolvimento desde a sua fundação. Dentre os projetos, temos internos para o próprio campus, como o <a href="/projetos/#sge"><strong>Sistema de Gerenciamento de Eventos (SGE)</strong></a> e também externos em parceria com a Prefeitura Municipal de Itapetininga em projetos como o <a href="/projetos/#svsa"><strong>SVSA</strong></a> e <a href="/projetos/#conrua"><strong>Consultório na Rua</strong></a>.</p>
       <ul class="projetos"></ul>
     </section>
 
     <section>
       <h2>Depoimentos</h2>
-      <div>
-        <iframe src="https://www.youtube.com/embed/B1bys3rAuL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p>Rafael Damiam</p>
-      </div>
+      <div class="depoimentos-videos">
+        <div>
+          <iframe src="https://www.youtube.com/embed/B1bys3rAuL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Rafael Damiam</p>
+        </div>
 
-      <div>
-        <iframe src="https://www.youtube.com/embed/sDcW1keRIDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p>Vinicius Zevarex</p>
-      </div>
-      <div>
-        <iframe src="https://www.youtube.com/embed/D054k8JNOm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p>João Moraiz</p>
-      </div>
-      <div>
-        <iframe src="https://www.youtube.com/embed/aw3LTiobEYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p>Lucas Cavalherie</p>
+        <div>
+          <iframe src="https://www.youtube.com/embed/sDcW1keRIDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Vinicius Zevarex</p>
+        </div>
+        <div>
+          <iframe src="https://www.youtube.com/embed/D054k8JNOm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>João Moraiz</p>
+        </div>
+        <div>
+          <iframe src="https://www.youtube.com/embed/aw3LTiobEYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Lucas Cavalherie</p>
+        </div>
       </div>
     </section>
   </div>
+  
 
   <script type="module">
     const getGraph = await fetch("graph.json");
     const response = await getGraph.json();
     const membros = response.filter((e) => e.route.startsWith("/membros/") && e.data.status == "ativo");
-    const projetos = response.filter((e) => e.route.startsWith("/projetos/"));
 
     document.querySelector(".membros").innerHTML = membros
       .map(
         (item) =>
-          `<li>
-            <a href="${item.route}">${item.label != null ? item.label : item.title}</a>
-          </li>`
-      )
-      .join("");
-
-    document.querySelector(".projetos").innerHTML = projetos
-      .map(
-        (item) =>
-          `<li>
-            <a href="${item.route}">${item.label != null ? item.label : item.title}</a>
-          </li>`
+          `<div class="membro">
+            <a href="${item.route}">
+              <img src="${item.data.img}" alt="${item.title}">
+              <span>${item.label != null ? item.label : item.title}</span>
+            </a>
+            <small>${item.data.position}</small>
+          </div class="membro">`
       )
       .join("");
   </script>

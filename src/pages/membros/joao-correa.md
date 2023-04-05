@@ -1,9 +1,10 @@
 ---
 template: "page"
 
-status: ativo
+status: desativado
 name: "João Corrêa"
 img: https://avatars.githubusercontent.com/u/75680576?v=4
+position: "Tec. Informática (2º ano)"
 ---
 
 # João Corrêa

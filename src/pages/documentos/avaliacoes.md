@@ -11,6 +11,43 @@ A avaliação tem como objetivo  proporcionar um feedback para o colaborador sob
 
 O desligamento do colaborador no projeto pode acontecer caso o índice de desempenho esteja abaixo do nível dentro do esperado em mais de uma avaliação e/ou tenha menos de 75% de presença nas atividades presenciais durante um mês.
 
+## Avaliação Bimestral (de 21/06 a 28/09)
+
+### Ana Julia
+    - posição: junior I
+    - perfil:  front-end / ux
+    - desempenho: abaixo do esperado
+
+### Andre Augusto
+    - posição: junior II
+    - perfil: back-end
+    - desempenho: dentro do esperado
+
+### Gabriel Machado
+    - posição: junior I
+    - perfil: back-end
+    - desempenho: dentro do esperado
+
+### João Correa
+    - posição: junior I
+    - perfil: front-end
+    - desempenho: dentro do esperado
+
+### Rafael Alexandre
+    - posição: junior II
+    - perfil: back-end
+    - desempenho: dentro do esperado
+
+### Vinicius Manoel
+    - posição: junior I
+    - perfil: n/a
+    - desempenho: abaixo do esperado;
+
+### Vitor Aquino
+    - posição: junior I
+    - perfil: n/a
+    - desempenho: dentro do esperado;  
+
 ## Avaliação Bimestral (de 25/04 a 21/06)
 
 ### Ana Julia

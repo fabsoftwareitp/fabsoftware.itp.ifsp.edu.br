@@ -5,6 +5,19 @@ body {
 
 body {
   margin-top: 0;
+  font-size: 17px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+a {
+  color:#fd624c;
+}
+
+.main h2 {
+  font-size: 3rem;
+  margin: 3rem 0 1rem;
 }
 
 .container {
@@ -50,4 +63,78 @@ img {
 .bg-index h2 {
   color: #fd624c;
   font-weight: 700;
+}
+
+main {
+  flex:1;
+}
+
+.main {
+  text-align: center;
+}
+
+.main section {
+  margin-bottom: 4rem;
+}
+
+.membros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 4rem;
+  text-align: center;
+  margin-top:2rem;
+}
+
+.membro {
+  max-width: 15rem;
+}
+
+.membro img {
+  display: inline-block;
+  border-radius: 100%;
+  margin-bottom: 1rem;
+}
+
+.membro a {
+  display: inline-block;
+  font-size: 1.5rem;
+  color:#fd624c;
+  font-weight: 600;
+}
+
+.membro a:hover {
+  font-weight: bold;
+}
+
+.depoimentos-videos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 770px) {
+  .depoimentos-videos {
+    justify-content: center;
+  }
+}
+
+.banners {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-top:2rem;
+}
+
+.banners figcaption {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.banners img {
+  width: 20rem;
+  height: 10rem;
+  margin-bottom: 1rem;
+  object-fit: contain;
 }

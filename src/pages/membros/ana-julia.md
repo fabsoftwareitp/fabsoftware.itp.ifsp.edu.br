@@ -1,9 +1,10 @@
 ---
 template: "page"
 
-status: ativo
+status: desativado
 name: "Ana Julia Trindade"
 img: https://avatars.githubusercontent.com/u/104458133?v=4
+position: "Tec. Informática (3º ano)"
 ---
 
 # Ana Julia Trindade

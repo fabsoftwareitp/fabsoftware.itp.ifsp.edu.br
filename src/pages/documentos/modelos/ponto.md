@@ -1,0 +1,6 @@
+- Coleta de dados dos funcionarios
+- Não tem internet
+- Centraliza numa planilha do Excel
+- Os funcionarios nao sabem lancar (tem que ter uma interface muito simpes)
+- Os encarregados tem que fazer a verificacao antes de enviar os dados
+- A preocupacao principal dela é com relacao ao tempo usado pelos funcionarios para lancar essas informacoes

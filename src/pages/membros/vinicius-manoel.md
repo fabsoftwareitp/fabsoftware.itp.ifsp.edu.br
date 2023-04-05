@@ -1,9 +1,10 @@
 ---
 template: "page"
 
-status: ativo
+status: desativado
 name: "Vinícius Manoel"
 img: https://avatars.githubusercontent.com/u/103225663?v=4
+position: "Tec. Informática (3º ano)"
 ---
 
 # Vinícius Manoel 
