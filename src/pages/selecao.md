@@ -16,7 +16,11 @@ Então, se você é apaixonado por tecnologia e quer fazer a diferença no mundo
 ## Etapas do processo seletivo
 
 - Inscrição via formulário do Google Forms do dia 05/04 até 10/04
-
 - Entrevista nos dias 11/04 e 12/04
 
-<!--### Link do formulário de inscrição:-->
+### Bolsa
+- O valor da Bolsa Discente – Modalidade Ensino é de R$ 700,00 mensais, para dedicação de 20 horas semanais.
+- 1 bolsa discente disponível
+
+### Link do formulário de inscrição:
+- https://forms.gle/UooMV5A8vvhV3dL38
