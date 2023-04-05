@@ -4,14 +4,14 @@ template: "page"
 status: ativo
 name: "André Augusto"
 img: https://avatars.githubusercontent.com/u/77406727?v=4
-position: "Tec. Informática (3º ano)"
+position: "Tec. Informática (4º ano)"
 ---
 
 # André Augusto
 
  ![andreaugusto-sourc](https://avatars.githubusercontent.com/u/77406727?v=4)
 
-Técnico em Informática [em formação] pelo IFSP, membro da Fábrica de Software (2020 - 2021), período ao qual participa/participou no desenvolvimento dos projetos: [Feira de Ciencias, site da Fábrica, SGE], com enfoque no uso das linguagens: [PHP e SQL].
+Técnico em Informática [em formação] pelo IFSP, membro da Fábrica de Software (2020 - 2022), período ao qual participa/participou no desenvolvimento dos projetos: [Feira de Ciencias, site da Fábrica, SGE], com enfoque no uso das linguagens: [PHP e SQL].
 
 ## Perfil
 
