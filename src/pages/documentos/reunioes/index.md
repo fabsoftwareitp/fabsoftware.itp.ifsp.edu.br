@@ -53,8 +53,10 @@ PRs integrados
 
 ## Março
 
-### Semana 13 (29/03)
+### Semana 14 (05/04)
+Gabriel refez a apresentação do treinamento para refinamentos. Gabriel apresentou o jogo space invaders para ver os problemas encontrados. Rafael ficou alocado para ajudar o Gabriel no jogo do space invaders. André ficou responsável por iniciar o desenvolvimento IFAQ (ChatGTP).
 
+### Semana 13 (29/03)
 - Apresentação treinamneto Gabriel/Rafael
 
 ### Semana 12 (22/03)
@@ -72,7 +74,7 @@ PRs integrados
   - problema inicial para ser resolvido + entrevista;
   - criar aba sobre o processo seletivo
 
-Ausências:
+Ausências:Nenhuma
 
 ### Semana 10 (08/03)
 
