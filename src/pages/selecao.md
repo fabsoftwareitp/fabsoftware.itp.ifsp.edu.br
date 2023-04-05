@@ -19,7 +19,7 @@ Então, se você é apaixonado por tecnologia e quer fazer a diferença no mundo
 - Entrevista nos dias 11/04 e 12/04
 
 ### Bolsa
-- O valor da Bolsa Discente – Modalidade Ensino é de R$ 700,00 (quatrocentos reais) mensais, para dedicação de 20 horas semanais.
+- O valor da Bolsa Discente – Modalidade Ensino é de R$ 700,00 mensais, para dedicação de 20 horas semanais.
 - 1 bolsa discente disponível
 
 ### Link do formulário de inscrição:
