@@ -4,22 +4,26 @@ template: "page"
 status: ativo
 name: "Rafael Alexandre"
 img: https://avatars.githubusercontent.com/u/77407339?v=4
-position: "Tec. Informática (3º ano)"
+position: "Tec. Informática (4º ano)"
 ---
 
 # Rafael Alexandre
 
  ![Rafalexandre-code](https://avatars.githubusercontent.com/u/77407339?v=4)
 
-Técnico em Informática [em formação] pelo IFSP, membro da Fábrica de Softwares (2020 - 2021), período ao qual participa/participou no desenvolvimento dos projetos: [Feira de Ciencias, site da Fábrica, SGE], com enfoque no uso das linguagens: [PHP e SQL].
+## Sobre mim
+Técnico em Informática [em formação] pelo IFSP, membro da Fábrica de Softwares (2020 - 2023), período ao qual participa/participou no desenvolvimento dos projetos: [Feira de Ciencias, site da Fábrica, SGE], com enfoque no uso das linguagens: [HTML,CSS,JS,PHP e SQL] e do Framework laravel.
 
-## Perfil
+## Atuação
+Atuar como fullstack, distribuindo tasks, checando as funcionalidades dos sites, resolver qualquer problema e ajudando os outros integrantes.
 
-## Evolução
-
-## Atividades
-Atuei como scrum master, distribuindo tasks, checando as funcionalidades dos sites e ajudando os outros integrantes a fazerem as tasks dadas por mim, além de assistir as apresentações dos outros participantes
-
+## Redes Sociais
+- github:https://github.com/Rafalexandre-code
+- linkedin:https://www.linkedin.com/in/rafael-alexandre-b9359b268/
+- facebook:https://www.facebook.com/rafael.alexandre.54540218
+- instagram:https://www.instagram.com/rafael.alexandre_lopes/
+***
+### Calendário 2022
 ### Maio
 - 19/04 - Apresentação da fabrica para os novos integrantes/apresentação do fluxo de trabalhos do github - 4 Horas
 - 26/04 - Levantamento de Tasks do site SGE - 4 Horas
@@ -57,25 +61,36 @@ Atuei como scrum master, distribuindo tasks, checando as funcionalidades dos sit
 - 14/09 - Ajudei a arrumar e fazer alguns ajustes a mais no SGE - 4 horas -
     link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/Teste
 - 21/09 - Arrumei o sistema de donos da fabrica implementando o usuario Organizador - 4 horas -
-    link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/Teste
+    link branch: https://github.com/fabsoftwareitp/sge-laravel/issues/94
 - 28/09 - Melhoria do formulário - 4 horas -
-    link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/teste3
+    link branch: https://github.com/fabsoftwareitp/sge-laravel/issues/97
 - total: **16 horas**
 
 ### Outubro
 - 05/10 - Tentando arrumar problema da melhoria do formulário - 4 horas -
-    link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/teste3
+    link branch: https://github.com/fabsoftwareitp/sge-laravel/issues/97
 - 12/10 - Feriado da nossa senhora Aparecida - 0 horas
 - 19/10 - Atuação como Scrum master na fábrica e organização do relatório - 4 horas
 - 26/10 - Implementado o rodapé e um menu responsivo hamburger - 4 horas -
-    link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/rodape
+    link branch: https://github.com/fabsoftwareitp/fabsoftware.itp.ifsp.edu.br/issues/6
 - total: **12 horas**
 
 ### Novembro
 - 02/10 - Feriado de Finados - Optimização de imagens das logos do site - 4 horas -
-    link branch: https://github.com/fabsoftwareitp/sge-laravel/tree/rodape
+    link branch: https://github.com/fabsoftwareitp/fabsoftware.itp.ifsp.edu.br/issues/12
 - 09/10 - 
 - 16/10 - Semana cientifico Cultural - 0 horas
 - 23/10 -
 - 30/10 -
 - total: **- horas**
+
+### Dezembro (Férias)
+- 01/10 - Férias
+- 08/10 - Férias
+- 15/10 - Férias
+- 22/10 - Férias
+- 29/10 - Férias
+- total: **- horas**
+***
+
+### Calendário 2023
