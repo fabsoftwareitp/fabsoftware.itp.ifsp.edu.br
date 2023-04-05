@@ -1,8 +1,10 @@
 <body>
   <div class="bg-index">
-    <img src="/assets/logo-oficial.png" alt="logo principal" />
-    <h1>Fábrica de Software</h1>
-    <h2>IFSP Itapetininga</h2>
+    <img src="/assets/logo-oficial.png" alt="logo principal" class="animate__animated animate__tada" />
+    <div class="animate__animated animate__bounceIn">
+      <h1>Fábrica de Software</h1>
+      <h2>IFSP Itapetininga</h2>
+    </div>
   </div>
   <div class="main container">
     <section>
@@ -26,19 +28,39 @@
 
     <section>
       <h2 id="equipe">Equipe</h2>
-      <p>A equipe é formada por alunos dos cursos de Informática do campus Itapetininga. Atualmente conta com <a href="#equipe"><strong>3 alunos</strong></a> do curso Técnico Integrado em Informática e já teve mais de <a href="/membros/"><strong>17 participantes</strong></a> desde o ínicio do projeto.</p>
+      <p>
+        A equipe é formada por alunos dos cursos de Informática do campus Itapetininga. Atualmente conta com <a href="#equipe"><strong>3 alunos</strong></a> do curso Técnico Integrado em Informática e já teve mais de <a href="/membros/"><strong>17 participantes</strong></a> desde o ínicio do projeto.
+      </p>
       <div id="equipe" class="membros"></div>
     </section>
 
     <section>
       <h2>Projetos</h2>
-      <p>A Fábrica de Software possui mais de <a href="/projetos/"><strong>10 projetos</strong></a> entre finalizados e em desenvolvimento desde a sua fundação. Dentre os projetos, temos internos para o próprio campus, como o <a href="/projetos/#sge"><strong>Sistema de Gerenciamento de Eventos (SGE)</strong></a> e também externos em parceria com a Prefeitura Municipal de Itapetininga em projetos como o <a href="/projetos/#svsa"><strong>SVSA</strong></a> e <a href="/projetos/#conrua"><strong>Consultório na Rua</strong></a>.</p>
+      <p>
+        A Fábrica de Software possui mais de <a href="/projetos/"><strong>10 projetos</strong></a> entre finalizados e em desenvolvimento desde a sua fundação. Dentre os projetos, temos internos para o próprio campus, como o <a href="/projetos/#sge"><strong>Sistema de Gerenciamento de Eventos (SGE)</strong></a> e também externos em parceria com a Prefeitura Municipal de Itapetininga em projetos como o <a href="/projetos/#svsa"><strong>SVSA</strong></a> e <a href="/projetos/#conrua"><strong>Consultório na Rua</strong></a
+        >.
+      </p>
       <ul class="projetos"></ul>
     </section>
 
     <section>
       <h2>Depoimentos</h2>
       <div class="depoimentos-videos">
+        <div>
+          <iframe src="https://www.youtube.com/embed/WqmlJsXiY54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>André Augusto</p>
+        </div>
+
+        <div>
+          <iframe src="https://www.youtube.com/embed/ETa81Rndiao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Gabriel Machado</p>
+        </div>
+
+        <div>
+          <iframe src="https://www.youtube.com/embed/mbH4MiyuVh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Rafael Alexandre</p>
+        </div>
+
         <div>
           <iframe src="https://www.youtube.com/embed/B1bys3rAuL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <p>Rafael Damiam</p>
@@ -59,7 +81,6 @@
       </div>
     </section>
   </div>
-  
 
   <script type="module">
     const getGraph = await fetch("graph.json");

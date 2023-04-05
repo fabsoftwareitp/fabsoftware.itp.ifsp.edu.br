@@ -19,4 +19,4 @@ Então, se você é apaixonado por tecnologia e quer fazer a diferença no mundo
 
 - Entrevista nos dias 11/04 e 12/04
 
-### Link do formulário de inscrição:
+<!--### Link do formulário de inscrição:-->
