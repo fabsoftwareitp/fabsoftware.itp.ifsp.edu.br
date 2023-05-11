@@ -5,62 +5,57 @@ template: "page"
 
 # Reuniões 📓
 
-## Objetivos 23
+## Maio
 
-- Divulgação de resultados nos eventos: IF Casa Aberta e WorkTech
-- Mudança do layout/sala/servidor; Criação de nova imagem para as máquinas com os softwares necessários;
-- IFCasa Aberta
-  - Finalizar o space invaders
-  - Apresentação Consultório na Rua
-  - Apresentação SVSA/SEC
-  - API Guia do Campus (pergutas sobre o campus respondidas pelaAPI - do Google Voz)
-- Atualização do SGE para modelo de componentes
-- Acordo de cooperação sobre o Consultório de Rua
+### Semana 22 (31)
+### Semana 21 (24)
+### Semana 20 (17)
+- ** Retrospectiva ** primeiro mês
 
-## Resumo
+### Semana 19 (10/03)
+- *** Exposição de trabalhos no IF Casa Aberta ***
+- Tivemos a exposição interativa dos projetos SpaceInvaders e IFAQ e uma apresentação dos demais projetos através de slides.
+- Vitor, Gabriel e Leonardo ficaram todo o período (manhã e tarde). Os João Pedro e o Rafael ficaram no perído da manhã cobrindo os demais.
 
-PRs integrados
 
-|         | André | Gabriel | Rafael |
-| :------ | :---: | :-----: | :----: |
-| **MAR** | **0** |  **0**  | **0**  |
-| Sem1    |   0   |    0    |   0    |
-| Sem12   |   0   |    0    |   0    |
-| Sem11   |   0   |    0    |   0    |
-| Sem10   |   0   |    0    |   0    |
-| -----   | ----  |   ---   |  ---   |
-| **FEV** | **0** |  **0**  | **0**  |
-| Sem09   |   0   |    0    |   0    |
-| Sem08   |   0   |    0    |   0    |
-| Sem07   |   0   |    0    |   0    |
-| -----   | ----  |   ---   |  ---   |
-| **JAN** | **0** |  **0**  | **0**  |
-| Sem06   |   0   |    0    |   0    |
+### Semana 18 (03/03)
+- Finalizações e testes das aplicações para o CasaAberta;
+- Organização dos equipamentos e planejamento do espaço no casa aberta;
 
 ---
 
-<!-- ## Abril
+## Abril
 
-### Semana 16 (26/04)
+### Semana 17 (26/04)
+- Foram distribuídas novas tarefas para a finalização do projeto; João Pedro e Leonardo ficaram alocados em trabalhar para implementar as novas especificações (https://github.com/fabsoftwareitp/fabsoftware.itp.ifsp.edu.br/issues/46)
+- Foram verificados os tablets; Foi criado um novo repositório para o space invaders. 
+- Conseguimos finalizar a comunicação entre cliente e servidor. 
+- Rafael vai trabalhar na criação do controle do game;
+- Gabriel e Vitor na mudança da biblioteca para socket.io e incorporcação do game final ao controle. 
 
 ### Semana 16 (19/04)
+- ***Entrada de novos membros***: Vitor Gabriel (bolsista), Leonardo e João Pedro como voluntários;
+- Teve a apresentação inicial do professor Danilo e a recepção dos membros novos
+- Os slides da apresentação podem ser encontrados aqui: 
 
 ### Semana 15 (12/04)
+- André apresentou a versão inicial do IFAQ; após discussões foram sugeridas modificações e novas funcionalidades no projeto;
+- Gabriel e Rafael mostraram o space-invaders; foram corrigidos alguns bugs encontrados. 
+- Rafael apresentou seu treinamento e os demais membros ajudaram com sugestões e refinamentos na apresentação.
 
-### Semana 14 (05/04)
-
--->
+---
 
 ## Março
 
 ### Semana 14 (05/04)
-Gabriel refez a apresentação do treinamento para refinamentos. Gabriel apresentou o jogo space invaders para ver os problemas encontrados. Rafael ficou alocado para ajudar o Gabriel no jogo do space invaders. André ficou responsável por iniciar o desenvolvimento IFAQ (ChatGTP).
+- Gabriel refez a apresentação do treinamento para que os demais membros pudessem colaborar com refinamentos. 
+- Gabriel apresentou o jogo space invaders, a partir disso foi discutido os  problemas encontrados. 
+- Rafael ficou alocado para ajudar o Gabriel no jogo do space invaders e André ficou responsável por iniciar o desenvolvimento IFAQ.
 
 ### Semana 13 (29/03)
 - Apresentação treinamneto Gabriel/Rafael
 
 ### Semana 12 (22/03)
-
 - Apresentação do treinamento do André
 - Apenas André e Rafael fizeram o depoimento
 
@@ -81,6 +76,8 @@ Ausências:Nenhuma
 Ausências: Rafael
 
 - Reunião para discutir as ideias para o planejamento. Ficou decidido que será uma apreesntação curta com slides seguida de atividades acompnhadas pelo tutor que está ministrando o treinamento. Gabriel ficou responsável por elaborar a parte de Git/GitHub; André sobre Laravel e Rafael sobre o SGE;
+
+---
 
 ## Fevereiro
 
@@ -125,6 +122,39 @@ Balanço do ano de 2022 e definição de prioridades para o ano de 2023.
   - Rafael -> SGE
   - Gabriel -> Git/Github
   - João -> Md Site Fábrica
+
+
+## Objetivos 23
+
+- Divulgação de resultados nos eventos: IF Casa Aberta e WorkTech
+- Mudança do layout/sala/servidor; Criação de nova imagem para as máquinas com os softwares necessários;
+- IFCasa Aberta
+  - Finalizar o space invaders
+  - Apresentação Consultório na Rua
+  - Apresentação SVSA/SEC
+  - API Guia do Campus (pergutas sobre o campus respondidas pelaAPI - do Google Voz)
+- Atualização do SGE para modelo de componentes
+- Acordo de cooperação sobre o Consultório de Rua
+
+## Resumo
+
+PRs integrados
+
+|         | André | Gabriel | Rafael |
+| :------ | :---: | :-----: | :----: |
+| **MAR** | **0** |  **0**  | **0**  |
+| Sem1    |   0   |    0    |   0    |
+| Sem12   |   0   |    0    |   0    |
+| Sem11   |   0   |    0    |   0    |
+| Sem10   |   0   |    0    |   0    |
+| -----   | ----  |   ---   |  ---   |
+| **FEV** | **0** |  **0**  | **0**  |
+| Sem09   |   0   |    0    |   0    |
+| Sem08   |   0   |    0    |   0    |
+| Sem07   |   0   |    0    |   0    |
+| -----   | ----  |   ---   |  ---   |
+| **JAN** | **0** |  **0**  | **0**  |
+| Sem06   |   0   |    0    |   0    |
 
 ### Antigas
 
