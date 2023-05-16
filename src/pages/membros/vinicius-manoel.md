@@ -13,11 +13,11 @@ position: "Tec. Informática (3º ano)"
 
 Técnico em Informática [em formação] pelo IFSP, membro da Fábrica de Softwares (2022), com enfoque no uso das linguagens: [PHP e SQL].
 
-## Perfil
+<!--## Perfil
 
 ## Evolução
 
-## Atividades
+## Atividades-->
 
 #### Maio
 

@@ -36,6 +36,10 @@ class TeamComponent extends HTMLElement {
             list-style:none;
             text-align:center;
           }
+
+          a {
+            color:#fd624c;
+          }
         </style>
   
         <nav>
