@@ -7,7 +7,7 @@ template: "page"
 
 <app-team></app-team>
 
-## Equipe
+## Equipe 23
 
 ## Equipe 22
 - Ana Júlia

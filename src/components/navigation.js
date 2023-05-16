@@ -58,7 +58,7 @@ class HeaderComponent extends HTMLElement {
         }
 
         nav.menu .logo {
-          font-size: 1.25rem;
+          font-size: 1.6rem;
           gap:0.4rem;
         }
 
@@ -72,7 +72,7 @@ class HeaderComponent extends HTMLElement {
         }
 
         nav.menu img {
-          max-width: 1.5rem;
+          max-width: 1.6rem;
         }
 
         nav.menu .container {
@@ -161,14 +161,14 @@ class HeaderComponent extends HTMLElement {
             margin: 0;
             padding: 0;
             border: 0;
-            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            transition: height 600ms cubic-bezier(0.23, 1, 0.32, 1);
           }
 
           #hamburger-toggle:checked ~ .hamburger li {
             border: 1px solid #333;
             height: 2.5em;
             padding: 0.5em;
-            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            transition: height 600ms cubic-bezier(0.23, 1, 0.32, 1);
           }
 
           .hamburger > li {

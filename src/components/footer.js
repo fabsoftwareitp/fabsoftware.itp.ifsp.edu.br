@@ -13,7 +13,7 @@ class FooterComponent extends HTMLElement {
       <style>
         .footer{
           background-color:#26272b;
-          padding:20px 0 10px;
+          padding:20px 5px 10px;
           font-size:15px;
           color:#737373;
           text-align:center;

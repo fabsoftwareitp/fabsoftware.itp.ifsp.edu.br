@@ -11,8 +11,23 @@ body {
   flex-direction: column;
 }
 
+p {
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+ul, li {
+  text-align: center;
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
 a {
   color:#fd624c;
+  word-wrap: break-word;
 }
 
 .main h2 {
@@ -31,6 +46,7 @@ footer {
 
 img {
   max-width: 100%;
+  border-radius: 5%;
 }
 
 .bg-index {
@@ -55,9 +71,10 @@ img {
 }
 
 .bg-index h1 {
-  font-size: 4.5rem;
+  font-size: 4.4rem;
   font-weight: 600;
   margin-bottom: 0;
+  padding: 0 5px;
 }
 
 .bg-index h2 {
@@ -129,7 +146,7 @@ main {
 }
 
 .banners figcaption {
-  font-size: 1.3rem;
+  /*font-size: 1.3rem;*/
   font-weight: 500;
 }
 
