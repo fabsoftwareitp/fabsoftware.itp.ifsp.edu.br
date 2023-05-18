@@ -11,16 +11,7 @@ body {
   flex-direction: column;
 }
 
-p {
-  text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  text-align: center;
-}
-
 ul, li {
-  text-align: center;
   list-style: none;
   padding-inline-start: 0px;
 }
