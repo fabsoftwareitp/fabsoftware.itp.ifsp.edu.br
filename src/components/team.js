@@ -32,7 +32,14 @@ class TeamComponent extends HTMLElement {
 
     return `
         <style>
-          /* CSS will go here */
+          ul {
+            list-style:none;
+            text-align:center;
+          }
+
+          a {
+            color:#fd624c;
+          }
         </style>
   
         <nav>

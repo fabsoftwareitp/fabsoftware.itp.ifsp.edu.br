@@ -10,7 +10,8 @@ template: "page"
 ### Semana 22 (31)
 ### Semana 21 (24)
 ### Semana 20 (17)
-- ** Retrospectiva ** primeiro mês
+- ** [Retrospectiva](retrospectiva/) ** primeiro mês
+- 
 
 ### Semana 19 (10/03)
 - *** Exposição de trabalhos no IF Casa Aberta ***
