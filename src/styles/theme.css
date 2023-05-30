@@ -11,10 +11,6 @@ body {
   flex-direction: column;
 }
 
-ul, li {
-  list-style: none;
-  padding-inline-start: 0px;
-}
 
 a {
   color:#fd624c;

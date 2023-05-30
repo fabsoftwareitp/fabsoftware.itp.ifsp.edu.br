@@ -9,9 +9,11 @@ template: "page"
 
 ### Semana 22 (31)
 ### Semana 21 (24)
+- Análise do projeto GeekIF
+- [Planejamento GeekIF](geekif/)
+
 ### Semana 20 (17)
 - ** [Retrospectiva](retrospectiva/) ** primeiro mês
-- 
 
 ### Semana 19 (10/03)
 - *** Exposição de trabalhos no IF Casa Aberta ***
