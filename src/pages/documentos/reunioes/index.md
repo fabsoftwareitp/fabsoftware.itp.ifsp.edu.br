@@ -5,10 +5,23 @@ template: "page"
 
 # Reuniões 📓
 
+## Junho
+
+
+### Semana 24 (14)
+- Gabriel finalizou o StyleGuide e apresentou para os demais membros; Vitor apresentou a base do site desenvolvido; Rafael apresentou o levantamento para a imagem do PC da Fábrica; Leo finalizou o envio de e-mail que já está incorporado na branch do geekif; JP apresentou o documento de boas práticas;
+
+### Semana 23 (07)
+- Não teve devido a apresentação de bancas de TCC
+
 ## Maio
 
 ### Semana 22 (31)
+- Ausências: Rafael, JP
+- Apresentação dos protótipos do GeekIF
+
 ### Semana 21 (24)
+- Ausências: Rafael
 - Análise do projeto GeekIF
 - [Planejamento GeekIF](geekif/)
 

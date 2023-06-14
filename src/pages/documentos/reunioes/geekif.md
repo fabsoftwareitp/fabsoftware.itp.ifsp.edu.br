@@ -10,8 +10,6 @@ template: "page"
 - segunda etapa: 02/ago
 - evento: 02/set
 
-
-
 ## 31/05
 Criação da identidade visual:
 - Paleta de cores

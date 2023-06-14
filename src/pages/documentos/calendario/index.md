@@ -11,8 +11,8 @@ template: "page"
 ## Junho
 
 ## Maio
-- 31: 
-- 24:
+- 31: Apresentação dos protótipos
+- 24: Reunião para apresentação do GeekIF
 - 17: Restrospectiva (1 mês)
 - 10: **IF CASA ABERTA**
 - 03: **Finalização do treinamento**
