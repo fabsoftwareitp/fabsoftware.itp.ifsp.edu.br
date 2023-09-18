@@ -8,6 +8,11 @@ template: "page"
 <app-team></app-team>
 
 ## Equipe 23
+- Vitor Gabriel
+- Gabriel Machado
+- Rafael Alexandre
+- Leonardo Luz
+- João Pedro
 
 ## Equipe 22
 - Ana Júlia

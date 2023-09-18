@@ -1,9 +1,9 @@
 ---
-title: "Processo Seletivo 2023"
+title: "Processo Seletivo"
 template: "page"
 ---
 
-# Processo Seletivo 2023 - Fábrica de Software
+# Processo Seletivo - Fábrica de Software
 
 Se você é apaixonado por tecnologia e sempre quis mergulhar no mundo da programação, esta é a sua chance de se tornar um desenvolvedor de software excepcional! A Fábrica de Software é o lugar perfeito para você aprender a criar soluções inovadoras para desafios do mundo real.
 
