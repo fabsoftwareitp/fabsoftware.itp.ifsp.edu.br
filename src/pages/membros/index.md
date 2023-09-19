@@ -8,7 +8,7 @@ template: "page"
 <app-team></app-team>
 
 ## Equipe 23
-- Vitor Gabriel
+- Vitor Cavalheiro
 - Gabriel Machado
 - Rafael Alexandre
 - Leonardo Luz

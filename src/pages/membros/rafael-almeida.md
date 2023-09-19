@@ -11,3 +11,8 @@ way: /membros/rafael-almeida
 # Rafael de Almeida Brochado
 
 ![rafalmeida-ifsp](https://avatars.githubusercontent.com/u/104154587?v=4)
+
+## Redes Sociais
+- github:https://github.com/rafalmeida-ifsp
+- linkedin:
+***

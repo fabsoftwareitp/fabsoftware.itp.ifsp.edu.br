@@ -15,8 +15,9 @@ class TeamComponent extends HTMLElement {
       .map(
         (item) => `
       <li>
-        <img src="${item.data.img}" width="30" style="border-radius: 100%">
+        <img src="${item.data.img}" width="100" style="border-radius: 100%">
         <a href="${item.route}">${item.label != null ? item.label : item.title}</a>
+        <p>${item.data.position}</p>
       </li>`
       )
       .join("");
@@ -39,6 +40,24 @@ class TeamComponent extends HTMLElement {
 
           a {
             color:#fd624c;
+          }
+
+          .shelf {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3vw;
+            margin: 1.5vw 0; 
+          }
+
+          .shelf > li {
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center;
+          }
+
+          .shelf > li > a {
+            width: 150px;
           }
         </style>
   
