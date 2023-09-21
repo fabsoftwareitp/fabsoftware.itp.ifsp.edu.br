@@ -16,7 +16,7 @@ Técnico em Informática [em formação] pelo IFSP, membro da Fábrica de Softwa
 
 ## Redes Sociais
 - github:https://github.com/andreaugusto-sourc
-- linkedin:
+- linkedin:https://www.linkedin.com/in/andr%C3%A9-augusto-b85296228/
 ***
 
 <!-- ## Perfil

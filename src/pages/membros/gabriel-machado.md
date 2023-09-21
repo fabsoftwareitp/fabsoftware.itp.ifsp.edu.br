@@ -16,7 +16,7 @@ Técnico em Informática [em formação] pelo IFSP, membro da Fábrica de Softwa
 
 ## Redes Sociais
 - github:https://github.com/gabs1m
-- linkedin:
+- linkedin:Não possui
 ***
 
 <!--## Perfil

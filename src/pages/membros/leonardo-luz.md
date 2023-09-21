@@ -16,7 +16,7 @@ Técnico em Informática [em formação] pelo IFSP, membro da Fábrica de Softwa
 
 ## Redes Sociais
 - github:https://github.com/leonardoDluz
-- linkedin:
+- linkedin:https://www.linkedin.com/in/leonardo-luz-928a831a1/
 ***
 
 <!--## Perfil

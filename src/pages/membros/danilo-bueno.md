@@ -14,5 +14,5 @@ position: "Professor"
 
 ## Redes Sociais
 - github:https://github.com/danilocbueno
-- linkedin:
+- linkedin:https://www.linkedin.com/in/danilocbueno/
 ***

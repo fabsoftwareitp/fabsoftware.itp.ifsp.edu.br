@@ -14,5 +14,5 @@ position: "Tec. Informática"
 
 ## Redes Sociais
 - github:
-- linkedin:
+- linkedin:https://www.linkedin.com/in/jo%C3%A3o-victor-ferreira-de-morais-20b774203/
 ***

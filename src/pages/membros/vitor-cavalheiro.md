@@ -16,7 +16,7 @@ Técnico em Informática [em formação] pelo IFSP, membro da Fábrica de Softwa
 
 ## Redes Sociais
 - github:https://github.com/Vitor-G-Cavalheiro
-- linkedin:
+- linkedin:https://www.linkedin.com/in/vitor-gc-39b6ab268/
 ***
 
 <!--## Perfil

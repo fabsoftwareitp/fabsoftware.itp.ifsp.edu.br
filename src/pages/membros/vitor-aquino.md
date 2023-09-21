@@ -16,7 +16,7 @@ Técnico em Informática [em formação] pelo IFSP, membro da Fábrica de Softwa
 
 ## Redes Sociais
 - github:
-- linkedin:
+- linkedin:https://www.linkedin.com/in/vitor-aquino-516a05286/
 ***
 
 <!--## Perfil
