@@ -8,11 +8,6 @@ class TeamComponent extends HTMLElement {
     this.attachShadow({ mode: "open" });
   }
 
-  getAllTeams() {
-    console.log("aeww");
-    
-  }
-
   async getData() {
     const data = await getMenuData("membros");
     console.log(data);
