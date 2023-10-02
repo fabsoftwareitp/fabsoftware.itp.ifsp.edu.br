@@ -6,6 +6,7 @@ name: "Ana Julia Trindade"
 img: https://avatars.githubusercontent.com/u/104458133?v=4
 way: /membros/ana-julia
 position: "Tec. Informática"
+date: "team team22"
 ---
 
 # Ana Julia Trindade

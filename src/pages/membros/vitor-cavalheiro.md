@@ -6,6 +6,7 @@ name: "Vitor Gabriel Cavalheiro"
 img: https://avatars.githubusercontent.com/u/126813410?v=4
 way: /membros/vitor-cavalheiro
 position: "Tec. Informática"
+date: "team team23"
 ---
 
 # Vitor Gabriel Cavalheiro

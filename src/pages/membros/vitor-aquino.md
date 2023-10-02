@@ -6,6 +6,7 @@ name: "Vitor Gabriel de Aquino"
 img: https://avatars.githubusercontent.com/u/95290697?v=4
 way: /membros/vitor-aquino
 position: "Tec. Informática"
+date: "team team22"
 ---
 
 # Vitor Gabriel de Aquino

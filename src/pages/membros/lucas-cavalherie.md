@@ -6,6 +6,7 @@ name: "Lucas Cavalherie"
 img: https://avatars.githubusercontent.com/u/41579591?v=4
 way: /membros/lucas-cavalherie
 position: "Tec. Informática"
+date: "team team19 team20"
 ---
 
 # Lucas Cavalherie

@@ -6,6 +6,7 @@ name: "Neemias Matos"
 img: https://avatars.githubusercontent.com/u/51499704?v=4
 way: /membros/neemias-matos
 position: "Tec. Informática"
+date: "team team20"
 ---
 
 # Neemias Borges de Matos

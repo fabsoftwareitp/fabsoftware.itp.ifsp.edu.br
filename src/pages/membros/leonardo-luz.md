@@ -6,6 +6,7 @@ name: "Leonardo Domingos da Luz"
 img: https://avatars.githubusercontent.com/u/71268759?v=4
 way: /membros/leonardo-luz
 position: "Tec. Informática"
+date: "team team23"
 ---
 
 # Leonardo Domingos da Luz

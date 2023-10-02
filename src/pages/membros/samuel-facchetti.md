@@ -6,6 +6,7 @@ name: "Samuel Facchetti"
 img: https://avatars.githubusercontent.com/u/47745205?v=4
 way: /membros/samuel-matos
 position: "Tec. Informática"
+date: "team team20"
 ---
 
 # Samuel Facchetti de Matos

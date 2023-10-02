@@ -6,6 +6,7 @@ name: "João Corrêa"
 img: https://avatars.githubusercontent.com/u/75680576?v=4
 way: /membros/jooa-correa
 position: "Tec. Informática"
+date: "team team22"
 ---
 
 # João Corrêa

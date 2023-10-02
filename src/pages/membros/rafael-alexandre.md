@@ -6,6 +6,7 @@ name: "Rafael Alexandre"
 img: https://avatars.githubusercontent.com/u/77407339?v=4
 way: /membros/rafael-alexandre
 position: "Tec. Informática"
+date: "team team21 team22 team23"
 ---
 
 # Rafael Alexandre
