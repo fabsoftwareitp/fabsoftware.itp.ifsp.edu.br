@@ -4,7 +4,7 @@ template: "page"
 ---
 
 # Projetos
-A Fábrica de Software possui um total de 10 projetos entre finalizados e em desenvolvimento desde a sua fundação em maio de 2019.
+A Fábrica de Software possui um total de 13 projetos entre finalizados e em desenvolvimento desde a sua fundação em maio de 2019.
 
 
 ## App do Consultório na Rua 
@@ -128,3 +128,31 @@ Tech: HTML, CSS e JS;
 Tech: HTML, CSS e JS;
 Frameworks: nenhum;
 [https://pos.itp.ifsp.edu.br/](https://pos.itp.ifsp.edu.br/)
+
+---
+
+## IFAQ
+
+O IFAQ é um website que apresenta perguntas e respostas dinâmicas a respieto do Insituto Federal
+- Tecnologias: HTML, CSS e JavaScript.([GitHub](https://github.com/fabsoftwareitp/ifaq.fabsoftware.itp.ifsp.edu.br)) 
+- APIS: SpeechSynthesis, SwipperJS e Animate.css
+
+---
+
+## Space Invaders
+
+O projeto Space Invaders replica o jogo de mesmo nome, portando o antigo arcade para um website, com
+sistemas de ranking utilizando JASON.
+- Tecnologias: HTML, CSS, JavaScript, NodeJs, Express e Canva([GitHub](https://github.com/fabsoftwareitp/space-invaders)) 
+
+--- 
+
+## Pong Multiplayer 
+![Partida de Pong](/assets/projetos/partida-de-pong.png) 
+
+O Pong Multiplayer é um projeto que visa colocar duas pessoas, em celulares distintos, para jogarem uma contra a outra enquanto uma tela
+exibe a disputa dos players. Utilizando-se da tecnologia de Socket.io para realizar a comunicação de todas as partes envolvidas, a construção
+do jogo é feita apenas com HTML, CSS, JavaScript e NodeJS.
+- Tecnologias: HTML, CSS, JavaScript, NodeJS e Canva([GitHub](https://github.com/fabsoftwareitp/pong.fabsoftware.itp.ifsp.edu.br)) 
+- Status: em Desenvolvimento
+- Data: 07/2023
