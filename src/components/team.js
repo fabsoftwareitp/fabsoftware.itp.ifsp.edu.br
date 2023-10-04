@@ -10,7 +10,6 @@ class TeamComponent extends HTMLElement {
 
   async getData() {
     const data = await getMenuData("membros");
-    console.log(data);
     this.shadowRoot.querySelector(".shelf").innerHTML = data
       .map(
         (item) => `
@@ -23,7 +22,7 @@ class TeamComponent extends HTMLElement {
       .join("");
   }
 
-  connectedCallback() {
+  async connectedCallback() {
     this.shadowRoot.innerHTML = this.getTemplate();
     const listBtn = this.shadowRoot.querySelectorAll(".btn");
     
@@ -32,7 +31,7 @@ class TeamComponent extends HTMLElement {
         const ano = btn.getAttribute("data-ano");
         this.shadowRoot.querySelectorAll("li").forEach(e => {
           e.style.opacity= 0.5;
-        })
+        });
         this.shadowRoot.querySelectorAll(`.${ano}`).forEach(e => {
           e.style.opacity = 1;
         });
@@ -41,7 +40,6 @@ class TeamComponent extends HTMLElement {
         });    
       })
     })
-
   }
 
   // create templates that interpolate variables and HTML!
@@ -102,7 +100,7 @@ class TeamComponent extends HTMLElement {
   
         <nav>
           <div>
-          <button class="btn" data-ano="team">Todos os Memebros</button>
+          <button class="btn" data-ano="team">Todos os Membros</button>
           <button class="btn" data-ano="team23">Equipe 23</button>
           <button class="btn" data-ano="team22">Equipe 22</button>
           <button class="btn" data-ano="team21">Equipe 21</button>
