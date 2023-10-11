@@ -32,7 +32,7 @@ Chamamos de Consultório na Rua equipes multiprofissionais que desenvolvem açõ
 O SGE é um projeto de sistema em que você pode buscar por eventos que estão por vir ou mesmo registrar seu próprio evento para que o público acesse as informações de uma forma simples.
 
 - Tecnologias: PHP, MySQL, Laravel e Bootstrap ([GitHub](https://github.com/fabsoftwareitp/consultorionarua.itp.ifsp.edu.br))
-- Time: [Rafael Damiam](/membros/rafael-santos/), [Vinícius Zevarex](/membros/vinicius-zevarex/), [Lucas Cavalherie](/membros/lucas-cavalherie), [João Morais](/membros/joao-morais/), [Pedro Góis](/membros/pedro-gois/), [Laura Naomi](/membros/laura-naomi/), [Andre Augusto](/membros/andre-augusto/), [Maria Senger](/membros/maria-senger/), [Rafael Alexandre](/membros/rafael-alexandre/) e [Gabriel Machado](/membros/gabriel-machado/)
+- Time: [Rafael Damiam](/membros/rafael-damiam/), [Vinícius Zevarex](/membros/vinicius-zevarex/), [Lucas Cavalherie](/membros/lucas-cavalherie), [João Morais](/membros/joao-victor/), [Pedro Góis](/membros/pedro-gois/), [Laura Naomi](/membros/laura-naomi/), [Andre Augusto](/membros/andre-augusto/), [Maria Senger](/membros/maria-senger/), [Rafael Alexandre](/membros/rafael-alexandre/) e [Gabriel Machado](/membros/gabriel-machado/)
 - Status: em Desenvolvimento
 - Data: 03/2019 
 
@@ -60,7 +60,7 @@ O SGE é um projeto de sistema em que você pode buscar por eventos que estão p
 Tem a finalidade de servir de guia para os usuários do SVSA, facilitando o acesso ao sistema e suas funcionalidades.
 
 - Tecnologias: PHP, SQLite e Bootstrap ([GitHub](https://github.com/fabsoftwareitp/svsa.itp.ifsp.edu.br))
-- Time: [Samuel Facchetti](/membros/samuel-matos/), [Rafael Damiam](/membros/rafael-santos/), [Pedro Gois](/membros/pedro-gois/), [Gustavo Leme](/membros/gustavo-leme/) e [Maria Senger](/membros/maria-senger/).
+- Time: [Samuel Matos](/membros/samuel-matos/), [Rafael Damiam](/membros/rafael-damiam/), [Pedro Gois](/membros/pedro-gois/), [Gustavo Leme](/membros/gustavo-leme/) e [Maria Senger](/membros/maria-senger/).
 - Status: em Desenvolvimento
 - Data: 03/2020
 
@@ -76,7 +76,7 @@ Tem a finalidade de servir de guia para os usuários do SVSA, facilitando o aces
 Show de física é um projeto no campo da Educação e Ciência. Sua missão é contribuir para o ensino de conceitos físicos por meio de diferentes e divertidos métodos de apredizagem.
 
 - Tecnologias: PHP, SQLite e NoopMVC ([GitHub](https://github.com/fabsoftwareitp/showdefisica.itp.ifsp.edu.br))
-- Time: [Neemias Borges](/membros/neemias-matos/), [Samuel Facchetti](/membros/samuel-matos/) e [Rafael Damiam](/membros/rafael-santos/)
+- Time: [Neemias Matos](/membros/neemias-matos/), [Samuel Matos](/membros/samuel-matos/) e [Rafael Damiam](/membros/rafael-damiam/)
 - Status: finalizado
 - Data: 04/2020
 
@@ -90,7 +90,7 @@ Show de física é um projeto no campo da Educação e Ciência. Sua missão é 
 O site EspWeb foi elaborado para a divulgação do curso de Especialização em Desenvolvimento Web ofertado pelo IFSP.
 
 - Tecnologias: HTML, CSS e JS ([GitHub](https://github.com/fabsoftwareitp/espweb))
-- Time: [Rafael Damiam](/membros/rafael-santos/) e [Neemias Borges](/membros/neemias-matos/)
+- Time: [Rafael Damiam](/membros/rafael-damiam/) e [Neemias Matos](/membros/neemias-matos/)
 - Status: finalizado
 - Data: 10/2019 
 
@@ -116,7 +116,7 @@ O site EspWeb foi elaborado para a divulgação do curso de Especialização em 
 ![Worktech2](/assets/projetos/worktech-img2.png)
 
 [https://worktech.itp.ifsp.edu.br/](https://worktech.itp.ifsp.edu.br/)
-Tech: HTML, CSS e JS;
+- Tecnologias: HTML, CSS e JS;
 
 ---
 
@@ -125,8 +125,8 @@ Tech: HTML, CSS e JS;
 ![Pós Info1](/assets/projetos/posInfo-img1.png)
 ![Pós Info2](/assets/projetos/posInfo-img2.png)
 
-Tech: HTML, CSS e JS;
-Frameworks: nenhum;
+- Tecnologias: HTML, CSS e JS;
+- Frameworks: nenhum;
 [https://pos.itp.ifsp.edu.br/](https://pos.itp.ifsp.edu.br/)
 
 ---
@@ -136,6 +136,8 @@ Frameworks: nenhum;
 O IFAQ é um website que apresenta perguntas e respostas dinâmicas a respieto do Insituto Federal
 - Tecnologias: HTML, CSS e JavaScript.([GitHub](https://github.com/fabsoftwareitp/ifaq.fabsoftware.itp.ifsp.edu.br)) 
 - APIS: SpeechSynthesis, SwipperJS e Animate.css
+- Time: [Leaonardo Luz](/membros/leonardo-luz/)
+- Status: Finalizado
 
 ---
 
@@ -144,6 +146,8 @@ O IFAQ é um website que apresenta perguntas e respostas dinâmicas a respieto d
 O projeto Space Invaders replica o jogo de mesmo nome, portando o antigo arcade para um website, com
 sistemas de ranking utilizando JASON.
 - Tecnologias: HTML, CSS, JavaScript, NodeJs, Express e Canva([GitHub](https://github.com/fabsoftwareitp/space-invaders)) 
+- Time: [Vitor Cavalheiro](/membros/vitor-cavalheiro/), [Leaonardo Luz](/membros/leonardo-luz/) e [Gabriel Machado](/membros/gabriel-machado/)
+- Status: Em Desenvolvimento
 
 --- 
 
@@ -154,5 +158,6 @@ O Pong Multiplayer é um projeto que visa colocar duas pessoas, em celulares dis
 exibe a disputa dos players. Utilizando-se da tecnologia de Socket.io para realizar a comunicação de todas as partes envolvidas, a construção
 do jogo é feita apenas com HTML, CSS, JavaScript e NodeJS.
 - Tecnologias: HTML, CSS, JavaScript, NodeJS e Canva([GitHub](https://github.com/fabsoftwareitp/pong.fabsoftware.itp.ifsp.edu.br)) 
-- Status: em Desenvolvimento
+- Time: [Vitor Cavalheiro](/membros/vitor-cavalheiro/)
+- Status: Em Desenvolvimento
 - Data: 07/2023
