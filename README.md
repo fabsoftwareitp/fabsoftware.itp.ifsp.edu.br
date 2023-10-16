@@ -4,7 +4,7 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 # Descrição do Projeto
-![Landing Page Fábrica de Software](./Landing-Page.png)
+![Landing Page Fábrica de Software](./Landing-Page-Fab.png)
 
 
 O site da Fágrica de Software é um projeto que visa informar e divulgar as pessoas de fora da fábrica sobre o estado dela, divulgando os sites, apps e projetos feitos pelos integrantes da fábrica, possuindo diversas páginas para o site como: Página Incial, Páginas de Membros, Página de Projetos e diversas outras. Utilizando-se das tecnologias de GreenWoodJs, o site é construído com HTML, CSS, JavaScript e MarkDown.
