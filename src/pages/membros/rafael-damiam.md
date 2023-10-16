@@ -2,9 +2,9 @@
 template: "page"
 
 status: desativado
-name: "Rafael Damian"
+name: "Rafael Damiam"
 img: https://avatars.githubusercontent.com/u/41579736?v=4
-way: /membros/rafael-santos
+way: /membros/rafael-damiam
 position: "Tec. Informática"
 date: "team team19 team20"
 ---

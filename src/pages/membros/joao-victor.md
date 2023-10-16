@@ -4,7 +4,7 @@ template: "page"
 status: desativado
 name: "João Victor"
 img: https://avatars.githubusercontent.com/u/41636783?v=4
-way: /membros/joao-morais
+way: /membros/joao-victor
 position: "Tec. Informática"
 date: "team team19 team20"
 ---

@@ -1,18 +1,35 @@
-# Projeto base com o Greenwood
-Site oficial https://www.greenwoodjs.io/
+# Fábrica de Software
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-## 🪴 Project Activity
-![Alt](https://repobeats.axiom.co/api/embed/96a55879bbc8b9730d1985f6e2895a8c9f09286b.svg "Repobeats analytics image")
+# Descrição do Projeto
+![Landing Page Fábrica de Software](./Landing-Page-Fab.png)
 
-## Como instalar
-- Rodar o comando `npm install` para instalar as dependências do projeto.
-- Rodar o comando `npm start` pra subir o projeto
 
-## Deploy
-Deploy
+O site da Fágrica de Software é um projeto que visa informar e divulgar as pessoas de fora da fábrica sobre o estado dela, divulgando os sites, apps e projetos feitos pelos integrantes da fábrica, possuindo diversas páginas para o site como: Página Incial, Páginas de Membros, Página de Projetos e diversas outras. Utilizando-se das tecnologias de GreenWoodJs, o site é construído com HTML, CSS, JavaScript e MarkDown.
 
-## Exemplo de testes
-https://github.com/freeCodeCamp/testable-projects-fcc/blob/21dbc3d2dfcbed6787bbb0dde4f989d36fe8927e/src/project-tests/tree-map-tests.js
+# Status do Projeto
+Status: Finalizado
 
-## Responsive Menu
-(Responsive Menu)[https://1stwebdesigner.com/how-to-create-a-responsive-dropdown-navigation-using-only-css/]
+# Funcionalidades e Demonstração da Aplicação
+O projeto exibe diversas páginas, dentre elas, página de membros, página de projetos e sobre.
+
+# Instruções de Uso
+Para acessar o site da fábrica de software localmente, deve ser feito o clonamento deste repositório.
+
+1. `git clone`
+
+Após isso, executar no terminal, os comandos:
+
+2. `npm install`
+3. `npm start`
+
+E basta acessar a hospedagem local.
+
+# Acesso ao Projeto (Link do Projeto)
+[Fábrica de Software](https://fabsoftware.itp.ifsp.edu.br/)
+
+# Contribuição/Autores
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/2002182?v=4" width=115><br><sub>Danilo Camargo Bueno</sub>](https://avatars.githubusercontent.com/u/2002182?v=4)| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/126813410?v=4" width=115><br><sub>Vitor Gabriel Cavalheiro</sub>](https://github.com/Vitor-G-Cavalheiro) | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/103156444?v=4" width=115><br><sub>Gabriel Machado</sub>](https://github.com/gabs1m) |
+| :---: | :---: |:---: |
