@@ -2,11 +2,11 @@
 template: "page"
 
 status: ativo
-name: "Danilo Bueno"
+name: "Danilo Bubeno"
 img: https://avatars.githubusercontent.com/u/2002182?v=4
 way: /membros/danilo-bueno
-position: "Professor"
-date: "teamprof"
+position: "Aluno"
+date: "teamaluno"
 ---
 
 # Danilo Bueno
