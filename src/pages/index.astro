@@ -5,7 +5,6 @@ import Equipe from '../components/Equipe.astro';
 const allPosts = await Astro.glob('./membros/*.md');
 const status = "ativo";
 const filteredPosts = allPosts.filter((post) => post.frontmatter.status?.includes(status));
-console.log(filteredPosts[0].frontmatter)
 const pageTitle = "Fábrica de Software";
 ---
 
