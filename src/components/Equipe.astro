@@ -5,7 +5,13 @@ const {way, img, name, position} = Astro.props;
     <div class="membro">
         <a href={way}>
             <img src={img} alt={name}></img>      
-            <span>{name}</span>
+            <span>{way.replace("/membros/", " ").replace("-", " ")}</span>
         </a>
         <small>{position}</small>
     </div>
+
+<style>
+    span {
+        text-transform: capitalize;
+    }
+</style>
