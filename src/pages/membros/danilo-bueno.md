@@ -1,12 +1,12 @@
 ---
-template: "page"
+layout: "../../layouts/MarkDownLayout.astro"
 
 status: ativo
-name: "Danilo Bubeno"
+name: "Danilo Bueno"
 img: https://avatars.githubusercontent.com/u/2002182?v=4
 way: /membros/danilo-bueno
-position: "Aluno"
-date: "teamaluno"
+position: "Professor"
+date: "teamprof"
 ---
 
 # Danilo Bueno

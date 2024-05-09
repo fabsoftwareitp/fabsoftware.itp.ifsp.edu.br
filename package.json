@@ -1,22 +1,16 @@
 {
-  "name": "greenblog",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "adaptacao",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "greenwood build",
-    "start": "greenwood develop",
-    "serve": "greenwood serve"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@greenwood/cli": "^0.25.2",
-    "puppeteer": "^13.5.2"
-  },
-  "prettier": {
-    "printWidth": 600
+  "dependencies": {
+    "astro": "^4.7.1",
+    "bootstrap": "^5.3.3"
   }
 }

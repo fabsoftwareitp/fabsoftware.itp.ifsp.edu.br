@@ -1,9 +1,9 @@
 ---
-template: "page"
+layout: "../../layouts/MarkDownLayout.astro"
 
 status: ativo
 name: "Leonardo Henrique de Oliveira Cesar"
-img: https://avatars.githubusercontent.com/u/126813410?v=4
+img: https://avatars.githubusercontent.com/u/127048383?v=4
 way: /membros/leonardo-cesar
 position: "Tec. Informática"
 date: "team team24"

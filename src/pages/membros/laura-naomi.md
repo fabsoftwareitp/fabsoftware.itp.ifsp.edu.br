@@ -1,5 +1,5 @@
 ---
-template: "page"
+layout: "../../layouts/MarkDownLayout.astro"
 
 status: desativado
 name: "Laura Naomi"

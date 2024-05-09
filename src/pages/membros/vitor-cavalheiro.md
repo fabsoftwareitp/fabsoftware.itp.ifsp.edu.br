@@ -1,7 +1,7 @@
 ---
-template: "page"
+layout: "../../layouts/MarkDownLayout.astro"
 
-status: ativo
+status: desativado
 name: "Vitor Gabriel Cavalheiro"
 img: https://avatars.githubusercontent.com/u/126813410?v=4
 way: /membros/vitor-cavalheiro

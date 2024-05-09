@@ -1,0 +1,11 @@
+---
+const {way, img, name, position} = Astro.props;
+---
+
+    <div class="membro">
+        <a href={way}>
+            <img src={img} alt={name}></img>      
+            <span>{name}</span>
+        </a>
+        <small>{position}</small>
+    </div>

@@ -1,7 +1,7 @@
 ---
-template: "page"
+layout: "../../layouts/MarkDownLayout.astro"
 
-status: desativado
+status: ativo
 name: "Gabriel Machado"
 img: https://avatars.githubusercontent.com/u/103156444?v=4
 way: /membros/gabriel-machado

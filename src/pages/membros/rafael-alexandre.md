@@ -1,7 +1,6 @@
 ---
-template: "page"
-
-status: ativo
+layout: "../../layouts/MarkDownLayout.astro"
+status: desativado
 name: "Rafael Alexandre"
 img: https://avatars.githubusercontent.com/u/77407339?v=4
 way: /membros/rafael-alexandre

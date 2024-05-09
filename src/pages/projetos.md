@@ -1,6 +1,6 @@
 ---
+layout: ../layouts/MarkDownLayout.astro
 title: "Projetos"
-template: "page"
 ---
 
 # Projetos
@@ -10,7 +10,7 @@ A Fábrica de Software possui um total de 13 projetos entre finalizados e em des
 ## App do Consultório na Rua 
 [https://consultorionarua.fabsoftware.itp.ifsp.edu.br](https://consultorionarua.fabsoftware.itp.ifsp.edu.br)
 
-![App Consultório na Rua](/assets/projetos/logo-consultorio-na-rua.png) 
+![App Consultório na Rua](/projetos/logo-consultorio-na-rua.png) 
 
 Chamamos de Consultório na Rua equipes multiprofissionais que desenvolvem ações integrais de saúde frente às necessidades dessa população. Elas devem realizar suas atividades de forma itinerante e, quando necessário, desenvolver ações em parceria com as equipes das Unidades Básicas de Saúde do território. É um aplicativo para ajudar no acompanhamento das equipes na rua.
 
@@ -24,9 +24,9 @@ Chamamos de Consultório na Rua equipes multiprofissionais que desenvolvem açõ
 ## Sistema de Gerenciamento de Eventos
 [https://sge.fabsoftware.itp.ifsp.edu.br](https://sge.fabsoftware.itp.ifsp.edu.br)
 
-![Logo SGE](/assets/projetos/logo-sge.png)
-![SGE1](/assets/projetos/sge-img1.png)
-![SGE2](/assets/projetos/sge-img2.png)
+![Logo SGE](/projetos/logo-sge.png)
+![SGE1](/projetos/sge-img1.png)
+![SGE2](/projetos/sge-img2.png)
 
 
 O SGE é um projeto de sistema em que você pode buscar por eventos que estão por vir ou mesmo registrar seu próprio evento para que o público acesse as informações de uma forma simples.
@@ -53,9 +53,9 @@ O SGE é um projeto de sistema em que você pode buscar por eventos que estão p
 ## Manual do usuário SVSA
 [https://svsa.itp.ifsp.edu.br/](https://svsa.itp.ifsp.edu.br/)
 
-![Logo SVSA](/assets/projetos/logo-svsa.png)
-![SVSA1](/assets/projetos/svsa-img1.png)
-![SVSA2](/assets/projetos/svsa-img2.png))
+![Logo SVSA](/projetos/logo-svsa.png)
+![SVSA1](/projetos/svsa-img1.png)
+![SVSA2](/projetos/svsa-img2.png))
 
 Tem a finalidade de servir de guia para os usuários do SVSA, facilitando o acesso ao sistema e suas funcionalidades.
 
@@ -69,9 +69,9 @@ Tem a finalidade de servir de guia para os usuários do SVSA, facilitando o aces
 ## Show De Fisica
 [https://showdefisica.itp.ifsp.edu.br/](https://showdefisica.itp.ifsp.edu.br/)
 
-![Logo Show de Física](/assets/projetos/logo-show-de-fisica.png)
-![Show de Física1](/assets/projetos/show-de-fisica-img1.png)
-![Show de Física2](/assets/projetos/show-de-fisica-img2.png)
+![Logo Show de Física](/projetos/logo-show-de-fisica.png)
+![Show de Física1](/projetos/show-de-fisica-img1.png)
+![Show de Física2](/projetos/show-de-fisica-img2.png)
 
 Show de física é um projeto no campo da Educação e Ciência. Sua missão é contribuir para o ensino de conceitos físicos por meio de diferentes e divertidos métodos de apredizagem.
 
@@ -85,7 +85,7 @@ Show de física é um projeto no campo da Educação e Ciência. Sua missão é 
 ## Pós Especialização em Desenvolvimento Web
 [https://espweb.fabsoftware.itp.ifsp.edu.br](https://espweb.fabsoftware.itp.ifsp.edu.br)
 
-![FS-cinza](/assets/projetos/logo-espweb.png)
+![FS-cinza](/projetos/logo-espweb.png)
 
 O site EspWeb foi elaborado para a divulgação do curso de Especialização em Desenvolvimento Web ofertado pelo IFSP.
 
@@ -99,9 +99,9 @@ O site EspWeb foi elaborado para a divulgação do curso de Especialização em 
 ## Feira de Ciências
 [https://feiradeciencias.itp.ifsp.edu.br/](https://feiradeciencias.itp.ifsp.edu.br/)
 
-![Logo Feira de Ciências](/assets/projetos/logo-feira-de-ciencias.png)
-![Feira de Ciências1](/assets/projetos/feira-de-ciencias-img1.png)
-![Feira de Ciências2](/assets/projetos/feira-de-ciencias-img2.png)
+![Logo Feira de Ciências](/projetos/logo-feira-de-ciencias.png)
+![Feira de Ciências1](/projetos/feira-de-ciencias-img1.png)
+![Feira de Ciências2](/projetos/feira-de-ciencias-img2.png)
 
 - Tecnologias: HTML, CSS e JS ([GitHub](https://github.com/fabsoftwareitp/feiradeciencias.itp.ifsp.edu.br))
 - Time: [Laura Naomi](/membros/laura-naomi/), [Andre Augusto](/membros/andre-augusto/), [Maria Senger](/membros/maria-senger/) e [Rafael Alexandre](/membros/rafael-alexandre/)
@@ -111,9 +111,9 @@ O site EspWeb foi elaborado para a divulgação do curso de Especialização em 
 ---
 
 ## Worktech
-![Logo Worktech](/assets/projetos/logo-worktech.png)
-![Worktech1](/assets/projetos/worktech-img1.png)
-![Worktech2](/assets/projetos/worktech-img2.png)
+![Logo Worktech](/projetos/logo-worktech.png)
+![Worktech1](/projetos/worktech-img1.png)
+![Worktech2](/projetos/worktech-img2.png)
 
 [https://worktech.itp.ifsp.edu.br/](https://worktech.itp.ifsp.edu.br/)
 - Tecnologias: HTML, CSS e JS;
@@ -121,9 +121,9 @@ O site EspWeb foi elaborado para a divulgação do curso de Especialização em 
 ---
 
 ## Pós Info EDU
-![Logo Pós Info EDU](/assets/projetos/logo-posInfo.png)
-![Pós Info1](/assets/projetos/posInfo-img1.png)
-![Pós Info2](/assets/projetos/posInfo-img2.png)
+![Logo Pós Info EDU](/projetos/logo-posInfo.png)
+![Pós Info1](/projetos/posInfo-img1.png)
+![Pós Info2](/projetos/posInfo-img2.png)
 
 - Tecnologias: HTML, CSS e JS;
 - Frameworks: nenhum;
@@ -152,7 +152,7 @@ sistemas de ranking utilizando JASON.
 --- 
 
 ## Pong Multiplayer 
-![Partida de Pong](/assets/projetos/partida-de-pong.png) 
+![Partida de Pong](/projetos/partida-de-pong.png) 
 
 O Pong Multiplayer é um projeto que visa colocar duas pessoas, em celulares distintos, para jogarem uma contra a outra enquanto uma tela
 exibe a disputa dos players. Utilizando-se da tecnologia de Socket.io para realizar a comunicação de todas as partes envolvidas, a construção
