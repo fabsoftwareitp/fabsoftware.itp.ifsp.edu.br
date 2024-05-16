@@ -42,8 +42,6 @@ E basta acessar a hospedagem local.
 [Fábrica de Software](https://fabsoftware.itp.ifsp.edu.br/)
 
 # Contribuição/Autores
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/2002182?v=4" width=115><br><sub>Danilo Camargo Bueno</sub>](https://github.com/danilocbueno) |
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/126813410?v=4" width=115><br><sub>Vitor Gabriel Cavalheiro</sub>](https://github.com/Vitor-G-Cavalheiro) |
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/103156444?v=4" width=115><br><sub>Gabriel Machado</sub>](https://github.com/gabs1m) |
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/127048383?v=4" width=115><br><sub>Leonardo Henrique de Oliveira Cesar</sub>](https://github.com/Leo2828)|
-| :---: | :---: |:---: |
+
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/2002182?v=4" width=115><br><sub>Danilo Camargo Bueno</sub>](https://avatars.githubusercontent.com/u/2002182?v=4)| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/126813410?v=4" width=115><br><sub>Vitor Gabriel Cavalheiro</sub>](https://github.com/Vitor-G-Cavalheiro) | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/103156444?v=4" width=115><br><sub>Gabriel Machado</sub>](https://github.com/gabs1m) | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/127048383?v=4" width=115><br><sub>Leonardo Henrique de Oliveira Cesar</sub>](https://github.com/Leo2828) |
+| :---: | :---: | :---: | :---: |
