@@ -1,6 +1,5 @@
 ---
-template: "page"
-
+layout: "../../layouts/MarkDownLayout.astro"
 status: desativado
 name: "Ana Julia Trindade"
 img: https://avatars.githubusercontent.com/u/104458133?v=4

@@ -1,6 +1,5 @@
 ---
-template: "page"
-
+layout: "../../layouts/MarkDownLayout.astro"
 status: desativado
 name: "Rafael Damiam"
 img: https://avatars.githubusercontent.com/u/41579736?v=4

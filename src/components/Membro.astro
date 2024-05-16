@@ -1,0 +1,19 @@
+---
+const {frontmatter} = Astro.props;
+
+const classe = "membro " + frontmatter.date;
+---
+
+<div class={classe}>
+    <img src={frontmatter.img} width="100" style="border-radius: 100%">
+    <a href={frontmatter.way}>{frontmatter.name}</a>
+    <p>{frontmatter.position}</p>
+</div>
+
+<style>
+    .membro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>

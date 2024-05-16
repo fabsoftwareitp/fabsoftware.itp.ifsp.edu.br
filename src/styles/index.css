@@ -1,5 +1,6 @@
 html,
 body {
+    margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -12,7 +13,7 @@ body {
 }
 
 
-a {
+a{
   color:#fd624c;
   word-wrap: break-word;
 }
@@ -23,7 +24,7 @@ a {
 }
 
 .container {
-  max-width: 80vw;
+  width: 80vw;
   margin: 1.5rem auto;
 }
 
@@ -115,6 +116,7 @@ router-outlet {
 
 .membro a:hover {
   font-weight: bold;
+  color:#fd624c;
 }
 
 .depoimentos-videos {
