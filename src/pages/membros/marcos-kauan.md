@@ -11,7 +11,7 @@ date: "team team24"
 
 # Marcos Kauan Soares de Medeiros
 
-![MarcosFabSoftware](https://avatars.githubusercontent.com/u/47745205?v=4)
+![MarcosFabSoftware](https://avatars.githubusercontent.com/u/164426945?v=4)
 
 ## Redes Sociais
 - github: https://github.com/MarcosFabSoftware

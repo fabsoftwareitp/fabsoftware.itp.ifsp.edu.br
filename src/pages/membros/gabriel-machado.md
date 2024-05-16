@@ -6,7 +6,7 @@ name: "Gabriel Machado"
 img: https://avatars.githubusercontent.com/u/103156444?v=4
 way: /membros/gabriel-machado
 position: "Tec. Informática"
-date: "team team22 team23"
+date: "team team22 team23 team24"
 ---
 
 # Gabriel Machado
