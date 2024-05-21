@@ -5,7 +5,7 @@ const {title} = Astro.props;
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={title || frontmatter.name || frontmatter.title}>
-    <div class="container">
+    <div class="container prose" >
         <slot />
     </div>
 </BaseLayout>

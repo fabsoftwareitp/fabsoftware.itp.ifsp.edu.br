@@ -2,9 +2,9 @@
 const {way, img, name, position} = Astro.props;
 ---
 
-    <div class="membro">
+    <div class="flex justify-center items-center flex-wrap border-2 w-[18rem] h-[26rem]">
         <a href={way}>
-            <img src={img} alt={name}></img>      
+            <img src={img} alt={name} class="size-[15rem] rounded-full"></img>      
             <span>{way.replace("/membros/", " ").replace("-", " ")}</span>
         </a>
         <small>{position}</small>
