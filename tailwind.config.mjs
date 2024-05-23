@@ -10,10 +10,10 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				primary: 'fe4e00' ,
-				secondary: '03071E' ,
-				dark: '252A34' ,
-				light: 'EAEAEA' ,
+				primary: '#fe4e00' ,
+				secondary: '#03071E' ,
+				dark: '#252A34' ,
+				light: '#EAEAEA' ,
 			},
 			backgroundImage: {
 				'hero-pattern':

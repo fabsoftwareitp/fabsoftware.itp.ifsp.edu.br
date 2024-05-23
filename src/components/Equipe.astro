@@ -2,16 +2,11 @@
 const {way, img, name, position} = Astro.props;
 ---
 
-    <div class="flex justify-center items-center flex-wrap border-2 w-[18rem] h-[26rem]">
+    <div class="flex justify-center items-center flex-col gap-y-10 border-2 border-secondary w-[18rem] h-[26rem] bg-secondary rounded-xl">
         <a href={way}>
-            <img src={img} alt={name} class="size-[15rem] rounded-full"></img>      
-            <span>{way.replace("/membros/", " ").replace("-", " ")}</span>
+            <img src={img} alt={name} class="size-[12rem] rounded-full"></img>      
+            <span class="capitalize text-primary font-bold text-xl">{way.replace("/membros/", " ").replace("-", " ")}</span>
         </a>
-        <small>{position}</small>
+        <small class="capitalize text-white font-semibold text-lg">{position}</small>
+        <a class="self-start ml-6"><img src="../logo-oficial.png" alt="github" class="size-[2rem]"></img></a>
     </div>
-
-<style>
-    span {
-        text-transform: capitalize;
-    }
-</style>

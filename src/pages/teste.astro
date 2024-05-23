@@ -1,10 +1,16 @@
 ---
 import TesteLayout from '../layouts/TesteLayout.astro';
 import Equipe from '../components/Equipe.astro';
+import Destaque from '../components/Destaque.astro';
 
 const allPosts = await Astro.glob('./membros/*.md');
 const status = "ativo";
 const filteredPosts = allPosts.filter((post) => post.frontmatter.status?.includes(status));
+
+const allProjects = await Astro.glob('./projetos/*.md');
+const destaque = "sim";
+const filteredProjects = allProjects.filter((post) => post.frontmatter.destaque?.includes(destaque));
+
 const pageTitle = "Fábrica de Software";
 ---
 
@@ -13,51 +19,56 @@ const pageTitle = "Fábrica de Software";
       <img src="logo-oficial.png" alt="logo principal" class="animate__animated animate__tada w-[13rem] mb-[2rem]" />
       <div class="animate__animated animate__bounceIn">
         <h1 class="text-[4.4rem] font-[600]">Fábrica de Software</h1>
-        <h2 class="text-[#fe4e00] font-[700]">IFSP Itapetininga</h2>
+        <h2 class="text-primary font-[700]">IFSP Itapetininga</h2>
       </div>
     </div>
-    <div class="flex flex-col mx-[16rem] gap-y-6">
-      <section class="flex flex-col gap-y-6">
-        <h2 class="mt-5 text-5xl text/loose font-semibold text-[#fe4e00]">Sobre o projeto</h2>
-        <p class="leading-relaxed break-normal text-[1.25rem]">A Fábrica de Software é uma iniciativa liderada pelo Prof. Danilo Bueno <strong>desde maio de 2019</strong> no Instituto Federal de Ciência e Tecnologia campus Itapetininga. A Fábrica têm como objetivo principal, o desenvolvimento, a prática e a evolução nos âmbitos do <strong>desenvolvimento de software</strong>. Nela, os alunos tem diversas vivências e oportunidades além da aulas tradicionais dos cursos, dentre as quais se destacam:</p>
+    <div class="flex flex-col mx-[16rem] gap-y-4">
+
+      <section class="flex gap-x-10 p-4 items-start">
+        <div class="flex flex-col border-2 border-secondary rounded-2xl h-[32.8rem] justify-evenly">
+          <h2 class="text-5xl text/loose font-semibold text-primary">Sobre o projeto</h2>
+          <p class="text-[1rem] text-[1.3rem]/loose text-balance">A Fábrica de Software é uma iniciativa liderada pelo Prof. Danilo Bueno <strong>desde maio de 2019</strong> no Instituto Federal de Ciência e Tecnologia campus Itapetininga. A Fábrica têm como objetivo principal, o desenvolvimento, a prática e a evolução nos âmbitos do <strong>desenvolvimento de software</strong>. Nela, os alunos tem diversas vivências e oportunidades além da aulas tradicionais dos cursos, dentre as quais se destacam:</p>
+        </div>
         <div class="flex flex-col items-center text-center gap-y-4">
-          <div class="flex items-center justify-evenly w-[50rem] rounded-2xl border-4 border-[#03071E]">
-            <img src="banner-tech.svg" alt="banner tecnologias" class="w-[20rem] h-[10rem] m-[1rem]" />
-            <p class="text-[#fe4e00] text-2xl text/loose font-semibold">Conhecer diferentes tecnologias</p>
+          <div class="flex items-center justify-evenly w-[30rem] rounded-2xl border-2 border-secondary ">
+            <img src="banner-tech.svg" alt="banner tecnologias" class="w-[16rem] h-[8rem] m-[1rem]" />
+            <p class="text-primary text-2xl text/loose font-semibold">Conhecer diferentes tecnologias</p>
           </div>
-          <div class="flex items-center justify-evenly w-[50rem] rounded-2xl border-4 border-[#03071E]">
-            <p class="text-[#fe4e00] text-2xl text/loose font-semibold">Enfrentar desafios reais</p>
-            <img src="banner-engineer.svg" alt="banner tecnologias" class="w-[20rem] h-[10rem] m-[1rem]" />
+          <div class="flex items-center justify-evenly w-[30rem] rounded-2xl border-2 border-secondary ">
+            <p class="text-primary text-2xl text/loose font-semibold">Enfrentar desafios reais</p>
+            <img src="banner-engineer.svg" alt="banner tecnologias" class="w-[16rem] h-[8rem] m-[1rem]" />
           </div>
-          <div class="flex items-center justify-evenly w-[50rem] rounded-2xl border-4 border-[#03071E]">
-            <img src="banner-pair.svg" alt="banner tecnologias" class="w-[20rem] h-[10rem] m-[1rem]" />
-            <p class="text-[#fe4e00] text-2xl text/loose font-semibold">Trabalhar em equipe</p>
+          <div class="flex items-center justify-evenly w-[30rem] rounded-2xl border-2 border-secondary ">
+            <img src="banner-pair.svg" alt="banner tecnologias" class="w-[16rem] h-[8rem] m-[1rem]" />
+            <p class="text-primary text-2xl text/loose font-semibold">Trabalhar em equipe</p>
           </div>
         </div>
       </section>
   
-      <section class="flex flex-col gap-4">
-        <h2 class="my-[1rem] text-5xl text/loose font-semibold text-[#fe4e00]">Equipe</h2>
+      <section class="flex flex-col gap-4 p-4">
+        <h2 class="my-[1rem] text-5xl text/loose font-semibold text-primary">Equipe</h2>
         <p class="leading-relaxed">
           A equipe é formada por alunos dos cursos de Informática do campus Itapetininga. Atualmente conta com <a href="#equipe"><strong>5 alunos</strong></a> do curso Técnico Integrado em Informática e já teve mais de <a href="/membros/"><strong>22 participantes</strong></a> desde o ínicio do projeto.
         </p>
         <div class="flex flex-wrap justify-center items-center gap-8">
-                {filteredPosts.map((post) => <Equipe way={post.frontmatter.way} name={post.frontmatter.name} img={post.frontmatter.img} position={post.frontmatter.position} />)}
+          {filteredPosts.map((post) => <Equipe way={post.frontmatter.way} name={post.frontmatter.name} img={post.frontmatter.img} position={post.frontmatter.position} />)}
         </div>
       </section>
   
-      <section class="flex flex-col gap-4">
-        <h2 class="my-[1rem] text-5xl text/loose font-semibold text-[#fe4e00]">Projetos</h2>
+      <section class="flex flex-col justify-center items-center gap-4 p-4">
+        <h2 class="my-[1rem] text-5xl text/loose font-semibold text-primary">Projetos</h2>
         <p>
-          A Fábrica de Software possui mais de <a href="/projetos/"><strong>13 projetos</strong></a> entre finalizados e em desenvolvimento desde a sua fundação. Dentre os projetos, temos internos para o próprio campus, como o <a href="/projetos/#sge"><strong>Sistema de Gerenciamento de Eventos (SGE)</strong></a> e também externos em parceria com a Prefeitura Municipal de Itapetininga em projetos como o <a href="/projetos/#svsa"><strong>SVSA</strong></a> e <a href="/projetos/#conrua"><strong>Consultório na Rua</strong></a
-          >.
+          A Fábrica de Software possui mais de <a href="/projetos/"><strong>13 projetos</strong></a> entre finalizados e em desenvolvimento desde a sua fundação. Dentre os projetos, temos internos para o próprio campus, como o <a href="/projetos/#sge"><strong>Sistema de Gerenciamento de Eventos (SGE)</strong></a> e também externos em parceria com a Prefeitura Municipal de Itapetininga em projetos como o <a href="/projetos/#svsa"><strong>SVSA</strong></a> e <a href="/projetos/#conrua"><strong>Consultório na Rua</strong></a>
         </p>
-        <ul class="projetos"></ul>
+        <div class="grid grid-cols-3 justify-center items-center gap-8">
+          {filteredProjects.map((post) => <Destaque way={post.frontmatter.way} title={post.frontmatter.title} img={post.frontmatter.img} descricao={} />)}
+        </div>
+        <button class="my-[1rem] h-[2rem] w-[8rem] text-lg text/loose font-semibold text-primary border-2 border-secondary rounded-full bg-secondary"><a href="./projetos">Veja mais</a></button>
       </section>
   
-      <section class="flex flex-col gap-4">
-        <h2 class="my-[1rem] text-5xl text/loose font-semibold text-[#fe4e00]">Depoimentos</h2>
-        <div class="depoimentos-videos">
+      <section class="flex flex-col gap-4 p-4">
+        <h2 class="my-[1rem] text-5xl text/loose font-semibold text-primary">Depoimentos</h2>
+        <div class="flex flex-wrap gap-6">
           <div>
             <iframe src="https://www.youtube.com/embed/WqmlJsXiY54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p>André Augusto</p>
@@ -93,6 +104,5 @@ const pageTitle = "Fábrica de Software";
         </div>
       </section>
     </div>
-  
 </TesteLayout>
   
