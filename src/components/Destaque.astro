@@ -2,7 +2,7 @@
 const {way, img, title, descricao} = Astro.props;
 ---
 
-    <div class="flex justify-evenly items-center gap-y-10 border-2 border-secondary w-[28rem] h-[16rem] cursor-pointer">
+    <div class="flex justify-evenly items-center gap-y-10 border-2 border-secondary w-[28rem] h-[16rem] cursor-pointer hover:shadow-primary shadow-xl">
         <a class="open-button">
             <figure class="relative w-[27.9rem] h-[15.75rem]">
                 <img src={img} alt={title} class="object-fill w-[27.9rem] h-[15.75rem] absolute top-0 left-0">
@@ -15,7 +15,7 @@ const {way, img, title, descricao} = Astro.props;
                 <div class="flex flex-col items-center justify-center">
                     <img src={img} alt={title} class="w-[43rem] h-[25rem] border-2 border-secondary mt-4"></img>
                     <p class="text-2xl text/loose font-semibold text-primary">{title}</p>
-                    <p class="text-md text/loose font-semibold text-primary">{descricao}</p>
+                    <p class="text-md text/loose font-semibold text-black">{descricao}</p>
                 </div>                
           </div>
         </dialog>
