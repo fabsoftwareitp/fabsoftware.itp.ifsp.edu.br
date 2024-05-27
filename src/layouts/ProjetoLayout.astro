@@ -1,0 +1,21 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const {title} = Astro.props;
+const { frontmatter } = Astro.props;
+---
+<BaseLayout pageTitle={title || frontmatter.name || frontmatter.title}>
+    <div class="container prose" >
+        <h1>{frontmatter.title}</h1>
+        <a><img src={frontmatter.logo}></a>
+        <a href={frontmatter.link}>{frontmatter.link}</a>
+        <slot />
+        <ul>
+            <li>Tecnologias: {frontmatter.tecnologias.map((tecnologia) => <span>{tecnologia}, </span>)}</li>
+            <li>Time: {frontmatter.time.map((time) => <a class="no-underline text-primary" href={time.slice(time.indexOf("."), time.indexOf("%"))}>{time.slice(time.indexOf(""), time.indexOf("."))}, </a>)}</li>
+            <li>Status: {frontmatter.status}</li>
+            <li>Data: {frontmatter.data}</li>
+            <li><a href={frontmatter.github}>Github</a></li>
+        </ul>
+    </div>
+</BaseLayout>

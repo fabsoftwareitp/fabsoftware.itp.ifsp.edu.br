@@ -3,14 +3,6 @@ const {frontmatter} = Astro.props;
 ---
 
 <div>
-    <img src={frontmatter.img} width="100" style="border-radius: 100%">
+    <img src={frontmatter.logo} width="100" style="border-radius: 100%">
     <a href={frontmatter.way}>{frontmatter.title}</a>
 </div>
-
-<style>
-    .membro {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-</style>

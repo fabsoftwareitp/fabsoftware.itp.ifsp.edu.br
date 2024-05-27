@@ -25,7 +25,7 @@ const pageTitle = "Fábrica de Software";
     <div class="flex flex-col mx-[16rem] gap-y-4">
 
       <section class="flex gap-x-10 p-4 items-start">
-        <div class="flex flex-col border-primary rounded-2xl h-[34.8rem] justify-evenly border">
+        <div class="flex flex-col rounded-2xl h-[34.8rem] justify-evenly bg-[#03023b] border border-primary">
           <h2 class="text-5xl text/loose font-semibold text-primary">Sobre o projeto</h2>
           <p class="text-[1rem] text-[1.3rem]/loose text-balance text-secondary">A Fábrica de Software é uma iniciativa liderada pelo Prof. Danilo Bueno <strong>desde maio de 2019</strong> no Instituto Federal de Ciência e Tecnologia campus Itapetininga. A Fábrica têm como objetivo principal, o desenvolvimento, a prática e a evolução nos âmbitos do <strong>desenvolvimento de software</strong>. Nela, os alunos tem diversas vivências e oportunidades além da aulas tradicionais dos cursos, dentre as quais se destacam:</p>
         </div>
@@ -61,7 +61,7 @@ const pageTitle = "Fábrica de Software";
           A Fábrica de Software possui mais de <a href="/projetos/"><strong>13 projetos</strong></a> entre finalizados e em desenvolvimento desde a sua fundação. Dentre os projetos, temos internos para o próprio campus, como o <a href="/projetos/#sge"><strong>Sistema de Gerenciamento de Eventos (SGE)</strong></a> e também externos em parceria com a Prefeitura Municipal de Itapetininga em projetos como o <a href="/projetos/#svsa"><strong>SVSA</strong></a> e <a href="/projetos/#conrua"><strong>Consultório na Rua</strong></a>
         </p>
         <div class="grid grid-cols-3 justify-center items-center gap-8">
-          {filteredProjects.map((post) => <Destaque way={post.frontmatter.way} title={post.frontmatter.title} img={post.frontmatter.img} descricao={post.rawContent} />)}
+          {filteredProjects.map((post) => <Destaque way={post.frontmatter.way} title={post.frontmatter.title} logo={post.frontmatter.logo} descricao={post.rawContent} tecnologias={post.frontmatter.tecnologias} time={post.frontmatter.time}/>)}
         </div>
         <button class="my-[1rem] h-[2rem] w-[8rem] text-lg text/loose font-semibold text-primary border-2 border-secondary rounded-full bg-secondary"><a href="./projetos">Veja mais</a></button>
       </section>

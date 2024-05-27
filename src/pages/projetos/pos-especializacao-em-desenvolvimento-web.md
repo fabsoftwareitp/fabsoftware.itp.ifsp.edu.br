@@ -1,21 +1,17 @@
 ---
-layout: ../../layouts/MarkDownLayout.astro
+layout: ../../layouts/ProjetoLayout.astro
 
 title: "Pós Especialização em Desenvolvimento Web"
-img: "/projetos/logo-espweb.png"
+logo: "/projetos/logo-espweb.png"
+imgs: []
 way: "/projetos/pos-especializacao-em-desenvolvimento-web"
 link: "https://espweb.fabsoftware.itp.ifsp.edu.br"
 destaque: "não"
+github: "https://github.com/fabsoftwareitp/espweb"
+tecnologias: ["HTML", "CSS", "JavaScript"]
+time: ["Rafael Damiam../membros/rafael-damiam%", "Neemias Matos../membros/neemias-matos%"]
+status: "Finalizado"
+data: "10/2019"
 ---
 
-## Pós Especialização em Desenvolvimento Web
-[https://espweb.fabsoftware.itp.ifsp.edu.br](https://espweb.fabsoftware.itp.ifsp.edu.br)
-
-![FS-cinza](/projetos/logo-espweb.png)
-
 O site EspWeb foi elaborado para a divulgação do curso de Especialização em Desenvolvimento Web ofertado pelo IFSP.
-
-- Tecnologias: HTML, CSS e JS ([GitHub](https://github.com/fabsoftwareitp/espweb))
-- Time: [Rafael Damiam](/membros/rafael-damiam/) e [Neemias Matos](/membros/neemias-matos/)
-- Status: finalizado
-- Data: 10/2019 
