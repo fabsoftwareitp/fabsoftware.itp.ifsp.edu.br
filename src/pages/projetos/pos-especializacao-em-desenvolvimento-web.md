@@ -9,7 +9,7 @@ link: "https://espweb.fabsoftware.itp.ifsp.edu.br"
 destaque: "não"
 github: "https://github.com/fabsoftwareitp/espweb"
 tecnologias: ["HTML", "CSS", "JavaScript"]
-time: ["Rafael Damiam../membros/rafael-damiam%", "Neemias Matos../membros/neemias-matos%"]
+time: ["../membros/rafael-damiam", "../membros/neemias-matos"]
 status: "Finalizado"
 data: "10/2019"
 ---

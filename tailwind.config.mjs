@@ -12,6 +12,7 @@ module.exports = {
 			colors: {
 				primary: '#fe5e26' ,
 				secondary: '#f3e5ab' ,
+				tertiary: '#03023b',
 				background: '#020122',
 				dark: '#252A34' ,
 				light: '#EAEAEA' ,
@@ -20,6 +21,15 @@ module.exports = {
 				'hero-pattern':
 				  "linear-gradient(to right bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress%20cs=tinysrgb&w=1260&h=750&dpr=1')",
 			},
+			keyframes: {
+				scroll: {
+				  '0%': { transform: 'translateX(0rem)' },
+				  '100%': { transform: 'translateX(calc(-30rem * 4))' },
+				}
+			  },
+			animation: {
+				scroll: 'scroll 20s linear infinite',
+			  }
 		},
 		fontFamily: {
 			'sans': ['Open Sans', 'ui-sans-serif', 'system-ui']

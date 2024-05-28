@@ -9,7 +9,7 @@ link: "https://showdefisica.itp.ifsp.edu.br/"
 destaque: "não"
 github: "https://github.com/fabsoftwareitp/showdefisica.itp.ifsp.edu.br"
 tecnologias: ["PHP", "SQLite", "NoopMVC"]
-time: ["Neemias Matos../membros/neemias-matos%", "Samuel Matos../membros/samuel-matos%", "Rafael Damiam../membros/rafael-damiam%"]
+time: ["../membros/neemias-matos", "../membros/samuel-matos", "../membros/rafael-damiam"]
 status: "Finalizado"
 data: "04/2020"
 ---

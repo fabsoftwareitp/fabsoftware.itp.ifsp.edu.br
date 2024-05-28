@@ -9,7 +9,7 @@ link: "https://sge.fabsoftware.itp.ifsp.edu.br"
 destaque: "não"
 github: "https://github.com/fabsoftwareitp/sge.fabsoftware.itp.ifsp.edu.br"
 tecnologias: ["PHP", "MySQL", "Laravel", "Bootstrap"]
-time: ["Rafael Damiam../membros/rafael-damiam%", "Vinícius Zevarex../membros/vinicius-zevarex%", "Lucas Cavalherie../membros/lucas-cavalherie%", "João Morais../membros/joao-victor%", "Pedro Góis../membros/pedro-gois%", "Laura Naomi../membros/laura-naomi%", "André Augusto../membros/andre-augusto%", "Maria Senger../membros/maria-senger%", "Rafael Alexandre../membros/rafael-alexandre%", "Gabriel Machado../membros/gabriel-machado%"]
+time: ["../membros/rafael-damiam", "../membros/vinicius-zevarex", "../membros/lucas-cavalherie", "../membros/joao-victor", "../membros/pedro-gois", "../membros/laura-naomi", "../membros/andre-augusto", "../membros/maria-senger", "../membros/rafael-alexandre", "../membros/gabriel-machado"]
 status: "em Desenvolvimento"
 data: "03/2019"
 ---

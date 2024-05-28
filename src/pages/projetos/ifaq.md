@@ -9,7 +9,7 @@ link: "https://ifaq.fabsoftware.itp.ifsp.edu.br/"
 destaque: "sim"
 github: "https://github.com/fabsoftwareitp/ifaq.fabsoftware.itp.ifsp.edu.br"
 tecnologias: ["HTML", "CSS", "JavaScript", "SpeechSynthesis", "SwipperJS", "Animate.css"]
-time: ["Leonardo Luz../membros/leonardo-luz%"]
+time: ["../membros/leonardo-luz"]
 status: "Finalizado"
 data: ""
 ---

@@ -9,7 +9,7 @@ link: "https://fabsoftware.itp.ifsp.edu.br/"
 destaque: "sim"
 github: "https://github.com/fabsoftwareitp/fabsoftwareitp.github.io"
 tecnologias: ["HTML", "CSS", "JavaScript", "Greenwood.js"]
-time: ["João Correa../membros/joao-correa%", "Rafael Alexandre../membros/rafael-alexandre%"]
+time: ["../membros/joao-correa", "../membros/rafael-alexandre"]
 status: "em Desenvolvimento"
 data: "07/2022"
 ---

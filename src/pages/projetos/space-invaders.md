@@ -9,7 +9,7 @@ link: ""
 destaque: "sim"
 github: "https://github.com/fabsoftwareitp/space.fabsoftware.itp.ifsp.edu.br"
 tecnologias: ["HTML", "CSS", "JavaScript", "NodeJs", "Express", "Canva"]
-time: ["Vitor Cavalheiro../membros/vitor-cavalheiro%", "Leonardo Luz../membros/leonardo-luz%", "Gabriel Machado../membros/gabriel-machado%"]
+time: ["../membros/vitor-cavalheiro", "../membros/leonardo-luz", "../membros/gabriel-machado"]
 status: "Em desenvolvimento"
 data: ""
 ---

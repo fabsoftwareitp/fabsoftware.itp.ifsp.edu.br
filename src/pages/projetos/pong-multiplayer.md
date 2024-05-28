@@ -9,7 +9,7 @@ link: ""
 destaque: "sim"
 github: "https://github.com/fabsoftwareitp/pong.fabsoftware.itp.ifsp.edu.br"
 tecnologias: ["HTML", "CSS", "JavaScript", "NodeJS"]
-time: ["Vitor Cavalheiro../membros/vitor-cavalheiro%"]
+time: ["../membros/vitor-cavalheiro"]
 status: "Em desenvolvimento"
 data: "07/2023"
 ---

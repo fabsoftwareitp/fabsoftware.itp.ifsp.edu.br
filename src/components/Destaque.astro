@@ -1,5 +1,5 @@
 ---
-const {way, logo, title, descricao, tecnologias, time} = Astro.props;
+const {way, logo, title, descricao} = Astro.props;
 ---
 
     <div class="flex justify-evenly items-center gap-y-10 border-2 border-secondary w-[28rem] h-[16rem] cursor-pointer hover:shadow-primary shadow-xl">
@@ -9,20 +9,14 @@ const {way, logo, title, descricao, tecnologias, time} = Astro.props;
                 <figcaption class="opacity-0 hover:opacity-100 duration-300 absolute top-0 left-0 w-full h-full flex items-end text-primary font-bold mx-4 my-[-1rem]"><span>{title}</span></figcaption>
             </figure>
         </a>
-        <dialog class="modal bg-[#03023b]">
+        <dialog class="modal bg-tertiary">
             <div class="w-[55rem] h-[45rem] flex flex-col gap-6 items-center">
                 <div class="close-button self-start m-4 text-4xl text-primary">X</div>
                 <div class="flex flex-col items-center justify-center">
                     <img src={logo} alt={title} class="w-[50rem] h-[25rem]">
                 </div>
                 <p class="text-2xl text/loose font-semibold text-primary">{title}</p>
-                <div class="flex flex-row px-12 justify-center items-center">
-                    <p class="text-md text/loose font-semibold text-secondary text-balance text-left ">{descricao}</p>
-                    <div>
-                        <span class="text-md text/loose font-semibold text-secondary text-balance text-left">{tecnologias}</span>
-                        <span class="text-md text/loose font-semibold text-secondary text-balance text-left">{time.slice(time.indexOf("%"), 7)}</span>
-                    </div>   
-                </div>              
+                <p class="text-md text/loose font-semibold text-secondary text-balance">{descricao}</p>
             </div>
         </dialog>
       

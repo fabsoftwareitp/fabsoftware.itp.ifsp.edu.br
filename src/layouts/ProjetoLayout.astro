@@ -12,7 +12,7 @@ const { frontmatter } = Astro.props;
         <slot />
         <ul>
             <li>Tecnologias: {frontmatter.tecnologias.map((tecnologia) => <span>{tecnologia}, </span>)}</li>
-            <li>Time: {frontmatter.time.map((time) => <a class="no-underline text-primary" href={time.slice(time.indexOf("."), time.indexOf("%"))}>{time.slice(time.indexOf(""), time.indexOf("."))}, </a>)}</li>
+            <li>Time: {frontmatter.time.map((time) => <a class="no-underline text-primary capitalize" href={time}>{time.replace("../membros/", "").replace("-", " ")}, </a>)}</li>
             <li>Status: {frontmatter.status}</li>
             <li>Data: {frontmatter.data}</li>
             <li><a href={frontmatter.github}>Github</a></li>

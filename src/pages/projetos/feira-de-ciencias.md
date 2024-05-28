@@ -9,7 +9,7 @@ link: "https://feiradeciencias.itp.ifsp.edu.br/"
 destaque: "não"
 github: "https://github.com/fabsoftwareitp/feiradeciencias.itp.ifsp.edu.br"
 tecnologias: ["HTML", "CSS", "JavaScript"]
-time: ["Laura Naomi../membros/laura-naomi%", "André Augusto../membros/andre-augusto%", "Maria Senger../membros/maria-senger%", "Rafael Alexandre../membros/rafael-alexandre%"]
+time: ["../membros/laura-naomi", "../membros/andre-augusto", "../membros/maria-senger", "../membros/rafael-alexandre"]
 status: "Finalizado"
 data: "06/2021"
 ---

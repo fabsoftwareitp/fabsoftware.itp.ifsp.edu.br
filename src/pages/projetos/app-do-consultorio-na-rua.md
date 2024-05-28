@@ -9,7 +9,7 @@ link: "https://consultorionarua.fabsoftware.itp.ifsp.edu.br"
 destaque: "sim"
 github: "https://github.com/fabsoftwareitp/consultorionarua.itp.ifsp.edu.br"
 tecnologias: ["PHP", "MySQL", "Laravel", "Bootstrap"]
-time: ["André Augusto../membros/andre-augusto%", "Ana Júlia../membros/ana-julia%"]
+time: ["../membros/andre-augusto", "../membros/ana-julia"]
 status: "Em desenvolvimento"
 data: "03/2022"
 ---
