@@ -23,12 +23,12 @@ module.exports = {
 			},
 			keyframes: {
 				scroll: {
-				  '0%': { transform: 'translateX(0rem)' },
-				  '100%': { transform: 'translateX(calc(-30rem * 4))' },
+				  '0%': { transform: 'translateX(30rem)' },
+				  '100%': { transform: 'translateX(calc(-30rem * 5))' },
 				}
 			  },
 			animation: {
-				scroll: 'scroll 20s linear infinite',
+				scroll: 'scroll 40s linear infinite',
 			  }
 		},
 		fontFamily: {

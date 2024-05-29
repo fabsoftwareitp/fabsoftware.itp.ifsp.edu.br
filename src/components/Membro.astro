@@ -1,19 +1,11 @@
 ---
 const {frontmatter} = Astro.props;
 
-const classe = "membro " + frontmatter.date;
+const classe = "flex flex-col items-center m-4 membro " + frontmatter.date;
 ---
 
 <div class={classe}>
     <img src={frontmatter.img} width="100" style="border-radius: 100%">
-    <a href={frontmatter.way}>{frontmatter.name}</a>
-    <p>{frontmatter.position}</p>
+    <a href={frontmatter.way} class="text-primary capitalize">{frontmatter.way.replace("/membros/", " ").replace("-", " ")}</a>
+    <p class="text-secondary">{frontmatter.position}</p>
 </div>
-
-<style>
-    .membro {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-</style>

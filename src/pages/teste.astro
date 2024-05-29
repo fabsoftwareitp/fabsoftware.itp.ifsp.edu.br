@@ -2,6 +2,7 @@
 import TesteLayout from '../layouts/TesteLayout.astro';
 import Equipe from '../components/Equipe.astro';
 import Destaque from '../components/Destaque.astro';
+import Depoimentos from '../components/Depoimentos.astro';
 
 const allPosts = await Astro.glob('./membros/*.md');
 const status = "ativo";
@@ -68,32 +69,7 @@ const pageTitle = "Fábrica de Software";
   
       <section class="flex flex-col gap-8 p-4">
         <h2 class="my-[1rem] text-5xl text/loose font-semibold text-primary">Depoimentos</h2>
-        <div class="flex flex-row overflow-hidden gap-x-6">
-          <div class="animate-scroll shrink-0 relative flex justify-evenly items-center gap-y-10 w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl">
-            <p class="text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-          </div>  
-          <div class="animate-scroll shrink-0 relative flex justify-evenly items-center gap-y-10 w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl">
-            <p class="text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-          </div>  
-          <div class="animate-scroll shrink-0 relative flex justify-evenly items-center gap-y-10 w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl">
-            <p class="text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-          </div>  
-          <div class="animate-scroll shrink-0 relative flex justify-evenly items-center gap-y-10 w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl">
-            <p class="text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-          </div>  
-          <div class="animate-scroll shrink-0 relative flex justify-evenly items-center gap-y-10 w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl">
-            <p class="text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-          </div>  
-          <div class="animate-scroll shrink-0 relative flex justify-evenly items-center gap-y-10 w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl">
-            <p class="text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-          </div>  
-          <div class="animate-scroll shrink-0 relative flex justify-evenly items-center gap-y-10 w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl">
-            <p class="text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-          </div>  
-          <div class="animate-scroll shrink-0 relative flex justify-evenly items-center gap-y-10 w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl">
-            <p class="text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-          </div>  
-        </div>
+        <Depoimentos />
       </section>
     </div>
 </TesteLayout>

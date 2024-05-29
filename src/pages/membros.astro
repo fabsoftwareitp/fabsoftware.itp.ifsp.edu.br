@@ -1,5 +1,5 @@
 ---
-import MarkDownLayout from '../layouts/MarkDownLayout.astro'
+import TesteLayout from '../layouts/TesteLayout.astro'
 import Membro from '../components/Membro.astro'
 
 const allPosts = await Astro.glob('./membros/*.md');
@@ -26,81 +26,22 @@ const allPosts = await Astro.glob('./membros/*.md');
 </script>
 
 
-<MarkDownLayout title="Membros">
+<TesteLayout pageTitle="Membros">
 
-      <nav>
+      <nav class="flex ">
             <div>
-                  <button class="btn" data-ano="team">Todos os Membros</button>
-                  <button class="btn" data-ano="team24">Equipe 24</button>
-                  <button class="btn" data-ano="team23">Equipe 23</button>
-                  <button class="btn" data-ano="team22">Equipe 22</button>
-                  <button class="btn" data-ano="team21">Equipe 21</button>
-                  <button class="btn" data-ano="team20">Equipe 20</button>
-                  <button class="btn" data-ano="team19">Equipe 19</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team">Todos os Membros</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team24">Equipe 24</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team23">Equipe 23</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team22">Equipe 22</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team21">Equipe 21</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team20">Equipe 20</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team19">Equipe 19</button>
             </div>
 
       </nav>
 
-      <div class="membros">
+      <div class="grid grid-cols-3">
             {allPosts.map((post) => <Membro frontmatter={post.frontmatter} />)}
       </div>
-</MarkDownLayout>
-
-
-<style>
-      .membros {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      }
-
-          ul {
-            list-style:none;
-            text-align:center;
-          }
-
-          a {
-            color:#fd624c;
-          }
-
-          .shelf {
-            display: flex;
-            flex-wrap: wrap;
-            align-itens: center;
-            gap: 3vw;
-            margin: 1.5vw 0; 
-          }
-
-          .shelf > li {
-            display: flex; 
-            flex-direction: column;
-            align-items: center; 
-            justify-content: center;
-          }
-
-          .shelf > li > a {
-            width: 150px;
-          }
-
-          .btn {
-            background-color: #fd624c;
-            color: white;
-            border-radius: 7px;
-            padding: 5px;
-            border: none;
-            font-size: 19px;
-            margin: 2.5px;
-          }
-
-          .btn:hover {
-            cursor: pointer;
-            background-color: #fd402c;
-          }
-
-          @media (max-width: 900px){
-            .shelf {
-              justify-content: center;
-            }
-          }
-
-      
-</style>
+</TesteLayout>   
