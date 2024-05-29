@@ -25,8 +25,8 @@ const pageTitle = "Fábrica de Software";
     </div>
     <div class="flex flex-col mx-[16rem] gap-y-4">
 
-      <section class="flex gap-x-10 p-4 items-start">
-        <div class="flex flex-col rounded-2xl h-[34.8rem] justify-evenly">
+      <section class="flex gap-x-10 p-4 items-start reveal">
+        <div class="flex flex-col rounded-2xl h-[34.8rem] justify-evenly ">
           <h2 class="text-5xl text/loose font-semibold text-primary">Sobre o projeto</h2>
           <p class="text-[1rem] text-[1.3rem]/loose text-balance text-secondary">A Fábrica de Software é uma iniciativa liderada pelo Prof. Danilo Bueno <strong>desde maio de 2019</strong> no Instituto Federal de Ciência e Tecnologia campus Itapetininga. A Fábrica têm como objetivo principal, o desenvolvimento, a prática e a evolução nos âmbitos do <strong>desenvolvimento de software</strong>. Nela, os alunos tem diversas vivências e oportunidades além da aulas tradicionais dos cursos, dentre as quais se destacam:</p>
         </div>
@@ -46,7 +46,7 @@ const pageTitle = "Fábrica de Software";
         </div>
       </section>
   
-      <section class="flex flex-col gap-4 p-4">
+      <section class="flex flex-col gap-8 p-4 reveal">
         <h2 class="my-[1rem] text-5xl text/loose font-semibold text-primary">Equipe</h2>
         <p class="leading-relaxed text-secondary">
           A equipe é formada por alunos dos cursos de Informática do campus Itapetininga. Atualmente conta com <a href="#equipe"><strong>5 alunos</strong></a> do curso Técnico Integrado em Informática e já teve mais de <a href="/membros/"><strong>22 participantes</strong></a> desde o ínicio do projeto.
@@ -55,8 +55,13 @@ const pageTitle = "Fábrica de Software";
           {filteredPosts.map((post) => <Equipe way={post.frontmatter.way} name={post.frontmatter.name} img={post.frontmatter.img} position={post.frontmatter.position} />)}
         </div>
       </section>
+
+      <section class="flex flex-col gap-8 p-4 reveal">
+        <h2 class="my-[1rem] text-5xl text/loose font-semibold text-primary">Depoimentos</h2>
+        <Depoimentos />
+      </section>
   
-      <section class="flex flex-col justify-center items-center gap-4 p-4">
+      <section class="flex flex-col justify-center items-center gap-4 p-4 reveal">
         <h2 class="my-[1rem] text-5xl text/loose font-semibold text-primary">Projetos</h2>
         <p class="text-secondary  ">
           A Fábrica de Software possui mais de <a href="/projetos/"><strong>13 projetos</strong></a> entre finalizados e em desenvolvimento desde a sua fundação. Dentre os projetos, temos internos para o próprio campus, como o <a href="/projetos/#sge"><strong>Sistema de Gerenciamento de Eventos (SGE)</strong></a> e também externos em parceria com a Prefeitura Municipal de Itapetininga em projetos como o <a href="/projetos/#svsa"><strong>SVSA</strong></a> e <a href="/projetos/#conrua"><strong>Consultório na Rua</strong></a>
@@ -64,14 +69,44 @@ const pageTitle = "Fábrica de Software";
         <div class="grid grid-cols-3 justify-center items-center gap-8">
           {filteredProjects.map((post) => <Destaque way={post.frontmatter.way} title={post.frontmatter.title} logo={post.frontmatter.logo} descricao={post.rawContent}/>)}
         </div>
-        <button class="my-[1rem] h-[2rem] w-[8rem] text-lg text/loose font-semibold text-primary border-2 border-secondary rounded-full bg-secondary"><a href="./projetos">Veja mais</a></button>
+        <button class="my-[1rem] h-[2.5rem] w-[8rem] text-lg text/loose font-semibold text-primary border-2 border-primary rounded-full bg-tertiary"><a href="./projetos">Veja mais</a></button>
       </section>
   
-      <section class="flex flex-col gap-8 p-4">
-        <h2 class="my-[1rem] text-5xl text/loose font-semibold text-primary">Depoimentos</h2>
-        <Depoimentos />
-      </section>
     </div>
 </TesteLayout>
 
+<style>
+  .reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+    text: black;
+  }
+</style>
+
+<script>
   
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
+</script>
