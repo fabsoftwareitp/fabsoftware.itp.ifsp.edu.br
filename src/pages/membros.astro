@@ -13,13 +13,13 @@ const allPosts = await Astro.glob('./membros/*.md');
       btn.addEventListener('click', (e) => {
         const ano = btn.getAttribute("data-ano");
         document.querySelectorAll(".membro").forEach(e => {
-          e.style.opacity= 0.5;
+          e.style.display= 'none';
         });
         document.querySelectorAll(`.${ano}`).forEach(e => {
-          e.style.opacity = 1;
+          e.style.display = '';
         });
         document.querySelectorAll(".teamprof").forEach(e => {
-          e.style.opacity = 1;
+          e.style.display = '';
         });    
       })
     })
@@ -28,7 +28,7 @@ const allPosts = await Astro.glob('./membros/*.md');
 
 <TesteLayout pageTitle="Membros">
 
-      <nav class="flex ">
+      <nav class="flex">
             <div>
                   <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team">Todos os Membros</button>
                   <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team24">Equipe 24</button>
@@ -41,7 +41,9 @@ const allPosts = await Astro.glob('./membros/*.md');
 
       </nav>
 
-      <div class="grid grid-cols-3">
-            {allPosts.map((post) => <Membro frontmatter={post.frontmatter} />)}
+    <div class="flex justify-evenly py-[2rem]">
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-[4rem] gap-x-[10rem] justify-center ">
+        {allPosts.map((post) => <Membro frontmatter={post.frontmatter} />)}
       </div>
+    </div>  
 </TesteLayout>   

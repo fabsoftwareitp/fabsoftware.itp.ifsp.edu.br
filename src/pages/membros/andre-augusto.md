@@ -7,6 +7,9 @@ img: https://avatars.githubusercontent.com/u/77406727?v=4
 way: /membros/andre-augusto
 position: "Tec. Informática"
 date: "team team21 team22"
+hasTestimonial: "sim"
+testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt."
+video: "https://www.youtube.com/embed/WqmlJsXiY54"
 ---
 
 # André Augusto

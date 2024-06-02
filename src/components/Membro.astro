@@ -1,11 +1,13 @@
 ---
 const {frontmatter} = Astro.props;
 
-const classe = "flex flex-col items-center m-4 membro " + frontmatter.date;
+const classe = "flex justify-center items-center flex-col gap-y-10 border-2 border-primary w-[18rem] h-[26rem] bg-tertiary rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 membro " + frontmatter.date;
 ---
 
 <div class={classe}>
-    <img src={frontmatter.img} width="100" style="border-radius: 100%">
-    <a href={frontmatter.way} class="text-primary capitalize">{frontmatter.way.replace("/membros/", " ").replace("-", " ")}</a>
-    <p class="text-secondary">{frontmatter.position}</p>
+    <a href={frontmatter.way}>
+        <img src={frontmatter.img} alt={frontmatter.name} class="size-[12rem] rounded-full"></img>      
+        <span class="capitalize text-primary font-bold text-xl">{frontmatter.way.replace("/membros/", " ").replace("-", " ")}</span>
+    </a>
+    <small class="capitalize text-secondary font-semibold text-lg">{frontmatter.position}</small>
 </div>

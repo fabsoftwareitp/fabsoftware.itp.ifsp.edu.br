@@ -7,6 +7,9 @@ img: https://avatars.githubusercontent.com/u/103156444?v=4
 way: /membros/gabriel-machado
 position: "Tec. Informática"
 date: "team team22 team23 team24"
+hasTestimonial: "sim"
+testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt."
+video: "https://www.youtube.com/embed/ETa81Rndiao"
 ---
 
 # Gabriel Machado

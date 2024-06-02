@@ -9,14 +9,14 @@ const {way, logo, title, descricao} = Astro.props;
                 <figcaption class="opacity-0 hover:opacity-100 duration-300 absolute top-0 left-0 w-full h-full flex items-end text-primary font-bold mx-4 my-[-1rem]"><span>{title}</span></figcaption>
             </figure>
         </a>
-        <dialog class="modal bg-tertiary">
+        <dialog class="modal bg-tertiary border-2 border-primary ">
             <div class="w-[55rem] h-[45rem] flex flex-col gap-6 items-center">
                 <div class="close-button self-start m-4 text-4xl text-primary">X</div>
                 <div class="flex flex-col items-center justify-center">
                     <img src={logo} alt={title} class="w-[50rem] h-[25rem]">
                 </div>
                 <p class="text-2xl text/loose font-semibold text-primary">{title}</p>
-                <p class="text-md text/loose font-semibold text-secondary text-balance">{descricao}</p>
+                <p class="text-md text/loose font-semibold text-secondary text-justify w-[44rem]">{descricao}</p>
             </div>
         </dialog>
       

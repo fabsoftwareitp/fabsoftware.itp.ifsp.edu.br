@@ -1,129 +1,33 @@
 ---
-import * as membro from '../pages/membros/andre-augusto.md';
-import * as membro2 from '../pages/membros/gabriel-machado.md';
-import * as membro3 from '../pages/membros/rafael-alexandre.md';
-import * as membro4 from '../pages/membros/rafael-damiam.md';
-import * as membro5 from '../pages/membros/vinicius-zevarex.md';
-import * as membro6 from '../pages/membros/joao-victor.md';
-import * as membro7 from '../pages/membros/lucas-cavalherie.md';
-import * as membro8 from '../pages/membros/vitor-cavalheiro.md';
+const {way, img, name, testimonial, video, testimonialQuantity} = Astro.props;
 ---
-
-<div class="flex flex-row overflow-hidden gap-x-6">
-
-    <div class="animate-scroll shrink-0 relative flex flex-col justify-evenly items-center w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl p-[2rem]">
-      <p class="open-button text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-      <div class="flex items-center place-self-start ">
-        <a href="../membros/andre-augusto"><img src={membro.frontmatter.img} class="w-[2rem] h-[2rem] rounded-full"></a>
-        <a href="../membros/andre-augusto"><p class="text-secondary text-balance p-4 text-lg">André Augusto</p></a>
-      </div>
-      <dialog class="modal bg-tertiary">
-        <div class="w-[50rem] h-[35rem] flex flex-col gap-6 items-center">
-            <div class="close-button self-start m-4 text-4xl text-primary">X</div>
-            <iframe class="w-[45rem] h-[25rem]" src="https://www.youtube.com/embed/WqmlJsXiY54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-       </dialog>
+<div class="scroll shrink-0 relative flex flex-col justify-evenly items-center w-[29rem] h-[18rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl p-[1rem]">
+  <p class="open-button text-secondary text-balance p-4 text-lg">{testimonial}</p>
+  <div class="flex items-center place-self-start ">
+    <a href={way}><img src={img} class="w-[2rem] h-[2rem] rounded-full"></a>
+    <a href={way}><p class="text-secondary text-balance p-4 text-lg">{name}</p></a>
+  </div>
+  <dialog class="modal bg-tertiary">
+    <div class="w-[50rem] h-[35rem] flex flex-col gap-6 items-center">
+        <div class="close-button self-start m-4 text-4xl text-primary">X</div>
+        <iframe class="w-[45rem] h-[25rem]" src={video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-
-    <div class="animate-scroll shrink-0 relative flex flex-col justify-evenly items-center w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl p-[2rem]">
-      <p class="open-button text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-      <div class="flex items-center place-self-start ">
-        <a href="../membros/gabriel-machado"><img src={membro2.frontmatter.img} class="w-[2rem] h-[2rem] rounded-full"></a>
-        <a href="../membros/gabriel-machado"><p class="text-secondary text-balance p-4 text-lg">Gabriel Machado</p></a>
-      </div>
-      <dialog class="modal bg-tertiary">
-        <div class="w-[50rem] h-[35rem] flex flex-col gap-6 items-center">
-            <div class="close-button self-start m-4 text-4xl text-primary">X</div>
-            <iframe class="w-[45rem] h-[25rem]" src="https://www.youtube.com/embed/ETa81Rndiao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-       </dialog>
-    </div>
-
-    <div class="animate-scroll shrink-0 relative flex flex-col justify-evenly items-center w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl p-[2rem]">
-      <p class="open-button text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-      <div class="flex items-center place-self-start ">
-        <a href="../membros/rafael-alexandre"><img src={membro3.frontmatter.img} class="w-[2rem] h-[2rem] rounded-full"></a>
-        <a href="../membros/rafael-alexandre"><p class="text-secondary text-balance p-4 text-lg">Rafael Alexandre</p></a>
-      </div>
-      <dialog class="modal bg-tertiary">
-        <div class="w-[50rem] h-[35rem] flex flex-col gap-6 items-center">
-            <div class="close-button self-start m-4 text-4xl text-primary">X</div>
-            <iframe class="w-[45rem] h-[25rem]" src="https://www.youtube.com/embed/mbH4MiyuVh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-       </dialog>
-    </div>
-
-    <div class="animate-scroll shrink-0 relative flex flex-col justify-evenly items-center w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl p-[2rem]">
-      <p class="open-button text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-      <div class="flex items-center place-self-start ">
-        <a href="../membros/rafael-damiam"><img src={membro4.frontmatter.img} class="w-[2rem] h-[2rem] rounded-full"></a>
-        <a href="../membros/rafael-damiam"><p class="text-secondary text-balance p-4 text-lg">Rafael Damiam</p></a>
-      </div>
-      <dialog class="modal bg-tertiary">
-        <div class="w-[50rem] h-[35rem] flex flex-col gap-6 items-center">
-            <div class="close-button self-start m-4 text-4xl text-primary">X</div>
-            <iframe class="w-[45rem] h-[25rem]" src="https://www.youtube.com/embed/B1bys3rAuL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-       </dialog>
-    </div>
-
-    <div class="animate-scroll shrink-0 relative flex flex-col justify-evenly items-center w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl p-[2rem]">
-      <p class="open-button text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-      <div class="flex items-center place-self-start ">
-        <a href="../membros/vinicius-zevarex"><img src={membro5.frontmatter.img} class="w-[2rem] h-[2rem] rounded-full"></a>
-        <a href="../membros/vinicius-zevarex"><p class="text-secondary text-balance p-4 text-lg">Vinicius Zevarex</p></a>
-      </div>
-      <dialog class="modal bg-tertiary">
-        <div class="w-[50rem] h-[35rem] flex flex-col gap-6 items-center">
-            <div class="close-button self-start m-4 text-4xl text-primary">X</div>
-            <iframe class="w-[45rem] h-[25rem]" src="https://www.youtube.com/embed/sDcW1keRIDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-       </dialog>
-    </div>
-
-    <div class="animate-scroll shrink-0 relative flex flex-col justify-evenly items-center w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl p-[2rem]">
-      <p class="open-button text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-      <div class="flex items-center place-self-start ">
-        <a href="../membros/joao-victor"><img src={membro6.frontmatter.img} class="w-[2rem] h-[2rem] rounded-full"></a>
-        <a href="../membros/joao-victor"><p class="text-secondary text-balance p-4 text-lg">João Moraiz</p></a>
-      </div>
-      <dialog class="modal bg-tertiary">
-        <div class="w-[50rem] h-[35rem] flex flex-col gap-6 items-center">
-            <div class="close-button self-start m-4 text-4xl text-primary">X</div>
-            <iframe class="w-[45rem] h-[25rem]" src="https://www.youtube.com/embed/D054k8JNOm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-       </dialog>
-    </div>
-
-    <div class="animate-scroll shrink-0 relative flex flex-col justify-evenly items-center w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl p-[2rem]">
-      <p class="open-button text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-      <div class="flex items-center place-self-start ">
-        <a href="../membros/lucas-cavalherie"><img src={membro7.frontmatter.img} class="w-[2rem] h-[2rem] rounded-full"></a>
-        <a href="../membros/lucas-cavalherie"><p class="text-secondary text-balance p-4 text-lg">Lucas Cavalherie</p></a>
-      </div>
-      <dialog class="modal bg-tertiary">
-        <div class="w-[50rem] h-[35rem] flex flex-col gap-6 items-center">
-            <div class="close-button self-start m-4 text-4xl text-primary">X</div>
-            <iframe class="w-[45rem] h-[25rem]" src="https://www.youtube.com/embed/aw3LTiobEYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-       </dialog>
-    </div>
-
-    <div class="animate-scroll shrink-0 relative flex flex-col justify-evenly items-center w-[28rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl p-[2rem]">
-      <p class="open-button text-secondary text-balance p-4 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt. </p>
-      <div class="flex items-center place-self-start ">
-        <a href="../membros/vitor-cavalheiro"><img src={membro8.frontmatter.img} class="w-[2rem] h-[2rem] rounded-full"></a>
-        <a href="../membros/vitor-cavalheiro"><p class="text-secondary text-balance p-4 text-lg">Vitor Cavalheiro</p></a>
-      </div>
-      <dialog class="modal bg-tertiary">
-        <div class="w-[50rem] h-[35rem] flex flex-col gap-6 items-center">
-            <div class="close-button self-start m-4 text-4xl text-primary">X</div>
-            <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt.</p>
-        </div>
-       </dialog>
-    </div>
-
+   </dialog>
 </div>
+
+<style define:vars={{testimonialQuantity}}>
+  @keyframes scroll {
+		0% { 
+      transform: translateX(10rem); 
+    }
+		100% { 
+      transform: translateX(calc(-30rem * var(--testimonialQuantity))) 
+    }
+	} 
+	.scroll {
+			animation: scroll 45s linear infinite
+			}
+</style>
 
 <script>
     const buttons = document.querySelectorAll('.open-button');

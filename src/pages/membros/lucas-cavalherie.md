@@ -7,6 +7,9 @@ img: https://avatars.githubusercontent.com/u/41579591?v=4
 way: /membros/lucas-cavalherie
 position: "Tec. Informática"
 date: "team team19 team20"
+hasTestimonial: "sim"
+testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt."
+video: "https://www.youtube.com/embed/aw3LTiobEYs"
 ---
 
 # Lucas Cavalherie
