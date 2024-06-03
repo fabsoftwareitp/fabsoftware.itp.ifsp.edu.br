@@ -4,7 +4,7 @@ const {way, img, name, testimonial, video, testimonialQuantity} = Astro.props;
 <div class="scroll shrink-0 relative flex flex-col justify-evenly items-center w-[29rem] h-[18rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl p-[1rem]">
   <p class="open-button text-secondary text-balance p-4 text-lg">{testimonial}</p>
   <div class="flex items-center place-self-start ">
-    <a href={way}><img src={img} class="w-[2rem] h-[2rem] rounded-full"></a>
+    <a href={way}><img src={img} class="w-[2rem] h-[2rem] rounded-full" /></a>
     <a href={way}><p class="text-secondary text-balance p-4 text-lg">{name}</p></a>
   </div>
   <dialog class="modal bg-tertiary">

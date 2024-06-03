@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/MarkDownLayout.astro
+layout: ../layouts/TesteLayout.astro
 template: 'page'
 title: 'Sobre'
 ---

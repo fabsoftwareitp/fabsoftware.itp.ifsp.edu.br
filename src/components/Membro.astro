@@ -6,7 +6,7 @@ const classe = "flex justify-center items-center flex-col gap-y-10 border-2 bord
 
 <div class={classe}>
     <a href={frontmatter.way}>
-        <img src={frontmatter.img} alt={frontmatter.name} class="size-[12rem] rounded-full"></img>      
+        <img src={frontmatter.img} alt={frontmatter.name} class="size-[12rem] rounded-full" />     
         <span class="capitalize text-primary font-bold text-xl">{frontmatter.way.replace("/membros/", " ").replace("-", " ")}</span>
     </a>
     <small class="capitalize text-secondary font-semibold text-lg">{frontmatter.position}</small>

@@ -1,15 +1,19 @@
 ---
-layout: ../../layouts/ProjetoLayout.astro
+layout: ../../layouts/MarkDownLayout.astro
 
 title: "Site da Fábrica"
-logo: "../logo-oficial.png"
-imgs: []
+img: "../logo-oficial.png"
 way: "/projetos/site-da-fabrica"
 link: "https://fabsoftware.itp.ifsp.edu.br/"
 destaque: "sim"
-github: "https://github.com/fabsoftwareitp/fabsoftwareitp.github.io"
-tecnologias: ["HTML", "CSS", "JavaScript", "Greenwood.js"]
-time: ["../membros/joao-correa", "../membros/rafael-alexandre"]
-status: "em Desenvolvimento"
-data: "07/2022"
 ---
+
+### Landing pages
+
+# Site da Fábrica
+[https://fabsoftware.itp.ifsp.edu.br/](https://fabsoftware.itp.ifsp.edu.br/)
+
+- Tecnologias: HTML, CSS, JS e Greenwood.js ([GitHub](https://github.com/fabsoftwareitp/fabsoftwareitp.github.io))
+- Time: [João Correa](/membros/joao-correa) e [Rafael Alexandre](/membros/rafael-alexandre)
+- Status: em Desenvolvimento
+- Data: 07/2022

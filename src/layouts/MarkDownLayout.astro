@@ -1,11 +1,44 @@
 ---
-import BaseLayout from './BaseLayout.astro';
+import BaseLayout from './TesteLayout.astro';
 
 const {title} = Astro.props;
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={title || frontmatter.name || frontmatter.title}>
-    <div class="container prose" >
-        <slot />
+    <div class="p-8 flex flex-wrap justify-center items-center gap-10">
+        <div class="place-self-start relative">
+            {frontmatter.imgs ? <a>{frontmatter.imgs.map((img) => <img src={img} class="w-[30rem] h-[30rem] rounded-xl slider"/> )}<a class="prev text-primary cursor-pointer left-5 absolute top-[50%] bg-tertiary text-[2rem] select-none rounded" onclick="plusSlides(-1)">❮</a>
+            <a class="next text-primary cursor-pointer right-5 absolute top-[50%] bg-tertiary text-[2rem] select-none rounded" onclick="plusSlides(1)">❯</a></a> : <a><img src={frontmatter.img} class="w-[30rem] h-[30rem] rounded-xl" /></a>}
+        </div>
+        <div class="flex flex-col border-2 p-8 border-primary bg-tertiary rounded-xl items-center container prose prose-h1:text-primary prose-img:rounded-xl prose-img:hidden prose-p:text-secondary prose-p:text-justify prose-h2:text-primary prose-li:text-secondary prose-a:text-secondary prose-ul:text-start prose-ul:place-self-start">
+            <slot />
+        </div>
+        <div>
+            {frontmatter.hasTestimonial ? <p class="text-primary text-4xl font-bold">Depoimento</p><br></br> <iframe class="w-[45rem] h-[25rem] rounded-xl" src={frontmatter.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : <p class="hidden">Depoimento</p>}
+        </div>
     </div>
 </BaseLayout>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slider");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slides[slideIndex-1].style.display = "block";  
+    }
+</script>

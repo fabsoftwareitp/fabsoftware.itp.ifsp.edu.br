@@ -1,17 +1,17 @@
 ---
-layout: ../../layouts/ProjetoLayout.astro
+layout: ../../layouts/MarkDownLayout.astro
 
 title: "IFAQ"
-logo: "../logo-oficial.png"
-imgs: []
+img: "../logo-oficial.png"
 way: "/projetos/ifaq"
-link: "https://ifaq.fabsoftware.itp.ifsp.edu.br/"
+link: "https://github.com/fabsoftwareitp/ifaq.fabsoftware.itp.ifsp.edu.br"
 destaque: "sim"
-github: "https://github.com/fabsoftwareitp/ifaq.fabsoftware.itp.ifsp.edu.br"
-tecnologias: ["HTML", "CSS", "JavaScript", "SpeechSynthesis", "SwipperJS", "Animate.css"]
-time: ["../membros/leonardo-luz"]
-status: "Finalizado"
-data: ""
 ---
 
-O IFAQ é um website que apresenta perguntas e respostas dinâmicas a respeito do Instituto Federal
+# IFAQ
+
+O IFAQ é um website que apresenta perguntas e respostas dinâmicas a respieto do Insituto Federal
+- Tecnologias: HTML, CSS e JavaScript.([GitHub](https://github.com/fabsoftwareitp/ifaq.fabsoftware.itp.ifsp.edu.br)) 
+- APIS: SpeechSynthesis, SwipperJS e Animate.css
+- Time: [Leaonardo Luz](/membros/leonardo-luz)
+- Status: Finalizado
