@@ -13,7 +13,7 @@ const allPosts = await Astro.glob('./membros/*.md');
       btn.addEventListener('click', (e) => {
         const ano = btn.getAttribute("data-ano");
         document.querySelectorAll(".membro").forEach(e => {
-          e.style.display= 'none';
+          e.style.display= 'none';          
         });
         document.querySelectorAll(`.${ano}`).forEach(e => {
           e.style.display = '';

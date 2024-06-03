@@ -1,12 +1,12 @@
 ---
-import MarkDownLayout from '../layouts/MarkDownLayout.astro'
+import MarkDownLayout from '../layouts/TesteLayout.astro'
 import Projeto from '../components/Projeto.astro'
 
 const allPosts = await Astro.glob('./projetos/*.md');
 ---
 
-<MarkDownLayout title="Projetos">
-    <div >
+<MarkDownLayout pageTitle="Projetos">
+    <div class="flex flex-col items-center gap-[4rem]">
           {allPosts.map((post) => <Projeto frontmatter={post.frontmatter} />)}
     </div>
 </MarkDownLayout>
