@@ -28,7 +28,7 @@ const allPosts = await Astro.glob('./membros/*.md');
 
 <TesteLayout pageTitle="Membros">
 
-      <nav class="flex">
+      <nav class="flex items-center justify-center">
             <div>
                   <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team">Todos os Membros</button>
                   <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team24">Equipe 24</button>
@@ -38,7 +38,6 @@ const allPosts = await Astro.glob('./membros/*.md');
                   <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team20">Equipe 20</button>
                   <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team19">Equipe 19</button>
             </div>
-
       </nav>
 
     <div class="flex justify-evenly py-[2rem]">

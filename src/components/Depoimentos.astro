@@ -7,7 +7,7 @@ const {way, img, name, testimonial, video, testimonialQuantity} = Astro.props;
     <a href={way}><img src={img} class="w-[2rem] h-[2rem] rounded-full" /></a>
     <a href={way}><p class="text-secondary text-balance p-4 text-lg">{name}</p></a>
   </div>
-  <dialog class="modal bg-tertiary">
+  <dialog class="modal bg-tertiary border-primary border-2">
     <div class="w-[50rem] h-[35rem] flex flex-col gap-6 items-center">
         <div class="close-button self-start m-4 text-4xl text-primary">X</div>
         <iframe class="w-[45rem] h-[25rem]" src={video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -10,7 +10,6 @@ destaque: "sim"
 
 # App do Consultório na Rua 
 [https://consultorionarua.fabsoftware.itp.ifsp.edu.br](https://consultorionarua.fabsoftware.itp.ifsp.edu.br)
-
 ![App Consultório na Rua](/projetos/logo-consultorio-na-rua.png) 
 
 Chamamos de Consultório na Rua equipes multiprofissionais que desenvolvem ações integrais de saúde frente às necessidades dessa população. Elas devem realizar suas atividades de forma itinerante e, quando necessário, desenvolver ações em parceria com as equipes das Unidades Básicas de Saúde do território. É um aplicativo para ajudar no acompanhamento das equipes na rua.
