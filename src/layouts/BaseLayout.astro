@@ -23,17 +23,15 @@ const { pageTitle } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../styles/lib/bootstrap-reboot.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
- 
 
     <script async defer data-website-id="5bfe3feb-0dd3-493a-b07d-c9161923532b" src="http://umami.fabsoftware.itp.ifsp.edu.br/umami.js"></script>
 
 	  <title>{pageTitle}</title>
   </head>
-  <body >
+  <body class="flex flex-col min-h-[100vh]">
 	<Header />
-  <main>
+  <main class="flex-1 text-center font-sans bg-background">
     <slot />
   </main>
   <Footer />

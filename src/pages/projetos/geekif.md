@@ -11,6 +11,10 @@ destaque: "sim"
 # Geekif
 [https://geekif.com.br/](https://geekif.com.br/)
 
+## Descrição
+
+## Info
+
 - Tecnologias: 
 - Time: [](/membros/#), [](/membros/#) e [](/membros/#)
 - Status: finalizado

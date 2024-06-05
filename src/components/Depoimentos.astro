@@ -1,11 +1,13 @@
 ---
 const {way, img, name, testimonial, video, testimonialQuantity} = Astro.props;
 ---
-<div class="scroll shrink-0 relative flex flex-col justify-evenly items-center w-[29rem] h-[18rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl p-[1rem]">
-  <p class="open-button text-secondary text-balance p-4 text-lg">{testimonial}</p>
-  <div class="flex items-center place-self-start ">
-    <a href={way}><img src={img} class="w-[2rem] h-[2rem] rounded-full" /></a>
-    <a href={way}><p class="text-secondary text-balance p-4 text-lg">{name}</p></a>
+<div class="scroll shrink-0 relative flex flex-col justify-evenly items-center xl:w-[29rem] xl:h-[18rem] w-[21rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl xl:p-[1rem] p-0">
+  <div class="open-button snap-start shrink-0 last:pr-[calc(100%-20rem)] p-3">
+    <p class="text-secondary text-balance p-4 xl:text-lg text-md">{testimonial}</p>
+    <div class="flex items-center place-self-start">
+      <a href={way}><img src={img} class="w-[2rem] h-[2rem] rounded-full" /></a>
+      <a href={way}><p class="text-secondary text-balance p-4 text-lg">{name}</p></a>
+    </div>
   </div>
   <dialog class="modal bg-tertiary border-primary border-2">
     <div class="w-[50rem] h-[35rem] flex flex-col gap-6 items-center">
@@ -24,9 +26,11 @@ const {way, img, name, testimonial, video, testimonialQuantity} = Astro.props;
       transform: translateX(calc(-30rem * var(--testimonialQuantity))) 
     }
 	} 
-	.scroll {
+  @media only screen and (min-width: 768px) {
+  .scroll {
 			animation: scroll 45s linear infinite
 			}
+  }
 </style>
 
 <script>

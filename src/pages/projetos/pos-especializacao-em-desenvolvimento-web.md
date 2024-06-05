@@ -13,7 +13,11 @@ destaque: "não"
 
 ![FS-cinza](/projetos/logo-espweb.png)
 
+## Descrição
+
 O site EspWeb foi elaborado para a divulgação do curso de Especialização em Desenvolvimento Web ofertado pelo IFSP.
+
+## Info
 
 - Tecnologias: HTML, CSS e JS ([GitHub](https://github.com/fabsoftwareitp/espweb))
 - Time: [Rafael Damiam](/membros/rafael-damiam) e [Neemias Matos](/membros/neemias-matos)

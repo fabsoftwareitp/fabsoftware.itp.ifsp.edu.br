@@ -14,6 +14,10 @@ destaque: "não"
 ![Pós Info1](/projetos/posInfo-img1.png)
 ![Pós Info2](/projetos/posInfo-img2.png)
 
+## Descrição
+
+## Info
+
 - Tecnologias: HTML, CSS e JS;
 - Frameworks: nenhum;
 [https://pos.itp.ifsp.edu.br/](https://pos.itp.ifsp.edu.br/)

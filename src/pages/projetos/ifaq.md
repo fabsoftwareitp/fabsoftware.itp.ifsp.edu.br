@@ -10,6 +10,10 @@ destaque: "sim"
 
 # IFAQ
 
+## Descrição
+
+## Info
+
 O IFAQ é um website que apresenta perguntas e respostas dinâmicas a respieto do Insituto Federal
 - Tecnologias: HTML, CSS e JavaScript.([GitHub](https://github.com/fabsoftwareitp/ifaq.fabsoftware.itp.ifsp.edu.br)) 
 - APIS: SpeechSynthesis, SwipperJS e Animate.css
