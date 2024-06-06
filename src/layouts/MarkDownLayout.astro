@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
         <div class="place-self-start relative">
             {frontmatter.imgs ? <a>{frontmatter.imgs.map((img) => <div><img src={img} class="xl:w-[30rem] xl:h-[30rem] w-[20rem] h-[20rem] rounded-xl"/></div> )}</a> : <a><img src={frontmatter.img} class="xl:w-[30rem] xl:h-[30rem] w-[20rem] h-[20rem] rounded-xl" /></a>}
         </div>
-        <div class="flex flex-col border-2 p-8 border-primary bg-tertiary rounded-xl items-center container prose prose-h1:text-primary prose-img:rounded-xl prose-img:hidden prose-p:text-secondary prose-p:text-justify prose-h2:text-primary prose-li:text-secondary prose-a:text-secondary prose-ul:text-start prose-ul:place-self-start">
+        <div class="flex flex-col border-2 p-8 border-primary bg-tertiary rounded-xl items-center container prose prose-a:text-[1rem] prose-h1:text-primary prose-img:rounded-xl prose-img:hidden prose-p:text-secondary prose-p:text-justify prose-h2:text-primary prose-li:text-secondary prose-a:text-secondary prose-ul:text-start prose-ul:place-self-start">
             <slot />
         </div>
         <div>
@@ -17,4 +17,3 @@ const { frontmatter } = Astro.props;
         </div>
     </div>
 </BaseLayout>
-

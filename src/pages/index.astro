@@ -64,8 +64,7 @@ const pageTitle = "Fábrica de Software";
 
       <section class="flex flex-col gap-8 p-4 reveal">
         <h2 class="xl:text-5xl text-[2.5rem] text/loose font-semibold text-primary">Depoimentos</h2>
-        <div class="snap-x md:snap-none scroll-pl-6 md:scroll-pl-0 overflow-x-auto md:overflow-x-hidden flex flex-row overflow-hidden gap-x-6">
-          {filteredTestimonials.map((testimonial) =><Depoimentos way={testimonial.frontmatter.way} name={testimonial.frontmatter.name} img={testimonial.frontmatter.img} testimonial={testimonial.frontmatter.testimonial} video={testimonial.frontmatter.video} testimonialQuantity={testimonialQuantity}/>)}
+        <div class="snap-x md:snap-none snap-mandatory overflow-x-auto md:overflow-x-hidden flex flex-row overflow-hidden gap-x-6">
           {filteredTestimonials.map((testimonial) =><Depoimentos way={testimonial.frontmatter.way} name={testimonial.frontmatter.name} img={testimonial.frontmatter.img} testimonial={testimonial.frontmatter.testimonial} video={testimonial.frontmatter.video} testimonialQuantity={testimonialQuantity}/>)}
         </div>
       </section>
