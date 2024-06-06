@@ -10,13 +10,13 @@ const {way, img, title, descricao} = Astro.props;
             </figure>
         </a>
         <dialog class="modal bg-tertiary border-2 border-primary ">
-            <div class="xl:w-[55rem] xl:h-[45rem] flex flex-col gap-6 items-center">
+            <div class="w-[22rem] h-[35rem] md:w-[50rem] md:h-[45rem] flex flex-col gap-6 items-center">
                 <div class="close-button self-start m-4 text-4xl text-primary">X</div>
                 <div class="flex flex-col items-center justify-center">
-                    <img src={img} alt={title} class="w-[50rem] h-[25rem]">
+                    <img src={img} alt={title} class="md:w-[44rem] md:h-[25rem] w-[20rem] h-[15rem]">
                 </div>
                 <p class="text-2xl text/loose font-semibold text-primary">{title}</p>
-                <p class="text-md text/loose font-semibold text-secondary text-justify w-[44rem]">{descricao.slice(descricao.indexOf('<h2 id="descrição">Descrição</h2>')+37, descricao.indexOf('<h2 id="info">Info</h2>')-5)}</p>
+                <p class="text-md text/loose font-semibold text-secondary w-[20rem] text-justify tracking-tighter md:text-justify md:w-[44rem]">{descricao.slice(descricao.indexOf('<h2 id="descrição">Descrição</h2>')+37, descricao.indexOf('<h2 id="info">Info</h2>')-5)}</p>
             </div>
         </dialog>
     </div>
@@ -26,9 +26,13 @@ const {way, img, title, descricao} = Astro.props;
             e.addEventListener('click', () => {
                 const elementoPai = e.parentElement;
                 const modal = elementoPai.querySelector("dialog");
+                const iframe = elementoPai.querySelector("iframe");
                 modal.showModal();
 
                 elementoPai.querySelector(".close-button").addEventListener("click", ()=> {
+                    if(iframe) {
+                        iframe.src = iframe.src;
+                    }
                     modal.close();
                 })
             })

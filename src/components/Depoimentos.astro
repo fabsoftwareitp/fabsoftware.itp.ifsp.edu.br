@@ -10,9 +10,9 @@ const {way, img, name, testimonial, video, testimonialQuantity} = Astro.props;
     </div>
   </div>
   <dialog class="modal bg-tertiary border-primary border-2">
-    <div class="w-[50rem] h-[35rem] flex flex-col gap-6 items-center">
+    <div class="w-[20rem] h-[35rem] md:w-[50rem] md:h-[35rem] flex flex-col gap-6 items-center">
         <div class="close-button self-start m-4 text-4xl text-primary">X</div>
-        <iframe class="w-[45rem] h-[25rem]" src={video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="w-[19rem] h-[25rem] md:w-[45rem] md:h-[25rem] youriframe" src={video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
    </dialog>
 </div>
@@ -20,31 +20,15 @@ const {way, img, name, testimonial, video, testimonialQuantity} = Astro.props;
 <style define:vars={{testimonialQuantity}}>
   @keyframes scroll {
 		0% { 
-      transform: translateX(60rem); 
+      transform: translateX(5rem); 
     }
 		100% { 
-      transform: translateX(calc(-30rem * var(--testimonialQuantity))) 
+      transform: translateX(calc(-20rem * var(--testimonialQuantity))) 
     }
 	} 
   @media only screen and (min-width: 768px) {
   .scroll {
-			animation: scroll linear infinite;
-      animation-duration: 45s;
+			animation: scroll 40s linear infinite;
 			}
   }
 </style>
-
-<script>
-    const buttons = document.querySelectorAll('.open-button');
-    buttons.forEach(e => {
-        e.addEventListener('click', () => {
-            const elementoPai = e.parentElement;
-            const modal = elementoPai.querySelector("dialog");
-            modal.showModal();
-
-            elementoPai.parentElement.querySelector(".close-button").addEventListener("click", ()=> {
-                modal.close();
-            })
-        })
-    })
-</script>
