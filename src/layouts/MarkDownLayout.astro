@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
     
     <div class="p-8 flex flex-wrap justify-center items-center gap-10">
         <div class="place-self-start">
-            <a href="/membros"><button class="text-secondary border-2 border-primary rounded-xl bg-tertiary w-[6rem] h-[2rem]">⭠ Voltar</button></a>
+            <a onclick="history.back()"><button class="text-secondary border-2 border-primary rounded-xl bg-tertiary w-[6rem] h-[2rem]">⭠ Voltar</button></a>
         </div>
         <div class="place-self-start relative slideshow-container">
             {frontmatter.imgs ? <a>{frontmatter.imgs.map((img) => <div class="mySlides fade"><img src={img} class="xl:w-[30rem] xl:h-[30rem] w-[20rem] h-[20rem] rounded-xl"/></div> )}</a><div class="flex"><button class="prev text-primary w-auto text-[2rem] absolute top-[45%] left-[-1.5rem]">&#10094;</button>

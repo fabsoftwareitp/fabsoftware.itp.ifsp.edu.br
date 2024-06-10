@@ -9,9 +9,22 @@ const allPosts = await Astro.glob('./membros/*.md');
 <script>
       const listBtn = document.querySelectorAll(".btn");
     
+    if(localStorage.getItem("storageName") != null) {
+        document.querySelectorAll(".membro").forEach(e => {
+          e.style.display= 'none';          
+        });
+        document.querySelectorAll(`.${localStorage.getItem("storageName")}`).forEach(e => {
+          e.style.display = '';
+        });
+        document.querySelectorAll(".teamprof").forEach(e => {
+          e.style.display = '';
+        });  
+    }
+
     listBtn.forEach(btn => {
       btn.addEventListener('click', (e) => {
         const ano = btn.getAttribute("data-ano");
+        localStorage.setItem("storageName", ano);
         document.querySelectorAll(".membro").forEach(e => {
           e.style.display= 'none';          
         });

@@ -1,5 +1,5 @@
 ---
-import TesteLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Equipe from '../components/Equipe.astro';
 import Destaque from '../components/Destaque.astro';
 import Depoimentos from '../components/Depoimentos.astro';
@@ -21,9 +21,9 @@ const testimonialQuantity = filteredTestimonials.length;
 const pageTitle = "Fábrica de Software";
 ---
 
-<TesteLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle}>
     <div class="bg-slate-900 bg-hero-pattern bg-center bg-no-repeat bg-cover h-screen text-center text-white flex flex-col justify-center items-center pb-[60px] border-primary">
-      <img src="logo-oficial.png" alt="logo principal" class="animate__animated animate__tada xl:w-[14rem] w-[10rem] mb-[2rem] " />
+      <img src="logo-claro.svg" alt="logo principal" class="animate__animated animate__tada xl:w-[14rem] w-[10rem] mb-[2rem] " />
       <div class="animate__animated animate__bounceIn">
         <h1 class="xl:text-[4rem] text-[2rem] font-[600]">Fábrica de Software</h1>
         <h2 class="text-primary font-[700]">IFSP Itapetininga</h2>
@@ -82,7 +82,7 @@ const pageTitle = "Fábrica de Software";
   
     </div>
     
-</TesteLayout>
+</BaseLayout>
 
 <style>
   .reveal{

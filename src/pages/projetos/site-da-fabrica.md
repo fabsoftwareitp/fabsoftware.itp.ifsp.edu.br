@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkDownLayout.astro
 
 title: "Site da Fábrica"
-img: "../logo-oficial.png"
+img: "../logo-claro.svg"
 way: "/projetos/site-da-fabrica"
 link: "https://fabsoftware.itp.ifsp.edu.br/"
 destaque: "sim"

@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkDownLayout.astro
 
 title: "IFAQ"
-img: "../logo-oficial.png"
+img: "../logo-claro.svg"
 way: "/projetos/ifaq"
 link: "https://github.com/fabsoftwareitp/ifaq.fabsoftware.itp.ifsp.edu.br"
 destaque: "sim"

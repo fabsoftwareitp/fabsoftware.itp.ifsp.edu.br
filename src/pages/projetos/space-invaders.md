@@ -2,8 +2,8 @@
 layout: ../../layouts/MarkDownLayout.astro
 
 title: "Space Invaders"
-img: "../logo-oficial.png"
-way: "/logo-oficial.png"
+img: "../logo-claro.svg"
+way: "/projetos/space-invaders"
 link: "https://github.com/fabsoftwareitp/space-invaders"
 destaque: "sim"
 ---
