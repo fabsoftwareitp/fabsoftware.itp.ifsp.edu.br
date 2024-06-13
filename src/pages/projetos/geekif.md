@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkDownLayout.astro
 
 title: "Geekif"
-img: "/projetos/geekif-logo.png"
+img: "/projetos/geekif.png"
 way: "/projetos/geekif"
 link: "https://geekif.com.br/"
 destaque: "sim"
@@ -13,9 +13,11 @@ destaque: "sim"
 
 ## Descrição
 
+O GEEK IF é um projeto que foi demandado um site para divulgar o evento conhecido como "GEEK IF" do câmpus de Itapetininga do Instituo Federal de São Paulo, construindo diversas páginas para o site como: Página Incial, Páginas das Atrações, Página de Galeria e diversas outras. Utilizando-se das tecnologias de AJAX e de uma API disponibilizada pelo Google Maps, o site é construído com HTML, CSS e JavaScript.
+
 ## Info
 
-- Tecnologias: 
-- Time: [](/membros/#), [](/membros/#) e [](/membros/#)
+- Tecnologias: HTML, CSS, JavaScript ([GitHub](https://github.com/fabsoftwareitp/geekif.fabsoftware.itp.ifsp.edu.br))
+- Time: [Vitor Cavalheiro](/membros/vitor-cavalheiro) e [Gabriel Machado](/membros/gabriel-machado)
 - Status: finalizado
-- Data: 
+- Data: 2023

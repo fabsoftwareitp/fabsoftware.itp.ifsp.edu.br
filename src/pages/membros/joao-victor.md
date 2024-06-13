@@ -8,7 +8,7 @@ way: /membros/joao-victor
 position: "Tec. Informática"
 date: "team team19 team20"
 hasTestimonial: "sim"
-testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt."
+testimonial: "A fábrica de software me auxiliou em vários quesitos tanto como aprender uma nova linguagem, aprender novas ferramentas e desenvolver soluções de problemas para vários tipos de pessoas."
 video: "https://www.youtube.com/embed/D054k8JNOm4"
 ---
 

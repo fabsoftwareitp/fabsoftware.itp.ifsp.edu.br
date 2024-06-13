@@ -7,7 +7,7 @@ way: /membros/rafael-damiam
 position: "Tec. Informática"
 date: "team team19 team20"
 hasTestimonial: "sim"
-testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt."
+testimonial: "A fábrica é super importante na minha evolução tanto no relacionamento com colegas, e também como desenvolvedor."
 video: "https://www.youtube.com/embed/B1bys3rAuL8"
 ---
 

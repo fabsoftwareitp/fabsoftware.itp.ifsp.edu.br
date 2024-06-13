@@ -18,6 +18,8 @@ destaque: "não"
 
 ## Descrição
 
+A II MOSTRA CIENTÍFICA E FEIRA DE CIÊNCIAS DO IFSP ITAPETININGA é um evento idealizado e realizado pelas Coordenadoria de Pesquisa, Inovação e Pós-Graduação, Diretoria Adjunta Educacional e Coordenadoria de Extensão do Câmpus Itapetininga do IFSP.
+
 ## Info
 
 - Tecnologias: HTML, CSS e JS ([GitHub](https://github.com/fabsoftwareitp/feiradeciencias.itp.ifsp.edu.br))

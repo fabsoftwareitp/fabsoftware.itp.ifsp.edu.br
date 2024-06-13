@@ -8,7 +8,7 @@ way: /membros/andre-augusto
 position: "Tec. Informática"
 date: "team team21 team22"
 hasTestimonial: "sim"
-testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt."
+testimonial: "Como é o propósito da fábrica, você lida como se fosse realmente uma empresa de TI onde o seu professor vira seu chefe só que de um jeito legal, não tem aquela pressão no trabalho e metas impossíveis."
 video: "https://www.youtube.com/embed/WqmlJsXiY54"
 ---
 

@@ -8,7 +8,7 @@ way: /membros/gabriel-machado
 position: "Tec. Informática"
 date: "team team22 team23 team24"
 hasTestimonial: "sim"
-testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt."
+testimonial: "fazer parte da fábrica de software me ajudou a amadurecer,a sensação que eu tenho hoje é de que eu realmente amadureci em relação ao garoto que tava lá começando."
 video: "https://www.youtube.com/embed/ETa81Rndiao"
 ---
 

@@ -8,7 +8,7 @@ way: /membros/vinicius-zevarex
 position: "Tec. Informática"
 date: "team team19"
 hasTestimonial: "sim"
-testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt."
+testimonial: "A fábrica foi uma experiência muito enriquecedora para mim, lá a gente tem uma experiência bem próxima do mercado desenvolvendo soluções com os conhecimentos que a gente aprendeu durante o curso."
 video: "https://www.youtube.com/embed/sDcW1keRIDs"
 ---
 
