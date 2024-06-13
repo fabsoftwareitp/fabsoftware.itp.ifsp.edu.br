@@ -1,0 +1,12 @@
+---
+import TesteLayout from '../layouts/BaseLayout.astro'
+import Projeto from '../components/Projeto.astro'
+
+const allPosts = await Astro.glob('./projetos/*.md');
+---
+
+<TesteLayout pageTitle="Projetos">
+    <div class="flex flex-wrap justify-center items-center gap-[4rem] my-8">
+          {allPosts.map((post) => <Projeto frontmatter={post.frontmatter} />)}
+    </div>
+</TesteLayout>

@@ -1,0 +1,34 @@
+---
+const {way, img, name, testimonial, video, testimonialQuantity} = Astro.props;
+---
+<div class="scroll shrink-0 relative flex flex-col justify-evenly items-center xl:w-[29rem] xl:h-[18rem] w-[21rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl xl:p-[1rem] p-0">
+  <div class="open-button snap-center snap-always shrink-0 last:pr-[calc(100%-20rem)] p-3">
+    <p class="text-secondary text-balance p-4 xl:text-lg text-md line-clamp-6">{testimonial}</p>
+    <div class="flex items-center place-self-start">
+      <a href={way}><img src={img} class="w-[2rem] h-[2rem] rounded-full" /></a>
+      <a href={way}><p class="text-secondary text-balance p-4 text-lg">{name}</p></a>
+    </div>
+  </div>
+  <dialog class="modal bg-tertiary border-primary border-2">
+    <div class="w-[20rem] h-[35rem] md:w-[50rem] md:h-[35rem] flex flex-col gap-6 items-center">
+        <div class="close-button self-start m-4 text-4xl text-primary">X</div>
+        <iframe class="w-[19rem] h-[25rem] md:w-[45rem] md:h-[25rem] youriframe" src={video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+   </dialog>
+</div>
+
+<style define:vars={{testimonialQuantity}}>
+  @keyframes scroll {
+		0% { 
+      transform: translateX(5rem); 
+    }
+		100% { 
+      transform: translateX(calc(-20rem * var(--testimonialQuantity))) 
+    }
+	} 
+  @media only screen and (min-width: 768px) {
+  .scroll {
+			animation: scroll 40s linear infinite;
+			}
+  }
+</style>

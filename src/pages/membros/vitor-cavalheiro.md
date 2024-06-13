@@ -7,6 +7,9 @@ img: https://avatars.githubusercontent.com/u/126813410?v=4
 way: /membros/vitor-cavalheiro
 position: "Tec. Informática"
 date: "team team23"
+hasTestimonial: "sim"
+testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt."
+video: ""
 ---
 
 # Vitor Gabriel Cavalheiro

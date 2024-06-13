@@ -1,98 +1,121 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Equipe from '../components/Equipe.astro';
+import Destaque from '../components/Destaque.astro';
+import Depoimentos from '../components/Depoimentos.astro';
 
-const allPosts = await Astro.glob('./membros/*.md');
+const allMembers = await Astro.glob('./membros/*.md');
 const status = "ativo";
-const filteredPosts = allPosts.filter((post) => post.frontmatter.status?.includes(status));
+const filteredMembers = allMembers.filter((post) => post.frontmatter.status?.includes(status));
+
+const allProjects = await Astro.glob('./projetos/*.md');
+const destaque = "sim";
+const filteredProjects = allProjects.filter((post) => post.frontmatter.destaque?.includes(destaque));
+
+const allTestimonials = await Astro.glob('../pages/membros/*.md');
+const hasTestimonial = "sim";
+const filteredTestimonials = allTestimonials.filter((post) => post.frontmatter.hasTestimonial?.includes(hasTestimonial));
+
+const testimonialQuantity = filteredTestimonials.length;
+
 const pageTitle = "Fábrica de Software";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="bg-index">
-      <img src="logo-oficial.png" alt="logo principal" class="animate__animated animate__tada" />
+    <div class="bg-slate-900 bg-hero-pattern bg-center bg-no-repeat bg-cover h-screen text-center text-white flex flex-col justify-center items-center pb-[60px] border-primary">
+      <img src="logo-claro.svg" alt="logo principal" class="animate__animated animate__tada xl:w-[14rem] w-[10rem] mb-[2rem] " />
       <div class="animate__animated animate__bounceIn">
-        <h1>Fábrica de Software</h1>
-        <h2>IFSP Itapetininga</h2>
+        <h1 class="xl:text-[4rem] text-[2rem] font-[600]">Fábrica de Software</h1>
+        <h2 class="text-primary font-[700]">IFSP Itapetininga</h2>
       </div>
     </div>
-    <div class="main container">
-      <section>
-        <h2>Sobre o projeto</h2>
-        <p>A Fábrica de Software é uma iniciativa liderada pelo Prof. Danilo Bueno <strong>desde maio de 2019</strong> no Instituto Federal de Ciência e Tecnologia campus Itapetininga. A Fábrica têm como objetivo principal, o desenvolvimento, a prática e a evolução nos âmbitos do <strong>desenvolvimento de software</strong>. Nela, os alunos tem diversas vivências e oportunidades além da aulas tradicionais dos cursos, dentre as quais se destacam:</p>
-        <div class="banners">
-          <figure>
-            <img src="banner-tech.svg" alt="banner tecnologias" />
-            <figcaption>Conhecer diferentes tecnologias</figcaption>
-          </figure>
-          <figure>
-            <img src="banner-engineer.svg" alt="banner tecnologias" />
-            <figcaption>Enfrentar desafios reais</figcaption>
-          </figure>
-          <figure>
-            <img src="banner-pair.svg" alt="banner tecnologias" />
-            <figcaption>Trabalhar em equipe</figcaption>
-          </figure>
+    <div class="flex flex-col xl:mx-[16rem] gap-y-4">
+
+      <section class="flex flex-col xl:flex-row gap-x-10 p-4 items-center reveal">
+        <div class="flex flex-col rounded-2xl xl:h-[34.8rem] h-[24rem] justify-evenly ">
+          <h2 class="xl:text-5xl text-[2.5rem] text/loose font-semibold text-primary">Sobre o projeto</h2>
+          <p class="xl:text-lg/loose text-md xl:text-center text-balance text-secondary xl:leading-normal">A Fábrica de Software é uma iniciativa liderada pelo Prof. Danilo Bueno <strong class="text-primary">desde maio de 2019</strong> no Instituto Federal de Ciência e Tecnologia campus Itapetininga. A Fábrica têm como objetivo principal, o desenvolvimento, a prática e a evolução nos âmbitos do <strong class="text-primary">desenvolvimento de software</strong>. Nela, os alunos tem diversas vivências e oportunidades além da aulas tradicionais dos cursos, dentre as quais se destacam:</p>
+        </div>
+        <div class="flex flex-col items-center text-center gap-y-8">
+          <div class="flex items-center justify-evenly w-[22rem] md:w-[32rem] xl:w-[30rem] rounded-2xl border-2 border-primary shadow-lg shadow-primary">
+            <img src="banner-tech.svg" alt="banner tecnologias" class="w-[12rem] h-[6rem] md:h-[10rem] xl:w-[16rem] xl:h-[8rem] m-[1rem]" />
+            <p class="text-primary text-xl xl:text-2xl text/loose font-semibold">Conhecer diferentes tecnologias</p>
+          </div>
+          <div class="flex items-center justify-evenly w-[22rem] md:w-[32rem] xl:w-[30rem] rounded-2xl border-2 border-primary shadow-lg shadow-primary">
+            <p class="text-primary text-xl xl:text-2xl text/loose font-semibold">Enfrentar desafios reais</p>
+            <img src="banner-engineer.svg" alt="banner tecnologias" class="w-[12rem] h-[6rem] md:h-[10rem] xl:w-[16rem] xl:h-[8rem] m-[1rem]" />
+          </div>
+          <div class="flex items-center justify-evenly w-[22rem] md:w-[32rem] xl:w-[30rem] rounded-2xl border-2 border-primary shadow-lg shadow-primary">
+            <img src="banner-pair.svg" alt="banner tecnologias" class="w-[12rem] h-[6rem] md:h-[10rem] xl:w-[16rem] xl:h-[8rem] m-[1rem]" />
+            <p class="text-primary text-xl xl:text-2xl text/loose font-semibold">Trabalhar em equipe</p>
+          </div>
         </div>
       </section>
   
-      <section>
-        <h2 id="equipe">Equipe</h2>
-        <p>
-          A equipe é formada por alunos dos cursos de Informática do campus Itapetininga. Atualmente conta com <a href="#equipe"><strong>5 alunos</strong></a> do curso Técnico Integrado em Informática e já teve mais de <a href="/membros/"><strong>22 participantes</strong></a> desde o ínicio do projeto.
+      <section class="flex flex-col gap-8 p-4 reveal">
+        <h2 class="xl:text-5xl text-[2.5rem] text/loose font-semibold text-primary">Equipe</h2>
+        <p class="xl:text-lg/loose text-md xl:text-center text-pretty text-secondary xl:leading-normal">
+          A equipe é formada por alunos dos cursos de Informática do campus Itapetininga. Atualmente conta com <strong class="text-primary">{filteredMembers.length} alunos</strong> do curso Técnico Integrado em Informática e já teve mais de <a href="/membros/"><strong class="text-primary">{allMembers.length} participantes</strong></a> desde o ínicio do projeto.
         </p>
-        <div id="equipe" class="membros">
-                {filteredPosts.map((post) => <Equipe way={post.frontmatter.way} name={post.frontmatter.name} img={post.frontmatter.img} position={post.frontmatter.position} />)}
+        <div class="flex flex-wrap justify-center items-center gap-8">
+          {filteredMembers.map((member) => <Equipe way={member.frontmatter.way} name={member.frontmatter.name} img={member.frontmatter.img} position={member.frontmatter.position} />)}
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-8 p-4 reveal">
+        <h2 class="xl:text-5xl text-[2.5rem] text/loose font-semibold text-primary">Depoimentos</h2>
+        <div class="snap-x md:snap-none snap-mandatory overflow-x-auto md:overflow-x-hidden flex flex-row overflow-hidden gap-x-6">
+          {filteredTestimonials.map((testimonial) =><Depoimentos way={testimonial.frontmatter.way} name={testimonial.frontmatter.name} img={testimonial.frontmatter.img} testimonial={testimonial.frontmatter.testimonial} video={testimonial.frontmatter.video} testimonialQuantity={testimonialQuantity}/>)}
         </div>
       </section>
   
-      <section>
-        <h2>Projetos</h2>
-        <p>
-          A Fábrica de Software possui mais de <a href="/projetos/"><strong>13 projetos</strong></a> entre finalizados e em desenvolvimento desde a sua fundação. Dentre os projetos, temos internos para o próprio campus, como o <a href="/projetos/#sge"><strong>Sistema de Gerenciamento de Eventos (SGE)</strong></a> e também externos em parceria com a Prefeitura Municipal de Itapetininga em projetos como o <a href="/projetos/#svsa"><strong>SVSA</strong></a> e <a href="/projetos/#conrua"><strong>Consultório na Rua</strong></a
-          >.
+      <section class="flex flex-col justify-center items-center gap-4 p-4 reveal">
+        <h2 class="xl:text-5xl text-[2.5rem] text/loose font-semibold text-primary">Projetos</h2>
+        <p class="xl:text-md/loose text-md xl:text-center text-balance text-secondary xl:leading-normal">
+          A Fábrica de Software possui mais de <a href="/projetos/"><strong class="text-primary">{allProjects.length} projetos</strong></a> entre finalizados e em desenvolvimento desde a sua fundação. Dentre os projetos, temos internos para o próprio campus, como o <a href="/projetos/#sge"><strong class="text-primary">Sistema de Gerenciamento de Eventos (SGE)</strong></a> e também externos em parceria com a Prefeitura Municipal de Itapetininga em projetos como o <a href="/projetos/#svsa"><strong class="text-primary">SVSA</strong></a> e <a href="/projetos/#conrua"><strong class="text-primary">Consultório na Rua</strong></a>
         </p>
-        <ul class="projetos"></ul>
-      </section>
-  
-      <section>
-        <h2>Depoimentos</h2>
-        <div class="depoimentos-videos">
-          <div>
-            <iframe src="https://www.youtube.com/embed/WqmlJsXiY54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>André Augusto</p>
-          </div>
-  
-          <div>
-            <iframe src="https://www.youtube.com/embed/ETa81Rndiao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>Gabriel Machado</p>
-          </div>
-  
-          <div>
-            <iframe src="https://www.youtube.com/embed/mbH4MiyuVh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>Rafael Alexandre</p>
-          </div>
-  
-          <div>
-            <iframe src="https://www.youtube.com/embed/B1bys3rAuL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>Rafael Damiam</p>
-          </div>
-  
-          <div>
-            <iframe src="https://www.youtube.com/embed/sDcW1keRIDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>Vinicius Zevarex</p>
-          </div>
-          <div>
-            <iframe src="https://www.youtube.com/embed/D054k8JNOm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>João Moraiz</p>
-          </div>
-          <div>
-            <iframe src="https://www.youtube.com/embed/aw3LTiobEYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>Lucas Cavalherie</p>
-          </div>
+        <div class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-8">
+          {filteredProjects.map((project) => <Destaque way={project.frontmatter.way} title={project.frontmatter.title} img={project.frontmatter.img} descricao={project.compiledContent()}/>)}
         </div>
+        <button class="my-[1rem] h-[2.5rem] w-[8rem] text-lg text/loose font-semibold text-primary border-2 border-primary rounded-full bg-tertiary"><a href="./projetos">Veja mais</a></button>
       </section>
+  
     </div>
-  
+    
 </BaseLayout>
+
+<style>
+  .reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+    text: black;
+  }
+</style>
+
+<script>
   
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
+</script>

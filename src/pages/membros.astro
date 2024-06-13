@@ -1,5 +1,5 @@
 ---
-import MarkDownLayout from '../layouts/MarkDownLayout.astro'
+import TesteLayout from '../layouts/BaseLayout.astro'
 import Membro from '../components/Membro.astro'
 
 const allPosts = await Astro.glob('./membros/*.md');
@@ -9,98 +9,53 @@ const allPosts = await Astro.glob('./membros/*.md');
 <script>
       const listBtn = document.querySelectorAll(".btn");
     
+    if(localStorage.getItem("storageName") != null) {
+        document.querySelectorAll(".membro").forEach(e => {
+          e.style.display= 'none';          
+        });
+        document.querySelectorAll(`.${localStorage.getItem("storageName")}`).forEach(e => {
+          e.style.display = '';
+        });
+        document.querySelectorAll(".teamprof").forEach(e => {
+          e.style.display = '';
+        });  
+    }
+
     listBtn.forEach(btn => {
       btn.addEventListener('click', (e) => {
         const ano = btn.getAttribute("data-ano");
+        localStorage.setItem("storageName", ano);
         document.querySelectorAll(".membro").forEach(e => {
-          e.style.opacity= 0.5;
+          e.style.display= 'none';          
         });
         document.querySelectorAll(`.${ano}`).forEach(e => {
-          e.style.opacity = 1;
+          e.style.display = '';
         });
         document.querySelectorAll(".teamprof").forEach(e => {
-          e.style.opacity = 1;
+          e.style.display = '';
         });    
       })
     })
 </script>
 
 
-<MarkDownLayout title="Membros">
+<TesteLayout pageTitle="Membros">
 
-      <nav>
+      <nav class="flex items-center justify-center">
             <div>
-                  <button class="btn" data-ano="team">Todos os Membros</button>
-                  <button class="btn" data-ano="team24">Equipe 24</button>
-                  <button class="btn" data-ano="team23">Equipe 23</button>
-                  <button class="btn" data-ano="team22">Equipe 22</button>
-                  <button class="btn" data-ano="team21">Equipe 21</button>
-                  <button class="btn" data-ano="team20">Equipe 20</button>
-                  <button class="btn" data-ano="team19">Equipe 19</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team">Todos os Membros</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team24">Equipe 24</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team23">Equipe 23</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team22">Equipe 22</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team21">Equipe 21</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team20">Equipe 20</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team19">Equipe 19</button>
             </div>
-
       </nav>
 
-      <div class="membros">
-            {allPosts.map((post) => <Membro frontmatter={post.frontmatter} />)}
+    <div class="flex justify-evenly py-[2rem]">
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-[4rem] gap-x-[10rem] justify-center ">
+        {allPosts.map((post) => <Membro frontmatter={post.frontmatter} />)}
       </div>
-</MarkDownLayout>
-
-
-<style>
-      .membros {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      }
-
-          ul {
-            list-style:none;
-            text-align:center;
-          }
-
-          a {
-            color:#fd624c;
-          }
-
-          .shelf {
-            display: flex;
-            flex-wrap: wrap;
-            align-itens: center;
-            gap: 3vw;
-            margin: 1.5vw 0; 
-          }
-
-          .shelf > li {
-            display: flex; 
-            flex-direction: column;
-            align-items: center; 
-            justify-content: center;
-          }
-
-          .shelf > li > a {
-            width: 150px;
-          }
-
-          .btn {
-            background-color: #fd624c;
-            color: white;
-            border-radius: 7px;
-            padding: 5px;
-            border: none;
-            font-size: 19px;
-            margin: 2.5px;
-          }
-
-          .btn:hover {
-            cursor: pointer;
-            background-color: #fd402c;
-          }
-
-          @media (max-width: 900px){
-            .shelf {
-              justify-content: center;
-            }
-          }
-
-      
-</style>
+    </div>  
+</TesteLayout>   
