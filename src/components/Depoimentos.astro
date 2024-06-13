@@ -1,12 +1,15 @@
 ---
 const {way, img, name, testimonial, video, testimonialQuantity} = Astro.props;
 ---
-<div class="scroll shrink-0 relative flex flex-col justify-evenly items-center xl:w-[29rem] xl:h-[18rem] w-[21rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl xl:p-[1rem] p-0">
-  <div class="open-button snap-center snap-always shrink-0 last:pr-[calc(100%-20rem)] p-3">
-    <p class="text-secondary text-balance p-4 xl:text-lg text-md line-clamp-6">{testimonial}</p>
-    <div class="flex items-center place-self-start">
-      <a href={way}><img src={img} class="w-[2rem] h-[2rem] rounded-full" /></a>
-      <a href={way}><p class="text-secondary text-balance p-4 text-lg">{name}</p></a>
+<div class="scroll shrink-0 relative  xl:w-[29rem] xl:h-[18rem] w-[21rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl xl:p-[1rem] p-0">
+  <div class="open-button snap-center snap-always shrink-0 last:pr-[calc(100%-20rem)] p-3 flex flex-col justify-evenly items-center">
+    <p class="text-secondary text-balance pt-4 xl:text-lg text-md line-clamp-6">{testimonial}</p>
+    <div class="flex items-center absolute top-[75%] left-[5%]">
+      <div class="flex items-center">
+        <a href={way}><img src={img} class="w-[2rem] h-[2rem] rounded-full" alt={name} /></a>
+        <a href={way}><p class="text-secondary text-balance p-4 text-lg">{name}</p></a>
+      </div>
+        <img src="/youtube.png" alt="Ícone youtube" class="w-[25px] h-[25px]" />
     </div>
   </div>
   <dialog class="modal bg-tertiary border-primary border-2">
@@ -18,6 +21,14 @@ const {way, img, name, testimonial, video, testimonialQuantity} = Astro.props;
 </div>
 
 <style define:vars={{testimonialQuantity}}>
+  @-webkit-keyframes scroll {
+    0% { 
+      transform: translateX(5rem); 
+    }
+		100% { 
+      transform: translateX(calc(-20rem * var(--testimonialQuantity))) 
+    }
+	} 
   @keyframes scroll {
 		0% { 
       transform: translateX(5rem); 

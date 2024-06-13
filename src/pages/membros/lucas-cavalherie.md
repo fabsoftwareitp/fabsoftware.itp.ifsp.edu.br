@@ -8,7 +8,7 @@ way: /membros/lucas-cavalherie
 position: "Tec. Informática"
 date: "team team19 team20"
 hasTestimonial: "sim"
-testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus vehicula dui, egestas. Nullam mattis purus eu est sagittis laoreet. Sed tincidunt neque quis ligula feugiat tincidunt."
+testimonial: "Com a fábrica de software eu aprendi diversas tecnologias que estão em alta no mercado, aprendi como programar da maneira adequada, além de conhecer outras linguagens de programação."
 video: "https://www.youtube.com/embed/aw3LTiobEYs"
 ---
 
