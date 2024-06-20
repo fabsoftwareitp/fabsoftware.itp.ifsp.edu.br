@@ -74,7 +74,7 @@ const pageTitle = "Fábrica de Software";
         <p class="xl:text-md/loose text-md xl:text-center text-balance text-secondary xl:leading-normal">
           A Fábrica de Software possui mais de <a href="/projetos/"><strong class="text-primary">{allProjects.length} projetos</strong></a> entre finalizados e em desenvolvimento desde a sua fundação. Dentre os projetos, temos internos para o próprio campus, como o <a href="/projetos/#sge"><strong class="text-primary">Sistema de Gerenciamento de Eventos (SGE)</strong></a> e também externos em parceria com a Prefeitura Municipal de Itapetininga em projetos como o <a href="/projetos/#svsa"><strong class="text-primary">SVSA</strong></a> e <a href="/projetos/#conrua"><strong class="text-primary">Consultório na Rua</strong></a>
         </p>
-        <div class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-8">
+        <div class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 xxl:grid-cols-3 justify-center items-center gap-8">
           {filteredProjects.map((project) => <Destaque way={project.frontmatter.way} title={project.frontmatter.title} img={project.frontmatter.img} descricao={project.compiledContent()}/>)}
         </div>
         <button class="my-[1rem] h-[2.5rem] w-[8rem] text-lg text/loose font-semibold text-primary border-2 border-primary rounded-full bg-tertiary"><a href="./projetos">Veja mais</a></button>

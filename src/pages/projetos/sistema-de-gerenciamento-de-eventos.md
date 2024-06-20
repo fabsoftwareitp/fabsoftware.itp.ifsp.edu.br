@@ -10,7 +10,6 @@ destaque: "não"
 ---
 
 # Sistema de Gerenciamento de Eventos
-[https://sge.fabsoftware.itp.ifsp.edu.br](https://sge.fabsoftware.itp.ifsp.edu.br)
 
 ![Logo SGE](/projetos/logo-sge.png)
 ![SGE1](/projetos/sge-img1.png)

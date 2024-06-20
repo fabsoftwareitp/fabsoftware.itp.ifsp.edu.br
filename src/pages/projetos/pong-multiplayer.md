@@ -9,7 +9,6 @@ destaque: "sim"
 ---
 
 # Pong Multiplayer 
-[https://github.com/fabsoftwareitp/pong.fabsoftware.itp.ifsp.edu.br](https://github.com/fabsoftwareitp/pong.fabsoftware.itp.ifsp.edu.br)
 ![Partida de Pong](/projetos/partida-de-pong.png) 
 
 ## Descrição

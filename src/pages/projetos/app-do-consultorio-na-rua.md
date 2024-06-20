@@ -9,8 +9,6 @@ destaque: "sim"
 ---
 
 # App do Consultório na Rua 
-
-[https://consultorionarua.fabsoftware.itp.ifsp.edu.br](https://consultorionarua.fabsoftware.itp.ifsp.edu.br)
 ![App Consultório na Rua](/projetos/logo-consultorio-na-rua.png) 
 
 ## Descrição
