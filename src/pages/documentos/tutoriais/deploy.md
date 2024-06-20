@@ -1,5 +1,5 @@
 ---
-template: "page"
+layout: ../../../layouts/GenericLayout.astro
 title: "Como fazer deploy das aplicações"
 
 name: "Git e Github"

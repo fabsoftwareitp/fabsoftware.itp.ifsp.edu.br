@@ -1,5 +1,5 @@
 ---
-template: "page"
+layout: ../../../layouts/GenericLayout.astro
 title: "Fluxo de Git e Github da Fábrica"
 
 name: "Git e Github"

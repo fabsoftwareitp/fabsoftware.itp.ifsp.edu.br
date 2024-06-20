@@ -1,6 +1,6 @@
 ---
 title: "Retrospectiva 2023"
-template: "page"
+layout: ../../../layouts/GenericLayout.astro
 ---
 
 # Retrospectiva 17/05

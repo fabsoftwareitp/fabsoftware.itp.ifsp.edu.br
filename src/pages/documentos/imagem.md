@@ -1,6 +1,6 @@
 ---
 title: "Imagem"
-template: "page"
+layout: ../../layouts/GenericLayout.astro
 ---
 
 # Imagem das máquinas

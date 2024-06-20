@@ -1,6 +1,6 @@
 ---
 title: "Calendário"
-template: "page"
+layout: ../../../layouts/GenericLayout.astro
 ---
 
 # Calendário 📅

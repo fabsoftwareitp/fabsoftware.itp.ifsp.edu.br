@@ -9,7 +9,7 @@ position: "Tec. Informática"
 date: "team team21 team22"
 hasTestimonial: "sim"
 testimonial: "Como é o propósito da fábrica, você lida como se fosse realmente uma empresa de TI onde o seu professor vira seu chefe só que de um jeito legal, não tem aquela pressão no trabalho e metas impossíveis."
-video: "https://www.youtube.com/embed/WqmlJsXiY54"
+video: "https://www.youtube.com/embed/J2_y3LiYJZA"
 ---
 
 # André Augusto

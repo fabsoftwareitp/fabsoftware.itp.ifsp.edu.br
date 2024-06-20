@@ -1,6 +1,6 @@
 ---
 title: "Reuniões"
-template: "page"
+layout: ../../../layouts/GenericLayout.astro
 ---
 
 # Reuniões 📓
@@ -174,4 +174,4 @@ PRs integrados
 
 ### Antigas
 
-- [Reuniões de 2022](reunioes-22)
+- [Reuniões de 2022](reunioes-22/)

@@ -1,6 +1,6 @@
 ---
 title: "Planejamento GeekIF"
-template: "page"
+layout: ../../../layouts/GenericLayout.astro
 ---
 
 # Planejamento GeekIF

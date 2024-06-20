@@ -9,7 +9,7 @@ position: "Tec. Informática"
 date: "team team19"
 hasTestimonial: "sim"
 testimonial: "A fábrica foi uma experiência muito enriquecedora para mim, lá a gente tem uma experiência bem próxima do mercado desenvolvendo soluções com os conhecimentos que a gente aprendeu durante o curso."
-video: "https://www.youtube.com/embed/sDcW1keRIDs"
+video: "https://www.youtube.com/embed/v-WTq5Gu-d8"
 ---
 
 # Vinicius Alexandre de Oliveira Zevarex
