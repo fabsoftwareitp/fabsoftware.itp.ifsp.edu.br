@@ -1,6 +1,6 @@
 ---
 title: "ReadMe Padrão para Repositórios"
-template: "page"
+layout: ../../layouts/GenericLayout.astro
 ---
 
 # Pong

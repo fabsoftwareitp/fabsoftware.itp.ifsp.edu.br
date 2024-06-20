@@ -1,6 +1,6 @@
 ---
+layout: ../../layouts/GenericLayout.astro
 title: "Arquitetura"
-template: "page"
 ---
 
 # Arquitetura da Infraestrutura

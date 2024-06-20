@@ -1,5 +1,5 @@
 ---
-template: "page"
+layout: ../../../layouts/GenericLayout.astro
 title: "Manual de acesso ao WebServer"
 
 author: "Vitor Gabriel de Aquino"

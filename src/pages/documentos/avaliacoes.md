@@ -1,6 +1,6 @@
 ---
 title: "Avaliações"
-template: "page"
+layout: ../../layouts/GenericLayout.astro
 ---
 
 # Avaliações 📅

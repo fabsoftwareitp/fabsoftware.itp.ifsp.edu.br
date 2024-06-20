@@ -1,5 +1,5 @@
 ---
-template: "page"
+layout: ../../../layouts/GenericLayout.astro
 title: "Proxmox e Docker"
 
 name: "Git e Github"

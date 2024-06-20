@@ -1,6 +1,6 @@
 ---
-title: "reunioes-22"
-template: "page"
+title: "Retrospectiva 2023"
+layout: ../../../layouts/GenericLayout.astro
 ---
 
 # Reuniões 📓

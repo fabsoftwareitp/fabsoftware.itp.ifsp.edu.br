@@ -6,7 +6,7 @@ const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={title || frontmatter.name || frontmatter.title}>
     <div class="p-8 flex flex-wrap justify-center items-center gap-10">
-        <div class="flex flex-col items-center container prose prose-h1:text-primary prose-img:rounded-xl prose-p:text-secondary prose-p:text-justify prose-h2:text-primary prose-li:text-secondary prose-a:text-secondary prose-ul:text-start prose-ul:place-self-start prose-strong:text-primary">
+        <div class="flex flex-col items-center container prose prose-code:text-primary prose-h1:text-primary prose-img:rounded-xl prose-p:text-secondary prose-p:text-justify prose-h2:text-primary prose-h3:text-primary prose-li:text-secondary prose-a:text-secondary prose-ul:text-start prose-ul:place-self-start prose-strong:text-primary">
             <slot />
         </div>
     </div>

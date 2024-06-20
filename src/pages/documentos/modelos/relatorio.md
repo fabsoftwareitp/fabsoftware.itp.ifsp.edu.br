@@ -1,6 +1,6 @@
 ---
 title: "Relatório"
-template: "page"
+layout: ../../../layouts/GenericLayout.astro
 ---
 
 # Relatórios 📅

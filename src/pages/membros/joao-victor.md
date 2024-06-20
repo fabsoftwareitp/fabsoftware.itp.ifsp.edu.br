@@ -9,7 +9,7 @@ position: "Tec. Informática"
 date: "team team19 team20"
 hasTestimonial: "sim"
 testimonial: "A fábrica de software me auxiliou em vários quesitos tanto como aprender uma nova linguagem, aprender novas ferramentas e desenvolver soluções de problemas para vários tipos de pessoas."
-video: "https://www.youtube.com/embed/D054k8JNOm4"
+video: "https://www.youtube.com/embed/Ka7USragzXQ"
 ---
 
 # João Victor Ferreira de Morais
