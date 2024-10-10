@@ -19,12 +19,18 @@ async function generateIssuesReport() {
     state: "all",
   });
 
+  const { data: commits } = await octokit.repos.listCommits({
+    owner,
+    repo,
+    per_page: 2,
+  });
+
   const oneWeekAgo = new Date();
   oneWeekAgo.setDate(oneWeekAgo.getDate() - 7); // Data de uma semana atrás
 
   // Estruturas para dados por assignee
   const performanceByAssignee = {};
-  
+
   issues.forEach(issue => {
     const assignees = issue.assignees.map(a => a.login); // Lista de assignees
 
@@ -58,11 +64,12 @@ async function generateIssuesReport() {
   });
 
   // Criação do conteúdo do relatório
-  let report = "# Relatório de Performance e Issues Abertas por Assignee\n\n";
+  let report = `# 🚀 Relatório de Performance e Issues Abertas por Assignee\n\n`;
 
   for (const [assignee, data] of Object.entries(performanceByAssignee)) {
-    report += `## ${assignee}\n\n`;
-    report += `### Issues Abertas:\n`;
+    report += `## 👤 **${assignee}**\n\n`;
+    
+    report += `### 📌 Issues Abertas:\n`;
     if (data.openIssues.length > 0) {
       data.openIssues.forEach(issue => {
         report += `- [${issue.title}](https://github.com/${owner}/${repo}/issues/${issue.number}) (#${issue.number})\n`;
@@ -70,10 +77,23 @@ async function generateIssuesReport() {
     } else {
       report += `- Nenhuma issue aberta.\n`;
     }
-    report += `\n### Desempenho:\n`;
-    report += `- ${data.completedLastWeek} issues fechadas na última semana\n`;
-    report += `- ${data.totalCompleted} total de issues fechadas\n`;
-    report += "\n";
+    
+    report += `\n### 🎯 Desempenho de Fechamento:\n`;
+    report += `- **${data.completedLastWeek}** issues fechadas na última semana\n`;
+    report += `- **${data.totalCompleted}** total de issues fechadas\n`;
+
+    // Adicionando os últimos dois commits
+    report += `\n### 🔄 Últimos Commits:\n`;
+    const userCommits = commits.filter(commit => commit.committer.login === assignee);
+    if (userCommits.length > 0) {
+      userCommits.forEach(commit => {
+        report += `- [${commit.commit.message}](https://github.com/${owner}/${repo}/commit/${commit.sha}) - ${new Date(commit.commit.author.date).toLocaleDateString()}\n`;
+      });
+    } else {
+      report += `- Nenhum commit encontrado.\n`;
+    }
+
+    report += `\n---\n`; // Linha horizontal para separar assignees
   }
 
   // Enviar o relatório para o Discord
