@@ -23,14 +23,18 @@ async function generateIssuesByAssigneeReport() {
   const issuesByAssignee = {};
 
   issues.forEach(issue => {
-    const assignee = issue.assignee ? issue.assignee.login : 'Unassigned';
+    const assignees = issue.assignees.map(a => a.login); // Lista de assignees
 
     // Excluir usuários específicos e issues fechadas
-    if (!excludedUsers.includes(assignee) && issue.state !== 'closed') {
-      if (!issuesByAssignee[assignee]) {
-        issuesByAssignee[assignee] = [];
-      }
-      issuesByAssignee[assignee].push(issue);
+    if (issue.state !== 'closed') {
+      assignees.forEach(assignee => {
+        if (!excludedUsers.includes(assignee)) {
+          if (!issuesByAssignee[assignee]) {
+            issuesByAssignee[assignee] = [];
+          }
+          issuesByAssignee[assignee].push(issue);
+        }
+      });
     }
   });
 
