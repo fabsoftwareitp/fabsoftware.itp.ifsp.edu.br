@@ -4,9 +4,9 @@ on:
   schedule:
     - cron: '0 12 * * 1'  # Executa toda segunda-feira às 12:00 UTC
   push:
-  branches:
-    - dev
-    - main
+    branches:
+      - dev
+      - main
 
 jobs:
   report:
