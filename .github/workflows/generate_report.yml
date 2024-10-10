@@ -1,0 +1,41 @@
+name: Generate Weekly Report
+
+on:
+  schedule:
+    - cron: '0 12 * * 1'  # Executa toda segunda-feira às 12:00 UTC
+  push:
+  branches:
+    - dev
+    - main
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: |
+          npm install @octokit/rest
+
+      - name: Generate report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          REPO_OWNER: "fabsoftwareitp" 
+          REPO_NAME: "fabsoftware.itp.ifsp.edu.br"
+        run: node generate_report.js
+
+      - name: Commit report
+        run: |
+          git config --local user.name "github-actions"
+          git config --local user.email "actions@github.com"
+          git add report.md
+          git commit -m "Update weekly report" || echo "No changes to commit"
+          git push
