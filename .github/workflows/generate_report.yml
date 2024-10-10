@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install @octokit/rest
+          npm install @octokit/rest axios
 
       - name: Generate report
         env:
