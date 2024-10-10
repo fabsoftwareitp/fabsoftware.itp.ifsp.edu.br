@@ -30,9 +30,10 @@ async function generateDailyCommitsReport() {
 
   // Criação do conteúdo do relatório
   let report = "# Relatório Diário de Commits\n\n";
+  report += `**Projeto:** [${owner}/${repo}](https://github.com/${owner}/${repo})\n\n`;
 
   filteredCommits.forEach(commit => {
-    report += `- [${commit.commit.committer.name}] ${commit.commit.message} (Commit SHA: ${commit.sha})\n`;
+    report += `- [${commit.commit.committer.name}] ${commit.commit.message} ([Commit SHA: ${commit.sha}](https://github.com/${owner}/${repo}/commit/${commit.sha}))\n`;
   });
 
   // Enviar o relatório para o Discord
