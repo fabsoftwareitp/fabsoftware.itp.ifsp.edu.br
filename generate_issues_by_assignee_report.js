@@ -12,40 +12,67 @@ const repo = process.env.REPO_NAME; // Nome do repositório
 const excludedUsers = ['danilocbueno', 'rafalmeida-ifsp']; // Usuários a serem excluídos
 const discordWebhookUrl = process.env.DISCORD_WEBHOOK_URL; // URL do webhook do Discord
 
-async function generateIssuesByAssigneeReport() {
+async function generateIssuesReport() {
   const { data: issues } = await octokit.issues.listForRepo({
     owner,
     repo,
     state: "all",
   });
 
-  // Agrupar issues por assignee
-  const issuesByAssignee = {};
+  const oneWeekAgo = new Date();
+  oneWeekAgo.setDate(oneWeekAgo.getDate() - 7); // Data de uma semana atrás
 
+  // Estruturas para dados por assignee
+  const performanceByAssignee = {};
+  
   issues.forEach(issue => {
     const assignees = issue.assignees.map(a => a.login); // Lista de assignees
 
-    // Excluir usuários específicos e issues fechadas
-    if (issue.state !== 'closed') {
-      assignees.forEach(assignee => {
-        if (!excludedUsers.includes(assignee)) {
-          if (!issuesByAssignee[assignee]) {
-            issuesByAssignee[assignee] = [];
-          }
-          issuesByAssignee[assignee].push(issue);
+    assignees.forEach(assignee => {
+      if (excludedUsers.includes(assignee)) return; // Exclui usuários específicos
+
+      // Inicializa dados para assignee
+      if (!performanceByAssignee[assignee]) {
+        performanceByAssignee[assignee] = {
+          completedLastWeek: 0, // Contador de issues fechadas na última semana
+          totalCompleted: 0, // Contador total de issues fechadas
+          openIssues: [] // Lista de issues abertas
+        };
+      }
+
+      // Conta apenas issues fechadas
+      if (issue.state === 'closed') {
+        performanceByAssignee[assignee].totalCompleted += 1;
+
+        // Conta apenas issues fechadas na última semana
+        if (new Date(issue.closed_at) >= oneWeekAgo) {
+          performanceByAssignee[assignee].completedLastWeek += 1;
         }
-      });
-    }
+      }
+
+      // Armazena issues abertas por assignee
+      if (issue.state !== 'closed') {
+        performanceByAssignee[assignee].openIssues.push(issue); // Adiciona issue aberta
+      }
+    });
   });
 
   // Criação do conteúdo do relatório
-  let report = "# Relatório de Issues por Assignee\n\n";
+  let report = "# Relatório de Performance e Issues Abertas por Assignee\n\n";
 
-  for (const [assignee, assigneeIssues] of Object.entries(issuesByAssignee)) {
-    report += `## Issues de ${assignee}\n\n`;
-    assigneeIssues.forEach(issue => {
-      report += `- [${issue.state}] [${issue.title}](https://github.com/${owner}/${repo}/issues/${issue.number}) (#${issue.number})\n`;
-    });
+  for (const [assignee, data] of Object.entries(performanceByAssignee)) {
+    report += `## ${assignee}\n\n`;
+    report += `### Issues Abertas:\n`;
+    if (data.openIssues.length > 0) {
+      data.openIssues.forEach(issue => {
+        report += `- [${issue.title}](https://github.com/${owner}/${repo}/issues/${issue.number}) (#${issue.number})\n`;
+      });
+    } else {
+      report += `- Nenhuma issue aberta.\n`;
+    }
+    report += `\n### Desempenho:\n`;
+    report += `- ${data.completedLastWeek} issues fechadas na última semana\n`;
+    report += `- ${data.totalCompleted} total de issues fechadas\n`;
     report += "\n";
   }
 
@@ -59,4 +86,4 @@ async function sendReportToDiscord(report) {
   });
 }
 
-generateIssuesByAssigneeReport().catch(console.error);
+generateIssuesReport().catch(console.error);
