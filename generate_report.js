@@ -1,5 +1,6 @@
-import { Octokit } from "@octokit/rest";
-import fs from "fs";
+const { Octokit } = require("@octokit/rest");
+const fs = require("fs");
+const axios = require("axios");
 
 // Configurações do Octokit
 const octokit = new Octokit({
@@ -9,6 +10,7 @@ const octokit = new Octokit({
 // Configurações do repositório
 const owner = process.env.REPO_OWNER; // Nome do usuário ou organização
 const repo = process.env.REPO_NAME; // Nome do repositório
+const discordWebhookUrl = process.env.DISCORD_WEBHOOK_URL; // URL do webhook do Discord
 
 async function generateReport() {
   const { data: issues } = await octokit.issues.listForRepo({
@@ -34,15 +36,26 @@ async function generateReport() {
 
   for (const [user, userIssues] of Object.entries(issuesByUser)) {
     report += `## Issues de ${user}\n\n`;
-    console.log(report);
     userIssues.forEach(issue => {
       report += `- [${issue.state}] ${issue.title} (#${issue.number})\n`;
     });
     report += "\n";
   }
 
-  // Escreve o relatório em um arquivo Markdown
-  fs.writeFileSync("report.md", report);
+  // Enviar o relatório para o Discord
+  await sendReportToDiscord(report);
+}
+
+async function sendReportToDiscord(report) {
+  const response = await axios.post(discordWebhookUrl, {
+    content: report,
+  });
+
+  if (response.status === 204) {
+    console.log("Relatório enviado com sucesso para o Discord!");
+  } else {
+    console.error("Falha ao enviar relatório para o Discord:", response.status);
+  }
 }
 
 generateReport().catch(console.error);

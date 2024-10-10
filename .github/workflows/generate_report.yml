@@ -30,12 +30,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
           REPO_OWNER: "fabsoftwareitp" 
           REPO_NAME: "fabsoftware.itp.ifsp.edu.br"
+          DISCORD_WEBHOOK_URL: https://discord.com/api/webhooks/1293896643980300342/SOcnqX8neZRZcA1dyF2YvWlwrPPWPH8CRPH60Mg_KVLCurAk0a7AbFDp4fnNb4pul24d 
         run: node generate_report.js
-
-      - name: Commit report
-        run: |
-          git config --local user.name "github-actions"
-          git config --local user.email "actions@github.com"
-          git add report.md
-          git commit -m "Update weekly report" || echo "No changes to commit"
-          git push
