@@ -34,6 +34,7 @@ async function generateReport() {
 
   for (const [user, userIssues] of Object.entries(issuesByUser)) {
     report += `## Issues de ${user}\n\n`;
+    console.log(report);
     userIssues.forEach(issue => {
       report += `- [${issue.state}] ${issue.title} (#${issue.number})\n`;
     });
