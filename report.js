@@ -6,7 +6,7 @@ function generateReport(performanceByAssignee) {
     report += `### 👤 **${assignee}**\n\n`;
     if (data.openIssues.length > 0) {
       data.openIssues.forEach((issue) => {
-        report += `[#${issue.number} - ${issue.title}](${issue.url}), `;
+        report += `[#${issue.number} - ${issue.title}](${issue.html_url}), `;
       });
     } else {
       report += `- Nenhuma issue aberta.`;
