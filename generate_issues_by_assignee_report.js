@@ -1,6 +1,7 @@
 import { Octokit } from "@octokit/rest";
 import axios from "axios";
 import { configDotenv } from "dotenv";
+import fs from "fs";
 
 configDotenv();
 // Configurações do Octokit
@@ -19,7 +20,7 @@ const repos = [
   "pongo.fabsoftware.itp.ifsp.edu.br",
   "philab.fabsoftware.itp.ifsp.edu.br",
   "ranking.fabsoftware.itp.ifsp.edu.br",
-  "pong.fabsoftware.itp.ifsp.edu.br"
+  "pong.fabsoftware.itp.ifsp.edu.br",
 ];
 
 const users = ["Leo2828", "JoniEmann", "maLu70", "MarcosFabSoftware2"];
@@ -65,10 +66,7 @@ async function generateOrganizationReport() {
 
         commits.forEach((commit) => {
           if (commit.author.login == assignee) {
-            const lastCommit = `Data ${new Date(
-              commit.commit.committer.date
-            ).toLocaleDateString()} ${commit.html_url} (${repo})`;
-            performanceByAssignee[assignee].lastCommits.push(lastCommit);
+            performanceByAssignee[assignee].lastCommits.push(commit);
           }
         });
 
@@ -90,9 +88,15 @@ async function generateOrganizationReport() {
     });
   }
 
-//   console.log(performanceByAssignee);
+  //console.log(performanceByAssignee);
+
+  fs.writeFileSync(
+    "report.json",
+    JSON.stringify(performanceByAssignee, null, 2)
+  );
+
   const report = generateReport(performanceByAssignee);
-  await sendReportToDiscord(report);    
+  await sendReportToDiscord(report);
 }
 
 function generateReport(performanceByAssignee) {
@@ -101,17 +105,21 @@ function generateReport(performanceByAssignee) {
     report += `### 👤 **${assignee}**\n\n`;
     if (data.openIssues.length > 0) {
       data.openIssues.forEach((issue) => {
-        report += `- [${issue.title}](#) (#${issue.number})\n`;
+        report += `[#${issue.number} - ${issue.title}](${issue.url}), `;
       });
     } else {
-      report += `- Nenhuma issue aberta.\n`;
+      report += `- Nenhuma issue aberta.`;
     }
+    report += `\n`;
     report += `- **${data.completedLastWeek}** issues fechadas na última semana\n`;
-    report += `- **${data.totalCompleted}** total de issues fechadas\n`;
+    report += `- **${data.totalCompleted}** issues fechadas no total\n`;
 
-    report += `- Commits semana passada: **${data.lastCommits.length}**.`;
-    
-    report += `\n\n`;
+    if (data.lastCommits.length > 0) {
+      report += `- **${data.lastCommits.length}** commits na semana passada\n`;
+    } else {
+      report += `- Nenhum commit na última semana.\n`;
+    }
+    report += `\n`;
   }
   return report;
 }
