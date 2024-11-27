@@ -18,6 +18,7 @@ title: 'Documentos'
 - [Manual Server](documentos/tutoriais/manual-server/)
 - [Git e GitHub da Fábrica](documentos/tutoriais/github/)
 - [Treinamento](documentos/tutoriais/treinamento/)
+- [Tutorial](documentos/tutoriais/keystatic/)
 
 ## Sites úteis
 - [Adobe: para tratamento de imagem (conversões de extensões, edição de imagem, etc)](https://www.adobe.com/br/)
