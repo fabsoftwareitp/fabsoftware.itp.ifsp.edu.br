@@ -11,12 +11,21 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
+    "@keystatic/astro": "^5.0.3",
+    "@keystatic/core": "^0.5.42",
     "@octokit/rest": "^21.0.2",
     "astro": "^4.7.1",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "@astrojs/markdoc": "^0.11.5",
+    "@astrojs/node": "^8.3.4",
+    "@astrojs/react": "^3.6.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.13"

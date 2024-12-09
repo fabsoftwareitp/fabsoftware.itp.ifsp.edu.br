@@ -9,33 +9,36 @@ name: "Git e Github"
 Primeiramente é necessário instalar as seguintes dependências:
  - npx astro add react markdoc 
  - npm install @keystatic/core @keystatic/astro
+ - npx astro add node
 
 Após isso no arquivo 'astro.config.mjs' do astro, é preciso adicionar a integração keystatic e o modo output que deve estar em hybrid, o arquivo deverá estar da seguinte forma após as configurações: 
 
-    // astro.config.mjs
-    import { defineConfig } from 'astro/config'
+```javascript
+// astro.config.mjs
+import { defineConfig } from 'astro/config'
 
-    import react from '@astrojs/react'
-    import markdoc from '@astrojs/markdoc'
+import react from '@astrojs/react'
+import markdoc from '@astrojs/markdoc'
 
-    import keystatic from '@keystatic/astro'
+import keystatic from '@keystatic/astro'
 
-    // https://astro.build/config
-    export default defineConfig({
-
-    integrations: [react(), markdoc()],
+// https://astro.build/config
+export default defineConfig({
 
     integrations: [react(), markdoc(), keystatic()],
 
     output: 'hybrid',
-    })
 
-Então é necessário criar um arquivo criar uma página 'keystatic.config.ts' na raiz do projeto. Este arquivo vai definir onde os arquivos vão ser salvos, e onde serão criados as coleções, que servirão como um molde para o usuário colocar as informações.
+})
+```
 
-    // keystatic.config.ts
-    import { config, fields, collection } from '@keystatic/core';
+Então é necessário criar um arquivo: `keystatic.config.ts` na raiz do projeto. Este arquivo vai definir onde os arquivos vão ser salvos, e onde serão criados as coleções, que servirão como um molde para o usuário colocar as informações.
 
-    export default config({
+```javascript
+// keystatic.config.ts
+import { config, fields, collection } from '@keystatic/core';
+
+export default config({
     storage: {
         kind: 'local',
     },
@@ -51,7 +54,8 @@ Então é necessário criar um arquivo criar uma página 'keystatic.config.ts' n
         },
         }),
     },
-    });
+});
+```
 
 A página a princípio terá essa configuração como base, onde no storage, que é o local que os arquivos serão armazenados pode ser alternado para 'github' para salvar os arquivos no repositório do github. Outro ponto importante é o 'collections', que será onde serão criados as coleções. Há uma coleção de exemplo já criada nomeada como 'posts', nela é possível notar os seguintes campos:
  - label: Serve para nomear o arquivo
@@ -69,19 +73,25 @@ Para testar oque foi configurado basta acessar o caminho /keystatic, onde ficar�
 ## Como renderizar o conteúdo do Keystatic em qualquer página que desejar
 A exibição de conteúdo ocorre da seguinte forma: 
 
-    import { getCollection, getEntry } from "astro:content";
+```javascript
+import { getCollection, getEntry } from "astro:content";
 
-    // Pega todos os arquivos md de uma pasta especificada na pasta content
-    const posts = await getCollection('posts');
+// Pega todos os arquivos md de uma pasta especificada na pasta content
+const posts = await getCollection('posts');
 
-    // Pega um único arquivo md
-    const post1 = await getEntry('posts', 'post1');
+// Pega um único arquivo md
+const post1 = await getEntry('posts', 'post1');
+```
 
 No frontmatter que você deseja exibir o conteúdo de determinado arquivo, assim como no exemplo acima, importe getCollection que servirá para acessar as pastas das coleções, e, getEntry que servirá para acessar um arquivo em específico. Após isso é necessário, assim como ilustrado no exemplo, definir uma constante que receberá os dados dos arquivos que você deseja exibir
 
 Agora, para usar esses dados na página você precisa, no local que dejesa exibir determinada informação de um ou mais arquivos, abrir chaves e colocar assim como no exemplo:
     
-    <h1>{post1.data.titulo}</h1>
+```javascript
+<h1>{post1.data.titulo}</h1>
+```
 
 Esse código pega o arquivo 'post1' e exibe os dados dele.
+
+## 
 
