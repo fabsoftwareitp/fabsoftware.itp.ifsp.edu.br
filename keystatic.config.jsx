@@ -20,11 +20,8 @@ export default config({
     ui: {
         brand: { 
           name: 'Fabsoftware',
-          mark: ({ colorScheme }) => {
-            let path = colorScheme === 'dark'
-              ? '/fundos/logo-claro.svg'
-              : '/fundos/logo-claro.svg';
-            return <img src={path} height={24} />
+          mark: () => {
+            return <img src={'/logo-claro.svg'} height={24} />
           }
         }
     }
