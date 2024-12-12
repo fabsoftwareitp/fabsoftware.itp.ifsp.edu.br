@@ -1,0 +1,21 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import ProjetoLayout from '../../layouts/ProjetoLayout.astro';
+
+const { slug } = Astro.params;
+if (!slug) throw new Error('Slug not found');
+const projeto = await getEntry('projetos', slug);
+
+if (!projeto) throw new Error('No projeto found for this slug');
+const { Content } = await projeto.render();
+
+// Generate static pages
+export async function getStaticPaths() {
+  const projetos = await getCollection('projetos');
+  return projetos.map(projeto => ({ params: { slug: projeto.slug } }));
+}
+---
+
+<ProjetoLayout title={projeto.data.title} frontmatter={projeto.data}>
+  <Content />
+</ProjetoLayout>

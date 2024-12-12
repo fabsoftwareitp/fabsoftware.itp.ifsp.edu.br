@@ -1,0 +1,25 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const {title} = Astro.props;
+const { frontmatter } = Astro.props;
+console.log(frontmatter.testimonial)
+---
+<BaseLayout pageTitle={title || frontmatter.name || frontmatter.title}>
+    
+    <div class="p-8 flex flex-wrap justify-center items-center gap-10">
+        <div class="place-self-start">
+            <a onclick="history.back()"><button class="text-secondary border-2 border-primary rounded-xl bg-tertiary w-[6rem] h-[2rem]">⭠ Voltar</button></a>
+        </div>
+        <div class="place-self-start relative slideshow-container">
+            <img src={frontmatter.avatar} class="object-contain xl:w-[500px] xl:h-[500px] md:w-[400px] md:h-[400px] w-[300px] h-[300px] rounded-xl" /></a>
+        </div>
+        <div class="flex flex-col border-2 p-8 border-primary bg-tertiary rounded-xl items-center container prose prose-a:break-all prose-a:text-[1rem] prose-h1:text-primary prose-img:rounded-xl prose-img:hidden prose-p:text-secondary prose-p:text-justify prose-h2:text-primary prose-li:text-secondary prose-a:text-secondary prose-ul:text-start prose-ul:place-self-start">
+            <slot />
+        </div>
+        <div>
+            {frontmatter.testimonial.discriminant ? <p class="text-primary text-4xl font-bold">Depoimento</p><br></br> <iframe class="xl:w-[45rem] xl:h-[25rem] w-[20rem] h-[20rem] rounded-xl" src={frontmatter.testimonial.value.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : <p class="hidden">Depoimento</p>}
+        </div>
+    </div>
+
+</BaseLayout>

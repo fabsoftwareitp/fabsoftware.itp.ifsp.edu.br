@@ -12,33 +12,15 @@ export default config({
             path: 'src/content/projetos/*',
             format: { contentField: 'content' },
             schema: {
-                layout: fields.select({
-                    label: 'Layout',
-                    options: [
-                      { label: 'MarkDownLayout', value: '../../layouts/MarkDownLayout.astro' },
-                    ],
-                    defaultValue: '../../layouts/MarkDownLayout.astro'
-                }), 
                 title: fields.slug({ name: { label: 'Título' } }),
-                img: fields.image({
-                    label: 'Capa',
-                    directory: 'public/images/projetos',
-                    publicPath: '/images/projetos/'
-                }),
-                imgs: fields.conditional(
-                    fields.checkbox({ label: 'Há mais de uma imagem?', defaultValue: false }),
+                imgs: fields.array(
+                    fields.image({
+                        label: 'Imagens',
+                        directory: 'public/images/projetos',
+                        publicPath: '/images/projetos/',
+                    }),
                     {
-                        true: fields.array(
-                            fields.image({
-                            label: 'Imagens',
-                            directory: 'public/images/equipamentos',
-                            publicPath: '/images/equipamentos/',
-                            }),
-                            {
-                            label: 'Imagens',
-                            }
-                        ),
-                        false: fields.empty(),
+                        label: 'Imagens',
                     }
                 ),
                 link: fields.text({
@@ -57,13 +39,6 @@ export default config({
             path: 'src/content/membros/*',
             format: { contentField: 'content' },
             schema: {
-                layout: fields.select({
-                    label: 'Layout',
-                    options: [
-                      { label: 'MarkDownLayout', value: '../../layouts/MarkDownLayout.astro' },
-                    ],
-                    defaultValue: '../../layouts/MarkDownLayout.astro'
-                }), 
                 title: fields.slug({ name: { label: 'Título' } }),
                 status: fields.checkbox({ label: 'Membro ativo?', defaultValue: false }),
                 name: fields.text({label: 'Nome'}),
@@ -86,16 +61,9 @@ export default config({
         documento: collection({
             label: 'Documento',
             slugField: 'title',
-            path: 'src/content/membros/*',
+            path: 'src/content/documentos/*',
             format: { contentField: 'content' },
             schema: {
-                layout: fields.select({
-                    label: 'Layout',
-                    options: [
-                      { label: 'MarkDownLayout', value: '../../layouts/MarkDownLayout.astro' },
-                    ],
-                    defaultValue: '../../layouts/MarkDownLayout.astro'
-                }), 
                 title: fields.slug({ name: { label: 'Título' } }),
                 content: fields.markdoc({ label: 'Content', extension: 'md' }),
             },

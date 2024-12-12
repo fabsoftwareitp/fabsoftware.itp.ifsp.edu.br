@@ -1,9 +1,8 @@
 ---
+import { getCollection } from "astro:content";
+const membros = await getCollection('membros');
 import TesteLayout from '../layouts/BaseLayout.astro'
 import Membro from '../components/Membro.astro'
-
-const allPosts = await Astro.glob('./membros/*.md');
-
 ---
 
 <script>
@@ -55,7 +54,7 @@ const allPosts = await Astro.glob('./membros/*.md');
 
     <div class="flex justify-evenly py-[2rem]">
       <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-[4rem] gap-x-[10rem] justify-center ">
-        {allPosts.map((post) => <Membro frontmatter={post.frontmatter} />)}
+        {membros.map((membro) => <Membro frontmatter={membro.data} />)}
       </div>
     </div>  
 </TesteLayout>   
