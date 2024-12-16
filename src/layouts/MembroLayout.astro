@@ -3,7 +3,6 @@ import BaseLayout from './BaseLayout.astro';
 
 const {title} = Astro.props;
 const { frontmatter } = Astro.props;
-console.log(frontmatter.testimonial)
 ---
 <BaseLayout pageTitle={title || frontmatter.name || frontmatter.title}>
     
