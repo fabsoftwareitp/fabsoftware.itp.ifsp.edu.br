@@ -1,11 +1,10 @@
 ---
-title: "ReadMe Padrão para Repositórios"
-layout: ../../layouts/GenericLayout.astro
+title: padraoReadme
 ---
-
 # Pong
 
 # Badges das Tecnologias
+
 Link com Badges: https://github.com/Ileriayo/markdown-badges
 
 # Descrição do Projeto(com imagem)
@@ -19,5 +18,7 @@ Link com Badges: https://github.com/Ileriayo/markdown-badges
 # Acesso ao Projeto (Link do Projeto)
 
 # Contribuição/Autores
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/126813410?v=4" width=115><br><sub>Vitor Gabriel Cavalheiro</sub>](https://github.com/Vitor-G-Cavalheiro) |
-| :---: |
+
+{% table %}
+- [<img loading="lazy" src="https://avatars.githubusercontent.com/u/126813410?v=4" width=115><br><sub>Vitor Gabriel Cavalheiro</sub>](https://github.com/Vitor-G-Cavalheiro)
+{% /table %}

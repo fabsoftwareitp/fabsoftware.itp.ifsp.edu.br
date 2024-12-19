@@ -1,0 +1,11 @@
+---
+import { getEntry } from 'astro:content';
+import GenericLayout from '../../layouts/GenericLayout.astro';
+
+const index = await getEntry('documentos', 'documentos');
+const { Content } = await index.render();
+---
+
+<GenericLayout title={index.data.title} >
+    <Content />
+</GenericLayout>

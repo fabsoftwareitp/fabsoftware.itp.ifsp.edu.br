@@ -70,9 +70,15 @@ export default config({
         }),
     },     
     singletons: {
-        settings: singleton({
-            label: 'Settings',
-            schema: {}
+        sobre: singleton({
+            label: 'Sobre',
+            path: 'src/pages/sobre',
+            format: { contentField: 'content' },
+            schema: {
+                layout: fields.ignored(),
+                title: fields.ignored(),
+                content: fields.markdoc({ label: 'Content', extension: 'md' }),
+            }
           }),
     }, 
     ui: {

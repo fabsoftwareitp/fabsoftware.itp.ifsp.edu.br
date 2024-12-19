@@ -4,18 +4,18 @@ import GenericLayout from '../../layouts/GenericLayout.astro';
 
 const { slug } = Astro.params;
 if (!slug) throw new Error('Slug not found');
-const membro = await getEntry('membros', slug);
+const documento = await getEntry('documentos', slug);
 
-if (!membro) throw new Error('No membro found for this slug');
-const { Content } = await membro.render();
+if (!documento) throw new Error('No membro found for this slug');
+const { Content } = await documento.render();
 
 // Generate static pages
 export async function getStaticPaths() {
-  const membros = await getCollection('membros');
-  return membros.map(membro => ({ params: { slug: membro.slug } }));
+  const documentos = await getCollection('documentos');
+  return documentos.map(documento => ({ params: { slug: documento.slug } }));
 }
 ---
 
-<GenericLayout title={membro.data.title} frontmatter={membro.data}>
+<GenericLayout title={documento.data.title} >
   <Content />
-</MembroLayout>GenericLayout
+</GenericLayout>
