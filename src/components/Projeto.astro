@@ -3,10 +3,10 @@ const {frontmatter} = Astro.props;
 ---
 
 <div class="flex justify-evenly items-center gap-y-10 border-2 border-primary cursor-pointer hover:shadow-primary shadow-xl">
-    <a href={frontmatter.way}>
+    <a href={'/projetos/'+frontmatter.title.toLowerCase().normalize("NFD").replace(/[^a-zA-Z\s]/g, "").replaceAll(' ', '-')}>
         <figure class="relative xl:w-[28rem] xl:h-[16rem] w-[20rem] h-[12rem] overflow-hidden">
-            <img src={frontmatter.img} alt={frontmatter.title} class="blur-[100px]"/>
-            <img src={frontmatter.img} alt={frontmatter.title} class="object-contain xl:w-[28rem] xl:h-[16rem] w-[22rem] h-[12rem] absolute top-0 left-0" />
+            <img src={frontmatter.imgs[0]} alt={frontmatter.title} class="blur-[100px]"/>
+            <img src={frontmatter.imgs[0]} alt={frontmatter.title} class="object-contain xl:w-[28rem] xl:h-[16rem] w-[22rem] h-[12rem] absolute top-0 left-0" />
             <figcaption class="opacity-1 xl:opacity-0 hover:opacity-100 duration-300 absolute top-0 left-0 w-full h-full flex items-end text-primary font-bold mx-4 my-[-1rem] text-balance"><span>{frontmatter.title}</span></figcaption>
         </figure>
     </a>  

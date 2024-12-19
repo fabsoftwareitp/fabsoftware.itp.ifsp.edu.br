@@ -1,22 +1,22 @@
 ---
+import { getCollection } from "astro:content";
+
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Equipe from '../components/Equipe.astro';
 import Destaque from '../components/Destaque.astro';
 import Depoimentos from '../components/Depoimentos.astro';
+import Membro from "../components/Membro.astro";
 
-const allMembers = await Astro.glob('./membros/*.md');
-const status = "ativo";
-const filteredMembers = allMembers.filter((post) => post.frontmatter.status?.includes(status));
+const membros = await getCollection('membros');
+const equipe = membros.filter((membro) => membro.data.status);
 
-const allProjects = await Astro.glob('./projetos/*.md');
-const destaque = "sim";
-const filteredProjects = allProjects.filter((post) => post.frontmatter.destaque?.includes(destaque));
+const projetos = await Astro.glob('../content/projetos/*.md');
+const destaques = projetos.filter((destaque) => destaque.frontmatter.destaque);
 
-const allTestimonials = await Astro.glob('../pages/membros/*.md');
-const hasTestimonial = "sim";
-const filteredTestimonials = allTestimonials.filter((post) => post.frontmatter.hasTestimonial?.includes(hasTestimonial));
+// const projetos = await getCollection('projetos');
+// const destaques = projetos.filter((projeto) => projeto.data.destaque);
 
-const testimonialQuantity = filteredTestimonials.length;
+const depoimentos = membros.filter((membro) => membro.data.testimonial.discriminant);
 
 const pageTitle = "Fábrica de Software";
 ---
@@ -55,27 +55,27 @@ const pageTitle = "Fábrica de Software";
       <section class="flex flex-col gap-8 p-4 reveal">
         <h2 class="xl:text-5xl text-[2.5rem] text/loose font-semibold text-primary">Equipe</h2>
         <p class="xl:text-lg/loose text-md xl:text-center text-pretty text-secondary xl:leading-normal">
-          A equipe é formada por alunos dos cursos de Informática do campus Itapetininga. Atualmente conta com <strong class="text-primary">{filteredMembers.length} alunos</strong> do curso Técnico Integrado em Informática e já teve mais de <a href="/membros/"><strong class="text-primary">{allMembers.length} participantes</strong></a> desde o ínicio do projeto.
+          A equipe é formada por alunos dos cursos de Informática do campus Itapetininga. Atualmente conta com <strong class="text-primary">{equipe.length} alunos</strong> do curso Técnico Integrado em Informática e já teve mais de <a href="/membros/"><strong class="text-primary">{membros.length} participantes</strong></a> desde o ínicio do projeto.
         </p>
         <div class="flex flex-wrap justify-center items-center gap-8">
-          {filteredMembers.map((member) => <Equipe way={member.frontmatter.way} name={member.frontmatter.name} img={member.frontmatter.img} position={member.frontmatter.position} />)}
+          {equipe.map((membro) => <Equipe way={'/membros/'+membro.slug} name={membro.data.name} img={membro.data.avatar} position={membro.data.position} />)}
         </div>
       </section>
 
       <section class="flex flex-col gap-8 p-4 reveal">
         <h2 class="xl:text-5xl text-[2.5rem] text/loose font-semibold text-primary">Depoimentos</h2>
         <div class="snap-x md:snap-none snap-mandatory overflow-x-auto md:overflow-x-hidden flex flex-row overflow-hidden gap-x-6">
-          {filteredTestimonials.map((testimonial) =><Depoimentos way={testimonial.frontmatter.way} name={testimonial.frontmatter.name} img={testimonial.frontmatter.img} testimonial={testimonial.frontmatter.testimonial} video={testimonial.frontmatter.video} testimonialQuantity={testimonialQuantity}/>)}
+          {depoimentos.map((depoimento) =><Depoimentos way={'/membros/'+depoimento.slug} name={depoimento.data.name} img={depoimento.data.avatar} testimonial={depoimento.data.testimonial.value.depoimento} video={depoimento.data.testimonial.value.video} testimonialQuantity={depoimentos.length}/>)}
         </div>
       </section>
   
       <section class="flex flex-col justify-center items-center gap-4 p-4 reveal">
         <h2 class="xl:text-5xl text-[2.5rem] text/loose font-semibold text-primary">Projetos</h2>
         <p class="xl:text-md/loose text-md xl:text-center text-balance text-secondary xl:leading-normal">
-          A Fábrica de Software possui mais de <a href="/projetos/"><strong class="text-primary">{allProjects.length} projetos</strong></a> entre finalizados e em desenvolvimento desde a sua fundação. Dentre os projetos, temos internos para o próprio campus, como o <a href="/projetos/#sge"><strong class="text-primary">Sistema de Gerenciamento de Eventos (SGE)</strong></a> e também externos em parceria com a Prefeitura Municipal de Itapetininga em projetos como o <a href="/projetos/#svsa"><strong class="text-primary">SVSA</strong></a> e <a href="/projetos/#conrua"><strong class="text-primary">Consultório na Rua</strong></a>
+          A Fábrica de Software possui mais de <a href="/projetos/"><strong class="text-primary">{projetos.length} projetos</strong></a> entre finalizados e em desenvolvimento desde a sua fundação. Dentre os projetos, temos internos para o próprio campus, como o <a href="/projetos/#sge"><strong class="text-primary">Sistema de Gerenciamento de Eventos (SGE)</strong></a> e também externos em parceria com a Prefeitura Municipal de Itapetininga em projetos como o <a href="/projetos/#svsa"><strong class="text-primary">SVSA</strong></a> e <a href="/projetos/#conrua"><strong class="text-primary">Consultório na Rua</strong></a>
         </p>
         <div class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 xxl:grid-cols-3 justify-center items-center gap-8">
-          {filteredProjects.map((project) => <Destaque way={project.frontmatter.way} title={project.frontmatter.title} img={project.frontmatter.img} descricao={project.compiledContent()}/>)}
+          {destaques.map((destaque) => <Destaque title={destaque.frontmatter.title} img={destaque.frontmatter.imgs} descricao={destaque.compiledContent()}/>)}
         </div>
         <button class="my-[1rem] h-[2.5rem] w-[8rem] text-lg text/loose font-semibold text-primary border-2 border-primary rounded-full bg-tertiary"><a href="./projetos">Veja mais</a></button>
       </section>

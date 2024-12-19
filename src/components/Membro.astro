@@ -2,12 +2,13 @@
 const {frontmatter} = Astro.props;
 
 const classe = "flex justify-center items-center flex-col gap-y-10 border-2 border-primary w-[18rem] h-[26rem] bg-tertiary rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 membro " + frontmatter.date;
+
 ---
 
 <div class={classe}>
-    <a href={frontmatter.way}>
-        <img src={frontmatter.img} alt={frontmatter.name} class="size-[12rem] rounded-full" />     
-        <span class="capitalize text-primary font-bold text-xl">{frontmatter.way.replace("/membros/", " ").replace("-", " ")}</span>
+    <a href={'/membros/'+frontmatter.title.toLowerCase().normalize("NFD").replace(/[^a-zA-Z\s]/g, "").replaceAll(' ', '-')}>
+        <img src={frontmatter.avatar} alt={frontmatter.name} class="size-[12rem] rounded-full" />     
+        <span class="capitalize text-primary font-bold text-xl">{frontmatter.title}</span>
     </a>
     <small class="capitalize text-secondary font-semibold text-lg">{frontmatter.position}</small>
 </div>
