@@ -33,11 +33,11 @@ jobs:
       #     DISCORD_WEBHOOK_URL: https://discord.com/api/webhooks/1293896643980300342/SOcnqX8neZRZcA1dyF2YvWlwrPPWPH8CRPH60Mg_KVLCurAk0a7AbFDp4fnNb4pul24d
       #   run: node generate_daily_commits_report.js
 
-      - name: Generate issues by assignee report
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO_OWNER: "fabsoftwareitp"
-          REPO_NAME: "fabsoftware.itp.ifsp.edu.br"
-          ORG_NAME: "fabsoftwareitp"
-          DISCORD_WEBHOOK_URL: https://discord.com/api/webhooks/1293896643980300342/SOcnqX8neZRZcA1dyF2YvWlwrPPWPH8CRPH60Mg_KVLCurAk0a7AbFDp4fnNb4pul24d
-        run: node generate_issues_by_assignee_report.js
+      # - name: Generate issues by assignee report
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     REPO_OWNER: "fabsoftwareitp"
+      #     REPO_NAME: "fabsoftware.itp.ifsp.edu.br"
+      #     ORG_NAME: "fabsoftwareitp"
+      #     DISCORD_WEBHOOK_URL: 
+      #   run: node generate_issues_by_assignee_report.js
