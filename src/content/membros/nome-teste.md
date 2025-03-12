@@ -1,5 +1,5 @@
 ---
-title: nome teste
+title: nome legal
 status: true
 name: NomeMembro
 testimonial:
