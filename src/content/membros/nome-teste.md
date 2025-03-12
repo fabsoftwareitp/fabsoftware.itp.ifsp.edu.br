@@ -1,5 +1,5 @@
 ---
-title: nome legal
+title: nome legal dsadsadsa
 status: true
 name: NomeMembro
 testimonial:
