@@ -6,6 +6,9 @@ avatar: http://www.google.com
 position: teste
 date: dev dev25
 testimonial:
-  discriminant: false
+  discriminant: true
+  value:
+    depoimento: dasdsadas
+    video: https://www.youtube.com/
 ---
 testejnjjhj
