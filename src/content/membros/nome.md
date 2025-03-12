@@ -1,8 +1,8 @@
 ---
 title: nome
-status: true
+status: false
 name: NomeMembro
 testimonial:
   discriminant: false
 ---
-teste
+testejnjjhj
