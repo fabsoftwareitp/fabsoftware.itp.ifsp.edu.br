@@ -1,6 +1,6 @@
 ---
 title: nome
-status: false
+status: true
 name: NomeMembro
 testimonial:
   discriminant: false
