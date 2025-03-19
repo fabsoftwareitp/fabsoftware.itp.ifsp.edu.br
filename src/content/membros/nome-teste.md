@@ -1,6 +1,6 @@
 ---
 title: nome legal dsadsadsa
-status: true
+status: false
 name: NomeMembro
 avatar: http://www.google.com
 position: teste
