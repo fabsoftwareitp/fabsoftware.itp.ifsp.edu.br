@@ -18,4 +18,4 @@ O GEEK IF é um projeto que foi demandado um site para divulgar o evento conheci
 - Tecnologias: HTML, CSS, JavaScript ([GitHub](https://github.com/fabsoftwareitp/geekif.fabsoftware.itp.ifsp.edu.br))
 - Time: [Vitor Cavalheiro](/membros/vitor-cavalheiro), [Gabriel Machado](/membros/gabriel-machado)
 - Status: finalizado
-- Data: 2023
+- Data: 2023.
