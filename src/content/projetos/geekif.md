@@ -3,7 +3,7 @@ title: Geekif
 imgs:
   - /images/projetos/geekif/imgs/0.png
 link: https://geekif.com.br/
-destaque: true
+destaque: false
 ---
 # Geekif
 
