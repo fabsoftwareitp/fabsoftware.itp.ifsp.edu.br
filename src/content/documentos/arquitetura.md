@@ -11,7 +11,7 @@ Uma infraestrutura mínima para o desenvolvimento de software, com foco em desen
 
 ## Aplicações
 
-- SiteFábrica
+- SiteFábrica.
 - SGE
 - Consultório na Rua
 - RepoIF
