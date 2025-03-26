@@ -16,7 +16,7 @@ export default config({
             path: 'src/content/projetos/*',
             format: { contentField: 'content' },
             schema: {
-                title: fields.slug({ name: { label: 'Título' } }),
+                title: fields.slug({ name: { label: 'Title' } }),
                 imgs: fields.array(
                     fields.image({
                         label: 'Imagens',
@@ -43,7 +43,7 @@ export default config({
             path: 'src/content/membros/*',
             format: { contentField: 'content' },
             schema: {
-                title: fields.slug({ name: { label: 'Título' } }),
+                title: fields.slug({ name: { label: 'Title' } }),
                 status: fields.checkbox({ label: 'Membro ativo?', defaultValue: false }),
                 name: fields.text({label: 'Nome'}),
                 avatar: fields.text({label: 'Link para o avatar do github'}),
@@ -68,7 +68,7 @@ export default config({
             path: 'src/content/documentos/*',
             format: { contentField: 'content' },
             schema: {
-                title: fields.slug({ name: { label: 'Título' } }),
+                title: fields.slug({ name: { label: 'Title' } }),
                 content: fields.markdoc({ label: 'Content', extension: 'md' }),
             },
         }),
