@@ -54,7 +54,7 @@ import Membro from '../components/Membro.astro'
 
     <div class="flex justify-evenly py-[2rem]">
       <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-[4rem] gap-x-[10rem] justify-center ">
-        <!-- {membros.map((membro) => <Membro frontmatter={membro.data} />)} -->
+        {membros.map((membro) => <Membro frontmatter={membro.data} />)}
       </div>
     </div>  
 </TesteLayout>   
