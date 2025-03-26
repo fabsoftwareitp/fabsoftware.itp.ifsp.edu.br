@@ -17,23 +17,23 @@ export default config({
             format: { contentField: 'content' },
             schema: {
                 title: fields.slug({ name: { label: 'Title' } }),
-                imgs: fields.array(
-                    fields.image({
-                        label: 'Imagens',
-                        directory: 'public/images/projetos',
-                        publicPath: '/images/projetos/',
-                    }),
-                    {
-                        label: 'Imagens',
-                    }
-                ),
+                // imgs: fields.array(
+                //     fields.image({
+                //         label: 'Imagens',
+                //         directory: 'public/images/projetos',
+                //         publicPath: '/images/projetos/',
+                //     }),
+                //     {
+                //         label: 'Imagens',
+                //     }
+                // ),
                 link: fields.text({
                     label: 'URL do projeto',
                 }),
-                destaque: fields.checkbox({
-                    label: 'Destaque',
-                    description: 'Definir como destaque na página inicial'
-                }),
+                // destaque: fields.checkbox({
+                //     label: 'Destaque',
+                //     description: 'Definir como destaque na página inicial'
+                // }),
                 content: fields.markdoc({ label: 'Content', extension: 'md' }),
             },
         }),
@@ -44,21 +44,21 @@ export default config({
             format: { contentField: 'content' },
             schema: {
                 title: fields.slug({ name: { label: 'Title' } }),
-                status: fields.checkbox({ label: 'Membro ativo?', defaultValue: false }),
+                // status: fields.checkbox({ label: 'Membro ativo?', defaultValue: false }),
                 name: fields.text({label: 'Nome'}),
                 avatar: fields.text({label: 'Link para o avatar do github'}),
                 position: fields.text({label: 'Cargo'}),
                 date: fields.text({label: 'Time'}),
-                testimonial: fields.conditional(
-                    fields.checkbox({ label: 'Tem depoimento?', defaultValue: false }),
-                    {
-                        true: fields.object({
-                            depoimento: fields.text({label: 'Depoimento', multiline: true}),
-                            video: fields.text({label: 'Link do vídeo'}),
-                        }),
-                        false: fields.empty(),
-                    }
-                ),
+                // testimonial: fields.conditional(
+                //     fields.checkbox({ label: 'Tem depoimento?', defaultValue: false }),
+                //     {
+                //         true: fields.object({
+                //             depoimento: fields.text({label: 'Depoimento', multiline: true}),
+                //             video: fields.text({label: 'Link do vídeo'}),
+                //         }),
+                //         false: fields.empty(),
+                //     }
+                // ),
                 content: fields.markdoc({ label: 'Content', extension: 'md' }),
             },
         }),
