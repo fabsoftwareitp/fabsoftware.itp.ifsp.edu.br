@@ -1,5 +1,5 @@
 ---
-title: Arquitetura teste
+title: Arquitetura
 ---
 # Arquitetura da Infraestrutura
 
