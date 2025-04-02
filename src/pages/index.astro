@@ -1,4 +1,4 @@
----
+<!-- ---
 import { getCollection } from "astro:content";
 
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -8,6 +8,7 @@ import Depoimentos from '../components/Depoimentos.astro';
 import Membro from "../components/Membro.astro";
 
 const membros = await getCollection('membros');
+
 const equipe = membros.filter((membro) => membro.data.status);
 
 const projetos = await Astro.glob('../content/projetos/*.md');
@@ -118,4 +119,4 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-</script>
+</script> -->
