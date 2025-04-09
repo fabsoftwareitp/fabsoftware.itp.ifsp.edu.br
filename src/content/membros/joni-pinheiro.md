@@ -1,6 +1,6 @@
 ---
 title: Joni Pinheiro
-status: true
+status: false
 name: Joni Emannuel Albuquerque Pinheiro
 avatar: https://avatars.githubusercontent.com/u/165536121?v=4
 position: Tec. Informática
