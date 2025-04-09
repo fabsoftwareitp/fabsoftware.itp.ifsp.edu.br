@@ -15,7 +15,7 @@ O desligamento do colaborador no projeto pode acontecer caso o índice de desemp
 
 - posição: junior I
 - perfil:  front-end / ux
-- desempenho: abaixo do esperado
+- desempenho: abaixo do esperado.
 
 ### Andre Augusto
 
