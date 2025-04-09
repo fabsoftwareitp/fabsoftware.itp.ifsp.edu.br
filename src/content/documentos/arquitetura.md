@@ -15,7 +15,7 @@ Uma infraestrutura mínima para o desenvolvimento de software, com foco em desen
 - SGE
 - Consultório na Rua
 - RepoIF
-- GeekIF
+- GeekIF.
 
 ### Organização
 
