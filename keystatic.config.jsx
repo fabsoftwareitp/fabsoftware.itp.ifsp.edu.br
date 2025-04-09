@@ -3,11 +3,11 @@ import { config, fields, collection, singleton } from '@keystatic/core';
 
 export default config({
     storage: {
-        kind: 'local',
-        // repo: {
-        //     owner: 'fabsoftwareitp',
-        //     name: 'fabsoftware.itp.ifsp.edu.br'
-        // }   
+        kind: 'github',
+        repo: {
+            owner: 'fabsoftwareitp',
+            name: 'fabsoftware.itp.ifsp.edu.br'
+        }   
     },
     collections: {
         projetos: collection({
