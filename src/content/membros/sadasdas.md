@@ -1,6 +1,6 @@
 ---
 title: sadasdas
-status: false
+status: true
 name: dsadsa
 avatar: asdsa
 position: sadsa
