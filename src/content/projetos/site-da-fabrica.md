@@ -18,4 +18,4 @@ O site da Fábrica tem como objetivo divulgar a iniciativa Fábrica De Software,
 - Tecnologias: HTML, CSS, JavaScript, Astro Js e Tailwind ([GitHub](https://github.com/fabsoftwareitp/fabsoftwareitp.github.io))
 - Time: [Leonardo Cesar](/membros/leonardo-cesar)
 - Status: Finalizado
-- Data: 2024
+- Data: 2024.
