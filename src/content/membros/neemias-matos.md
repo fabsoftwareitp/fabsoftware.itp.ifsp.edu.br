@@ -10,8 +10,6 @@ testimonial:
 ---
 # Neemias Borges de Matos
 
-![Neemoasb](https://avatars.githubusercontent.com/u/51499704?v=4)
-
 ## Redes Sociais
 
 - github:

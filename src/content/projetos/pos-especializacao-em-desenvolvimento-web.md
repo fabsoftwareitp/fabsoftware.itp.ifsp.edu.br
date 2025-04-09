@@ -9,8 +9,6 @@ destaque: false
 
 [https://espweb.fabsoftware.itp.ifsp.edu.br](https://espweb.fabsoftware.itp.ifsp.edu.br)
 
-![FS-cinza](/projetos/logo-espweb.png)
-
 ## Descrição
 
 O site EspWeb foi elaborado para a divulgação do curso de Especialização em Desenvolvimento Web ofertado pelo IFSP.

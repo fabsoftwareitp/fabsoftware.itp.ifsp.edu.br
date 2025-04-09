@@ -10,8 +10,6 @@ testimonial:
 ---
 # Laura Naomi Seto
 
-![lauranaomiseto](https://avatars.githubusercontent.com/u/47746453?v=4)
-
 ## Redes Sociais
 
 - github:

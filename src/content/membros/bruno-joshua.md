@@ -10,8 +10,6 @@ testimonial:
 ---
 # Bruno Joshua Medeiros Schanoski
 
-![Bruno Joshua](https://avatars.githubusercontent.com/u/103225663?v=4)
-
 ## Redes Sociais
 
 - github:

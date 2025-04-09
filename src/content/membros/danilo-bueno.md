@@ -10,8 +10,6 @@ testimonial:
 ---
 # Danilo Bueno
 
-![danilocbueno](https://avatars.githubusercontent.com/u/2002182?v=4)
-
 ## Redes Sociais
 
 - github:https://github.com/danilocbueno

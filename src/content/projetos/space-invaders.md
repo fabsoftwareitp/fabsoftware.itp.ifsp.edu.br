@@ -9,8 +9,6 @@ destaque: true
 
 [https://space.fabsoftware.itp.ifsp.edu.br/](https://space.fabsoftware.itp.ifsp.edu.br/)
 
-![Cover space invaders](/projetos/cover-space-invaders.png)
-
 ## Descrição
 
 O projeto Space Invaders replica o jogo de mesmo nome, portando o antigo arcade para um website, com

@@ -16,8 +16,6 @@ testimonial:
 ---
 # João Victor Ferreira de Morais
 
-![joaomorais1f](https://avatars.githubusercontent.com/u/41636783?v=4)
-
 ## Redes Sociais
 
 - github:

@@ -9,10 +9,6 @@ destaque: false
 ---
 # Sistema de Gerenciamento de Eventos
 
-![Logo SGE](/projetos/logo-sge.png)
-![SGE1](/projetos/sge-img1.png)
-![SGE2](/projetos/sge-img2.png)
-
 ## Descrição
 
 O SGE é um projeto de sistema em que você pode buscar por eventos que estão por vir ou mesmo registrar seu próprio evento para que o público acesse as informações de uma forma simples.

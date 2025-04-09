@@ -8,7 +8,6 @@ destaque: true
 # IFAQ
 
 [https://ifaq.fabsoftware.itp.ifsp.edu.br/](https://ifaq.fabsoftware.itp.ifsp.edu.br/)
-![Ifaq](/projetos/ifaq.png)
 
 ## Descrição
 

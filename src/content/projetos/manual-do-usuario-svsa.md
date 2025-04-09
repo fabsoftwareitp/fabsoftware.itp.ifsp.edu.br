@@ -11,10 +11,6 @@ destaque: false
 
 [https://svsa.itp.ifsp.edu.br/](https://svsa.itp.ifsp.edu.br/)
 
-![Logo SVSA](/projetos/logo-svsa.png)
-![SVSA1](/projetos/svsa-img1.png)
-![SVSA2](/projetos/svsa-img2.png)
-
 ## Descrição
 
 Tem a finalidade de servir de guia para os usuários do SVSA, facilitando o acesso ao sistema e suas funcionalidades.

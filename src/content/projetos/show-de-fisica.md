@@ -9,10 +9,6 @@ destaque: false
 
 [https://showdefisica.itp.ifsp.edu.br/](https://showdefisica.itp.ifsp.edu.br/)
 
-![Logo Show de Física](/projetos/logo-show-de-fisica.png)
-![Show de Física1](/projetos/show-de-fisica-img1.png)
-![Show de Física2](/projetos/show-de-fisica-img2.png)
-
 ## Descrição
 
 Show de física é um projeto no campo da Educação e Ciência. Sua missão é contribuir para o ensino de conceitos físicos por meio de diferentes e divertidos métodos de apredizagem.

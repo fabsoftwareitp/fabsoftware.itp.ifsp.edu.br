@@ -10,8 +10,6 @@ testimonial:
 ---
 # Pedro Henrique Morais de Gois
 
-![PedroGois](https://avatars.githubusercontent.com/u/41579818?v=4)
-
 ## Redes Sociais
 
 - github:
