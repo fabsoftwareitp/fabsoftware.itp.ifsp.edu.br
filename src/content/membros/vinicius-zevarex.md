@@ -1,6 +1,6 @@
 ---
 title: Vinicius Zevarex
-status: true
+status: false
 name: Vinicius Alexandre de Oliveira Zevarex
 avatar: https://avatars.githubusercontent.com/u/41579743?v=4
 position: Tec. Informática
