@@ -1,6 +1,6 @@
 ---
 title: Luma Siqueira
-status: true
+status: false
 name: Luma Karoline de Siqueira
 avatar: https://avatars.githubusercontent.com/u/166057576?v=4
 position: Tec. Informática
