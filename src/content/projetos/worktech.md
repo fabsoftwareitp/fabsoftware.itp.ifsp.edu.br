@@ -9,7 +9,7 @@ destaque: false
 ---
 # Worktech
 
-[https://worktech.itp.ifsp.edu.br/](https://worktech.itp.ifsp.edu.br/)
+[https://worktech.fabsoftware.itp.ifsp.edu.br/](https://worktech.itp.ifsp.edu.br/)
 
 ## Descrição
 
