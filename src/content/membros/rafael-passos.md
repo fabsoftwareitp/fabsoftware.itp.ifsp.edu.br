@@ -2,7 +2,7 @@
 title: Rafael dos Passos Rodrigues
 status: true
 name: Rafael dos Passos Rodrigues
-avatar: https://github.com/account
+avatar: https://avatars.githubusercontent.com/u/209825813?v=4
 position: Tec. Informática
 date: team team25
 testimonial:
