@@ -4,8 +4,12 @@ const membros = await getCollection('membros');
 import TesteLayout from '../layouts/BaseLayout.astro'
 import Membro from '../components/Membro.astro'
 const teamList = []
-teamList.push(membros[0].data.date.slice(4, 11).trim())
-let listLength = teamList.length
+for(let i = 0; i < membros.length; i++){
+  if(teamList.indexOf(membros[i].data.date.slice(4, 11).trim()) === -1 && membros[i].data.date.slice(4, 11).trim() != 'prof'){
+    teamList.push(membros[i].data.date.slice(4, 11).trim())
+  }
+}
+teamList.sort((a, b) => Number(a.slice(4, 6)) - Number(b.slice(4, 6)));
 ---
 
 <script>
@@ -45,24 +49,16 @@ let listLength = teamList.length
 
       <nav class="flex items-center justify-center">
             <div>
-              {membros.map((membro) => 
-                {
-                  // for(let i = 0; i < listLength; i++){
-                  //   if(membro.data.date.slice(4, 11).trim() != teamList[i]){
-                      
-                  //     teamList.push(membro.data.date.slice(4, 11).trim())   
-                  //   }
-                  // }
-                  console.log(membro.data.date.slice(4, 11).trim())
-                }
+              {teamList.map((team) => 
+                <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano={team}>Equipe {team.slice(4, 6)}</button>
               )}
                   <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team">Todos os Membros</button>
-                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team24">Equipe 24</button>
+                  <!-- <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team24">Equipe 24</button>
                   <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team23">Equipe 23</button>
                   <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team22">Equipe 22</button>
                   <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team21">Equipe 21</button>
                   <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team20">Equipe 20</button>
-                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team19">Equipe 19</button>
+                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team19">Equipe 19</button> -->
             </div>
       </nav>
 
