@@ -11,8 +11,7 @@ destaque: true
 
 ## Descrição
 
-O projeto Space Invaders replica o jogo de mesmo nome, portando o antigo arcade para um website, com
-sistemas de ranking utilizando JASON.
+O projeto Space Invaders replica o jogo de mesmo nome, portando o antigo arcade para um website, com sistemas de ranking utilizando JSON.
 
 ## Info
 
