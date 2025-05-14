@@ -7,7 +7,7 @@ destaque: false
 ---
 # Tecweb
 
-[https://tecweb.fabsoftware.itp.ifsp.edu.br/](https://tecweb.fabsoftware.itp.ifsp.edu.br/) ![tecweb](/projetos/tecweb.png)
+[https://tecweb.fabsoftware.itp.ifsp.edu.br/](https://tecweb.fabsoftware.itp.ifsp.edu.br/)
 
 ## Descrição
 
