@@ -1,7 +1,7 @@
 ---
 title: tecweb
 imgs:
-  - /images/projetos/tecweb/imgs/0.png
+  - /images/projetos/tecweb-1/imgs/0.png
 link: https://tecweb.fabsoftware.itp.ifsp.edu.br/
 destaque: false
 ---
@@ -11,7 +11,7 @@ destaque: false
 
 ## Descrição
 
-O **Curso Superior de Tecnologia em Sistemas para Internet** tem por objetivo geral propiciar ao estudante um processo formativo que o habilite desenvolver e empregar os conhecimentos científicos e tecnológicos voltados para as atividades de desenvolvimento, teste, atualização e manutenção de sistemas para Internet e dispositivos móveis, tornando-o capaz de posicionar-se de maneira crítica no mercado e intervir no desenvolvimento econômico e social da sua região, além de contribuir em sua formação como cidadão.
+O Curso Superior de Tecnologia em Sistemas para Internet tem por objetivo geral propiciar ao estudante um processo formativo que o habilite desenvolver e empregar os conhecimentos científicos e tecnológicos voltados para as atividades de desenvolvimento, teste, atualização e manutenção de sistemas para Internet e dispositivos móveis, tornando-o capaz de posicionar-se de maneira crítica no mercado e intervir no desenvolvimento econômico e social da sua região, além de contribuir em sua formação como cidadão.
 
 ## Info
 
