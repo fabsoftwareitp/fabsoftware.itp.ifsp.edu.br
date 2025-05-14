@@ -1,6 +1,6 @@
 ---
 title: Paulo Sérgio
-status: true
+status: false
 name: Paulo Sérgio Bertolai Filho
 avatar: https://avatars.githubusercontent.com/u/209826464?v=4
 position: Tec. Informática
