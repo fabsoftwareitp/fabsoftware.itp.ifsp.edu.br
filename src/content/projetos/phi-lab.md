@@ -5,17 +5,24 @@ imgs:
 link: ' https://philab.fabsoftware.itp.ifsp.edu.br'
 destaque: true
 ---
-# **IFAQ**
+# **PHI lab**
 
-[**https://ifaq.fabsoftware.itp.ifsp.edu.br/**](https://ifaq.fabsoftware.itp.ifsp.edu.br/)
+[https://philab.fabsoftware.itp.ifsp.edu.br/](https://philab.fabsoftware.itp.ifsp.edu.br/)
 
-## **Descrição**
+## Sobre o Laboratório
 
-O IFAQ é um Web Stories desenvolvido com as perguntas frequentes feitas pela comunidade, sendo criada com o intuito do público conhecer e saber o que o Campus Itapetininga oferece, podendo ser utilizada durante eventos para mais informações rápidas para pessoas que desejam conhecer mais o campus.
+O PHI Lab é um laboratório de ensino do Instituto Federal de São Paulo, campus Itapetininga. Com uma finalidade multifuncional, o laboratório tem na flexibilidade uma de suas marcas, onde além de experimentos diversos que podem ser realizados em suas diferentes bancadas, aulas teóricas também podem ser realizadas, uma vez que possui estrutura adequada para tal. Esta característica permite que vários cursos oferecidos pelo campus possam se utilizar de suas teste webhook!
 
-## **Info**
+## **Time:**
 
-- Tecnologias: HTML, CSS e AMP Stories ([**GitHub**](https://github.com/fabsoftwareitp/ifaq.fabsoftware.itp.ifsp.edu.br))
-- Time: [**Joni Pinheiro**](https://fabsoftware.itp.ifsp.edu.br/membros/joni-pinheiro), [**Luma Siqueira**](https://fabsoftware.itp.ifsp.edu.br/membros/luma-siqueira) e [**Marcos Soares**](https://fabsoftware.itp.ifsp.edu.br/membros/marcos-kauan)
-- Status: Finalizado
-- Data: 2024
+A equipe é formada por professores da mecânica e atualmente contamos com dois professores e um coordenador de curso.
+
+<ul>
+
+**<li>Coordenador -** Dr. Cristhiano da Costa Herrera;</li>
+
+**<li>Professor -** Dr. Francisco Mateus Faria de Almeida Varasquim;</li>
+
+**<li>Professor -** Dr. Rafael dos Santos</li>
+
+</ul>
