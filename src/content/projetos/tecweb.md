@@ -1,7 +1,7 @@
 ---
 title: tecweb
 imgs:
-  - /images/projetos/tecweb-1/imgs/0.png
+  - /images/projetos/tecweb/imgs/0.png
 link: https://tecweb.fabsoftware.itp.ifsp.edu.br/
 destaque: false
 ---
