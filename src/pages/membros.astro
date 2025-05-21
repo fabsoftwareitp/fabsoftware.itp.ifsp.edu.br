@@ -3,10 +3,21 @@ import { getCollection } from "astro:content";
 const membros = await getCollection('membros');
 import TesteLayout from '../layouts/BaseLayout.astro'
 import Membro from '../components/Membro.astro'
+const teamList = []
+
+for(let i = 0; i < membros.length; i++){
+  const dates = membros[i].data.date.slice(4, 11).trim()
+  
+  if(teamList.indexOf(dates) === -1 && dates != 'prof'){
+    teamList.push(dates)
+  }
+}
+
+teamList.sort((a, b) => Number(a.slice(4, 6)) - Number(b.slice(4, 6)));
 ---
 
 <script>
-      const listBtn = document.querySelectorAll(".btn");
+    const listBtn = document.querySelectorAll(".btn");
     
     if(localStorage.getItem("storageName") != null) {
         document.querySelectorAll(".membro").forEach(e => {
@@ -42,13 +53,10 @@ import Membro from '../components/Membro.astro'
 
       <nav class="flex items-center justify-center">
             <div>
+              {teamList.map((team) => 
+                <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano={team}>Equipe {team.slice(4, 6)}</button>
+              )}
                   <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team">Todos os Membros</button>
-                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team24">Equipe 24</button>
-                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team23">Equipe 23</button>
-                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team22">Equipe 22</button>
-                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team21">Equipe 21</button>
-                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team20">Equipe 20</button>
-                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team19">Equipe 19</button>
             </div>
       </nav>
 
