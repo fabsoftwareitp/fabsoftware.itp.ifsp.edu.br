@@ -4,7 +4,7 @@ status: true
 name: Marcos Kauan Soares de Medeiros
 avatar: https://avatars.githubusercontent.com/u/164426945?v=4
 position: Tec. Informática
-date: team team24
+date: team team24 team25
 testimonial:
   discriminant: false
 ---
