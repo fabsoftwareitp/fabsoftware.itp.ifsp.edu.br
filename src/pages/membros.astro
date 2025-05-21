@@ -4,11 +4,15 @@ const membros = await getCollection('membros');
 import TesteLayout from '../layouts/BaseLayout.astro'
 import Membro from '../components/Membro.astro'
 const teamList = []
+
 for(let i = 0; i < membros.length; i++){
-  if(teamList.indexOf(membros[i].data.date.slice(4, 11).trim()) === -1 && membros[i].data.date.slice(4, 11).trim() != 'prof'){
-    teamList.push(membros[i].data.date.slice(4, 11).trim())
+  const dates = membros[i].data.date.slice(4, 11).trim()
+  
+  if(teamList.indexOf(dates) === -1 && dates != 'prof'){
+    teamList.push(dates)
   }
 }
+
 teamList.sort((a, b) => Number(a.slice(4, 6)) - Number(b.slice(4, 6)));
 ---
 
