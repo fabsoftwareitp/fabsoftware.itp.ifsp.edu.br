@@ -3,7 +3,7 @@ title: PHI lab
 imgs:
   - /images/projetos/phi-lab/imgs/0.png
 link: ' https://philab.fabsoftware.itp.ifsp.edu.br'
-destaque: true
+destaque: false
 ---
 <html>
 
