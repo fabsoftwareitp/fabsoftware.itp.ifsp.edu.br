@@ -4,7 +4,7 @@ status: true
 name: Leonardo Henrique de Oliveira Cesar
 avatar: https://avatars.githubusercontent.com/u/127048383?v=4
 position: Tec. Informática
-date: team team24
+date: team team24 team25
 testimonial:
   discriminant: false
 ---
