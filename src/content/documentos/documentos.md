@@ -1,7 +1,6 @@
 ---
 title: Documentos
 ---
-
 # Documentos
 
 - [Quadro](https://github.com/orgs/fabsoftwareitp/projects/2)
@@ -11,6 +10,7 @@ title: Documentos
 
 - [Treinamento](/documentos/treinamento/)
 - [Tutorial Keystatic](/documentos/keystatic-tutorial/)
+- [Manual do fluxo de trabalho com git/github na fabrica](/documentos/manual-do-fluxo-de-trabalho-com-git-git-hub-na-fabrica)
 
 ## Sites úteis
 
