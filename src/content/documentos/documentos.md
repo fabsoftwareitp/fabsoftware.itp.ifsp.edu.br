@@ -11,6 +11,7 @@ title: Documentos
 - [Treinamento](/documentos/treinamento/)
 - [Tutorial Keystatic](/documentos/keystatic-tutorial/)
 - [Manual do fluxo de trabalho com git/github na fabrica](/documentos/manual-do-fluxo-de-trabalho-com-git-git-hub-na-fabrica)
+- [debug de projetos no celular](/documentos/testar-projetos-no-celular)
 
 ## Sites úteis
 
