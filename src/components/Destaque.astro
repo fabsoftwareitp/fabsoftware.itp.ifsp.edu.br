@@ -1,6 +1,8 @@
 ---
 // Destaque.astro
-const { img, title, descricao, tags = [] } = Astro.props;
+const { img, title, descricao, tags = [], status } = Astro.props;
+
+let labelStatus = status === "doing" ? "Em desenvolvimento" : "Finalizado";
 
 // Lógica original de extração do texto (mantida, apenas isolada para limpeza)
 // Tenta extrair o texto entre os H2. Se falhar, usa uma string vazia para não quebrar.
@@ -40,15 +42,11 @@ try {
       class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
     >
       {
-        tags && tags.length > 0 && (
+        labelStatus && (
           <div class="flex gap-2 mb-2 flex-wrap">
-            {tags.slice(0, 2).map((tag, index) => (
-              <span
-                class={`badge text-xs border-none ${index === 0 ? "bg-fab-orange text-white" : "badge-outline text-gray-300"}`}
-              >
-                {tag}
-              </span>
-            ))}
+            <span class="badge text-xs border-none badge-black text-white">
+              {labelStatus}
+            </span>
           </div>
         )
       }

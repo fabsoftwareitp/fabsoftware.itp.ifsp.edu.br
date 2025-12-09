@@ -4,7 +4,10 @@ imgs:
   - /images/projetos/consultorio-na-rua/imgs/0.png
 link: https://consultorionarua.fabsoftware.itp.ifsp.edu.br
 destaque: true
+tags: [PHP, MySQL, Laravel, Bootstrap]
+status: doing
 ---
+
 # App do Consultório na Rua
 
 ## Descrição

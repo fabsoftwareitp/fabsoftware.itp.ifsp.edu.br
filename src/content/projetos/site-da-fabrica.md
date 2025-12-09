@@ -4,7 +4,9 @@ imgs:
   - /images/projetos/site-da-fabrica/imgs/0.png
 link: https://fabsoftware.itp.ifsp.edu.br/
 destaque: true
+status: doing
 ---
+
 # Site da Fábrica V3
 
 [https://fabsoftware.itp.ifsp.edu.br/](https://fabsoftware.itp.ifsp.edu.br/)
