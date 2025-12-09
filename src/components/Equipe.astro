@@ -1,11 +1,61 @@
 ---
-const {way, img, name, position} = Astro.props;
+const { way, img, name, position } = Astro.props;
 ---
 
-    <div class="flex justify-center items-center flex-col gap-y-10 border-2 border-primary w-[18rem] h-[26rem] bg-tertiary rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-        <a href={way}>
-            <img src={img} alt={name} class="size-[12rem] rounded-full" />      
-            <span class="capitalize text-primary font-bold text-xl">{way.replace("/membros/", " ").replace("-", " ")}</span>
-        </a>
-        <small class="capitalize text-secondary font-semibold text-lg">{position}</small>
+<!-- <div
+  class="flex justify-center items-center flex-col gap-y-10 border-2 border-primary w-[18rem] h-[26rem] bg-tertiary rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+>
+  <a href={way}>
+    <img src={img} alt={name} class="size-[12rem] rounded-full" />
+    <span class="capitalize text-primary font-bold text-xl"
+      >{way.replace("/membros/", " ").replace("-", " ")}</span
+    >
+  </a>
+  <small class="capitalize text-secondary font-semibold text-lg"
+    >{position}</small
+  >
+</div> -->
+<a
+  href={way}
+  class="glass-card rounded-xl p-6 text-center group relative overflow-hidden"
+>
+  <div
+    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-fab-orange to-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+  >
+  </div>
+  <div class="avatar mb-4">
+    <div
+      class="w-24 rounded-full ring-2 ring-white/10 group-hover:ring-fab-orange transition-all"
+    >
+      <img src={img} alt={name} />
     </div>
+  </div>
+  <h3 class="font-bold text-white text-lg capitalize">
+    {way.replace("/membros/", " ").replace("-", " ")}
+  </h3>
+  <p class="text-xs text-gray-400 uppercase tracking-wider mb-3">
+    {position}
+  </p>
+  <div
+    class="flex justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0"
+  >
+    <div class="badge badge-outline badge-sm text-gray-400">Frontend</div>
+  </div>
+</a>
+<style>
+  /* Glassmorphism Card */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 94, 30, 0.2);
+    /* Borda laranja bem sutil */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .glass-card:hover {
+    border-color: #ff5e1e;
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 94, 30, 0.15);
+  }
+</style>

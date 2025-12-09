@@ -1,45 +1,112 @@
 ---
-const {way, img, name, testimonial, video, testimonialQuantity} = Astro.props;
+// Depoimentos.astro
+const { way, img, name, testimonial, video } = Astro.props;
 ---
-<div class="scroll shrink-0 relative  xl:w-[29rem] xl:h-[18rem] w-[20rem] h-[16rem] cursor-pointer outline bg-tertiary border-2 border-primary rounded-2xl xl:p-[1rem] p-0">
-  <div class="open-button snap-center snap-always shrink-0 last:pr-[calc(100%-20rem)] p-3 flex flex-col justify-evenly items-center">
-    <p class="text-secondary text-balance pt-4 xl:text-lg text-md line-clamp-6">{testimonial}</p>
-    <div class="flex items-center absolute top-[75%] left-[5%]">
-      <div class="flex items-center">
-        <a href={way}><img src={img} class="w-[2rem] h-[2rem] rounded-full" alt={name} /></a>
-        <a href={way}><p class="text-secondary text-balance p-4 text-lg">{name}</p></a>
+
+<div
+  class="relative w-[20rem] md:w-[24rem] h-[18rem] md:h-[20rem] flex-shrink-0 group"
+>
+  <div
+    class="open-button w-full h-full cursor-pointer rounded-2xl border border-white/10 bg-[#0a0e26] p-6 flex flex-col justify-between transition-all duration-300 hover:border-fab-orange/50 hover:shadow-lg hover:shadow-fab-orange/10 hover:-translate-y-2"
+  >
+    <div class="text-fab-orange/20 text-4xl font-serif leading-none mb-2">
+      “
+    </div>
+
+    <p
+      class="text-gray-300 text-sm md:text-base leading-relaxed line-clamp-5 flex-grow"
+    >
+      {testimonial}
+    </p>
+
+    <div
+      class="flex items-center justify-between mt-4 pt-4 border-t border-white/5"
+    >
+      <a
+        href={way}
+        class="flex items-center gap-3 group-hover:opacity-80 transition-opacity"
+      >
+        <img
+          src={img}
+          class="w-10 h-10 rounded-full object-cover border border-fab-orange/30"
+          alt={name}
+        />
+        <div>
+          <p class="text-white font-semibold text-sm">{name}</p>
+          <span class="text-xs text-gray-500">Ver perfil</span>
+        </div>
+      </a>
+
+      <div
+        class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-red-600/20 group-hover:text-red-500 transition-colors text-gray-400"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="currentColor"><path d="M8 5v14l11-7z"></path></svg
+        >
       </div>
-        <img src="/youtube.png" alt="Ícone youtube" class="w-[25px] h-[25px]" />
     </div>
   </div>
-  <dialog class="modal bg-tertiary border-primary border-2">
-    <div class="w-[20rem] h-[35rem] md:w-[50rem] md:h-[35rem] flex flex-col gap-6 items-center">
-        <div class="close-button self-start m-4 text-4xl text-primary">X</div>
-        <iframe class="w-[19rem] h-[25rem] md:w-[45rem] md:h-[25rem] youriframe" src={video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <dialog class="modal backdrop-blur-md bg-black/40">
+    <div
+      class="modal-box w-11/12 max-w-4xl bg-[#0a0e26] border border-fab-orange/30 text-white shadow-2xl p-0 overflow-hidden"
+    >
+      <div
+        class="flex justify-between items-center p-4 border-b border-white/10 bg-white/5"
+      >
+        <h3 class="font-bold text-lg text-fab-orange">Depoimento de {name}</h3>
+        <button
+          class="close-button btn btn-sm btn-circle btn-ghost text-white hover:bg-white/10"
+          >✕</button
+        >
+      </div>
+      <div class="relative w-full pt-[56.25%] bg-black">
+        <iframe
+          class="absolute top-0 left-0 w-full h-full video-iframe"
+          src={video}
+          title="YouTube video player"
+          frameborder="0"
+          allowfullscreen></iframe>
+      </div>
     </div>
-   </dialog>
+    <form method="dialog" class="modal-backdrop">
+      <button class="close-backdrop">close</button>
+    </form>
+  </dialog>
 </div>
 
-<style define:vars={{testimonialQuantity}}>
-  @-webkit-keyframes scroll {
-    0% { 
-      transform: translateX(5rem); 
+<script>
+  const items = document.querySelectorAll(".group"); // Seletor ajustado para o container do componente
+  items.forEach((item) => {
+    if (item.getAttribute("data-init") === "true") return;
+    item.setAttribute("data-init", "true");
+    const openBtn = item.querySelector(".open-button");
+    const modal = item.querySelector("dialog");
+    const closeBtn = item.querySelector(".close-button");
+    const backdropBtn = item.querySelector(".close-backdrop");
+    const iframe = item.querySelector("iframe");
+    const originalSrc = iframe ? iframe.src : "";
+
+    if (openBtn && modal) {
+      openBtn.addEventListener("click", () => modal.showModal());
+      const closeModal = () => {
+        modal.close();
+        if (iframe) iframe.src = originalSrc;
+      };
+      if (closeBtn)
+        closeBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          closeModal();
+        });
+      if (backdropBtn)
+        backdropBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          closeModal();
+        });
     }
-		100% { 
-      transform: translateX(calc(-20rem * var(--testimonialQuantity))) 
-    }
-	} 
-  @keyframes scroll {
-		0% { 
-      transform: translateX(5rem); 
-    }
-		100% { 
-      transform: translateX(calc(-20rem * var(--testimonialQuantity))) 
-    }
-	} 
-  @media only screen and (min-width: 768px) {
-  .scroll {
-			animation: scroll 40s linear infinite;
-			}
-  }
-</style>
+  });
+</script>

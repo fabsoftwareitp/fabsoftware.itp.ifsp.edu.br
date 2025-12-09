@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fábrica de Software - Inovação e Tecnologia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Mudei para 'Plus Jakarta Sans', uma fonte mais moderna e geométrica para Tech
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        fab: {
+                            bg: '#020415',
+                            orange: '#ff5e1e',
+                            orangeDark: '#ff3d00', // Para gradiente
+                            text: '#f8fafc'
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(to bottom, rgba(2, 4, 21, 0.6), rgba(2, 4, 21, 1)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #020415;
+            color: #f8fafc;
+        }
+
+        /* Gradiente de Texto Moderno */
+        .text-gradient {
+            background: linear-gradient(to right, #ff5e1e, #ff9100);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glassmorphism Card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 94, 30, 0.2);
+            /* Borda laranja bem sutil */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: #ff5e1e;
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(255, 94, 30, 0.15);
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen selection:bg-fab-orange selection:text-white">
+
+    <div
+        class="navbar fixed top-0 z-50 px-4 lg:px-10 py-3 text-white transition-all duration-300 bg-fab-bg/80 backdrop-blur-md border-b border-white/5">
+        <div class="navbar-start">
+            <a href="/" class="flex gap-3 items-center group">
+                <img src="/logo-claro.svg" alt="FabSoftware" class="w-9 h-9 group-hover:rotate-12 transition-transform">
+                <span
+                    class="text-xl font-bold tracking-wide group-hover:text-fab-orange transition-colors">FabSoftware</span>
+            </a>
+        </div>
+
+        <div class="navbar-end hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-sm font-semibold gap-2">
+                <li><a href="#equipe" class="hover:text-fab-orange hover:bg-white/5 rounded-lg">Equipe</a></li>
+                <li><a href="#projetos" class="hover:text-fab-orange hover:bg-white/5 rounded-lg">Projetos</a></li>
+                <li><a href="#sobre" class="hover:text-fab-orange hover:bg-white/5 rounded-lg">Sobre</a></li>
+                <li>
+                    <a href="https://github.com/fabsoftwareitp" target="_blank"
+                        class="btn btn-sm bg-fab-orange border-none text-white hover:bg-fab-orangeDark ml-4 px-6 rounded-full shadow-lg shadow-fab-orange/20">
+                        GitHub
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="flex-1">
+
+        <div class="hero min-h-screen bg-hero-pattern flex items-center justify-center text-center px-4 pt-16">
+            <div class="max-w-5xl animate-fade-in-up space-y-6">
+
+                <div
+                    class="inline-block px-4 py-1 rounded-full border border-fab-orange/30 bg-fab-orange/10 text-fab-orange text-xs font-bold tracking-wider mb-4 uppercase">
+                    IFSP Câmpus Itapetininga
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight">
+                    Transformando Aprendizado em <br>
+                    <span class="text-gradient">Soluções Reais</span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    Somos uma Fábrica de Software acadêmica que simula o ambiente corporativo.
+                    Desenvolvemos talentos e entregamos tecnologia de ponta.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                    <a href="#projetos"
+                        class="btn bg-fab-orange hover:bg-fab-orangeDark text-white border-none rounded-full px-8 h-12 min-h-0 text-base shadow-lg shadow-fab-orange/30">
+                        Conheça Nossos Projetos
+                    </a>
+                    <a href="#sobre"
+                        class="btn btn-outline border-white/20 text-white hover:bg-white/10 hover:border-white rounded-full px-8 h-12 min-h-0 text-base">
+                        Saiba Mais
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <section id="sobre" class="py-24 px-4 container mx-auto relative">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-fab-orange/10 rounded-full blur-[100px] -z-10">
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                <div class="space-y-6">
+                    <h2 class="text-3xl md:text-4xl font-bold">
+                        Mais do que código, <br>
+                        <span class="text-fab-orange">desenvolvemos carreiras.</span>
+                    </h2>
+                    <p class="text-gray-400 leading-relaxed text-justify">
+                        Desde 2019, a Fábrica de Software atua como uma ponte entre a sala de aula e o mercado de
+                        trabalho.
+                        <br><br>
+                        Nossos alunos não apenas "escrevem código"; eles gerenciam projetos, lidam com prazos reais,
+                        utilizam metodologias ágeis e entregam produtos que impactam a comunidade interna e externa do
+                        IFSP.
+                    </p>
+
+                    <div class="flex gap-8 pt-4 border-t border-white/10">
+                        <div>
+                            <span class="block text-3xl font-bold text-white">16+</span>
+                            <span class="text-xs text-fab-orange uppercase font-bold">Projetos</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-bold text-white">27+</span>
+                            <span class="text-xs text-fab-orange uppercase font-bold">Talentos Formados</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-fab-orange/20 flex items-center justify-center text-fab-orange">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 5-5v-5a5 5 0 0 0-5-5Z"></path>
+                                <circle cx="6" cy="6" r="3"></circle>
+                                <circle cx="6" cy="18" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-white">Domínio Multi-Stack</h3>
+                            <p class="text-sm text-gray-500">Fullstack, Mobile e Cloud.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-fab-orange/20 flex items-center justify-center text-fab-orange">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-white">Resolução de Problemas</h3>
+                            <p class="text-sm text-gray-500">Desafios reais para clientes reais.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-fab-orange/20 flex items-center justify-center text-fab-orange">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-white">Metodologias Ágeis</h3>
+                            <p class="text-sm text-gray-500">Scrum, Kanban e trabalho em equipe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="equipe" class="py-24 px-4 bg-[#05081c]">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                    <div>
+                        <h2 class="text-3xl font-bold text-white">Nossa <span class="text-fab-orange">Equipe</span></h2>
+                        <p class="text-gray-400 mt-2">Mentes brilhantes por trás do código.</p>
+                    </div>
+                    <div class="hidden md:block h-1 flex-1 bg-white/5 mx-8 rounded-full"></div>
+                    <a href="#" class="text-sm text-fab-orange font-bold hover:underline">Ver ex-membros -></a>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="glass-card rounded-xl p-6 text-center group relative overflow-hidden">
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-fab-orange to-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+                        </div>
+                        <div class="avatar mb-4">
+                            <div
+                                class="w-24 rounded-full ring-2 ring-white/10 group-hover:ring-fab-orange transition-all">
+                                <img src="https://avatars.githubusercontent.com/u/2002182?v=4" />
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-white text-lg">Danilo Bueno</h3>
+                        <p class="text-xs text-fab-orange uppercase tracking-wider font-bold mb-3">Professor Orientador
+                        </p>
+                        <div
+                            class="flex justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0">
+                            <div class="badge badge-outline badge-sm text-gray-400">Liderança</div>
+                            <div class="badge badge-outline badge-sm text-gray-400">Fullstack</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-xl p-6 text-center group relative overflow-hidden">
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-fab-orange to-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+                        </div>
+                        <div class="avatar mb-4">
+                            <div
+                                class="w-24 rounded-full ring-2 ring-white/10 group-hover:ring-fab-orange transition-all">
+                                <img src="https://avatars.githubusercontent.com/u/114886228" />
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-white text-lg">Guilherme Vieira</h3>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider mb-3">Téc. Informática</p>
+                        <div
+                            class="flex justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0">
+                            <div class="badge badge-outline badge-sm text-gray-400">Frontend</div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="glass-card rounded-xl p-6 flex flex-col items-center justify-center border-dashed border-2 border-white/10 opacity-50">
+                        <span class="text-3xl text-gray-600">+5</span>
+                        <span class="text-sm text-gray-500">Membros Ativos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="py-24 px-4 container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Projetos em <span class="text-gradient">Destaque</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer open-button">
+                    <div class="absolute inset-0 bg-fab-orange/0 group-hover:bg-fab-orange/10 z-10 transition-colors">
+                    </div>
+                    <img src="/images/projetos/consultorio-na-rua/imgs/0.png"
+                        class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        alt="Consultório">
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-fab-bg via-fab-bg/80 to-transparent flex flex-col justify-end p-6">
+                        <div
+                            class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <div class="flex gap-2 mb-2">
+                                <span class="badge bg-fab-orange text-white border-none text-xs">Mobile</span>
+                                <span class="badge badge-outline text-gray-300 text-xs">Saúde</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-1">Consultório na Rua</h3>
+                            <p
+                                class="text-gray-400 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity delay-100">
+                                App para acompanhamento de equipes de saúde itinerantes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <dialog class="modal backdrop-blur-md">
+                        <div
+                            class="modal-box w-11/12 max-w-5xl bg-[#0a0e26] border border-fab-orange/30 text-white shadow-2xl shadow-fab-orange/20">
+                            <form method="dialog"><button
+                                    class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 text-white hover:bg-white/10">✕</button>
+                            </form>
+
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                <div class="rounded-xl overflow-hidden border border-white/10">
+                                    <img src="/images/projetos/consultorio-na-rua/imgs/0.png"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="space-y-4">
+                                    <h3 class="text-3xl font-bold text-fab-orange">Consultório na Rua</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge badge-neutral">React Native</span>
+                                        <span class="badge badge-neutral">NodeJS</span>
+                                        <span class="badge badge-neutral">PostgreSQL</span>
+                                    </div>
+                                    <p class="text-gray-300 leading-relaxed text-sm lg:text-base">
+                                        Chamamos de Consultório na Rua equipes multiprofissionais que desenvolvem ações
+                                        integrais de saúde...
+                                        (Texto original mantido)
+                                    </p>
+                                    <button
+                                        class="btn btn-block bg-fab-orange text-white border-none hover:bg-fab-orangeDark mt-4">Ver
+                                        no GitHub</button>
+                                </div>
+                            </div>
+                        </div>
+                    </dialog>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer open-button">
+                    <img src="/images/projetos/geekif/imgs/0.png"
+                        class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        alt="GeekIF">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-fab-bg via-fab-bg/80 to-transparent flex flex-col justify-end p-6">
+                        <div
+                            class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <div class="flex gap-2 mb-2">
+                                <span class="badge bg-fab-orange text-white border-none text-xs">Web</span>
+                                <span class="badge badge-outline text-gray-300 text-xs">Eventos</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-1">GeekIF</h3>
+                            <p
+                                class="text-gray-400 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity delay-100">
+                                Portal oficial do evento de cultura geek do campus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-black text-center py-8 border-t border-white/10 text-sm text-gray-500">
+        <p>&copy; 2025 Fábrica de Software IFSP Itapetininga. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Mantendo a lógica dos modais
+        document.querySelectorAll('.open-button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const dialog = btn.querySelector('dialog');
+                if (dialog && !e.target.closest('dialog')) dialog.showModal();
+            });
+        });
+    </script>
+</body>
+
+</html>
