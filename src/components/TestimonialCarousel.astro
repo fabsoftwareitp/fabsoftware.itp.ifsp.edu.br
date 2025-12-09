@@ -1,0 +1,159 @@
+---
+import { TESTIMONIALS_SECTION } from "../constants/content";
+import Depoimentos from "./Depoimentos.astro";
+
+interface Props {
+  title?: string;
+  titleHighlight?: string;
+  subtitle?: string;
+  depoimentos: Array<{
+    slug: string;
+    data: {
+      name: string;
+      avatar: string;
+      testimonial: {
+        discriminant: boolean;
+        value: {
+          depoimento: string;
+          video?: string;
+        };
+      };
+    };
+  }>;
+}
+
+const {
+  title = TESTIMONIALS_SECTION.title,
+  titleHighlight = TESTIMONIALS_SECTION.titleHighlight,
+  subtitle = TESTIMONIALS_SECTION.subtitle,
+  depoimentos,
+} = Astro.props;
+---
+
+<section
+  class="py-4 relative bg-[#050714]"
+  aria-labelledby="testimonials-heading"
+>
+  <!-- Cabeçalho da seção -->
+  <div class="container mx-auto px-4 mb-12 text-center">
+    <h2
+      id="testimonials-heading"
+      class="text-3xl md:text-5xl font-bold text-white mb-4 mt-16"
+    >
+      {title}
+      <span class="text-fab-orange">{titleHighlight}</span>
+    </h2>
+    <p class="text-gray-400">{subtitle}</p>
+  </div>
+
+  <!-- Carrossel de depoimentos -->
+  <div class="relative w-full max-w-[100vw] overflow-hidden mask-gradient">
+    <div
+      class="flex w-max gap-8 py-10 animate-marquee hover:pause"
+      role="group"
+      aria-label="Carrossel de depoimentos"
+    >
+      <!-- Primeira instância dos depoimentos -->
+      {
+        depoimentos.map((depoimento) => (
+          <Depoimentos
+            way={"/membros/" + depoimento.slug}
+            name={depoimento.data.name}
+            img={depoimento.data.avatar}
+            testimonial={depoimento.data.testimonial.value.depoimento}
+            video={depoimento.data.testimonial.value.video}
+          />
+        ))
+      }
+
+      <!-- Duplicata para animação contínua -->
+      <div class="flex gap-8" aria-hidden="true">
+        {
+          depoimentos.map((depoimento) => (
+            <Depoimentos
+              way={"/membros/" + depoimento.slug}
+              name={depoimento.data.name}
+              img={depoimento.data.avatar}
+              testimonial={depoimento.data.testimonial.value.depoimento}
+              video={depoimento.data.testimonial.value.video}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Utilitário para pausar animação */
+  .hover\:pause:hover {
+    animation-play-state: paused;
+  }
+
+  /* Animação da Esteira */
+  .animate-marquee {
+    animation: marquee 60s linear infinite;
+  }
+
+  /* A animação move a esteira até -50%.
+     Como temos 2 grupos idênticos, quando chega em -50% (final do grupo 1),
+     ele volta instantaneamente para 0% (começo do grupo 1),
+     que é visualmente idêntico ao começo do grupo 2.
+  */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Fade lateral usando mask-image (funciona na maioria dos navegadores modernos) */
+  .mask-gradient {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+  }
+
+  /* AJUSTE PARA MOBILE
+     Scroll manual no celular em vez de animação automática
+  */
+  @media (max-width: 768px) {
+    .animate-marquee {
+      animation: none;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    /* Esconde a duplicata no mobile para não ficar estranho */
+    .animate-marquee > div[aria-hidden="true"] {
+      display: none;
+    }
+
+    /* Garante snap no card */
+    .animate-marquee > :global(div) {
+      scroll-snap-align: center;
+    }
+
+    /* Remove o fade no mobile para melhor usabilidade */
+    .mask-gradient {
+      mask-image: none;
+      -webkit-mask-image: none;
+    }
+  }
+</style>
