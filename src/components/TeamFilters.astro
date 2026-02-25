@@ -1,0 +1,123 @@
+---
+interface Props {
+  teams: string[];
+}
+
+const { teams } = Astro.props;
+---
+
+<section class="container mx-auto px-4 mb-12" aria-label="Filtros de equipes">
+  <div class="flex flex-wrap justify-center gap-3">
+    <!-- Botão "Todos" -->
+    <button
+      class="filter-btn active px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 bg-fab-orange text-white border-2 border-fab-orange hover:bg-fab-orange/90"
+      data-filter="all"
+      aria-label="Mostrar todos os membros"
+    >
+      Todos os Membros
+    </button>
+
+    <!-- Botões para cada ano -->
+    {
+      teams.map((team) => {
+        const year = team.slice(4, 6);
+        return (
+          <button
+            class="filter-btn px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 bg-white/5 text-gray-300 border-2 border-white/20 hover:border-fab-orange hover:text-fab-orange"
+            data-filter={`team-${team}`}
+            aria-label={`Mostrar membros da equipe de 20${year}`}
+          >
+            Equipe {year}
+          </button>
+        );
+      })
+    }
+  </div>
+</section>
+
+<style>
+  .filter-btn.active {
+    background-color: #ff5e1e;
+    color: white;
+    border-color: #ff5e1e;
+  }
+</style>
+
+<script>
+  // Script para filtros de membros
+  function initMemberFilters() {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const memberCards = document.querySelectorAll(
+      '[class*="team-"], .active-member',
+    );
+
+    // Restaurar filtro do localStorage
+    const savedFilter = localStorage.getItem("memberFilter") || "all";
+    applyFilter(savedFilter);
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+
+        // Atualizar botões ativos
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        // Aplicar filtro
+        applyFilter(filter);
+
+        // Salvar no localStorage
+        localStorage.setItem("memberFilter", filter);
+      });
+    });
+
+    function applyFilter(filter) {
+      // Atualizar botão ativo baseado no filtro salvo
+      filterButtons.forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.filter === filter);
+      });
+
+      memberCards.forEach((card) => {
+        if (filter === "all") {
+          card.style.display = "";
+        } else {
+          const shouldShow = card.classList.contains(filter);
+          card.style.display = shouldShow ? "" : "none";
+        }
+      });
+
+      // Animar entrada dos cards visíveis
+      setTimeout(() => {
+        const visibleCards = Array.from(memberCards).filter(
+          (card) => card.style.display !== "none",
+        );
+        visibleCards.forEach((card, index) => {
+          card.style.animation = `fadeInUp 0.6s ease-out ${index * 0.1}s both`;
+        });
+      }, 50);
+    }
+  }
+
+  // Inicializar quando o DOM estiver carregado
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMemberFilters);
+  } else {
+    initMemberFilters();
+  }
+
+  // Keyframes para animação
+  const style = document.createElement("style");
+  style.textContent = `
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  `;
+  document.head.appendChild(style);
+</script>

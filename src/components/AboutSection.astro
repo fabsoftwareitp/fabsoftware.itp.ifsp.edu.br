@@ -1,0 +1,67 @@
+---
+import { ABOUT_CONTENT, FEATURES } from "../constants/content";
+import FeatureCard from "./FeatureCard.astro";
+import Statistics from "./Statistics.astro";
+
+interface Props {
+  title?: string;
+  titleHighlight?: string;
+  description?: string;
+  features?: Array<{
+    title: string;
+    description: string;
+    icon: string;
+  }>;
+}
+
+const {
+  title = ABOUT_CONTENT.title,
+  titleHighlight = ABOUT_CONTENT.titleHighlight,
+  description = ABOUT_CONTENT.description,
+  features = FEATURES,
+} = Astro.props;
+---
+
+<section
+  id="sobre"
+  class="py-24 px-4 container mx-auto relative"
+  aria-labelledby="sobre-heading"
+>
+  <!-- Background decoration -->
+  <div
+    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-fab-orange/10 rounded-full blur-[100px] -z-10"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <!-- Conteúdo principal -->
+    <div class="space-y-6">
+      <h2 id="sobre-heading" class="text-3xl md:text-4xl font-bold">
+        {title}
+        <br />
+        <span class="text-fab-orange">{titleHighlight}</span>
+      </h2>
+
+      <div class="text-gray-400 leading-relaxed text-justify space-y-4">
+        {description.split("\n\n").map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+
+      <!-- Estatísticas -->
+      <Statistics />
+    </div>
+
+    <!-- Cards de Features -->
+    <div class="flex flex-col gap-5">
+      {
+        features.map((feature) => (
+          <FeatureCard
+            title={feature.title}
+            description={feature.description}
+            icon={feature.icon}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

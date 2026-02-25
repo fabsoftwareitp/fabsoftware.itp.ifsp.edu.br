@@ -4,7 +4,10 @@ imgs:
   - /images/projetos/geekif/imgs/0.png
 link: https://geekif.com.br/
 destaque: true
+tags: [HTML, CSS, JavaScript]
+status: done
 ---
+
 # Geekif
 
 [https://geekif.com.br/](https://geekif.com.br/)

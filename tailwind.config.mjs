@@ -2,29 +2,22 @@
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		screens: {
-			sm: "480px",
-			md: "768px",
-			lg: "976px",
-			xl: "1440px",
-			xxl: "1870px",
-		},
 		extend: {
+			fontFamily: {
+				// Mudei para 'Plus Jakarta Sans', uma fonte mais moderna e geométrica para Tech
+				sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+			},
 			colors: {
-				primary: '#fe5e26' ,
-				secondary: '#f3e5ab' ,
-				tertiary: '#03023b',
-				background: '#020122',
-				dark: '#252A34' ,
-				light: '#EAEAEA' ,
+				fab: {
+					bg: '#020415',
+					orange: '#ff5e1e',
+					orangeDark: '#ff3d00', // Para gradiente
+					text: '#f8fafc'
+				}
 			},
 			backgroundImage: {
-				'hero-pattern':
-				  "linear-gradient(to right bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress%20cs=tinysrgb&w=1260&h=750&dpr=1')",
-			},
-		},
-		fontFamily: {
-			'sans': ['Open Sans', 'ui-sans-serif', 'system-ui']
+				'hero-pattern': "linear-gradient(to bottom, rgba(2, 4, 21, 0.6), rgba(2, 4, 21, 1)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop')",
+			}
 		}
 	},
 	plugins: [require("@tailwindcss/typography")],

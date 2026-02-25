@@ -1,0 +1,36 @@
+/* Estilos globais compartilhados */
+
+/* Animação de reveal para seções */
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Configurações globais do corpo */
+body {
+  background-color: #020415;
+  color: #f8fafc;
+}
+
+/* Utilitários de animação */
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

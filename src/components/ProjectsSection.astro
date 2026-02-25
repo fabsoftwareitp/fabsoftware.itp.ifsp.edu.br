@@ -1,0 +1,80 @@
+---
+import { PROJECTS_SECTION } from "../constants/content";
+import Destaque from "./Destaque.astro";
+
+interface Props {
+  title?: string;
+  titleHighlight?: string;
+  ctaText?: string;
+  projetos: Array<any>;
+  destaques: Array<any>;
+}
+
+const {
+  title = PROJECTS_SECTION.title,
+  titleHighlight = PROJECTS_SECTION.titleHighlight,
+  ctaText = PROJECTS_SECTION.ctaText,
+  projetos,
+  destaques,
+} = Astro.props;
+---
+
+<section
+  id="projetos"
+  class="py-16 px-4 container mx-auto"
+  aria-labelledby="projetos-heading"
+>
+  <!-- Cabeçalho da seção -->
+  <div class="text-center mb-16 space-y-4">
+    <h2
+      id="projetos-heading"
+      class="text-3xl md:text-5xl font-bold mb-4 text-white"
+    >
+      {title}
+      <span class="text-fab-orange">{titleHighlight}</span>
+    </h2>
+
+    <p class="max-w-3xl mx-auto text-gray-400 text-lg leading-relaxed">
+      A Fábrica de Software possui mais de <a
+        href="/projetos/"
+        class="text-fab-orange hover:underline font-bold transition-colors duration-200"
+        aria-label={`Ver todos os ${projetos.length} projetos`}
+      >
+        {projetos.length} projetos
+      </a> entre finalizados e em desenvolvimento. Dentre os projetos, temos internos
+      como o <span class="text-gray-200 font-semibold">SGE</span> e parcerias com
+      a Prefeitura como o <span class="text-gray-200 font-semibold">SVSA</span>
+      e <span class="text-gray-200 font-semibold">Consultório na Rua</span>.
+    </p>
+  </div>
+
+  <!-- Grid de projetos em destaque -->
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+    role="group"
+    aria-label="Projetos em destaque"
+  >
+    {
+      destaques.map((destaque, index) => (
+        <Destaque
+          title={destaque.frontmatter.title}
+          img={destaque.frontmatter.imgs}
+          descricao={destaque.compiledContent()}
+          tags={destaque.frontmatter.tags}
+          status={destaque.frontmatter.status}
+        />
+      ))
+    }
+  </div>
+
+  <!-- Call to Action -->
+  <div class="flex justify-center mt-16">
+    <a
+      href="./projetos"
+      class="btn btn-outline border-fab-orange text-fab-orange hover:bg-fab-orange hover:text-white px-8 rounded-full normal-case text-lg transition-all duration-300 focus:ring-2 focus:ring-fab-orange focus:ring-offset-2 focus:ring-offset-fab-bg"
+      aria-label="Navegar para página com todos os projetos"
+    >
+      {ctaText}
+    </a>
+  </div>
+</section>

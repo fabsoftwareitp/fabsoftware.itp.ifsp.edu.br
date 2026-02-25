@@ -1,0 +1,89 @@
+---
+import { HERO_CONTENT } from "../constants/content";
+
+interface Props {
+  title?: string;
+  titleHighlight?: string;
+  description?: string;
+  primaryCTA?: string;
+  secondaryCTA?: string;
+  badge?: string;
+}
+
+const {
+  title = HERO_CONTENT.title,
+  titleHighlight = HERO_CONTENT.titleHighlight,
+  description = HERO_CONTENT.description,
+  primaryCTA = HERO_CONTENT.primaryCTA,
+  secondaryCTA = HERO_CONTENT.secondaryCTA,
+  badge = HERO_CONTENT.badge,
+} = Astro.props;
+---
+
+<section
+  class="hero min-h-screen bg-hero-pattern flex items-center justify-center text-center px-4"
+  aria-label="Seção principal"
+>
+  <div class="max-w-5xl animate-fade-in-up space-y-6">
+    <div
+      class="inline-block px-4 py-1 rounded-full border border-fab-orange/30 bg-fab-orange/10 text-fab-orange text-xs font-bold tracking-wider mb-4 uppercase"
+      role="banner"
+    >
+      {badge}
+    </div>
+
+    <h1 class="text-5xl md:text-6xl font-bold text-white leading-tight">
+      {title}&nbsp;<br />
+      <span class="text-gradient">{titleHighlight}</span>
+    </h1>
+
+    <p
+      class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed"
+    >
+      {description}
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+      <a
+        href="#projetos"
+        class="btn bg-fab-orange hover:bg-fab-orangeDark text-white border-none rounded-full px-8 h-12 min-h-0 text-base shadow-lg shadow-fab-orange/30 transition-all duration-300"
+        aria-label="Navegar para seção de projetos"
+      >
+        {primaryCTA}
+      </a>
+      <a
+        href="#sobre"
+        class="btn btn-outline border-white/20 text-white hover:bg-white/10 hover:border-white rounded-full px-8 h-12 min-h-0 text-base transition-all duration-300"
+        aria-label="Navegar para seção sobre"
+      >
+        {secondaryCTA}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Gradiente de Texto Moderno */
+  .text-gradient {
+    background: linear-gradient(to right, #ff5e1e, #ff9100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Animação de fade in personalizada */
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

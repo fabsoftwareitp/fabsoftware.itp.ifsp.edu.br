@@ -1,41 +1,318 @@
 ---
-const {img, title, descricao} = Astro.props;
+// Destaque.astro
+const {
+  img,
+  title,
+  descricao,
+  tags = [],
+  status,
+  link,
+  team = [],
+  date,
+  github,
+} = Astro.props;
+
+let labelStatus = status === "doing" ? "Em Desenvolvimento" : "Finalizado";
+
+// Lógica para extrair informações do markdown
+let textoDescricao = "";
+let infoSection = "";
+let teamMembers = [];
+let technologies = tags;
+let projectDate = date;
+let githubLink = github;
+let projectLink = link;
+
+try {
+  // Extrair descrição
+  const start = descricao.indexOf('<h2 id="descrição">Descrição</h2>');
+  const end = descricao.indexOf('<h2 id="info">Info</h2>');
+
+  if (start !== -1 && end !== -1) {
+    let rawDescription = descricao.slice(start + 37, end - 5);
+    // Remover todas as tags HTML
+    textoDescricao = rawDescription
+      .replace(/<[^>]*>/g, "")
+      // Remover caracteres de markdown restantes
+      .replace(/#+\s*/g, "")
+      .replace(/\*\*/g, "")
+      .replace(/\*/g, "")
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // Links markdown para texto simples
+      .replace(/\n+/g, " ") // Quebras de linha para espaços
+      .trim();
+  } else {
+    // Fallback melhorado
+    textoDescricao =
+      descricao
+        .replace(/<[^>]*>/g, "") // Remove HTML
+        .replace(/#+\s*/g, "") // Remove headers markdown
+        .replace(/\*\*/g, "") // Remove bold
+        .replace(/\*/g, "") // Remove italic
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // Links para texto simples
+        .replace(/\n+/g, " ") // Quebras de linha para espaços
+        .slice(0, 200)
+        .trim() + "...";
+  }
+
+  // Extrair seção Info se disponível
+  const infoStart = descricao.indexOf('<h2 id="info">Info</h2>');
+  if (infoStart !== -1) {
+    infoSection = descricao.slice(infoStart);
+
+    // Extrair time da seção Info
+    const teamMatch = infoSection.match(/Time:\s*(.*?)(?:\n|<br|$)/);
+    if (teamMatch) {
+      teamMembers = teamMatch[1]
+        .replace(/<[^>]*>/g, "") // Remove tags HTML
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // Remove links markdown, mantém só o texto
+        .split(" e ")
+        .map((member) => member.trim())
+        .filter((member) => member.length > 0);
+    }
+
+    // Extrair data da seção Info
+    const dateMatch = infoSection.match(/Data:\s*(\d{2}\/\d{4})/);
+    if (dateMatch) {
+      projectDate = dateMatch[1];
+    }
+
+    // Extrair GitHub da seção Info
+    const githubMatch = infoSection.match(/\[GitHub\]\(([^)]+)\)/);
+    if (githubMatch) {
+      githubLink = githubMatch[1];
+    }
+  }
+} catch (e) {
+  textoDescricao = "Descrição indisponível.";
+}
 ---
 
-    <div class="flex justify-evenly items-center gap-y-10 border-2 border-secondary xl:w-[28rem] xl:h-[16rem] w-[20rem] h-[12rem] cursor-pointer hover:shadow-primary shadow-xl">
-        <a class="open-button">
-            <figure class="relative xl:w-[28rem] xl:h-[16rem] w-[20rem] h-[12rem]">
-                <img src={img} alt={title} class="object-cover xl:w-[28rem] xl:h-[16rem] w-[20rem] h-[12rem] absolute top-0 left-0" />
-                <figcaption class="opacity-1 xl:opacity-0 hover:opacity-100 duration-300 absolute top-0 left-0 w-full h-full flex items-end text-primary font-bold mx-4 my-[-1rem]"><span>{title}</span></figcaption>
-            </figure>
-        </a>
-        <dialog class="modal bg-tertiary border-2 border-primary ">
-            <div class="w-[21rem] h-[35rem] md:w-[50rem] md:h-[45rem] flex flex-col gap-6 items-center">
-                <div class="close-button self-start m-4 text-4xl text-primary">X</div>
-                <div class="flex flex-col items-center justify-center">
-                    <img src={img} alt={title} class="md:w-[44rem] md:h-[25rem] w-[20rem] h-[15rem]">
-                </div>
-                <p class="text-2xl text/loose font-semibold text-primary">{title}</p>
-                <p class="text-md text/loose font-semibold text-secondary w-[20rem] text-justify tracking-tighter md:text-justify md:w-[44rem]">{descricao.slice(descricao.indexOf('<h2 id="descrição">Descrição</h2>')+37, descricao.indexOf('<h2 id="info">Info</h2>')-5)}</p>
-            </div>
-        </dialog>
-    </div>
-      <script>
-        const buttons = document.querySelectorAll('.open-button');
-        buttons.forEach(e => {
-            e.addEventListener('click', () => {
-                const elementoPai = e.parentElement;
-                const modal = elementoPai.querySelector("dialog");
-                const iframe = elementoPai.querySelector("iframe");
-                modal.showModal();
+<div
+  class="group relative rounded-2xl overflow-hidden cursor-pointer open-button h-64 md:h-80 shadow-lg hover:shadow-fab-orange/20 transition-all duration-300"
+>
+  <div
+    class="absolute inset-0 bg-fab-orange/0 group-hover:bg-fab-orange/10 z-10 transition-colors"
+  >
+  </div>
+  <img
+    src={img}
+    alt={title}
+    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+  />
 
-                elementoPai.querySelector(".close-button").addEventListener("click", ()=> {
-                    if(iframe) {
-                        iframe.src = iframe.src;
-                    }
-                    modal.close();
-                })
-            })
-        })
-    
-      </script>
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-[#0a0e26] via-[#0a0e26]/80 to-transparent flex flex-col justify-end p-6"
+  >
+    <div
+      class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+    >
+      {
+        labelStatus && (
+          <div class="flex gap-2 mb-2 flex-wrap">
+            <span class="badge text-xs border-none badge-black text-white">
+              {labelStatus}
+            </span>
+          </div>
+        )
+      }
+
+      <h3 class="text-2xl font-bold text-white mb-1">{title}</h3>
+
+      <div
+        class="text-gray-400 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity delay-100"
+        set:html={textoDescricao}
+      />
+    </div>
+  </div>
+
+  <dialog class="modal backdrop-blur-md p-0 bg-transparent">
+    <div
+      class="modal-box w-11/12 max-w-5xl bg-[#0a0e26] border border-fab-orange/30 text-white shadow-2xl shadow-fab-orange/20 p-0 overflow-hidden relative"
+    >
+      <button
+        class="close-button btn btn-sm btn-circle btn-ghost absolute right-4 top-4 text-white hover:bg-white/10 z-50"
+        >✕</button
+      >
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 h-full">
+        <div
+          class="h-64 lg:h-auto overflow-hidden border-b lg:border-b-0 lg:border-r border-white/10 bg-black"
+        >
+          <img
+            src={img}
+            class="w-full h-full object-contain bg-black/50"
+            alt={title}
+          />
+        </div>
+
+        <div class="p-8 space-y-6 overflow-y-auto max-h-[60vh] lg:max-h-[80vh]">
+          <div>
+            <h3 class="text-3xl font-bold text-fab-orange mb-6">{title}</h3>
+
+            <!-- Tags/Tecnologias -->
+            {
+              technologies && technologies.length > 0 && (
+                <div class="mb-6">
+                  <h4 class="text-lg font-semibold text-white mb-3">
+                    Tecnologias:
+                  </h4>
+                  <div class="flex flex-wrap gap-2">
+                    {technologies.map((tech) => (
+                      <span class="badge badge-neutral border border-fab-orange/30 text-fab-orange p-3">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )
+            }
+
+            <!-- Descrição -->
+            <div class="mb-6">
+              <h4 class="text-lg font-semibold text-fab-orange mb-3">
+                Descrição
+              </h4>
+              <p
+                class="text-gray-300 leading-relaxed text-sm lg:text-base text-justify"
+              >
+                {textoDescricao}
+              </p>
+            </div>
+
+            <!-- Informações do projeto -->
+            <div class="border-t border-white/10 pt-6">
+              <h4 class="text-lg font-semibold text-fab-orange mb-4">Info</h4>
+
+              <div class="space-y-4 text-gray-300">
+                <!-- Time -->
+                {
+                  teamMembers && teamMembers.length > 0 && (
+                    <div>
+                      <span class="font-semibold text-white">Time: </span>
+                      {teamMembers.join(" e ")}
+                    </div>
+                  )
+                }
+
+                <!-- Status -->
+                {
+                  labelStatus && (
+                    <div>
+                      <span class="font-semibold text-white mb-2 block">
+                        Status:
+                      </span>
+                      <span
+                        class={`badge ${status === "doing" ? "badge-warning" : "badge-success"} text-xs px-3 py-1`}
+                      >
+                        {labelStatus}
+                      </span>
+                    </div>
+                  )
+                }
+
+                <!-- Data -->
+                {
+                  projectDate && (
+                    <div>
+                      <span class="font-semibold text-white">Data: </span>
+                      {projectDate}
+                    </div>
+                  )
+                }
+
+                <!-- Links -->
+                <div class="flex gap-4 mt-4">
+                  {
+                    githubLink && (
+                      <a
+                        href={githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline btn-sm border-fab-orange text-fab-orange hover:bg-fab-orange hover:text-white normal-case"
+                      >
+                        <svg
+                          class="w-4 h-4 mr-1"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        GitHub
+                      </a>
+                    )
+                  }
+
+                  {
+                    projectLink && (
+                      <a
+                        href={projectLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline btn-sm border-fab-orange text-fab-orange hover:bg-fab-orange hover:text-white normal-case"
+                      >
+                        <svg
+                          class="w-4 h-4 mr-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                        Ver Projeto
+                      </a>
+                    )
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</div>
+
+<script>
+  // Script otimizado para não duplicar listeners
+  const buttons = document.querySelectorAll(".open-button");
+
+  buttons.forEach((button) => {
+    // Evita adicionar múltiplos listeners se o componente re-renderizar
+    if (button.getAttribute("data-listener") === "true") return;
+    button.setAttribute("data-listener", "true");
+
+    button.addEventListener("click", (e) => {
+      // Se clicar no dialog (backdrop) não faz nada no listener do botão
+      if ((e.target as HTMLElement).tagName === "DIALOG") return;
+
+      const modal = button.querySelector("dialog");
+      const closeBtn = modal?.querySelector(
+        ".close-button",
+      ) as HTMLButtonElement;
+
+      if (modal) {
+        modal.showModal();
+
+        // Fecha ao clicar no botão X
+        if (closeBtn) {
+          closeBtn.onclick = (ev) => {
+            ev.stopPropagation(); // Impede que o clique propague para o card
+            modal.close();
+          };
+        }
+
+        // Fecha ao clicar fora (backdrop)
+        modal.onclick = (ev) => {
+          if (ev.target === modal) {
+            modal.close();
+          }
+        };
+      }
+    });
+  });
+</script>

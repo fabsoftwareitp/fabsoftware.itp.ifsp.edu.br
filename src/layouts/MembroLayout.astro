@@ -1,24 +1,174 @@
 ---
-import BaseLayout from './BaseLayout.astro';
+import BaseLayout from "./BaseLayout.astro";
 
-const {title} = Astro.props;
+const { title } = Astro.props;
 const { frontmatter } = Astro.props;
 ---
+
 <BaseLayout pageTitle={title || frontmatter.name || frontmatter.title}>
-    
-    <div class="p-8 flex flex-wrap justify-center items-center gap-10">
-        <div class="place-self-start">
-            <a onclick="history.back()"><button class="text-secondary border-2 border-primary rounded-xl bg-tertiary w-[6rem] h-[2rem]">⭠ Voltar</button></a>
-        </div>
-        <div class="place-self-start relative slideshow-container">
-            <img src={frontmatter.avatar} class="object-contain xl:w-[500px] xl:h-[500px] md:w-[400px] md:h-[400px] w-[300px] h-[300px] rounded-xl" /></a>
-        </div>
-        <div class="flex flex-col border-2 p-8 border-primary bg-tertiary rounded-xl items-center container prose prose-a:break-all prose-a:text-[1rem] prose-h1:text-primary prose-img:rounded-xl prose-img:hidden prose-p:text-secondary prose-p:text-justify prose-h2:text-primary prose-li:text-secondary prose-a:text-secondary prose-ul:text-start prose-ul:place-self-start">
-            <slot />
-        </div>
-        <div>
-            {frontmatter.testimonial.discriminant ? <p class="text-primary text-4xl font-bold">Depoimento</p><br></br> <iframe class="xl:w-[45rem] xl:h-[25rem] w-[20rem] h-[20rem] rounded-xl" src={frontmatter.testimonial.value.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : <p class="hidden">Depoimento</p>}
-        </div>
+  <!-- Hero section do membro -->
+  <section
+    class="py-20 px-4 bg-gradient-to-b from-fab-bg to-[#05081c] relative overflow-hidden"
+  >
+    <!-- Background decorativo -->
+    <div
+      class="absolute top-0 right-0 w-[500px] h-[500px] bg-fab-orange/10 rounded-full blur-[120px] -z-10"
+      aria-hidden="true"
+    >
     </div>
 
+    <div class="container mx-auto">
+      <!-- Botão voltar -->
+      <div class="mb-8">
+        <button
+          onclick="history.back()"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-fab-orange text-white rounded-full transition-all duration-300 group"
+          aria-label="Voltar à página anterior"
+        >
+          <svg
+            class="w-5 h-5 group-hover:text-fab-orange transition-colors"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"></path>
+          </svg>
+          Voltar
+        </button>
+      </div>
+
+      <!-- Perfil principal -->
+      <div class="grid lg:grid-cols-3 gap-12 items-start">
+        <!-- Avatar -->
+        <div class="lg:col-span-1">
+          <div class="sticky top-8">
+            <div class="relative">
+              <img
+                src={frontmatter.avatar}
+                alt={`Foto de ${frontmatter.name || frontmatter.title}`}
+                class="w-full max-w-md mx-auto rounded-2xl shadow-2xl shadow-fab-orange/20 border border-white/10"
+                loading="lazy"
+              />
+              <!-- Badge de status -->
+              {
+                frontmatter.status && (
+                  <div class="absolute -bottom-4 left-1/2 -translate-x-1/2">
+                    <span class="inline-block px-4 py-2 bg-fab-orange text-white text-sm font-semibold rounded-full shadow-lg">
+                      Membro Ativo
+                    </span>
+                  </div>
+                )
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Conteúdo principal -->
+        <div class="lg:col-span-2">
+          <div
+            class="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-8 lg:p-12"
+          >
+            <!-- Cabeçalho do perfil -->
+            <div class="mb-8 text-center lg:text-left">
+              <h1 class="text-4xl lg:text-5xl font-bold text-white mb-2">
+                {frontmatter.name || frontmatter.title}
+              </h1>
+              <p class="text-xl text-fab-orange font-semibold mb-4">
+                {frontmatter.position}
+              </p>
+
+              <!-- Links sociais se existirem -->
+              {
+                frontmatter.github && (
+                  <div class="flex justify-center lg:justify-start gap-4 mt-4">
+                    <a
+                      href={frontmatter.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-fab-orange text-gray-300 hover:text-white rounded-lg transition-all duration-300"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                      </svg>
+                      GitHub
+                    </a>
+                  </div>
+                )
+              }
+            </div>
+
+            <!-- Conteúdo bio/descrição -->
+            <div class="prose prose-invert prose-lg max-w-none mb-8">
+              <div
+                class="prose-headings:text-white prose-p:text-gray-300 prose-a:text-fab-orange prose-a:hover:text-fab-orange/80 prose-strong:text-white prose-ul:text-gray-300 prose-li:text-gray-300"
+              >
+                <slot />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seção de depoimento se existir -->
+      {
+        frontmatter.testimonial?.discriminant && (
+          <div class="mt-16">
+            <div class="text-center mb-8">
+              <h2 class="text-3xl font-bold text-white mb-4">Depoimento</h2>
+              <p class="text-gray-400">
+                Veja o que {frontmatter.name || frontmatter.title} tem a dizer
+                sobre a experiência na Fábrica
+              </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+              <div class="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-8 lg:p-12">
+                {frontmatter.testimonial.value.video ? (
+                  <div class="aspect-video rounded-xl overflow-hidden shadow-2xl">
+                    <iframe
+                      src={frontmatter.testimonial.value.video}
+                      title={`Depoimento de ${frontmatter.name || frontmatter.title}`}
+                      class="w-full h-full"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    />
+                  </div>
+                ) : (
+                  <blockquote class="text-xl text-gray-300 italic text-center leading-relaxed">
+                    "{frontmatter.testimonial.value.depoimento}"
+                  </blockquote>
+                )}
+              </div>
+            </div>
+          </div>
+        )
+      }
+
+      <!-- Call to action -->
+      <div class="mt-16 text-center">
+        <div
+          class="inline-block bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
+        >
+          <h3 class="text-xl font-bold text-white mb-4">
+            Conheça outros membros da equipe
+          </h3>
+          <a
+            href="/membros"
+            class="inline-block px-8 py-4 bg-fab-orange hover:bg-fab-orange/90 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105"
+          >
+            Ver todos os membros
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

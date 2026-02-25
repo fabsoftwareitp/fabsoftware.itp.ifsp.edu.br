@@ -1,8 +1,10 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
-{/* definição da variável dinâmica */}
+{
+  /* definição da variável dinâmica */
+}
 const { pageTitle } = Astro.props;
 ---
 
@@ -11,33 +13,75 @@ const { pageTitle } = Astro.props;
     <meta charset="utf-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A Fábrica de Software é um projeto do IFSP Câmpus Itapetininga, que oferece aos alunos a oportunidade de trabalhar em um ambiente similar ao das empresas, aplicando novas tecnologias de software e desenvolvendo suas competências técnicas e comportamentais relativas a esse ambiente.">
-    <meta name="generator" content={Astro.generator} >
+    <meta
+      name="description"
+      content="A Fábrica de Software é um projeto do IFSP Câmpus Itapetininga, que oferece aos alunos a oportunidade de trabalhar em um ambiente similar ao das empresas, aplicando novas tecnologias de software e desenvolvendo suas competências técnicas e comportamentais relativas a esse ambiente."
+    />
+    <meta name="generator" content={Astro.generator} />
 
     <meta property="og:title" content="Fábrica de software" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://fabsoftware.itp.ifsp.edu.br/" />
-    <meta property="og:description" content="A Fábrica de Software é um projeto do IFSP Câmpus Itapetininga, que oferece aos alunos a oportunidade de trabalhar em um ambiente similar ao das empresas, aplicando novas tecnologias de software e desenvolvendo suas competências técnicas e comportamentais relativas a esse ambiente.">
-    <meta property="og:image" content="https://fabsoftware.itp.ifsp.edu.br/projetos/fabsoftware.png" />
+    <meta
+      property="og:description"
+      content="A Fábrica de Software é um projeto do IFSP Câmpus Itapetininga, que oferece aos alunos a oportunidade de trabalhar em um ambiente similar ao das empresas, aplicando novas tecnologias de software e desenvolvendo suas competências técnicas e comportamentais relativas a esse ambiente."
+    />
+    <meta
+      property="og:image"
+      content="https://fabsoftware.itp.ifsp.edu.br/projetos/fabsoftware.png"
+    />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-	  <title>{pageTitle}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              // Mudei para 'Plus Jakarta Sans', uma fonte mais moderna e geométrica para Tech
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+            colors: {
+              fab: {
+                bg: "#020415",
+                orange: "#ff5e1e",
+                orangeDark: "#ff3d00", // Para gradiente
+                text: "#f8fafc",
+              },
+            },
+            backgroundImage: {
+              "hero-pattern":
+                "linear-gradient(to bottom, rgba(2, 4, 21, 0.6), rgba(2, 4, 21, 1)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop')",
+            },
+          },
+        },
+      };
+    </script>
+    <title>{pageTitle}</title>
   </head>
-  <body class="flex flex-col min-h-[100vh]">
-	<Header />
-  <main class="flex-1 text-center font-sans bg-background">
-    <slot />
-  </main>
-  <Footer />
+  <body
+    class="flex flex-col min-h-screen selection:bg-fab-orange selection:text-white"
+  >
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>

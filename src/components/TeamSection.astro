@@ -1,0 +1,80 @@
+---
+import { TEAM_SECTION } from "../constants/content";
+import Equipe from "./Equipe.astro";
+
+interface Props {
+  title?: string;
+  titleHighlight?: string;
+  subtitle?: string;
+  ctaText?: string;
+  equipe: Array<{
+    slug: string;
+    data: {
+      name: string;
+      avatar: string;
+      position: string;
+    };
+  }>;
+}
+
+const {
+  title = TEAM_SECTION.title,
+  titleHighlight = TEAM_SECTION.titleHighlight,
+  subtitle = TEAM_SECTION.subtitle,
+  ctaText = TEAM_SECTION.ctaText,
+  equipe,
+} = Astro.props;
+---
+
+<section
+  id="equipe"
+  class="py-24 px-4 bg-[#05081c]"
+  aria-labelledby="equipe-heading"
+>
+  <div class="container mx-auto">
+    <!-- Cabeçalho da seção -->
+    <div
+      class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4"
+    >
+      <div>
+        <h2 id="equipe-heading" class="text-3xl font-bold text-white">
+          {title}
+          <span class="text-fab-orange">{titleHighlight}</span>
+        </h2>
+        <p class="text-gray-400 mt-2">{subtitle}</p>
+      </div>
+
+      <div
+        class="hidden md:block h-1 flex-1 bg-white/5 mx-8 rounded-full"
+        aria-hidden="true"
+      >
+      </div>
+
+      <a
+        href="/membros"
+        class="text-sm text-fab-orange font-bold hover:underline transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-fab-orange focus:ring-offset-2 focus:ring-offset-[#05081c] rounded"
+        aria-label="Ver página com todos os membros da equipe"
+      >
+        {ctaText}
+      </a>
+    </div>
+
+    <!-- Grid da equipe -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+      role="group"
+      aria-label="Membros da equipe em destaque"
+    >
+      {
+        equipe.map((membro) => (
+          <Equipe
+            way={"/membros/" + membro.slug}
+            name={membro.data.name}
+            img={membro.data.avatar}
+            position={membro.data.position}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
