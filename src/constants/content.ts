@@ -1,6 +1,6 @@
 // Constantes de conteúdo da página inicial
 export const HERO_CONTENT = {
-  badge: "IFSP Câmpus Itapetininga",
+  badge: "IFSP Campus Itapetininga",
   title: "Transformando aprendizado em",
   titleHighlight: "soluções reais",
   description: "Um laboratório onde alunos aprendem na prática, desenvolvendo soluções reais que ajudam a comunidade e o campus.",
