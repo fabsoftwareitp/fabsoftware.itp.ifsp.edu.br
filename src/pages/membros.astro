@@ -1,68 +1,103 @@
 ---
 import { getCollection } from "astro:content";
-const membros = await getCollection('membros');
-import TesteLayout from '../layouts/BaseLayout.astro'
-import Membro from '../components/Membro.astro'
-const teamList = []
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TeamFilters from "../components/TeamFilters.astro";
+import Equipe from "../components/Equipe.astro";
 
-for(let i = 0; i < membros.length; i++){
-  const dates = membros[i].data.date.slice(4, 11).trim()
-  
-  if(teamList.indexOf(dates) === -1 && dates != 'prof'){
-    teamList.push(dates)
+// Obter todos os membros
+const membros = await getCollection("membros");
+
+// Separar membros ativos e alumni
+const membrosAtivos = membros.filter((membro) => membro.data.status);
+const alumni = membros.filter((membro) => !membro.data.status);
+
+// Criar lista de anos das equipes
+const teamList = [];
+
+for (let i = 0; i < membros.length; i++) {
+  const dates = membros[i].data.date?.slice(4, 11)?.trim();
+
+  if (dates && dates !== "prof" && !teamList.includes(dates)) {
+    teamList.push(dates);
   }
 }
 
+// Ordenar por ano
 teamList.sort((a, b) => Number(a.slice(4, 6)) - Number(b.slice(4, 6)));
+
+const pageTitle = "Membros da Fábrica de Software";
 ---
 
-<script>
-    const listBtn = document.querySelectorAll(".btn");
-    
-    if(localStorage.getItem("storageName") != null) {
-        document.querySelectorAll(".membro").forEach(e => {
-          e.style.display= 'none';          
-        });
-        document.querySelectorAll(`.${localStorage.getItem("storageName")}`).forEach(e => {
-          e.style.display = '';
-        });
-        document.querySelectorAll(".teamprof").forEach(e => {
-          e.style.display = '';
-        });  
-    }
+<BaseLayout pageTitle={pageTitle}>
+  <!-- Header da página -->
+  <section class="py-16 bg-[#05081c]">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">
+        Nossa <span class="text-fab-orange">Equipe</span>
+      </h1>
+      <p class="text-gray-400 max-w-3xl mx-auto">
+        Conheça os talentosos profissionais que fazem parte da Fábrica de
+        Software do IFSP
+      </p>
+    </div>
+  </section>
 
-    listBtn.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const ano = btn.getAttribute("data-ano");
-        localStorage.setItem("storageName", ano);
-        document.querySelectorAll(".membro").forEach(e => {
-          e.style.display= 'none';          
-        });
-        document.querySelectorAll(`.${ano}`).forEach(e => {
-          e.style.display = '';
-        });
-        document.querySelectorAll(".teamprof").forEach(e => {
-          e.style.display = '';
-        });    
-      })
-    })
-</script>
+  <!-- Seção principal com filtros e membros -->
+  <section class="py-16 px-4 bg-fab-bg relative">
+    <!-- Background decorativo -->
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-r from-fab-orange/5 to-transparent rounded-full blur-[100px] -z-10"
+      aria-hidden="true"
+    >
+    </div>
 
+    <div class="container mx-auto">
+      <!-- Filtros -->
+      <TeamFilters teams={teamList} />
 
-<TesteLayout pageTitle="Membros">
+      <!-- Grid de membros -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center"
+        role="group"
+        aria-label="Lista de membros da equipe"
+      >
+        {
+          membros.map((membro) => {
+            const memberData = membro.data;
+            const year = memberData.date?.slice(4, 11)?.trim();
 
-      <nav class="flex items-center justify-center">
-            <div>
-              {teamList.map((team) => 
-                <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano={team}>Equipe {team.slice(4, 6)}</button>
-              )}
-                  <button class="btn bg-primary hover:bg-[#fd402c] text-secondary rounded-[7px] p-[5px] font-[19px] m-[2.5px] cursor-pointer" data-ano="team">Todos os Membros</button>
-            </div>
-      </nav>
-
-    <div class="flex justify-evenly py-[2rem]">
-      <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-[4rem] gap-x-[10rem] justify-center ">
-        {membros.map((membro) => <Membro frontmatter={membro.data} />)}
+            return (
+              <div
+                class={`team-member ${year ? `team-${year}` : ""} ${memberData.status ? "active-member" : "alumni-member"}`}
+              >
+                <Equipe
+                  way={`/membros/${membro.slug}`}
+                  img={memberData.avatar}
+                  name={memberData.name || memberData.title}
+                  position={memberData.position}
+                />
+              </div>
+            );
+          })
+        }
       </div>
-    </div>  
-</TesteLayout>   
+
+      <!-- Seção de call to action -->
+      <div class="text-center mt-20 pt-16 border-t border-white/10">
+        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
+          Quer fazer parte da nossa equipe?
+        </h3>
+        <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+          A Fábrica de Software está sempre em busca de novos talentos. Entre em
+          contato conosco e descubra como participar!
+        </p>
+        <a
+          href="/#sobre"
+          class="inline-block px-8 py-4 bg-fab-orange hover:bg-fab-orange/90 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 focus:ring-2 focus:ring-fab-orange focus:ring-offset-2 focus:ring-offset-fab-bg"
+        >
+          Saiba mais sobre a Fábrica
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
