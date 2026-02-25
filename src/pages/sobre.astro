@@ -1,0 +1,256 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "Sobre a Fábrica de Software";
+
+// Estatísticas da Fábrica
+const stats = [
+  {
+    number: "27+",
+    label: "Participantes",
+    description: "Alunos que já passaram pela Fábrica",
+  },
+  {
+    number: "16+",
+    label: "Projetos",
+    description: "Entre finalizados e em desenvolvimento",
+  },
+  {
+    number: "2019",
+    label: "Fundação",
+    description: "Início das atividades em maio",
+  },
+  {
+    number: "R$ 238Bi",
+    label: "Mercado TI",
+    description: "Investimento no Brasil em 2021",
+  },
+];
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <!-- Header da página -->
+  <section class="py-16 bg-[#05081c]">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">
+        Sobre a <span class="text-fab-orange">Fábrica de Software</span>
+      </h1>
+      <p class="text-gray-400 max-w-3xl mx-auto text-lg">
+        Uma iniciativa inovadora que prepara alunos para o mercado de TI,
+        oferecendo experiência prática em um ambiente similar ao das empresas.
+      </p>
+    </div>
+  </section>
+
+  <!-- Seção de Estatísticas -->
+  <section class="py-16 px-4 bg-fab-bg relative">
+    <!-- Background decorativo -->
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-r from-fab-orange/5 to-transparent rounded-full blur-[100px] -z-10"
+      aria-hidden="true"
+    >
+    </div>
+
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        {
+          stats.map((stat) => (
+            <div class="text-center p-6 glass-card rounded-xl group hover:scale-105 transition-transform duration-300">
+              <div class="text-3xl md:text-4xl font-bold text-fab-orange mb-2">
+                {stat.number}
+              </div>
+              <div class="text-xl font-semibold text-white mb-2">
+                {stat.label}
+              </div>
+              <div class="text-sm text-gray-400">{stat.description}</div>
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Contexto e História -->
+      <div class="mb-20 max-w-5xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Contexto do Mercado -->
+          <div class="space-y-6">
+            <h2 class="text-3xl font-bold text-white">
+              O <span class="text-fab-orange">Mercado</span> em Crescimento
+            </h2>
+            <div class="space-y-4 text-gray-300 leading-relaxed">
+              <p>
+                A área de Tecnologia da Informação no Brasil e no mundo tem
+                apresentado um
+                <strong class="text-white">crescimento constante</strong> e gerado
+                muitas oportunidades de emprego nos últimos anos.
+              </p>
+              <p>
+                De acordo com a Associação Brasileira das Empresas de Software
+                (2022), a produção mundial de TI cresceu <strong
+                  class="text-fab-orange">11%</strong
+                >
+                em 2021, enquanto no Brasil esse percentual chegou a
+                <strong class="text-fab-orange">17,4%</strong>, representando um
+                investimento de <strong class="text-fab-orange"
+                  >R$ 238,2 bilhões</strong
+                >.
+              </p>
+              <p>
+                Esses números apontam para uma <strong class="text-white"
+                  >demanda crescente</strong
+                >
+                de profissionais cada vez mais qualificados e preparados para as novas
+                tecnologias.
+              </p>
+            </div>
+          </div>
+
+          <!-- Nossa Iniciativa -->
+          <div class="glass-card p-8 rounded-xl">
+            <h3 class="text-2xl font-bold text-fab-orange mb-6">
+              Nossa Iniciativa
+            </h3>
+            <div class="space-y-4 text-gray-300 leading-relaxed">
+              <p>
+                Nesse sentido, a <strong class="text-white"
+                  >Fábrica de Software</strong
+                > é uma iniciativa que busca contribuir para que os alunos
+                <strong class="text-fab-orange"
+                  >adquiram experiência de mercado</strong
+                >.
+              </p>
+              <p>
+                Oferecemos a oportunidade de trabalhar em um ambiente similar ao
+                das empresas, aplicando <strong class="text-white"
+                  >novas tecnologias</strong
+                > e desenvolvendo
+                <strong class="text-white"
+                  >competências técnicas e comportamentais</strong
+                >.
+              </p>
+
+              <div class="pt-4 border-t border-fab-orange/20">
+                <p class="text-sm text-gray-400 mb-3">
+                  <strong class="text-fab-orange">Início:</strong> Maio de 2019
+                </p>
+                <p class="text-sm text-gray-400 mb-3">
+                  <strong class="text-fab-orange">Formação:</strong> Alunos dos cursos
+                  de Informática do campus Itapetininga
+                </p>
+                <p class="text-sm text-gray-400">
+                  <strong class="text-fab-orange">Projetos:</strong> Internos (SGE)
+                  e externos em parceria com a Prefeitura (SVSA, Consultório na Rua)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nossa Missão -->
+      <div class="mb-20">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-white mb-4">
+            Nossa <span class="text-fab-orange">Missão</span>
+          </h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Contribuir para que os alunos adquiram experiência de mercado real
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div class="text-center space-y-4">
+            <div
+              class="w-16 h-16 mx-auto bg-fab-orange/20 rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-8 h-8 text-fab-orange"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.78 0-2.678-2.153-1.415-3.414l5-5A2 2 0 009 9.172V5L8 4z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Experiência Real</h3>
+            <p class="text-gray-300 text-sm">
+              Ambiente similar ao das empresas, com metodologias e processos
+              profissionais
+            </p>
+          </div>
+
+          <div class="text-center space-y-4">
+            <div
+              class="w-16 h-16 mx-auto bg-fab-orange/20 rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-8 h-8 text-fab-orange"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Novas Tecnologias</h3>
+            <p class="text-gray-300 text-sm">
+              Aplicação de ferramentas modernas e frameworks atuais do mercado
+            </p>
+          </div>
+
+          <div class="text-center space-y-4">
+            <div
+              class="w-16 h-16 mx-auto bg-fab-orange/20 rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-8 h-8 text-fab-orange"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Competências</h3>
+            <p class="text-gray-300 text-sm">
+              Desenvolvimento técnico e comportamental para o mercado de
+              trabalho
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Glassmorphism Card */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 94, 30, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .glass-card:hover {
+    border-color: rgba(255, 94, 30, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 40px rgba(255, 94, 30, 0.15);
+  }
+</style>
