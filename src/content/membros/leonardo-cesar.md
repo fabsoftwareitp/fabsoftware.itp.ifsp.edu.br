@@ -1,6 +1,6 @@
 ---
 title: Leonardo Cesar
-status: true
+status: false
 name: Leonardo Henrique de Oliveira Cesar
 avatar: https://avatars.githubusercontent.com/u/127048383?v=4
 position: Tec. Informática
