@@ -13,11 +13,11 @@
     "@astrojs/markdoc": "^0.11.5",
     "@astrojs/node": "^8.3.4",
     "@astrojs/react": "^3.6.2",
-    "@astrojs/tailwind": "^5.1.0",
     "@astrojs/upgrade": "^0.4.1",
     "@keystatic/astro": "^5.0.3",
     "@keystatic/core": "^0.5.39",
     "@octokit/rest": "^21.0.2",
+    "@tailwindcss/vite": "^4.2.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "astro": "^4.16.10",
@@ -27,9 +27,6 @@
     "dotenv": "^16.4.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.3"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.13"
+    "tailwindcss": "^4.2.1"
   }
 }

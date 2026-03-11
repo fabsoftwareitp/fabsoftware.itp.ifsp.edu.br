@@ -1,6 +1,76 @@
-/* Estilos globais compartilhados */
+@import "tailwindcss";
+@plugin "daisyui";
 
-/* Animação de reveal para seções */
+/* ========================================
+   CONFIGURAÇÃO DO TEMA - TAILWIND CSS v4
+   ======================================== */
+
+@theme {
+  /* Fonte personalizada */
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  /* Cores da marca */
+  --color-fab-bg: #020415;
+  --color-fab-orange: #ff5e1e;
+  --color-fab-orange-dark: #ff3d00;
+  --color-fab-text: #f8fafc;
+}
+
+/* ========================================
+   ESTILOS BASE
+   ======================================== */
+
+/* Cor de seleção de texto */
+::selection {
+  background-color: var(--color-fab-orange);
+  color: white;
+}
+
+/* Body base */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-fab-bg);
+  color: var(--color-fab-text);
+}
+
+/* ========================================
+   COMPONENTES CUSTOMIZADOS
+   ======================================== */
+
+/* Glassmorphism Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 94, 30, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-fab-orange) 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero pattern background */
+.bg-hero-pattern {
+  background-image:
+    linear-gradient(to bottom, rgba(2, 4, 21, 0.6), rgba(2, 4, 21, 1)),
+    url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ========================================
+   ANIMAÇÕES
+   ======================================== */
+
+/* Animação reveal */
 .reveal {
   position: relative;
   transform: translateY(150px);
@@ -13,17 +83,7 @@
   opacity: 1;
 }
 
-/* Configurações globais do corpo */
-body {
-  background-color: #020415;
-  color: #f8fafc;
-}
-
-/* Utilitários de animação */
-.animate-fade-in-up {
-  animation: fadeInUp 1s ease-out;
-}
-
+/* Animação fade in up */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -33,4 +93,44 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Animação marquee para carrossel */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Mask gradient para carrossel */
+.mask-gradient {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
 }
