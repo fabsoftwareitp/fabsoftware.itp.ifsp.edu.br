@@ -43,36 +43,6 @@ const { pageTitle } = Astro.props;
       rel="stylesheet"
     />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              // Mudei para 'Plus Jakarta Sans', uma fonte mais moderna e geométrica para Tech
-              sans: ['"Plus Jakarta Sans"', "sans-serif"],
-            },
-            colors: {
-              fab: {
-                bg: "#020415",
-                orange: "#ff5e1e",
-                orangeDark: "#ff3d00", // Para gradiente
-                text: "#f8fafc",
-              },
-            },
-            backgroundImage: {
-              "hero-pattern":
-                "linear-gradient(to bottom, rgba(2, 4, 21, 0.6), rgba(2, 4, 21, 1)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop')",
-            },
-          },
-        },
-      };
-    </script>
     <title>{pageTitle}</title>
   </head>
   <body

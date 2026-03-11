@@ -279,46 +279,46 @@ try {
 
 <script is:inline>
   // Função auto-executável para evitar poluição do escopo global
-  (function() {
+  (function () {
     function initProjectModals() {
       var buttons = document.querySelectorAll(".open-button");
-      
+
       for (var i = 0; i < buttons.length; i++) {
         var button = buttons[i];
-        
+
         // Evita adicionar múltiplos listeners
         if (button.getAttribute("data-modal-init") === "true") continue;
         button.setAttribute("data-modal-init", "true");
-        
-        button.addEventListener("click", function(e) {
+
+        button.addEventListener("click", function (e) {
           // Ignora cliques no próprio dialog
           if (e.target.tagName === "DIALOG") return;
-          
+
           var modal = this.querySelector("dialog");
           if (!modal) return;
-          
+
           modal.showModal();
-          
+
           // Fecha ao clicar no botão X
           var closeBtn = modal.querySelector(".close-button");
           if (closeBtn) {
-            closeBtn.onclick = function(ev) {
+            closeBtn.onclick = function (ev) {
               ev.stopPropagation();
               modal.close();
             };
           }
-          
+
           // Fecha ao clicar no backdrop
           var backdropBtn = modal.querySelector(".close-backdrop");
           if (backdropBtn) {
-            backdropBtn.onclick = function(ev) {
+            backdropBtn.onclick = function (ev) {
               ev.stopPropagation();
               modal.close();
             };
           }
-          
+
           // Fecha ao clicar fora (no dialog em si)
-          modal.onclick = function(ev) {
+          modal.onclick = function (ev) {
             if (ev.target === modal) {
               modal.close();
             }
@@ -326,14 +326,14 @@ try {
         });
       }
     }
-    
+
     // Executar quando DOM estiver pronto
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", initProjectModals);
     } else {
       initProjectModals();
     }
-    
+
     // Re-executar após 500ms para elementos carregados dinamicamente
     setTimeout(initProjectModals, 500);
   })();

@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
@@ -20,5 +20,15 @@ module.exports = {
 			}
 		}
 	},
-	plugins: [require("@tailwindcss/typography")],
+	plugins: [
+		require("@tailwindcss/typography"),
+		require("daisyui")
+	],
+	daisyui: {
+		themes: ["dark"], // Usa o tema dark como base
+		darkTheme: "dark",
+		base: true,
+		styled: true,
+		utils: true,
+	}
 }

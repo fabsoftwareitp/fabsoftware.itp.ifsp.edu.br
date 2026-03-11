@@ -81,45 +81,52 @@ const { way, img, name, testimonial, video } = Astro.props;
 
 <script is:inline>
   // Função auto-executável para evitar poluição do escopo global
-  (function() {
+  (function () {
     function initTestimonialModals() {
       var items = document.querySelectorAll(".group");
-      
+
       for (var i = 0; i < items.length; i++) {
         var item = items[i];
-        
+
         // Evita inicialização duplicada
         if (item.getAttribute("data-testimonial-init") === "true") continue;
         item.setAttribute("data-testimonial-init", "true");
-        
+
         var openBtn = item.querySelector(".open-button");
         var modal = item.querySelector("dialog");
         var closeBtn = item.querySelector(".close-button");
         var backdropBtn = item.querySelector(".close-backdrop");
         var iframe = item.querySelector("iframe");
         var originalSrc = iframe ? iframe.src : "";
-        
+
         if (openBtn && modal) {
           // Criar closure para manter referências corretas
-          (function(openBtn, modal, closeBtn, backdropBtn, iframe, originalSrc) {
-            var closeModal = function() {
+          (function (
+            openBtn,
+            modal,
+            closeBtn,
+            backdropBtn,
+            iframe,
+            originalSrc,
+          ) {
+            var closeModal = function () {
               modal.close();
               if (iframe) iframe.src = originalSrc;
             };
-            
-            openBtn.addEventListener("click", function() {
+
+            openBtn.addEventListener("click", function () {
               modal.showModal();
             });
-            
+
             if (closeBtn) {
-              closeBtn.addEventListener("click", function(e) {
+              closeBtn.addEventListener("click", function (e) {
                 e.stopPropagation();
                 closeModal();
               });
             }
-            
+
             if (backdropBtn) {
-              backdropBtn.addEventListener("click", function(e) {
+              backdropBtn.addEventListener("click", function (e) {
                 e.stopPropagation();
                 closeModal();
               });
@@ -128,14 +135,14 @@ const { way, img, name, testimonial, video } = Astro.props;
         }
       }
     }
-    
+
     // Executar quando DOM estiver pronto
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", initTestimonialModals);
     } else {
       initTestimonialModals();
     }
-    
+
     // Re-executar após 500ms para elementos carregados dinamicamente
     setTimeout(initTestimonialModals, 500);
   })();
