@@ -48,7 +48,7 @@ export const FEATURES = [
 export const TEAM_SECTION = {
   title: "Nossa",
   titleHighlight: "Equipe",
-  subtitle: "Mentes brilhantes por trás do código.",
+  subtitle: "Participantes atuais do projeto.",
   ctaText: "Ver todos os membros ->"
 };
 
