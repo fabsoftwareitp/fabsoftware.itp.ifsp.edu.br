@@ -277,42 +277,64 @@ try {
   </dialog>
 </div>
 
-<script>
-  // Script otimizado para não duplicar listeners
-  const buttons = document.querySelectorAll(".open-button");
-
-  buttons.forEach((button) => {
-    // Evita adicionar múltiplos listeners se o componente re-renderizar
-    if (button.getAttribute("data-listener") === "true") return;
-    button.setAttribute("data-listener", "true");
-
-    button.addEventListener("click", (e) => {
-      // Se clicar no dialog (backdrop) não faz nada no listener do botão
-      if ((e.target as HTMLElement).tagName === "DIALOG") return;
-
-      const modal = button.querySelector("dialog");
-      const closeBtn = modal?.querySelector(
-        ".close-button",
-      ) as HTMLButtonElement;
-
-      if (modal) {
-        modal.showModal();
-
-        // Fecha ao clicar no botão X
-        if (closeBtn) {
-          closeBtn.onclick = (ev) => {
-            ev.stopPropagation(); // Impede que o clique propague para o card
-            modal.close();
-          };
-        }
-
-        // Fecha ao clicar fora (backdrop)
-        modal.onclick = (ev) => {
-          if (ev.target === modal) {
-            modal.close();
+<script is:inline>
+  // Função auto-executável para evitar poluição do escopo global
+  (function() {
+    function initProjectModals() {
+      var buttons = document.querySelectorAll(".open-button");
+      
+      for (var i = 0; i < buttons.length; i++) {
+        var button = buttons[i];
+        
+        // Evita adicionar múltiplos listeners
+        if (button.getAttribute("data-modal-init") === "true") continue;
+        button.setAttribute("data-modal-init", "true");
+        
+        button.addEventListener("click", function(e) {
+          // Ignora cliques no próprio dialog
+          if (e.target.tagName === "DIALOG") return;
+          
+          var modal = this.querySelector("dialog");
+          if (!modal) return;
+          
+          modal.showModal();
+          
+          // Fecha ao clicar no botão X
+          var closeBtn = modal.querySelector(".close-button");
+          if (closeBtn) {
+            closeBtn.onclick = function(ev) {
+              ev.stopPropagation();
+              modal.close();
+            };
           }
-        };
+          
+          // Fecha ao clicar no backdrop
+          var backdropBtn = modal.querySelector(".close-backdrop");
+          if (backdropBtn) {
+            backdropBtn.onclick = function(ev) {
+              ev.stopPropagation();
+              modal.close();
+            };
+          }
+          
+          // Fecha ao clicar fora (no dialog em si)
+          modal.onclick = function(ev) {
+            if (ev.target === modal) {
+              modal.close();
+            }
+          };
+        });
       }
-    });
-  });
+    }
+    
+    // Executar quando DOM estiver pronto
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initProjectModals);
+    } else {
+      initProjectModals();
+    }
+    
+    // Re-executar após 500ms para elementos carregados dinamicamente
+    setTimeout(initProjectModals, 500);
+  })();
 </script>

@@ -79,34 +79,64 @@ const { way, img, name, testimonial, video } = Astro.props;
   </dialog>
 </div>
 
-<script>
-  const items = document.querySelectorAll(".group"); // Seletor ajustado para o container do componente
-  items.forEach((item) => {
-    if (item.getAttribute("data-init") === "true") return;
-    item.setAttribute("data-init", "true");
-    const openBtn = item.querySelector(".open-button");
-    const modal = item.querySelector("dialog");
-    const closeBtn = item.querySelector(".close-button");
-    const backdropBtn = item.querySelector(".close-backdrop");
-    const iframe = item.querySelector("iframe");
-    const originalSrc = iframe ? iframe.src : "";
-
-    if (openBtn && modal) {
-      openBtn.addEventListener("click", () => modal.showModal());
-      const closeModal = () => {
-        modal.close();
-        if (iframe) iframe.src = originalSrc;
-      };
-      if (closeBtn)
-        closeBtn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          closeModal();
-        });
-      if (backdropBtn)
-        backdropBtn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          closeModal();
-        });
+<script is:inline>
+  // Função auto-executável para evitar poluição do escopo global
+  (function() {
+    function initTestimonialModals() {
+      var items = document.querySelectorAll(".group");
+      
+      for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        
+        // Evita inicialização duplicada
+        if (item.getAttribute("data-testimonial-init") === "true") continue;
+        item.setAttribute("data-testimonial-init", "true");
+        
+        var openBtn = item.querySelector(".open-button");
+        var modal = item.querySelector("dialog");
+        var closeBtn = item.querySelector(".close-button");
+        var backdropBtn = item.querySelector(".close-backdrop");
+        var iframe = item.querySelector("iframe");
+        var originalSrc = iframe ? iframe.src : "";
+        
+        if (openBtn && modal) {
+          // Criar closure para manter referências corretas
+          (function(openBtn, modal, closeBtn, backdropBtn, iframe, originalSrc) {
+            var closeModal = function() {
+              modal.close();
+              if (iframe) iframe.src = originalSrc;
+            };
+            
+            openBtn.addEventListener("click", function() {
+              modal.showModal();
+            });
+            
+            if (closeBtn) {
+              closeBtn.addEventListener("click", function(e) {
+                e.stopPropagation();
+                closeModal();
+              });
+            }
+            
+            if (backdropBtn) {
+              backdropBtn.addEventListener("click", function(e) {
+                e.stopPropagation();
+                closeModal();
+              });
+            }
+          })(openBtn, modal, closeBtn, backdropBtn, iframe, originalSrc);
+        }
+      }
     }
-  });
+    
+    // Executar quando DOM estiver pronto
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initTestimonialModals);
+    } else {
+      initTestimonialModals();
+    }
+    
+    // Re-executar após 500ms para elementos carregados dinamicamente
+    setTimeout(initTestimonialModals, 500);
+  })();
 </script>
