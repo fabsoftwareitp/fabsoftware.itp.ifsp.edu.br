@@ -1,0 +1,304 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "Processo Seletivo - Fábrica de Software";
+
+const etapas = [
+  {
+    numero: "01",
+    titulo: "Inscrição e Análise de IRA",
+    periodo: "25/03 a 01/04",
+    descricao:
+      "Preencha o formulário de inscrição online. O IRA (Índice de Rendimento Acadêmico) será analisado como critério de pré-seleção.",
+  },
+  {
+    numero: "02",
+    titulo: "Convocação para Entrevista",
+    periodo: "Até 07/04",
+    descricao:
+      "Os candidatos pré-selecionados serão convocados via e-mail. Fique atento à sua caixa de entrada.",
+  },
+  {
+    numero: "03",
+    titulo: "Entrevistas",
+    periodo: "08 e 09 de abril",
+    descricao:
+      "Entrevistas presenciais com a equipe da Fábrica de Software para avaliar perfil técnico e comportamental.",
+  },
+  {
+    numero: "04",
+    titulo: "Início das Atividades",
+    periodo: "15 de abril",
+    descricao:
+      "Os selecionados dão início às atividades na Fábrica de Software, integrando os projetos em andamento.",
+  },
+];
+
+const vagas = [
+  {
+    quantidade: "2",
+    curso: "Graduação",
+    detalhe: "Tecnologia em Sistemas para Internet",
+    icone: "M12 14l9-5-9-5-9 5 9 5z M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z",
+  },
+  {
+    quantidade: "1",
+    curso: "Ensino Técnico",
+    detalhe: "Técnico em Informática",
+    icone: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+  },
+];
+
+const requisitos = [
+  {
+    titulo: "Disponibilidade Semanal",
+    descricao:
+      "Mínimo de 8 horas semanais, com presença obrigatória nas quartas e quintas à tarde.",
+    icone: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+  },
+  {
+    titulo: "Semestre Mínimo",
+    descricao:
+      "Estar matriculado no 3º semestre ou superior dos cursos elegíveis no Campus Itapetininga.",
+    icone: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
+  },
+  {
+    titulo: "Sem Vínculo Remunerado",
+    descricao:
+      "Não possuir vínculo empregatício, estágio remunerado ou bolsa discente em outra modalidade.",
+    icone: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+  },
+];
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <!-- Header da página -->
+  <section class="py-16 bg-[#05081c]">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">
+        Processo <span class="text-fab-orange">Seletivo</span>
+      </h1>
+      <p class="text-gray-400 max-w-3xl mx-auto text-lg">
+        Faça parte da Fábrica de Software e ganhe experiência real de mercado.
+        Inscrições abertas para voluntários dos cursos de Informática do Campus
+        Itapetininga.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 bg-fab-bg relative">
+    <!-- Background decorativo -->
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-r from-fab-orange/5 to-transparent rounded-full blur-[100px] -z-10"
+      aria-hidden="true"
+    >
+    </div>
+
+    <div class="container mx-auto">
+      <!-- Vagas Disponíveis -->
+      <div class="mb-20">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-white mb-4">
+            Vagas <span class="text-fab-orange">Disponíveis</span>
+          </h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            São <strong class="text-fab-orange">3 vagas</strong> abertas neste processo
+            seletivo, distribuídas entre os cursos do Campus Itapetininga.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          {
+            vagas.map((vaga) => (
+              <div class="glass-card p-8 rounded-xl text-center group hover:scale-105 transition-transform duration-300">
+                <div class="w-16 h-16 mx-auto bg-fab-orange/20 rounded-full flex items-center justify-center mb-6">
+                  <svg
+                    class="w-8 h-8 text-fab-orange"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d={vaga.icone}
+                    />
+                  </svg>
+                </div>
+                <div class="text-5xl font-bold text-fab-orange mb-2">
+                  {vaga.quantidade}
+                </div>
+                <div class="text-xs font-semibold text-fab-orange/70 uppercase tracking-widest mb-1">
+                  {vaga.quantidade === "1" ? "vaga" : "vagas"}
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">{vaga.curso}</h3>
+                <p class="text-gray-400 text-sm">{vaga.detalhe}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Etapas do Processo Seletivo -->
+      <div class="mb-20 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-white mb-4">
+            Etapas do <span class="text-fab-orange">Processo</span>
+          </h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Confira o cronograma completo de seleção e fique atento às datas.
+          </p>
+        </div>
+
+        <div class="relative">
+          <!-- Linha vertical conectora (desktop) -->
+          <div
+            class="hidden md:block absolute left-[28px] top-8 bottom-8 w-0.5 bg-gradient-to-b from-fab-orange via-fab-orange/40 to-transparent"
+            aria-hidden="true"
+          >
+          </div>
+
+          <div class="space-y-6">
+            {
+              etapas.map((etapa, index) => (
+                <div class="flex gap-6 items-start group">
+                  <!-- Número da etapa -->
+                  <div class="flex-shrink-0 w-14 h-14 bg-fab-orange rounded-full flex items-center justify-center font-bold text-white text-sm shadow-lg shadow-fab-orange/30 z-10">
+                    {etapa.numero}
+                  </div>
+
+                  <!-- Conteúdo -->
+                  <div class="glass-card flex-1 p-6 rounded-xl hover:scale-[1.01] transition-transform duration-300">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+                      <h3 class="text-lg font-bold text-white">
+                        {etapa.titulo}
+                      </h3>
+                      <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-fab-orange bg-fab-orange/10 px-3 py-1 rounded-full border border-fab-orange/20 whitespace-nowrap">
+                        <svg
+                          class="w-3.5 h-3.5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                        {etapa.periodo}
+                      </span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                      {etapa.descricao}
+                    </p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+
+      <!-- Requisitos Mínimos -->
+      <div class="mb-20">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-white mb-4">
+            Requisitos <span class="text-fab-orange">Mínimos</span>
+          </h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Verifique se você atende aos critérios antes de se inscrever.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {
+            requisitos.map((req) => (
+              <div class="text-center space-y-4">
+                <div class="w-16 h-16 mx-auto bg-fab-orange/20 rounded-full flex items-center justify-center">
+                  <svg
+                    class="w-8 h-8 text-fab-orange"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d={req.icone}
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white">{req.titulo}</h3>
+                <p class="text-gray-300 text-sm">{req.descricao}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- CTA - Inscrição -->
+      <div class="max-w-3xl mx-auto">
+        <div class="glass-card p-10 rounded-xl text-center">
+          <div
+            class="w-16 h-16 mx-auto bg-fab-orange/20 rounded-full flex items-center justify-center mb-6"
+          >
+            <svg
+              class="w-8 h-8 text-fab-orange"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+              ></path>
+            </svg>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+            Pronto para se <span class="text-fab-orange">inscrever?</span>
+          </h2>
+          <p class="text-gray-400 mb-8 max-w-xl mx-auto">
+            As inscrições estão abertas de <strong class="text-white"
+              >25/03 a 01/04</strong
+            >. Preencha o formulário e dê o primeiro passo para entrar na
+            Fábrica de Software.
+          </p>
+          <a
+            href="https://forms.gle/dgMyHVYMhmAMC7Vx7"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-lg bg-fab-orange border-none text-white hover:bg-[#ff3d00] px-10 rounded-full shadow-lg shadow-fab-orange/30 transition-all duration-300 hover:scale-105"
+          >
+            Acessar Formulário de Inscrição
+          </a>
+          <p class="mt-6 text-xs text-gray-500">
+            Toda a comunicação será feita via e-mail informado no formulário.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 94, 30, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .glass-card:hover {
+    border-color: rgba(255, 94, 30, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 40px rgba(255, 94, 30, 0.15);
+  }
+</style>
