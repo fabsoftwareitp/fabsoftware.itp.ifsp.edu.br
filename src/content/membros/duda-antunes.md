@@ -16,3 +16,4 @@ Técnico em Informática [em formação] pelo IFSP, membro da Fábrica de Softwa
 
 - github: https://github.com/dudaac
 - discord: duda_76838
+- facebook
