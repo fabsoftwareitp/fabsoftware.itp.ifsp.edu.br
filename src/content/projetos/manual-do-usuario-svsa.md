@@ -4,7 +4,7 @@ imgs:
   - /images/projetos/manual-do-usuario-svsa/imgs/0.png
   - /images/projetos/manual-do-usuario-svsa/imgs/1.png
   - /images/projetos/manual-do-usuario-svsa/imgs/2.png
-link: https://consultorionarua.fabsoftware.itp.ifsp.edu.br
+link: https://svsa.itp.ifsp.edu.br/
 destaque: false
 ---
 # Manual do usuário SVSA

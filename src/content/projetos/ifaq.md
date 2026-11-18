@@ -2,7 +2,7 @@
 title: IFAQ
 imgs:
   - /images/projetos/ifaq/imgs/0.png
-link: https://github.com/fabsoftwareitp/ifaq.fabsoftware.itp.ifsp.edu.br
+link: ifaq.fabsoftware.itp.ifsp.edu.br
 destaque: true
 ---
 # IFAQ

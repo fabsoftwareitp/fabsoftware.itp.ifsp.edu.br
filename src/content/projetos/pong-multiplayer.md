@@ -2,7 +2,7 @@
 title: Pong Multiplayer
 imgs:
   - /images/projetos/pong-multiplayer/imgs/0.png
-link: https://github.com/fabsoftwareitp/pong.fabsoftware.itp.ifsp.edu.br
+link: pong.fabsoftware.itp.ifsp.edu.br
 destaque: true
 ---
 # Pong Multiplayer

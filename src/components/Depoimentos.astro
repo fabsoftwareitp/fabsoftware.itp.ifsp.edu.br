@@ -4,7 +4,7 @@ const { way, img, name, testimonial, video } = Astro.props;
 ---
 
 <div
-  class="relative w-[20rem] md:w-[24rem] h-[18rem] md:h-[20rem] flex-shrink-0 group"
+  class="testimonial-card relative w-[min(20rem,85vw)] md:w-[24rem] h-[18rem] md:h-[20rem] flex-shrink-0 group"
 >
   <div
     class="open-button w-full h-full cursor-pointer rounded-2xl border border-white/10 bg-[#0a0e26] p-6 flex flex-col justify-between transition-all duration-300 hover:border-fab-orange/50 hover:shadow-lg hover:shadow-fab-orange/10 hover:-translate-y-2"
@@ -24,7 +24,7 @@ const { way, img, name, testimonial, video } = Astro.props;
     >
       <a
         href={way}
-        class="flex items-center gap-3 group-hover:opacity-80 transition-opacity"
+        class="profile-link flex items-center gap-3 group-hover:opacity-80 transition-opacity"
       >
         <img
           src={img}
@@ -53,18 +53,24 @@ const { way, img, name, testimonial, video } = Astro.props;
 
   <dialog class="modal backdrop-blur-md bg-black/40">
     <div
-      class="modal-box w-11/12 max-w-4xl bg-[#0a0e26] border border-fab-orange/30 text-white shadow-2xl p-0 overflow-hidden"
+      class="modal-box w-11/12 max-w-4xl max-h-[90dvh] bg-[#0a0e26] border border-fab-orange/30 text-white shadow-2xl p-0 overflow-hidden flex flex-col"
     >
       <div
-        class="flex justify-between items-center p-4 border-b border-white/10 bg-white/5"
+        class="flex justify-between items-center gap-3 p-3 sm:p-4 border-b border-white/10 bg-white/5 shrink-0"
       >
-        <h3 class="font-bold text-lg text-fab-orange">Depoimento de {name}</h3>
+        <h3 class="font-bold text-base sm:text-lg text-fab-orange truncate">
+          Depoimento de {name}
+        </h3>
         <button
-          class="close-button btn btn-sm btn-circle btn-ghost text-white hover:bg-white/10"
+          type="button"
+          aria-label="Fechar"
+          class="close-button btn btn-sm btn-circle btn-ghost text-white hover:bg-white/10 shrink-0"
           >✕</button
         >
       </div>
-      <div class="relative w-full pt-[56.25%] bg-black">
+      <div
+        class="relative w-full aspect-video max-h-[calc(90dvh-4rem)] bg-black"
+      >
         <iframe
           class="absolute top-0 left-0 w-full h-full video-iframe"
           src={video}
@@ -83,7 +89,7 @@ const { way, img, name, testimonial, video } = Astro.props;
   // Função auto-executável para evitar poluição do escopo global
   (function () {
     function initTestimonialModals() {
-      var items = document.querySelectorAll(".group");
+      var items = document.querySelectorAll(".testimonial-card");
 
       for (var i = 0; i < items.length; i++) {
         var item = items[i];
@@ -114,8 +120,15 @@ const { way, img, name, testimonial, video } = Astro.props;
               if (iframe) iframe.src = originalSrc;
             };
 
-            openBtn.addEventListener("click", function () {
-              modal.showModal();
+            openBtn.addEventListener("click", function (e) {
+              // Tocar em "Ver perfil" navega, sem abrir o modal
+              if (e.target.closest(".profile-link")) return;
+              if (!modal.open) modal.showModal();
+            });
+
+            // Esc / fechamento nativo também reseta o vídeo
+            modal.addEventListener("close", function () {
+              if (iframe) iframe.src = originalSrc;
             });
 
             if (closeBtn) {
