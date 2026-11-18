@@ -2,7 +2,7 @@
 title: Brick Breaker
 imgs:
   - /images/projetos/brick-breaker/imgs/0.png
-link: bb.fabsoftware.itp.ifsp.edu.br
+link: https://bb.fabsoftware.itp.ifsp.edu.br/
 destaque: false
 ---
 # Brick Breaker
