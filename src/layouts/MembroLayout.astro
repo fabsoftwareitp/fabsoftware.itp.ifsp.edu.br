@@ -70,11 +70,11 @@ const { frontmatter } = Astro.props;
         <!-- Conteúdo principal -->
         <div class="lg:col-span-2">
           <div
-            class="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-8 lg:p-12"
+            class="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-5 sm:p-8 lg:p-12"
           >
             <!-- Cabeçalho do perfil -->
             <div class="mb-8 text-center lg:text-left">
-              <h1 class="text-4xl lg:text-5xl font-bold text-white mb-2">
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 break-words">
                 {frontmatter.name || frontmatter.title}
               </h1>
               <p class="text-xl text-fab-orange font-semibold mb-4">
@@ -106,7 +106,7 @@ const { frontmatter } = Astro.props;
             </div>
 
             <!-- Conteúdo bio/descrição -->
-            <div class="prose prose-invert prose-lg max-w-none mb-8">
+            <div class="prose prose-invert sm:prose-lg max-w-none break-words mb-8">
               <div
                 class="prose-headings:text-white prose-p:text-gray-300 prose-a:text-fab-orange prose-a:hover:text-fab-orange/80 prose-strong:text-white prose-ul:text-gray-300 prose-li:text-gray-300"
               >
@@ -130,7 +130,7 @@ const { frontmatter } = Astro.props;
             </div>
 
             <div class="max-w-4xl mx-auto">
-              <div class="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-8 lg:p-12">
+              <div class="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-4 sm:p-8 lg:p-12">
                 {frontmatter.testimonial.value.video ? (
                   <div class="aspect-video rounded-xl overflow-hidden shadow-2xl">
                     <iframe
@@ -143,7 +143,7 @@ const { frontmatter } = Astro.props;
                     />
                   </div>
                 ) : (
-                  <blockquote class="text-xl text-gray-300 italic text-center leading-relaxed">
+                  <blockquote class="text-lg sm:text-xl text-gray-300 italic text-center leading-relaxed">
                     "{frontmatter.testimonial.value.depoimento}"
                   </blockquote>
                 )}
@@ -156,7 +156,7 @@ const { frontmatter } = Astro.props;
       <!-- Call to action -->
       <div class="mt-16 text-center">
         <div
-          class="inline-block bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
+          class="inline-block bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-8"
         >
           <h3 class="text-xl font-bold text-white mb-4">
             Conheça outros membros da equipe
