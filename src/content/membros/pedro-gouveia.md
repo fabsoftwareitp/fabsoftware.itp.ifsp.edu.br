@@ -1,6 +1,6 @@
 ---
 title: Pedro Gouveia
-status: true
+status: false
 name: Pedro Gouveia
 avatar: https://avatars.githubusercontent.com/u/209826073?v=4
 position: Tec. Informática.

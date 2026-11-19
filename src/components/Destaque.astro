@@ -127,16 +127,20 @@ try {
 
   <dialog class="modal backdrop-blur-md p-0 bg-transparent">
     <div
-      class="modal-box w-11/12 max-w-5xl bg-[#0a0e26] border border-fab-orange/30 text-white shadow-2xl shadow-fab-orange/20 p-0 overflow-hidden relative"
+      class="modal-box w-11/12 max-w-5xl max-h-[90dvh] bg-[#0a0e26] border border-fab-orange/30 text-white shadow-2xl shadow-fab-orange/20 p-0 overflow-y-auto overscroll-contain lg:overflow-hidden relative"
     >
-      <button
-        class="close-button btn btn-sm btn-circle btn-ghost absolute right-4 top-4 text-white hover:bg-white/10 z-50"
-        >✕</button
-      >
+      <div class="sticky top-0 z-50 h-0 flex justify-end">
+        <button
+          type="button"
+          aria-label="Fechar"
+          class="close-button btn btn-sm btn-circle border-none bg-black/60 text-white hover:bg-white/20 mt-3 mr-3"
+          >✕</button
+        >
+      </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 h-full">
         <div
-          class="h-64 lg:h-auto overflow-hidden border-b lg:border-b-0 lg:border-r border-white/10 bg-black"
+          class="h-48 sm:h-64 lg:h-auto overflow-hidden border-b lg:border-b-0 lg:border-r border-white/10 bg-black"
         >
           <img
             src={img}
@@ -145,9 +149,15 @@ try {
           />
         </div>
 
-        <div class="p-8 space-y-6 overflow-y-auto max-h-[60vh] lg:max-h-[80vh]">
+        <div
+          class="p-5 sm:p-8 space-y-6 lg:overflow-y-auto lg:max-h-[80vh]"
+        >
           <div>
-            <h3 class="text-3xl font-bold text-fab-orange mb-6">{title}</h3>
+            <h3
+              class="text-2xl sm:text-3xl font-bold text-fab-orange mb-6 break-words"
+            >
+              {title}
+            </h3>
 
             <!-- Tags/Tecnologias -->
             {
@@ -173,7 +183,7 @@ try {
                 Descrição
               </h4>
               <p
-                class="text-gray-300 leading-relaxed text-sm lg:text-base text-justify"
+                class="text-gray-300 leading-relaxed text-sm lg:text-base text-left lg:text-justify"
               >
                 {textoDescricao}
               </p>
@@ -221,7 +231,7 @@ try {
                 }
 
                 <!-- Links -->
-                <div class="flex gap-4 mt-4">
+                <div class="flex flex-wrap gap-3 mt-4">
                   {
                     githubLink && (
                       <a
@@ -290,40 +300,31 @@ try {
         if (button.getAttribute("data-modal-init") === "true") continue;
         button.setAttribute("data-modal-init", "true");
 
-        button.addEventListener("click", function (e) {
-          // Ignora cliques no próprio dialog
-          if (e.target.tagName === "DIALOG") return;
+        var modal = button.querySelector("dialog");
+        if (!modal) continue;
 
-          var modal = this.querySelector("dialog");
-          if (!modal) return;
-
-          modal.showModal();
-
+        (function (button, modal) {
           // Fecha ao clicar no botão X
           var closeBtn = modal.querySelector(".close-button");
           if (closeBtn) {
-            closeBtn.onclick = function (ev) {
+            closeBtn.addEventListener("click", function (ev) {
               ev.stopPropagation();
               modal.close();
-            };
+            });
           }
 
-          // Fecha ao clicar no backdrop
-          var backdropBtn = modal.querySelector(".close-backdrop");
-          if (backdropBtn) {
-            backdropBtn.onclick = function (ev) {
-              ev.stopPropagation();
-              modal.close();
-            };
-          }
+          // Fecha ao clicar fora da caixa (no backdrop do dialog)
+          modal.addEventListener("click", function (ev) {
+            ev.stopPropagation();
+            if (ev.target === modal) modal.close();
+          });
 
-          // Fecha ao clicar fora (no dialog em si)
-          modal.onclick = function (ev) {
-            if (ev.target === modal) {
-              modal.close();
-            }
-          };
-        });
+          button.addEventListener("click", function (e) {
+            // Cliques dentro do modal não devem reabri-lo
+            if (modal.open || modal.contains(e.target)) return;
+            modal.showModal();
+          });
+        })(button, modal);
       }
     }
 

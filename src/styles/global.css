@@ -26,6 +26,18 @@
   color: white;
 }
 
+/* Evita rolagem horizontal no celular (blobs decorativos largos) */
+html,
+body {
+  overflow-x: hidden;
+}
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
+
 /* Body base */
 body {
   font-family: var(--font-sans);

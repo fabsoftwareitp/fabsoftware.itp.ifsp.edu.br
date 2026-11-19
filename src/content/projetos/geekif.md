@@ -2,7 +2,7 @@
 title: Geekif
 imgs:
   - /images/projetos/geekif/imgs/0.png
-link: https://geekif.com.br/
+link: https://geekif.fabsoftware.itp.ifsp.edu.br/
 destaque: true
 tags: [HTML, CSS, JavaScript]
 status: done

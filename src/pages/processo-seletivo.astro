@@ -162,14 +162,14 @@ const requisitos = [
           <div class="space-y-6">
             {
               etapas.map((etapa, index) => (
-                <div class="flex gap-6 items-start group">
+                <div class="flex gap-3 sm:gap-6 items-start group">
                   <!-- Número da etapa -->
                   <div class="flex-shrink-0 w-14 h-14 bg-fab-orange rounded-full flex items-center justify-center font-bold text-white text-sm shadow-lg shadow-fab-orange/30 z-10">
                     {etapa.numero}
                   </div>
 
                   <!-- Conteúdo -->
-                  <div class="glass-card flex-1 p-6 rounded-xl hover:scale-[1.01] transition-transform duration-300">
+                  <div class="glass-card flex-1 min-w-0 p-4 sm:p-6 rounded-xl hover:scale-[1.01] transition-transform duration-300">
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
                       <h3 class="text-lg font-bold text-white">
                         {etapa.titulo}
@@ -242,7 +242,7 @@ const requisitos = [
 
       <!-- CTA - Inscrição -->
       <div class="max-w-3xl mx-auto">
-        <div class="glass-card p-10 rounded-xl text-center">
+        <div class="glass-card p-6 sm:p-10 rounded-xl text-center">
           <div
             class="w-16 h-16 mx-auto bg-fab-orange/20 rounded-full flex items-center justify-center mb-6"
           >
@@ -273,7 +273,7 @@ const requisitos = [
             href="https://forms.gle/dgMyHVYMhmAMC7Vx7"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-lg bg-fab-orange border-none text-white hover:bg-[#ff3d00] px-10 rounded-full shadow-lg shadow-fab-orange/30 transition-all duration-300 hover:scale-105"
+            class="btn btn-lg bg-fab-orange border-none text-white hover:bg-[#ff3d00] h-auto py-3 px-6 sm:px-10 whitespace-normal rounded-full shadow-lg shadow-fab-orange/30 transition-all duration-300 hover:scale-105"
           >
             Acessar Formulário de Inscrição
           </a>
